@@ -1,0 +1,5 @@
+{
+  "status": "infeasible",
+  "semesters": [],
+  "explanation": "Proven infeasible by CP-SAT"
+}

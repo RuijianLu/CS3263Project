@@ -1,0 +1,20 @@
+{
+  "case_id": "test-hard-04",
+  "approach": "assisted",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "started_at_utc": "2026-10-09T15:41:57.331608+00:00",
+  "prompt_sha256": "d4257cffd51c307e4665196d3c42e19c699d06587236833a8d31a9e63d50aa35",
+  "status": "ok",
+  "usage": {
+    "input_tokens": 18806,
+    "cached_input_tokens": 7040,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1105,
+    "reasoning_output_tokens": 222
+  },
+  "tool_items": [],
+  "attempt": 1,
+  "exit_code": 0,
+  "elapsed_seconds": 34.421
+}

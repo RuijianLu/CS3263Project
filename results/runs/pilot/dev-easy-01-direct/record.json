@@ -1,0 +1,28 @@
+{
+  "case_id": "dev-easy-01",
+  "approach": "direct",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "started_at_utc": "2026-10-09T15:17:01.067869+00:00",
+  "prompt_sha256": "00eadc861debbeab933d0dccf27602cd2094659f7b724e9c7d5bcb0f4bd37f85",
+  "status": "ok",
+  "usage": {
+    "input_tokens": 18626,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 406,
+    "reasoning_output_tokens": 243
+  },
+  "attempt": 1,
+  "exit_code": 0,
+  "elapsed_seconds": 19.422,
+  "runtime_warning_items": [
+    "error",
+    "error",
+    "error",
+    "error",
+    "error"
+  ],
+  "tool_items": [],
+  "audit_note": "CLI diagnostic error items were initially misclassified; saved trace contains no model tool calls. Response unchanged, no retry."
+}

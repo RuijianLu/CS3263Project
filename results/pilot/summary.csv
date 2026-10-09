@@ -1,0 +1,13 @@
+case_id,difficulty,approach,gold_status,execution_status,predicted_status,success,valid_plan,violations,translation_differences,elapsed_seconds,solver_seconds,input_tokens,output_tokens
+dev-easy-01,easy,direct,feasible,ok,feasible,True,True,,,19.422,,18626,406
+dev-easy-01,easy,assisted,feasible,ok,feasible,True,True,,,27.672,0.031,18850,996
+dev-easy-02,easy,direct,infeasible,ok,infeasible,True,False,,,9.344,,18623,102
+dev-easy-02,easy,assisted,infeasible,ok,infeasible,True,False,,required,46.359,0.016,18849,1349
+dev-medium-01,medium,direct,feasible,ok,feasible,True,True,,,23.266,,18611,469
+dev-medium-01,medium,assisted,feasible,ok,feasible,True,True,,,27.985,0.063,18835,971
+dev-medium-02,medium,direct,infeasible,ok,infeasible,True,False,,,11.922,,18613,151
+dev-medium-02,medium,assisted,infeasible,ok,infeasible,True,False,,,30.265,0.031,18833,960
+dev-hard-01,hard,direct,feasible,ok,feasible,True,True,,,24.766,,18587,613
+dev-hard-01,hard,assisted,feasible,ok,feasible,True,True,,,30.781,0.062,18811,1035
+dev-hard-02,hard,direct,infeasible,ok,infeasible,True,False,,,9.563,,18590,139
+dev-hard-02,hard,assisted,infeasible,ok,infeasible,True,False,,,28.828,0.016,18806,982

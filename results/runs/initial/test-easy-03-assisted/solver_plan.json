@@ -1,0 +1,17 @@
+{
+  "status": "feasible",
+  "semesters": [
+    [
+      "CS3263",
+      "CS3264",
+      "CS3268",
+      "CS4243",
+      "CS4248",
+      "CS4261",
+      "CS5242"
+    ],
+    [],
+    []
+  ],
+  "explanation": "OPTIMAL"
+}

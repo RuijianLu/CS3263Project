@@ -1,0 +1,20 @@
+{
+  "case_id": "test-easy-04",
+  "approach": "assisted",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "started_at_utc": "2026-10-09T15:30:28.311858+00:00",
+  "prompt_sha256": "eec0fa8f557ac45e431cb2a577c1b764da8b2714a1f9b0d2a8ae1dd20f09a0c5",
+  "status": "ok",
+  "usage": {
+    "input_tokens": 18846,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1206,
+    "reasoning_output_tokens": 283
+  },
+  "tool_items": [],
+  "attempt": 1,
+  "exit_code": 0,
+  "elapsed_seconds": 39.938
+}

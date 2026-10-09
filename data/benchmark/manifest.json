@@ -1,0 +1,14 @@
+{
+  "development_cases": 6,
+  "evaluation_cases": 24,
+  "evaluation_infeasible": 6,
+  "construction": "Deterministic synthetic profiles and controlled restrictions over real course data.",
+  "limitations": [
+    "Difficulty categories are designed, not empirically calibrated.",
+    "Cases are related controlled variants, not independent samples of the NUS student population.",
+    "Some development and test cases share failure mechanisms; do not claim template-disjoint generalisation.",
+    "Benchmark labels are implementation-verified, not yet independently reviewed by the student team."
+  ],
+  "catalogue_sha256": "334da6099be466a8a2f2e072d015c27511574aac2290505c79a72f431f6fbd47",
+  "requirements_sha256": "c01d5ea894933dfbfb83738e8e075020470415dfe603e8b775fbe44e8e442da2"
+}

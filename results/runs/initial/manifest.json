@@ -1,0 +1,26 @@
+{
+  "configuration": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "medium",
+    "timeout_seconds": 180,
+    "solver_timeout_seconds": 10,
+    "attempts_per_case": 1,
+    "execution": "ChatGPT subscription via locally authenticated Codex CLI"
+  },
+  "split": "test",
+  "artifact_sha256": {
+    "data/courses.json": "334da6099be466a8a2f2e072d015c27511574aac2290505c79a72f431f6fbd47",
+    "data/requirements.json": "c01d5ea894933dfbfb83738e8e075020470415dfe603e8b775fbe44e8e442da2",
+    "data/benchmark/test.jsonl": "72339fd1f2fff9611053c3a52920f561aa2ea54195ac69ee7a08909566e9001f",
+    "data/benchmark/gold.jsonl": "db23e0977d2958a8843a1038b1a0a2f09e00137f3b7ac96c6b03481729e429ca",
+    "prompts/direct.txt": "7969ed0d4b8a57bd513c12aa1541d41ca7d613b8e665833cb31ac0232bbdf0f6",
+    "prompts/translate.txt": "7bb4b8a28c7b487cb55b1970808b71221c2d1c2d1bef2cfea773d9e7b846a069",
+    "prompts/plan.schema.json": "d6bdec9d8f765f79803dcde70104f3e66ff6b4eba5a9a7a453d22cc9ffac4cca",
+    "prompts/spec.schema.json": "8b0cbfd8e1217506f05bc4f4865e66bf7c59fbc16bc54ae8f8b1dfac6ab3792a"
+  },
+  "cli_version": "codex-cli 0.162.0-alpha.2",
+  "catalogue_sha256": "334da6099be466a8a2f2e072d015c27511574aac2290505c79a72f431f6fbd47",
+  "requirements_sha256": "c01d5ea894933dfbfb83738e8e075020470415dfe603e8b775fbe44e8e442da2",
+  "benchmark_sha256": "72339fd1f2fff9611053c3a52920f561aa2ea54195ac69ee7a08909566e9001f",
+  "protocol": "Fresh session; tools disabled and audited; no repairs or retries; subscription authentication."
+}

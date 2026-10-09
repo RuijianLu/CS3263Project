@@ -1,0 +1,34 @@
+{
+  "direct": {
+    "attempted": 24,
+    "total": 24,
+    "feasible_valid": 18,
+    "feasible_total": 18,
+    "infeasible_correct": 6,
+    "infeasible_total": 6,
+    "false_infeasibility": 0,
+    "overall_correct": 24,
+    "execution_statuses": {
+      "ok": 24
+    },
+    "mean_total_seconds": 19.49,
+    "reported_input_tokens": 446629,
+    "reported_output_tokens": 10190
+  },
+  "assisted": {
+    "attempted": 24,
+    "total": 24,
+    "feasible_valid": 18,
+    "feasible_total": 18,
+    "infeasible_correct": 6,
+    "infeasible_total": 6,
+    "false_infeasibility": 0,
+    "overall_correct": 24,
+    "execution_statuses": {
+      "ok": 24
+    },
+    "mean_total_seconds": 33.56,
+    "reported_input_tokens": 452011,
+    "reported_output_tokens": 27027
+  }
+}

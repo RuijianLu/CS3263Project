@@ -1,0 +1,16 @@
+{
+  "configuration": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "medium",
+    "timeout_seconds": 180,
+    "solver_timeout_seconds": 10,
+    "attempts_per_case": 1,
+    "execution": "ChatGPT subscription via locally authenticated Codex CLI"
+  },
+  "split": "dev",
+  "cli_version": "codex-cli 0.162.0-alpha.2",
+  "catalogue_sha256": "334da6099be466a8a2f2e072d015c27511574aac2290505c79a72f431f6fbd47",
+  "requirements_sha256": "c01d5ea894933dfbfb83738e8e075020470415dfe603e8b775fbe44e8e442da2",
+  "benchmark_sha256": "7c1435f6c1a3684d19fef0f89b3e10c50e94731f44e4e1d4caa5c49e6e52cf9c",
+  "protocol": "Fresh session; tools disabled and audited; no repairs or retries; subscription authentication."
+}

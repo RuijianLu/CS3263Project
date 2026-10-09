@@ -1,0 +1,20 @@
+{
+  "case_id": "test-hard-03",
+  "approach": "direct",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "started_at_utc": "2026-10-09T15:40:33.999107+00:00",
+  "prompt_sha256": "17ff2606eb9a1e4042f0d432f0124c614ab3dcb3f21657e490c0b5853498b8a5",
+  "status": "ok",
+  "usage": {
+    "input_tokens": 18580,
+    "cached_input_tokens": 6912,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 579,
+    "reasoning_output_tokens": 380
+  },
+  "tool_items": [],
+  "attempt": 1,
+  "exit_code": 0,
+  "elapsed_seconds": 25.328
+}

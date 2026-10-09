@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "nus-degree-planner"
+version = "0.1.0"
+description = "CS3263 direct Codex planning versus translation to a CSP solver"
+requires-python = ">=3.11"
+dependencies = ["ortools>=9.10,<10", "beautifulsoup4>=4.12,<5", "jsonschema>=4.22,<5"]
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+[project.scripts]
+degree-planner = "degree_planner.__main__:main"
+[tool.setuptools.packages.find]
+where = ["src"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,1 @@
+{"status":"infeasible","semesters":[],"explanation":"Remaining semester 1 is Semester 2, but CS3268 is offered only in Semester 1. Requiring CS3268 in remaining semester 1 therefore contradicts the supplied offerings."}
