@@ -59,7 +59,7 @@
       "CS2103T"
     ]
   ],
-  "max_units_per_semester": 32,
+  "max_units_per_semester": 16,
   "sources": [
     "https://www.comp.nus.edu.sg/cug/per-cohort/cs/cs-26-27/",
     "https://www.comp.nus.edu.sg/programmes/ug/focus/"
@@ -70,6 +70,7 @@
     "The 12 upper-level units are within breadth/depth, including credited industry courses.",
     "Initial pathway: completed CP3200 (6 units), no dissertation substitution.",
     "Plan normal Semesters 1 and 2; repeat AY2026/27 offerings.",
-    "Common Curriculum and Unrestricted Electives are not audited."
+    "Common Curriculum and Unrestricted Electives are not audited.",
+    "Project workload cap: 16 units per normal semester for modeled Programme courses, reserving room for other study; no semester minimum."
   ]
 }

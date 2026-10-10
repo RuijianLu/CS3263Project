@@ -1,0 +1,8 @@
+{
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "timeout_seconds": 180,
+  "solver_timeout_seconds": 10,
+  "attempts_per_case": 1,
+  "execution": "ChatGPT subscription via locally authenticated Codex CLI"
+}

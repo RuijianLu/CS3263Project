@@ -14,5 +14,5 @@
 
 ## Current phase
 
-Early stage: dataset collection and benchmark construction.
+Test, debug and refine.
 

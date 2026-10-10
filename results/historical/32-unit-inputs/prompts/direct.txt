@@ -1,0 +1,6 @@
+Solve the supplied degree-planning request directly using only the supplied facts.
+Do not browse, run code, access files, call tools, or use a solver.
+Treat course prerequisites as strictly earlier completion; the special CS2101/CS2103T rule requires simultaneous enrollment.
+Return JSON matching the plan schema. A feasible result must include exactly one course array per remaining semester, including empty semesters.
+Use "infeasible" only if constraints are contradictory, and "unknown" if you cannot determine the answer.
+Do not include previously completed courses in new enrollments. Explain the main reasoning briefly.

@@ -2,7 +2,8 @@
 from __future__ import annotations
 import json
 from pathlib import Path
-from jsonschema import Draft202012Validator
+from jsonschema import Draft202012Validator, ValidationError
+from .policy import MAX_UNITS
 
 def obj(properties):
     return {"type": "object", "properties": properties, "required": list(properties),
@@ -18,7 +19,7 @@ SPEC_SCHEMA = obj({
     "completed": CODES,
     "semesters": {"type": "array", "minItems": 1, "maxItems": 12,
                   "items": {"type": "integer", "enum": [1, 2]}},
-    "max_units": {"type": "integer", "minimum": 0, "maximum": 64},
+    "max_units": {"type": "integer", "minimum": 0, "maximum": MAX_UNITS},
     "required": CODES, "forbidden": CODES,
     "fixed": {"type": "array", "items": FIXED},
     "groups": {"type": "array", "items": GROUP}
@@ -33,7 +34,10 @@ def validate(value, schema):
     Draft202012Validator(schema).validate(value)
 
 def validate_spec(spec, courses):
-    validate(spec, SPEC_SCHEMA)
+    try:
+        validate(spec, SPEC_SCHEMA)
+    except ValidationError as exc:
+        raise ValueError(f"Invalid specification at {exc.json_path}: {exc.message}") from exc
     refs = set(spec["completed"] + spec["required"] + spec["forbidden"])
     refs.update(f["course"] for f in spec["fixed"])
     for group in spec["groups"]:

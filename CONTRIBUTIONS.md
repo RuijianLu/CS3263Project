@@ -21,3 +21,7 @@ Initial experiment execution and results are recorded under results/. Failed out
 | Jonathan Graziano Yang | To be recorded by the team | Pending |
 
 Record source/label review, modifications, analysis, report writing and presentation preparation as they occur. All members should be able to explain the entire formulation and evaluation.
+
+## Current CSP revision
+
+The user revised the workload policy to a maximum of 16 modelled units per normal semester and requested a feasibility-only formulation. Codex supported separating CSP construction from solving, removing the optimization objective, documenting variables/domains/constraints, and exporting inspectable specifications, compiled models, schedules and independent check results. Two real-course examples were locally validated. No new model comparison, exhaustive enumeration, or large benchmark generation was performed. The original 32-unit experiment remains historical evidence. The student team must review the formulation and source interpretations and record its own academic contribution.

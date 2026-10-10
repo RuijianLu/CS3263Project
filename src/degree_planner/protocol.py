@@ -1,6 +1,8 @@
 """Proposal evaluation: freeze input artifacts so runs cannot mix protocols."""
 from __future__ import annotations
 import hashlib
+import json
+from .policy import MAX_UNITS
 from .collect import read_json
 
 def fingerprints(root, split):
@@ -25,3 +27,10 @@ def verify_manifest(root, manifest, split, config=None):
                 raise ValueError("Pilot input snapshot changed")
     if config is not None and config != manifest["configuration"]:
         raise ValueError("Experiment settings changed within a run")
+
+
+def require_current_benchmark(root):
+    """Refuse to reuse historical labels after changing the workload policy."""
+    answers = [json.loads(line) for line in (root / "data/benchmark/gold.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
+    if not answers or any(a["spec"]["max_units"] != MAX_UNITS for a in answers):
+        raise ValueError("The saved benchmark is historical and uses the previous workload cap. A new 16-unit benchmark is required before comparison or relabelling. Use verify for local CSP validation.")

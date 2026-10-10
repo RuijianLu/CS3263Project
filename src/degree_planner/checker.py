@@ -1,6 +1,7 @@
 """Proposal sub-problems 1-3: independent arithmetic/set-based plan checking."""
 from __future__ import annotations
-from .schemas import PLAN_SCHEMA, validate
+from .schemas import PLAN_SCHEMA, validate, validate_spec
+
 
 def satisfied(tree, completed):
     if tree is None or tree is True:
@@ -16,73 +17,104 @@ def satisfied(tree, completed):
     count, children = tree["nOf"]
     return sum(satisfied(t, completed) for t in children) >= count
 
+
 def check(plan, spec, courses, corequisite_pairs=()):
-    errors = []
-    def error(kind, message):
-        errors.append({"type": kind, "message": message})
+    """Check the original input independently of the CSP builder and solver."""
+    errors, checks, semesters, groups = [], [], [], []
+
+    def expect(kind, subject, passed, detail):
+        record = {"type": kind, "subject": subject, "passed": bool(passed), "detail": detail}
+        checks.append(record)
+        if not passed:
+            errors.append({"type": kind, "message": f"{subject}: {detail}"})
+        return record
+
+    def result():
+        return {"valid": not errors, "violations": errors, "checks": checks,
+                "semesters": semesters, "groups": groups}
+
     try:
+        validate_spec(spec, courses)
         validate(plan, PLAN_SCHEMA)
     except Exception as exc:
-        return {"valid": False, "violations": [{"type": "format", "message": str(exc)}]}
+        expect("format", "input", False, str(exc))
+        return result()
     if plan["status"] != "feasible":
-        return {"valid": False, "violations": [{"type": "no_plan", "message": plan["status"]}]}
-    if len(plan["semesters"]) != len(spec["semesters"]):
-        error("horizon", "Must supply exactly one course list per remaining semester")
+        expect("no_plan", "schedule", False,
+               f"status={plan['status']}; the checker validates schedules, not infeasibility proofs")
+        return result()
+    expect("horizon", "schedule", len(plan["semesters"]) == len(spec["semesters"]),
+           f"{len(plan['semesters'])} semester lists; expected {len(spec['semesters'])}")
     taken = set(spec["completed"])
     newly_taken, placement = set(), {}
     for t, semester_courses in enumerate(plan["semesters"]):
         this = set(semester_courses)
-        if len(this) != len(semester_courses):
-            error("duplicate", f"Duplicate enrollment in semester {t + 1}")
+        subject = f"remaining semester {t + 1}"
+        expect("duplicate", subject, len(this) == len(semester_courses), "No duplicate codes within this semester")
         known = this & courses.keys()
-        for code in this - courses.keys():
-            error("unknown_course", code)
-        if sum(courses[c]["units"] for c in known) > spec["max_units"] + 1e-8:
-            error("workload", f"Semester {t + 1} exceeds {spec['max_units']} units")
-        for code in known:
+        for code in sorted(this - courses.keys()):
+            expect("unknown_course", code, False, "Code is absent from the catalogue")
+        units = sum(courses[c]["units"] for c in known)
+        expect("workload", subject, units <= spec["max_units"] + 1e-8,
+               f"{units:g} units <= {spec['max_units']} units")
+        season = spec["semesters"][t] if t < len(spec["semesters"]) else None
+        semesters.append({"position": t + 1, "normal_semester": season, "courses": sorted(this),
+                          "units": units, "max_units": spec["max_units"]})
+        for code in sorted(known):
             course = courses[code]
             placement[code] = t + 1
-            if code in taken:
-                error("duplicate", f"{code} was already completed")
-            if code in spec["forbidden"]:
-                error("forbidden", code)
-            if not course["selectable"]:
-                error("eligibility", f"{code} is blocked pending review or excluded from new selection")
-            if t >= len(spec["semesters"]) or spec["semesters"][t] not in course["offered_semesters"]:
-                error("availability", f"{code} not offered in semester {t + 1}")
-            if not satisfied(course["prerequisites"], taken):
-                error("prerequisite", f"{code} prerequisites not completed before semester {t + 1}")
+            expect("duplicate", code, code not in taken, "Not previously completed or scheduled")
+            expect("forbidden", code, code not in spec["forbidden"], "New enrolment is permitted by the request")
+            expect("eligibility", code, course["selectable"], "Selectable under the catalogue assumptions")
+            expect("availability", code, season in course["offered_semesters"],
+                   f"Normal Semester {season}; offered in {course['offered_semesters']}")
+            evidence = expect("prerequisite", code, satisfied(course["prerequisites"], taken),
+                              "Prerequisite expression satisfied using only completed and earlier-semester courses")
+            evidence.update(prerequisites=course["prerequisites"], available_before=sorted(taken))
             for other in course["corequisites"]:
-                if other not in taken | this:
-                    error("corequisite", f"{code} needs {other} before or concurrently")
+                expect("corequisite", code, other in taken | this, f"{other} completed before or concurrently")
         newly_taken |= known
         taken |= known
+
     for a, b in corequisite_pairs:
-        if (a in placement or b in placement) and placement.get(a) != placement.get(b):
-            error("corequisite", f"{a} and {b} must be taken in the same semester")
-    for code in newly_taken:
+        if a in placement or b in placement:
+            expect("corequisite", f"{a}/{b}", placement.get(a) == placement.get(b),
+                   f"Same new-enrolment semester: {placement.get(a)} / {placement.get(b)}")
+    conflicts = set()
+    for code in courses:
         for other in courses[code]["preclusions"]:
-            if other in taken and other != code:
-                error("preclusion", f"{code} conflicts with {other}")
-    for code in taken - newly_taken:
-        for other in courses[code]["preclusions"]:
-            if other in newly_taken:
-                error("preclusion", f"{other} conflicts with completed {code}")
-    for code in set(spec["required"]) - taken:
-        error("required", f"Missing {code}")
+            if other in courses and other != code and {code, other} & newly_taken:
+                pair = tuple(sorted((code, other)))
+                if pair not in conflicts:
+                    expect("preclusion", "/".join(pair), not {code, other} <= taken,
+                           "Cannot include both when at least one is newly enrolled")
+                    conflicts.add(pair)
+    for code in sorted(set(spec["required"])):
+        expect("required", code, code in taken, "Present in completed record or new schedule")
     for fixed in spec["fixed"]:
-        if placement.get(fixed["course"]) != fixed["semester"]:
-            error("fixed_semester", f"{fixed['course']} must be in semester {fixed['semester']}")
+        code, semester = fixed["course"], fixed["semester"]
+        expect("fixed_semester", code, placement.get(code) == semester,
+               f"Scheduled position {placement.get(code)}; required position {semester}")
     for group in spec["groups"]:
         members = taken & set(group["courses"])
         totals = {"courses": len(members), "units": sum(courses[c]["units"] for c in members)}
+        bounds = {k: group[k] for k in ("min_units", "max_units", "min_courses", "max_courses")}
+        group_passed = True
         for kind, total in totals.items():
             lo, hi = group[f"min_{kind}"], group[f"max_{kind}"]
-            if lo is not None and total + 1e-8 < lo:
-                error("requirement", f"{group['name']}: {total:g} {kind}, needs at least {lo}")
-            if hi is not None and total - 1e-8 > hi:
-                error("requirement", f"{group['name']}: {total:g} {kind}, permits at most {hi}")
-    return {"valid": not errors, "violations": errors}
+            if lo is not None:
+                passed = total + 1e-8 >= lo
+                expect("requirement", group["name"], passed, f"{total:g} {kind} >= {lo}")
+                group_passed &= passed
+            if hi is not None:
+                passed = total - 1e-8 <= hi
+                expect("requirement", group["name"], passed, f"{total:g} {kind} <= {hi}")
+                group_passed &= passed
+        groups.append({"name": group["name"], "matched_courses": sorted(members),
+                       "units": totals["units"], "course_count": totals["courses"],
+                       **bounds, "passed": bool(group_passed)})
+    return result()
+
 
 def translation_differences(actual, gold):
     """Field-level audit; named group membership ignores ordering, not semantics."""

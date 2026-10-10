@@ -1,0 +1,11 @@
+Translate the supplied degree-planning request and requirement narrative into the formal JSON specification. Do not solve the planning problem.
+Use only the supplied facts; do not browse, run code, access files, or call tools.
+Return every schema field. Semester lists contain alternating normal-semester numbers (1 or 2), not course assignments.
+required = all mandatory foundation and mathematics courses, plus courses explicitly requested; completed mandatory courses remain in required.
+forbidden = courses prohibited from NEW enrollment only.
+fixed = required new enrollments with remaining-semester positions, numbered from 1.
+Each group counts each member once across completed courses and future selections. Course membership may overlap between requirement groups; earned credits are never duplicated within a group.
+Use exactly the group names specified in the narrative, and null for unused bounds.
+Foundation and mathematics courses do not also earn breadth credits. Prerequisite-support courses do not earn Programme credits.
+Course facts (prerequisites, offerings, preclusions, and the special co-requisite pair) are enforced independently by the fixed compiler and are not fields to translate.
+Do not silently correct a contradictory request; translate it faithfully.

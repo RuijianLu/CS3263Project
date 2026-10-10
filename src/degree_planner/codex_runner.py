@@ -11,7 +11,7 @@ from pathlib import Path
 from .collect import read_json, write_json
 from .benchmark import load_jsonl
 from .schemas import write_schemas
-from .protocol import fingerprints, verify_manifest
+from .protocol import fingerprints, verify_manifest, require_current_benchmark
 
 # Capabilities are disabled rather than relying on a 'read-only' shell alone.
 DISABLED = ["shell_tool", "unified_exec", "apps", "plugins", "multi_agent", "memories",
@@ -129,6 +129,7 @@ def run_one(root, case, approach, config, destination):
     return record
 
 def run(root, split="dev", limit=None, run_name="initial", approaches=("direct","assisted")):
+    require_current_benchmark(root)
     config = read_json(root / "experiment.json")
     if config["attempts_per_case"] != 1:
         raise ValueError("Initial protocol allows one attempt per case")

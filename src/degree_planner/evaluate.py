@@ -9,9 +9,10 @@ from .benchmark import load_jsonl
 from .checker import check, translation_differences
 from .schemas import PLAN_SCHEMA, validate, validate_spec
 from .solver import solve
-from .protocol import verify_manifest
+from .protocol import verify_manifest, require_current_benchmark
 
 def evaluate(root, run_name="initial", split="test"):
+    require_current_benchmark(root)
     courses, req = read_json(root / "data/courses.json"), read_json(root / "data/requirements.json")
     cases = load_jsonl(root / f"data/benchmark/{split}.jsonl")
     gold = {g["id"]: g for g in load_jsonl(root / "data/benchmark/gold.jsonl")}
@@ -141,6 +142,7 @@ def evaluate(root, run_name="initial", split="test"):
     return summary
 
 def verify_benchmark(root):
+    require_current_benchmark(root)
     courses, req = read_json(root / "data/courses.json"), read_json(root / "data/requirements.json")
     counts = Counter()
     for gold in load_jsonl(root / "data/benchmark/gold.jsonl"):

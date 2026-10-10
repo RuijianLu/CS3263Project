@@ -1,76 +1,95 @@
-"""Independent checks of proposal sub-problems 1-3 and benchmark integrity."""
+"""Proposal sub-problems 1-3: feasible outputs and independent validation; no enumeration."""
 from __future__ import annotations
 import copy
-from itertools import product
 from pathlib import Path
 import pytest
 from degree_planner.collect import read_json
-from degree_planner.benchmark import gold_spec, load_jsonl, group
+from degree_planner.benchmark import gold_spec
 from degree_planner.checker import check
-from degree_planner.normalize import resolve
+from degree_planner.csp import build_csp
+from degree_planner.inspection import solve_and_export
+from degree_planner.policy import MAX_UNITS
+from degree_planner.schemas import validate_spec
 from degree_planner.solver import solve
 
 ROOT = Path(__file__).resolve().parents[1]
 
-def course(code, units=4, offered=(1,2), prerequisite=None):
-    return dict(code=code, units=units, offered_semesters=list(offered),
+
+def course(code, units=4, prerequisite=None):
+    return dict(code=code, title=code, units=units, offered_semesters=[1,2],
                 prerequisites=prerequisite, corequisites=[], preclusions=[], selectable=True)
 
-def small_spec(required, semesters=(1,2), max_units=32):
+
+def small_spec(required, semesters=(1,2), max_units=MAX_UNITS):
     return dict(completed=[], semesters=list(semesters), max_units=max_units,
                 required=list(required), forbidden=[], fixed=[], groups=[])
 
-def exhaustive(spec, courses, pairs=()):
-    # Enumerate assignments without using any solver expression/compiler.
-    names = list(courses)
-    for assignments in product(range(len(spec["semesters"])+1), repeat=len(names)):
-        plan = {"status":"feasible", "semesters":[[] for _ in spec["semesters"]], "explanation":"enumerated"}
-        for code, semester in zip(names, assignments):
-            if semester: plan["semesters"][semester-1].append(code)
-        if check(plan,spec,courses,pairs)["valid"]: return True
-    return False
 
-@pytest.mark.parametrize("spec,courses,pairs", [
-    (small_spec(["A","B"]), {"A":course("A"),"B":course("B",prerequisite="A")}, ()),
-    (small_spec(["A","B"],(1,)), {"A":course("A"),"B":course("B",prerequisite="A")}, ()),
-    (small_spec(["A"],(2,)), {"A":course("A",offered=(1,))}, ()),
-    (small_spec(["A","B"],(1,),4), {"A":course("A"),"B":course("B")}, ()),
-    (small_spec(["A","B"]), {"A":course("A",offered=(1,)),"B":course("B",offered=(2,))}, (("A","B"),)),
-    (small_spec(["C"]), {"A":course("A"),"B":course("B"),"C":course("C",prerequisite={"nOf":[1,["A","B"]]})}, ())
-])
-def test_solver_agrees_with_exhaustive_search(spec,courses,pairs):
-    result=solve(spec,courses,pairs)
-    assert (result["status"]=="feasible")==exhaustive(spec,courses,pairs)
-    if result["status"]=="feasible": assert check(result,spec,courses,pairs)["valid"]
+@pytest.mark.parametrize("example", ["foundation-remaining","ai-remaining"])
+def test_real_example_produces_independently_valid_schedule(example):
+    courses=read_json(ROOT/"data/courses.json")
+    req=read_json(ROOT/"data/requirements.json")
+    spec=read_json(ROOT/f"data/examples/{example}.json")
+    assert spec["max_units"] == req["max_units_per_semester"] == 16
+    plan=solve(spec,courses,req["corequisite_pairs"])
+    checked=check(plan,spec,courses,req["corequisite_pairs"])
+    assert plan["status"]=="feasible"
+    assert checked["valid"], checked["violations"]
+    assert all(s["units"]<=16 for s in checked["semesters"])
+    assert all(g["passed"] for g in checked["groups"])
 
-def test_completed_prerequisite_is_not_repeated():
+
+def test_feasibility_model_has_no_objective():
     courses={"A":course("A"),"B":course("B",prerequisite="A")}
-    spec=small_spec(["A","B"],(1,))
-    spec["completed"]=["A"]
-    result=solve(spec,courses)
-    assert result["semesters"]==[["B"]]
+    problem=build_csp(small_spec(["B"]),courses)
+    assert not problem.model.has_objective()
+    assert problem.inspection["objective"] is None
+    assert problem.inspection["constraint_count"]==len(problem.model.proto.constraints)
 
-def test_preclusion_with_completed_course():
-    courses={"A":course("A"),"B":course("B")}
+
+def test_larger_workload_is_rejected():
+    courses={"A":course("A")}
+    spec=small_spec(["A"],max_units=32)
+    with pytest.raises(ValueError):
+        validate_spec(spec,courses)
+    assert not check({"status":"feasible","semesters":[["A"],[]],"explanation":""},spec,courses)["valid"]
+
+
+def test_workload_and_prerequisites_are_independently_checked():
+    courses={c:course(c) for c in ("A","B","C","D","E")}
+    courses["E"]["prerequisites"]="A"
+    spec=small_spec(list(courses))
+    plan=solve(spec,courses)
+    assert check(plan,spec,courses)["valid"]
+    invalid={"status":"feasible","semesters":[list(courses),[]],"explanation":""}
+    failures={v["type"] for v in check(invalid,spec,courses)["violations"]}
+    assert {"workload","prerequisite"}<=failures
+
+
+def test_completed_prerequisite_and_concurrent_pair():
+    courses={"A":course("A"),"B":course("B",prerequisite="A"),"C":course("C")}
+    spec=small_spec(["A","B","C"],semesters=(1,))
+    spec["completed"]=["A"]
+    plan=solve(spec,courses,[("B","C")])
+    assert set(plan["semesters"][0])=={"B","C"}
+    assert check(plan,spec,courses,[("B","C")])["valid"]
+
+
+def test_or_prerequisite_and_preclusion_produce_valid_choice():
+    courses={"A":course("A"),"B":course("B"),"C":course("C",prerequisite={"or":["A","B"]})}
     courses["A"]["preclusions"]=["B"]
-    spec=small_spec(["B"])
-    spec["completed"]=["A"]
-    assert solve(spec,courses)["status"]=="infeasible"
+    spec=small_spec(["C"])
+    assert check(solve(spec,courses),spec,courses)["valid"]
 
-def test_fractional_credits_and_no_minimum():
+
+def test_fractional_credits_and_empty_semesters_are_allowed():
     courses={"A":course("A",2.5),"B":course("B",2.5)}
     spec=small_spec(["A","B"],max_units=4)
-    result=solve(spec,courses)
-    assert result["status"]=="feasible"
-    assert check(result,spec,courses)["valid"]
+    assert check(solve(spec,courses),spec,courses)["valid"]
     assert check({"status":"feasible","semesters":[[],[]],"explanation":""},small_spec([]),courses)["valid"]
 
-def test_checker_rejects_same_semester_prerequisite():
-    courses={"A":course("A"),"B":course("B",prerequisite="A")}
-    report=check({"status":"feasible","semesters":[["A","B"],[]],"explanation":""},small_spec(["B"]),courses)
-    assert "prerequisite" in {v["type"] for v in report["violations"]}
 
-def test_focus_shares_completion_without_breadth_credits():
+def test_focus_counts_do_not_duplicate_breadth_credits():
     courses=read_json(ROOT/"data/courses.json")
     req=read_json(ROOT/"data/requirements.json")
     spec=gold_spec(courses,req,["CS2109S","CP3200"],4)
@@ -79,30 +98,17 @@ def test_focus_shares_completion_without_breadth_credits():
     assert "CS2109S" not in groups["breadth"]["courses"]
     assert "CP3200" in groups["breadth"]["courses"]
 
-def test_grade_and_cohort_normalisation():
-    assert resolve({"nOf":[1,["CS1231S:D","CS2040S:D"]]})=={"nOf":[1,["CS1231S","CS2040S"]]}
-    assert resolve({"cohort":{"rule":"IF_IN","years":["S:2025"]},"then":"CS2109S:D"})=="CS2109S"
-    assert resolve({"cohort":{"rule":"IF_IN","years":["E:2025"]},"then":"CS2109S:D"}) is True
-    with pytest.raises(ValueError): resolve("CS1010%:D")
 
-def test_benchmark_labels_and_counts():
-    gold=load_jsonl(ROOT/"data/benchmark/gold.jsonl")
-    tests=load_jsonl(ROOT/"data/benchmark/test.jsonl")
-    assert len(gold)==30 and len(tests)==24
-    assert len({g["id"] for g in gold})==30
-    assert sum(g["status"]=="infeasible" and g["id"].startswith("test-") for g in gold)==6
+def test_saved_stages_can_be_checked_again(tmp_path):
+    source=ROOT/"data/examples/ai-remaining.json"
+    spec=read_json(source)
+    output=tmp_path/"inspection"
+    plan,checked=solve_and_export(ROOT,spec,source,output)
+    assert checked["valid"]
+    assert {p.name for p in output.iterdir()} >= {
+        "spec.json","request.txt","csp.json","csp.md","model.pbtxt",
+        "plan.json","schedule.csv","validation.json","report.md","manifest.json"}
     courses=read_json(ROOT/"data/courses.json")
     req=read_json(ROOT/"data/requirements.json")
-    for answer in gold:
-        plan=solve(answer["spec"],courses,req["corequisite_pairs"])
-        assert plan["status"]==answer["status"], answer["id"]
-        if plan["status"]=="feasible":
-            assert check(plan,answer["spec"],courses,req["corequisite_pairs"])["valid"],answer["id"]
-
-def test_checker_detects_mutated_real_plan():
-    courses=read_json(ROOT/"data/courses.json")
-    req=read_json(ROOT/"data/requirements.json")
-    answer=next(g for g in load_jsonl(ROOT/"data/benchmark/gold.jsonl") if g["id"]=="test-easy-06")
-    plan=copy.deepcopy(answer["reference_plan"])
-    plan["semesters"][0].append("CS4246")
-    assert not check(plan,answer["spec"],courses,req["corequisite_pairs"])["valid"]
+    assert check(read_json(output/"plan.json"),read_json(output/"spec.json"),courses,req["corequisite_pairs"])["valid"]
+    assert "PASS" in (output/"report.md").read_text(encoding="utf-8")

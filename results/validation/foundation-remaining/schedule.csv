@@ -1,0 +1,18 @@
+remaining_position,normal_semester,course,title,units
+1,1,CS2040S,Data Structures and Algorithms,4.0
+1,1,CS2100,Computer Organisation,4.0
+1,1,ST2334,Probability and Statistics,4.0
+2,2,CS2109S,Introduction to AI and Machine Learning,4.0
+3,1,CS3268,Responsible AI: from Algorithms to Impact,4.0
+3,1,MA2104,Multivariable Calculus,4.0
+4,2,CS3230,Design and Analysis of Algorithms,4.0
+5,1,CS4248,Introduction to Large Language Models,4.0
+5,1,CS4261,Algorithmic Mechanism Design,4.0
+6,2,CS2030S,Programming Methodology II,4.0
+6,2,CS2106,Introduction to Operating Systems,4.0
+7,1,CS2101,Effective Communication for Computing Professionals,4.0
+7,1,CS2103T,Software Engineering,4.0
+8,2,CS3263,Foundations of Artificial Intelligence,4.0
+8,2,CS3264,Foundations of Machine Learning,4.0
+8,2,CS4277,3D Computer Vision,4.0
+8,2,CS5242,Neural Networks and Deep Learning,4.0

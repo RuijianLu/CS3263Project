@@ -1,0 +1,19 @@
+{
+  "formulation": "csp-feasibility-16-v1",
+  "objective": null,
+  "spec_source": "E:\\NUS\\AY26-27 Sem 1\\CS3263\\Project\\CS3263Project\\data\\examples\\ai-remaining.json",
+  "max_units": 16,
+  "artifact_sha256": {
+    "data/courses.json": "334da6099be466a8a2f2e072d015c27511574aac2290505c79a72f431f6fbd47",
+    "data/requirements.json": "14bdcdbec4ca6097d455375f8d7f66a47514be9b791e4418746f7c1a943f3f69",
+    "src/degree_planner/csp.py": "5d7994be1d2bae4ffffe679b59e313001ede410b3ebf05c69c7a73406653b6bf",
+    "src/degree_planner/solver.py": "be16d1045f38bd96b237ef9550ffaf11b2f4168c6086140d97ff364cc3b25631",
+    "src/degree_planner/checker.py": "c804d3f44ae5f23921069c8434dc8ec3823c9feb08c5ed10fd9066f4cf28afa4",
+    "src/degree_planner/schemas.py": "1301914a07c96664c3b76d9b19e89e431e4519b4d41dcfbbc5341d53aa661436",
+    "src/degree_planner/policy.py": "c06103711734b32248458ddf14334feeab7827255fd2141fb79f9f0f6365e611",
+    "src/degree_planner/inspection.py": "38d8b45c41d7f7e6d79b7cc59902911fb87bd03f0e2a8eebb1e2e95772c49c6e"
+  },
+  "spec_sha256": "792e309c86886e2d330e4daf742f8debd563228261ad4310fbe3f46927c4e325",
+  "validation_only": true,
+  "model_calls": 0
+}

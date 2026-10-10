@@ -1,5 +1,6 @@
 """Proposal sub-problems 1-3: collect real course facts and their provenance."""
 from __future__ import annotations
+from .policy import MAX_UNITS
 import hashlib
 import json
 import re
@@ -99,7 +100,7 @@ def collect(root: Path, refresh: bool = False):
         "non_industry_cp_max_units": 12,
         "programme_level1000_4000_min_fraction": 0.8,
         "corequisite_pairs": [["CS2101", "CS2103T"]],
-        "max_units_per_semester": 32,
+        "max_units_per_semester": MAX_UNITS,
         "sources": [COHORT_URL, FOCUS_URL],
         "interpretation": [
             "Foundation and mathematics credits cannot also earn breadth credits.",

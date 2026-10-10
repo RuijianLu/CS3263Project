@@ -3,10 +3,9 @@ import copy
 from pathlib import Path
 import pytest
 from degree_planner.collect import read_json
-from degree_planner.protocol import fingerprints, verify_manifest
+from degree_planner.protocol import fingerprints, verify_manifest, require_current_benchmark
 from degree_planner.codex_runner import prepare_prompt
 from degree_planner.benchmark import load_jsonl
-from degree_planner.evaluate import evaluate
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -33,3 +32,8 @@ def test_model_prompt_excludes_gold_label_and_reference():
         assert "reference_plan" not in prompt
         assert "label_rationale" not in prompt
         assert "gold.jsonl" not in prompt
+
+
+def test_historical_benchmark_is_not_reused_for_current_policy():
+    with pytest.raises(ValueError, match="historical"):
+        require_current_benchmark(ROOT)

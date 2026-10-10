@@ -22,7 +22,7 @@
     "max_units": {
       "type": "integer",
       "minimum": 0,
-      "maximum": 64
+      "maximum": 16
     },
     "required": {
       "type": "array",
