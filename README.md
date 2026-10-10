@@ -113,7 +113,7 @@ Only a course's normal-semester offering pattern is modelled. Timetable clashes,
 For a catalogue prerequisite course $p$, define:
 
 $$
-b_{p,t}=d_p+\sum_{s<t}x_{p,s}.
+b_{p,t}=d_p+\sum_{s\lt t}x_{p,s}.
 $$
 
 Thus, $b_{p,t}=1$ exactly when $p$ was completed before the plan or in an earlier remaining semester. A prerequisite taken concurrently does **not** satisfy this expression. A missing prerequisite code evaluates to false; an OR expression can still use another available alternative.
