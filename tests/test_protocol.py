@@ -36,4 +36,8 @@ def test_model_prompt_excludes_gold_label_and_reference():
 
 def test_historical_benchmark_is_not_reused_for_current_policy():
     with pytest.raises(ValueError, match="historical"):
-        require_current_benchmark(ROOT)
+        require_current_benchmark(ROOT/"results/historical/32-unit-inputs")
+
+
+def test_current_benchmark_matches_its_validated_inputs():
+    require_current_benchmark(ROOT)

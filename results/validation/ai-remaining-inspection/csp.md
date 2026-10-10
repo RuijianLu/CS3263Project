@@ -1,10 +1,10 @@
 # Compiled CSP inspection
 
 - Workload cap: 16 units per normal semester.
-- Remaining normal semesters: [1, 2, 1].
+- Remaining normal semesters: [1, 2, 1, 2].
 - Objective: none; find any satisfying assignment.
-- Variables: 955.
-- Constraints: 1671.
+- Variables: 1248.
+- Constraints: 2127.
 
 All decision and logical auxiliary variables have domain {0,1}. Backend constants have singleton domains.
 Semester suffixes are remaining positions (1-based), not normal Semester 1/2.
@@ -12,23 +12,23 @@ csp.json lists every variable/domain and constraint description; backend_index p
 
 | Constraint family | Number |
 |---|---:|
-| before_link | 168 |
-| eligibility | 17 |
+| before_link | 228 |
+| eligibility | 16 |
 | fixed_semester | 2 |
 | no_retake | 87 |
-| offering | 45 |
-| paired_enrolment | 3 |
+| offering | 60 |
+| paired_enrolment | 4 |
 | preclusion | 101 |
-| prerequisite | 261 |
-| prerequisite_logic | 876 |
+| prerequisite | 348 |
+| prerequisite_logic | 1168 |
 | programme_group | 8 |
-| required | 13 |
+| required | 14 |
 | selection_link | 87 |
-| workload | 3 |
+| workload | 4 |
 
 ## Mandatory new enrolments
 
-CS3263, CS4246
+CS2106, CS3263, CS4246
 
 ## Requirement groups
 

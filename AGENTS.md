@@ -4,7 +4,7 @@
 
 - Course project guidelines and evaluation criteria: `docs/project-guidelines.md`
 - Submitted proposal: `docs/project-proposal.md`
-- Both are authoritative; consult them when making course-related decisions.
+- Both are authoritative; consult them when making project-related decisions. However, `docs/project-proposal.md` need not be strictly followed; it was a initial idea agreed by the team.
 
 ## Working conventions
 

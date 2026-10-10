@@ -9,8 +9,8 @@ This is local feasibility validation, not a comparison experiment or a graduatio
 ## 1. Input specification
 
 Maximum workload: **16 units**, no minimum.
-Remaining normal semesters: [1, 2, 1].
-Completed record: CP3200, CS1101S, CS1231S, CS2030S, CS2040S, CS2100, CS2101, CS2103T, CS2106, CS2109S, CS3230, MA1521, MA1522, ST2334.
+Remaining normal semesters: [1, 2, 1, 2].
+Completed record: CP3200, CS1101S, CS1231S, CS2030S, CS2040S, CS2100, CS2101, CS2103T, CS2109S, CS3230, MA1521, MA1522, ST2334.
 Read spec.json for the exact required, forbidden, fixed and group fields.
 
 ## 2. Compiled CSP
@@ -22,9 +22,10 @@ The model has no course-count or semester-position objective.
 
 | Remaining position | Normal semester | Units / cap | Courses |
 |---:|---:|---:|---|
-| 1 | 1 | 12 / 16 | CS3263, CS3264, CS3268 |
-| 2 | 2 | 12 / 16 | CS4246, CS4277, CS5339 |
-| 3 | 1 | 4 / 16 | CS5340 |
+| 1 | 1 | 12 / 16 | CS2106, CS3263, CS4261 |
+| 2 | 2 | 8 / 16 | CS4246, CS4248 |
+| 3 | 1 | 4 / 16 | CS3268 |
+| 4 | 2 | 8 / 16 | CS5242, CS5340 |
 
 Course titles and credits are listed in schedule.csv. Completed courses are not repeated.
 
@@ -32,39 +33,39 @@ Course titles and credits are listed in schedule.csv. Completed courses are not 
 
 | Check family | Passed | Total |
 |---|---:|---:|
-| availability | 7 | 7 |
-| duplicate | 10 | 10 |
-| eligibility | 7 | 7 |
+| availability | 8 | 8 |
+| duplicate | 12 | 12 |
+| eligibility | 8 | 8 |
 | fixed_semester | 2 | 2 |
-| forbidden | 7 | 7 |
+| forbidden | 8 | 8 |
 | horizon | 1 | 1 |
-| preclusion | 4 | 4 |
-| prerequisite | 7 | 7 |
-| required | 13 | 13 |
+| preclusion | 3 | 3 |
+| prerequisite | 8 | 8 |
+| required | 14 | 14 |
 | requirement | 8 | 8 |
-| workload | 3 | 3 |
+| workload | 4 | 4 |
 
 ### Programme group totals
 
 | Group | Actual units | Actual courses | Unit bounds | Course bounds | Pass |
 |---|---:|---:|---|---|---|
 | breadth | 34 | 8 | 32 .. - | - .. - | True |
-| breadth_upper | 16 | 4 | 12 .. - | - .. - | True |
+| breadth_upper | 20 | 5 | 12 .. - | - .. - | True |
 | ai_primary | 20 | 5 | - .. - | 3 .. - | True |
-| ai_upper | 4 | 1 | - .. - | 1 .. - | True |
+| ai_upper | 8 | 2 | - .. - | 1 .. - | True |
 | industry | 6 | 1 | 6 .. 12 | - .. - | True |
 | cp_non_industry | 0 | 0 | - .. 12 | - .. - | True |
 | programme_lower | 74 | 18 | 64 .. - | - .. - | True |
 
 Each group's matched courses:
 
-- breadth: CP3200, CS3263, CS3264, CS3268, CS4246, CS4277, CS5339, CS5340.
-- breadth_upper: CS4246, CS4277, CS5339, CS5340.
-- ai_primary: CS2109S, CS3263, CS3264, CS3268, CS4246.
-- ai_upper: CS4246.
+- breadth: CP3200, CS3263, CS3268, CS4246, CS4248, CS4261, CS5242, CS5340.
+- breadth_upper: CS4246, CS4248, CS4261, CS5242, CS5340.
+- ai_primary: CS2109S, CS3263, CS3268, CS4246, CS4248.
+- ai_upper: CS4246, CS4248.
 - industry: CP3200.
 - cp_non_industry: (none).
-- programme_lower: CP3200, CS1231S, CS2030S, CS2040S, CS2100, CS2101, CS2103T, CS2106, CS2109S, CS3230, CS3263, CS3264, CS3268, CS4246, CS4277, MA1521, MA1522, ST2334.
+- programme_lower: CP3200, CS1231S, CS2030S, CS2040S, CS2100, CS2101, CS2103T, CS2106, CS2109S, CS3230, CS3263, CS3268, CS4246, CS4248, CS4261, MA1521, MA1522, ST2334.
 
 ### Violations
 

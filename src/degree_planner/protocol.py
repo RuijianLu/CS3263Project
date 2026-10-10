@@ -8,7 +8,11 @@ from .collect import read_json
 def fingerprints(root, split):
     paths = ["data/courses.json", "data/requirements.json", f"data/benchmark/{split}.jsonl",
              "data/benchmark/gold.jsonl", "prompts/direct.txt", "prompts/translate.txt",
-             "prompts/plan.schema.json", "prompts/spec.schema.json"]
+             "prompts/plan.schema.json", "prompts/spec.schema.json", "data/benchmark/manifest.json",
+             "src/degree_planner/csp.py", "src/degree_planner/solver.py", "src/degree_planner/checker.py",
+             "src/degree_planner/schemas.py", "src/degree_planner/policy.py",
+             "src/degree_planner/codex_runner.py", "src/degree_planner/evaluate.py",
+             "src/degree_planner/protocol.py"]
     return {p: hashlib.sha256((root / p).read_bytes()).hexdigest() for p in paths}
 
 def verify_manifest(root, manifest, split, config=None):
@@ -34,3 +38,12 @@ def require_current_benchmark(root):
     answers = [json.loads(line) for line in (root / "data/benchmark/gold.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
     if not answers or any(a["spec"]["max_units"] != MAX_UNITS for a in answers):
         raise ValueError("The saved benchmark is historical and uses the previous workload cap. A new 16-unit benchmark is required before comparison or relabelling. Use verify for local CSP validation.")
+    from .benchmark import VERSION, source_hashes
+    manifest = read_json(root / "data/benchmark/manifest.json")
+    if manifest.get("version") != VERSION or not manifest.get("local_validation", {}).get("valid"):
+        raise ValueError("The current benchmark has no completed local validation")
+    if manifest["source_sha256"] != source_hashes(root):
+        raise ValueError("Benchmark source facts or solver implementation changed; revalidate before comparison")
+    for path, digest in manifest["artifact_sha256"].items():
+        if hashlib.sha256((root / "data/benchmark" / path).read_bytes()).hexdigest() != digest:
+            raise ValueError(f"Validated benchmark artifact changed: {path}")

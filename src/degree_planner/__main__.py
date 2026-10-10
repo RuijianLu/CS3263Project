@@ -29,7 +29,8 @@ def main():
     commands = parser.add_subparsers(dest="command", required=True)
     collect_parser = commands.add_parser("collect")
     collect_parser.add_argument("--refresh", action="store_true")
-    commands.add_parser("benchmark")
+    p = commands.add_parser("benchmark", help="Build and locally validate 24 development + 120 evaluation cases")
+    p.add_argument("--seed", type=int, default=3263)
     commands.add_parser("verify", help="Solve and independently validate the two current examples")
     for name in ("solve", "inspect-csp"):
         p = commands.add_parser(name)
@@ -54,7 +55,9 @@ def main():
             collect(root, args.refresh)
             normalize(root)
         elif args.command == "benchmark":
-            build(root)
+            result = build(root, args.seed)
+            print(f"Benchmark validated: {result['cases']} cases; {result['feasible']} feasible, {result['infeasible']} infeasible; no model calls.")
+            print(f"Review index: {root / 'data/benchmark/README.md'}")
         elif args.command == "verify":
             print("\n".join(verify_examples(root)))
         elif args.command == "run":

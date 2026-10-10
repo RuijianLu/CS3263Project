@@ -18,7 +18,9 @@ def load_spec(root, value):
     if not path.is_file():
         path = root / "data/examples" / f"{value}.json"
     if not path.is_file():
-        raise ValueError("Provide a specification JSON path or an example name: foundation-remaining, ai-remaining")
+        path = root / "data/benchmark/cases" / f"{value}.json"
+    if not path.is_file():
+        raise ValueError("Provide a specification JSON path, an example name, or a benchmark case identifier")
     return read_json(path), path.resolve()
 
 
@@ -132,7 +134,8 @@ def solve_and_export(root, spec, source, output, time_limit=10):
     (output / "report.md").write_text(render_report(spec, plan, checked, courses), encoding="utf-8")
     paths = ["data/courses.json", "data/requirements.json",
              "src/degree_planner/csp.py", "src/degree_planner/solver.py", "src/degree_planner/checker.py",
-             "src/degree_planner/schemas.py", "src/degree_planner/policy.py", "src/degree_planner/inspection.py"]
+             "src/degree_planner/schemas.py", "src/degree_planner/policy.py", "src/degree_planner/inspection.py",
+             "src/degree_planner/benchmark.py"]
     write_json(output / "manifest.json", {
         "formulation": problem.inspection["formulation"], "objective": None,
         "spec_source": str(source), "max_units": spec["max_units"],

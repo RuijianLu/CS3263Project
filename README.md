@@ -2,13 +2,14 @@
 
 **Current version: a feasibility CSP with a maximum of 16 modelled units per normal semester.** There is no scheduling or course-count objective. The implementation addresses proposal sub-problems (1) course selection, (2) prerequisites, and (3) semester allocation. Preferences are deferred.
 
-Current work is local CSP construction and solution validation. No new model calls, comparison experiments, exhaustive enumeration, or large benchmark generation have been performed for this version. Programme interpretations still require student-team review.
+Current work is local CSP construction, solution validation, and a new **24-development/120-evaluation benchmark**. No model comparison has been run for this version. Programme interpretations still require review.
 
 Start with the readable results:
 
-- [AI-remaining example: solution and checks](results/validation/ai-remaining/report.md)
 - [Foundation-remaining example: solution and checks](results/validation/foundation-remaining/report.md)
+- [AI-remaining example: solution and checks](results/validation/ai-remaining/report.md)
 - [AI-remaining example: compiled CSP overview](results/validation/ai-remaining/csp.md)
+- [Current benchmark design and review index](data/benchmark/README.md)
 
 ## Scope and assumptions
 
@@ -16,6 +17,7 @@ Start with the readable results:
 - Programme Requirements only: 36 Foundation units, 32 Breadth/Depth units, and 12 Mathematics/Sciences units.
 - **At most 16 units of modelled courses per normal semester; no minimum.** This is the project's workload policy, not a claim about an official NUS enrolment limit. It reserves room for courses outside our model and other study commitments.
 - Completed courses, the first normal semester, and the number of remaining semesters are inputs.
+- Foundation and mathematics courses are not automatically completed. Only courses explicitly listed in a testcase's completed record receive past credit; outstanding required courses must be newly scheduled.
 - CP3200 is assumed already completed and contributes six Industry Experience units.
 - The catalogue includes Foundation, Mathematics/Sciences, AI primaries/electives and prerequisite dependencies. Other focus-area electives are excluded.
 - Normal Semesters 1 and 2 alternate. The AY2026/27 offering pattern is repeated in simulated future years.
@@ -290,8 +292,12 @@ The intended pipeline is natural-language request -> JSON specification -> compi
 
 The example names are:
 
-- foundation-remaining: eight semesters; an early completed record with CS1101S, CS1231S, MA1521, MA1522 and CP3200.
-- ai-remaining: three semesters; Foundation/Mathematics already completed, with CS3263 fixed to position 1 and CS4246 to position 2.
+- foundation-remaining: seven semesters beginning in normal Semester 2; CS1101S, CS1231S and MA1521 are the only completed academic courses. CS2109S and the other outstanding Foundation/Mathematics courses, along with enough AI/breadth electives, must be newly scheduled.
+- ai-remaining: four semesters beginning in normal Semester 1; twelve academic courses are completed after four simulated past semesters. CS2106 remains outstanding, along with the AI/breadth electives. CS3263 is fixed to remaining position 1 and CS4246 to position 2.
+
+CS1101S is an explicit required course in both examples. It is classified as prerequisite support in the restricted Programme Requirements catalogue: its four units count toward semester workload, but do not add Foundation/breadth credits. Requiring it fixes the introductory programming pathway instead of allowing another catalogue alternative.
+
+The completed CP3200 credit is a retained simplifying assumption, not a realistic first-year transcript. Academic course histories follow the study-stage policy below; internship scheduling remains outside the model.
 
 They are inspection fixtures, not a statistically meaningful evaluation dataset.
 
@@ -337,6 +343,92 @@ verify solves the two current examples and saves their reports under results/val
 
 Custom input: copy one example JSON, change its fields, and use solve PATH_TO_SPEC.json. --output can choose a directory inside results/validation/. Output paths are restricted to that area to protect source documents and historical experiments. The raw collector remains available, but refreshing source facts changes the interpretation being validated.
 
+## Current benchmark
+
+The active data/benchmark/ contains 24 development cases and 120 evaluation cases under the 16-unit feasibility model. Four remaining horizons (4-7) cross three designed difficulty levels. Every evaluation cell has seven feasible and three infeasible cases: **84 feasible and 36 infeasible evaluation cases**. Development has one of each label per cell.
+
+Completed academic records come from checked past semester schedules, with progress ranges of 2-4 courses for seven remaining semesters, 5-7 for six, 8-9 for five, and 10-12 for four. Some early histories leave CS1101S outstanding and require the full introductory programming chain to be scheduled. The ranges do not overlap, so longer horizons always have fewer completed academic courses. The cases leave different foundation courses outstanding; they do not grant all foundations by default. CP3200 remains a separate internship-credit exception.
+
+Completed-course sets are disjoint between development and evaluation. Histories recur within a split to support controlled comparisons; different cases add elective requirements, fixed positions, and forbidden alternatives. Cases remain correlated synthetic variants, not independent observations of real students. Constraint mechanisms can recur across splits, so this is not a claim of generalisation to entirely unseen templates.
+
+Course facts, prerequisite expressions, programme bounds and the cap stay fixed. Easy feasible cases require one chosen elective without additional fixed/forbidden constraints; medium cases require three electives, two fixed enrolments and two forbidden alternatives; hard cases require six electives, five fixed enrolments and four forbidden alternatives. These are designed categories, not measured model difficulty. Infeasibility proof difficulty can differ from the surrounding request's designed level.
+
+Every academic history and feasible reference schedule passes the independent checker. Every infeasible case has a solver proof, an arithmetically checked contradiction witness, and a separately checked feasible precursor. Source-rule correctness is distinct from correctness under the frozen model. There are no timeout-based infeasibility labels.
+
+Browse [data/benchmark/README.md](data/benchmark/README.md), index.csv, or individual review/CASE_ID.md files. Each case has an editable specification in cases/CASE_ID.json. Gold labels, histories, reference plans and validation records are retained in gold.jsonl and excluded from model prompts. The first 12 development entries cover all horizon/difficulty cells with six feasible and six infeasible requests.
+
+~~~powershell
+# Rebuild and locally validate the benchmark, without model calls.
+.venv\Scripts\python.exe -m degree_planner benchmark --seed 3263
+
+# Solve one case by identifier and check its saved plan.
+.venv\Scripts\python.exe -m degree_planner solve dev-h7-easy-01
+.venv\Scripts\python.exe -m degree_planner check data/benchmark/cases/dev-h7-easy-01.json results/validation/dev-h7-easy-01/plan.json
+~~~
+
+Generation is seeded and specifications are reproducible for the same frozen facts and implementation. Reference schedules are any satisfying assignments; an OR-Tools/runtime change can produce a different schedule. Comparison commands check the validated input/source hashes before making model calls. Use separate run names such as csp16-pilot (dev) and csp16-evaluation (test); a run cannot mix splits or changed settings. Review the cases before starting the model pilot. No model pilot or evaluation has been run on this benchmark yet.
+
+## Testcase study stage and completed courses
+
+Programme evaluation cases should have **4-7 remaining normal semesters**. Under a stated eight-semester study timeline, the remaining horizon determines how many semesters have elapsed. Longer horizons should generally have fewer completed academic courses, rather than receiving credit for most foundations by default. This is a dataset-design policy; the general solver still supports other horizons for small constraint examples and custom investigations.
+
+One prerequisite-valid synthetic academic history is:
+
+| Past semester | Normal semester | Academic courses completed in that semester | Units |
+|---:|---:|---|---:|
+| 1 | 1 | CS1101S, CS1231S, MA1521 | 12 |
+| 2 | 2 | CS2030S, CS2040S, MA1522 | 12 |
+| 3 | 1 | CS2100, CS2109S, ST2334 | 12 |
+| 4 | 2 | CS2101, CS2103T, CS3230 | 12 |
+
+Take a prefix of this history to create a consistent profile:
+
+| Remaining semesters | Stage at the start of the plan | Past semesters | First normal semester | Completed academic courses |
+|---:|---|---:|---:|---:|
+| 7 | Year 1 Semester 2 | 1 | 2 | 3 |
+| 6 | Year 2 Semester 1 | 2 | 1 | 6 |
+| 5 | Year 2 Semester 2 | 3 | 2 | 9 |
+| 4 | Year 3 Semester 1 | 4 | 1 | 12 |
+
+The counts exclude the separately assumed CP3200 internship credit. These are example profiles, not compulsory student transcripts or a fixed course-count formula. Future generated cases can use different legal academic histories, while keeping previous workload, prerequisites, offerings and co-requisites consistent with the stated study stage. Review completed **units and prerequisite depth**, not just course counts. Early-stage cases should leave substantial foundational work outstanding; later-stage cases can have more completed foundations while retaining AI/breadth work. Both feasible and deliberately infeasible remaining requests are useful; do not silently add completed courses merely to make a request feasible.
+
+The current checker trusts the supplied completed record; it does not reconstruct its past semester order. The table above was separately checked as a four-semester schedule under the frozen catalogue and 16-unit cap. Custom completed records therefore need the author's review for historical plausibility.
+
+## Writing and checking your own testcase
+
+From the project root, copy the full early-stage specification:
+
+~~~powershell
+Copy-Item -LiteralPath data/examples/foundation-remaining.json -Destination data/examples/my-case.json
+~~~
+
+Edit data/examples/my-case.json in a text editor. The JSON must contain all seven specification fields, without comments or extra fields:
+
+| Field | What to write |
+|---|---|
+| completed | Courses actually passed before the plan, including CP3200 under the current internship simplification. Use only catalogue codes; no duplicates. |
+| semesters | One normal-semester number per remaining position, alternating 1 and 2. Seven starting in Semester 2 is [2,1,2,1,2,1,2]; four starting in Semester 1 is [1,2,1,2]. |
+| max_units | Keep 16 for the programme testcases. |
+| required | Keep the full mandatory list, including completed requirements, and add any elective you want to require. Completed courses satisfy their requirement through past credit. |
+| forbidden | Courses that must not be newly enrolled; use [] if none. |
+| fixed | Explicit enrolment positions, e.g. [{"course":"CS3263","semester":3}]. Position 3 means the third remaining semester, not normal Semester 3. Use [] if none. |
+| groups | Keep the copied programme groups and bounds when testing the agreed degree model. Changing them creates a different planning problem. |
+
+Find available codes and course facts in data/courses.json. For a six-semester profile from the table, set completed to ["CP3200","CS1101S","CS1231S","CS2030S","CS2040S","MA1521","MA1522"] and semesters to [1,2,1,2,1,2], leaving the other copied fields unchanged.
+
+Solve the case and then run the independent checker:
+
+~~~powershell
+.venv\Scripts\python.exe -m degree_planner solve data/examples/my-case.json --output results/validation/my-case
+.venv\Scripts\python.exe -m degree_planner check data/examples/my-case.json results/validation/my-case/plan.json
+~~~
+
+Read results/validation/my-case/report.md for the schedule, semester unit totals, group totals and validation result. schedule.csv includes course titles; validation.json lists every check. Add --json to the check command for detailed console output. To examine your own proposed schedule, copy plan.json to a separate filename, edit its semester course arrays, and pass that filename to check with the original testcase JSON.
+
+Interpret status carefully: feasible with independent validation PASS is a checked schedule; infeasible is CP-SAT's conclusion for the supplied specification; unknown means neither a solution nor an infeasibility proof was found within the search limit. The checker validates feasible schedules only, so it cannot independently certify infeasible or unknown output. Those statuses make the solve command exit unsuccessfully even though the saved artifacts remain available. You can retry unknown with a longer --time-limit, without treating it as infeasible.
+
+These commands test the symbolic solver and checker. They do not call a language model. request.txt is a generated description for inspection, not an input to solve, and assumes the standard programme groups. Adding a custom case to model evaluation requires a reviewed natural-language request and validated JSONL/gold entries; editing a convenience export alone does not change the active benchmark. Keep gold specifications and reference schedules out of model prompts. The generated benchmark is ready for review; its model comparison has not yet been run.
+
 ## Sources and unresolved rules
 
 Course facts come from the [NUSMods API](https://api.nusmods.com/v2/). Programme rules come from the [AY2026/27 CS cohort page](https://www.comp.nus.edu.sg/cug/per-cohort/cs/cs-26-27/) and [CS focus-area page](https://www.comp.nus.edu.sg/programmes/ug/focus/).
@@ -349,14 +441,16 @@ The 16-unit cap is a project policy and is stored separately from source facts i
 
 The original 6-development/24-evaluation benchmark and saved comparison records used a **32-unit cap** and an optimization objective. They remain historical evidence and have not been relabelled or re-scored.
 
-- Original benchmark: data/benchmark/.
+All 30 historical cases pre-completed CS1101S and MA1521. Eight of the 24 evaluation cases pre-completed every mandatory Foundation/Mathematics course; the other 16 pre-completed either nine or three of those twelve courses. The earlier accuracy results therefore do not establish performance when the entire academic pathway remains to be planned.
+
+- Original benchmark: results/historical/32-unit-inputs/data/benchmark/.
 - Original records/results: results/runs/, results/pilot/, results/initial/.
 - Exact original inputs and core solver sources: results/historical/32-unit-inputs/.
 - Original Git commit: 468f5b79ddf2c8c363e354f3c5367431a7a0d8d7.
 
-Those results do not describe the current 16-unit feasibility CSP. Changing the cap can change feasibility labels. run and evaluate therefore reject the historical benchmark before making model calls or changing results. Benchmark generation is deferred. A future comparison will require deliberately constructed 16-unit cases, fresh labels and a new run name.
+Those results do not describe the current 16-unit feasibility CSP. Changing the cap can change feasibility labels. The original benchmark was replaced in the active data/benchmark/ only after confirming the archived copies matched exactly. run and evaluate reject historical labels, changed source facts, or changed validated artifacts before making model calls or changing results. The fresh benchmark is ready for a separately named pilot after review.
 
-Larger testcase generation, further model comparisons and preferences remain future work.
+Model comparisons and preferences remain future work. The new 144-case benchmark has been generated and locally validated.
 
 ## Files and proposal mapping
 
@@ -364,12 +458,12 @@ Larger testcase generation, further model comparisons and preferences remain fut
 |---|---|---|
 | collect.py, normalize.py | Source facts and explicit interpretations | 1-3 |
 | policy.py, schemas.py | Workload policy and specification contracts | 1-3 |
-| benchmark.py, data/examples/ | Specification helpers and two local examples | 1-3 |
+| benchmark.py, histories.py, data/examples/ | Checked history generation, labelled benchmark, and local examples | 1-3 and Evaluation |
 | csp.py | Variables, domains, constraints and their inspection record | 1-3 |
 | solver.py | Feasibility search and schedule decoding | 1-3 |
 | checker.py | Independent constraint checks and credit totals | 1-3 |
 | inspection.py, __main__.py | Readable stage artifacts and inspect/solve/check commands | 1-3 |
-| codex_runner.py, evaluate.py, protocol.py | Retained comparison infrastructure; new benchmark required | Evaluation |
+| codex_runner.py, evaluate.py, protocol.py | Controlled comparison infrastructure and frozen-input checks | Evaluation |
 
 docs/ is unchanged. Actual authoritative files are docs/CS3263_Project_Guidelines.md and docs/CS3263_Project_Proposal.md; the shorter names in AGENTS.md are stale references.
 

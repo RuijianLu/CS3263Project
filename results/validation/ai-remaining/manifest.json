@@ -11,9 +11,10 @@
     "src/degree_planner/checker.py": "c804d3f44ae5f23921069c8434dc8ec3823c9feb08c5ed10fd9066f4cf28afa4",
     "src/degree_planner/schemas.py": "1301914a07c96664c3b76d9b19e89e431e4519b4d41dcfbbc5341d53aa661436",
     "src/degree_planner/policy.py": "c06103711734b32248458ddf14334feeab7827255fd2141fb79f9f0f6365e611",
-    "src/degree_planner/inspection.py": "38d8b45c41d7f7e6d79b7cc59902911fb87bd03f0e2a8eebb1e2e95772c49c6e"
+    "src/degree_planner/inspection.py": "0ec7c2acd25de9808e9205fff0ba0c21896552b55ce23f1032357379066ad081",
+    "src/degree_planner/benchmark.py": "c6ae4084efdc658d16a79b640f12f53e5fbed44e7db7cd86c8be123c58830cb1"
   },
-  "spec_sha256": "792e309c86886e2d330e4daf742f8debd563228261ad4310fbe3f46927c4e325",
+  "spec_sha256": "067c4972bc3bb78ae8cfaac4f4a639362017b750477b194152bf6bcb6544e2e7",
   "validation_only": true,
   "model_calls": 0
 }

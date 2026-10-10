@@ -6,7 +6,7 @@
       "type": "horizon",
       "subject": "schedule",
       "passed": true,
-      "detail": "3 semester lists; expected 3"
+      "detail": "4 semester lists; expected 4"
     },
     {
       "type": "duplicate",
@@ -19,6 +19,61 @@
       "subject": "remaining semester 1",
       "passed": true,
       "detail": "12 units <= 16 units"
+    },
+    {
+      "type": "duplicate",
+      "subject": "CS2106",
+      "passed": true,
+      "detail": "Not previously completed or scheduled"
+    },
+    {
+      "type": "forbidden",
+      "subject": "CS2106",
+      "passed": true,
+      "detail": "New enrolment is permitted by the request"
+    },
+    {
+      "type": "eligibility",
+      "subject": "CS2106",
+      "passed": true,
+      "detail": "Selectable under the catalogue assumptions"
+    },
+    {
+      "type": "availability",
+      "subject": "CS2106",
+      "passed": true,
+      "detail": "Normal Semester 1; offered in [1, 2]"
+    },
+    {
+      "type": "prerequisite",
+      "subject": "CS2106",
+      "passed": true,
+      "detail": "Prerequisite expression satisfied using only completed and earlier-semester courses",
+      "prerequisites": {
+        "or": [
+          "CS2100",
+          "CS2100DE",
+          "CS2100HS",
+          "EE2007",
+          "EE2024",
+          "EE2028"
+        ]
+      },
+      "available_before": [
+        "CP3200",
+        "CS1101S",
+        "CS1231S",
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "CS2101",
+        "CS2103T",
+        "CS2109S",
+        "CS3230",
+        "MA1521",
+        "MA1522",
+        "ST2334"
+      ]
     },
     {
       "type": "duplicate",
@@ -97,7 +152,6 @@
         "CS2100",
         "CS2101",
         "CS2103T",
-        "CS2106",
         "CS2109S",
         "CS3230",
         "MA1521",
@@ -107,36 +161,46 @@
     },
     {
       "type": "duplicate",
-      "subject": "CS3264",
+      "subject": "CS4261",
       "passed": true,
       "detail": "Not previously completed or scheduled"
     },
     {
       "type": "forbidden",
-      "subject": "CS3264",
+      "subject": "CS4261",
       "passed": true,
       "detail": "New enrolment is permitted by the request"
     },
     {
       "type": "eligibility",
-      "subject": "CS3264",
+      "subject": "CS4261",
       "passed": true,
       "detail": "Selectable under the catalogue assumptions"
     },
     {
       "type": "availability",
-      "subject": "CS3264",
+      "subject": "CS4261",
       "passed": true,
-      "detail": "Normal Semester 1; offered in [1, 2]"
+      "detail": "Normal Semester 1; offered in [1]"
     },
     {
       "type": "prerequisite",
-      "subject": "CS3264",
+      "subject": "CS4261",
       "passed": true,
       "detail": "Prerequisite expression satisfied using only completed and earlier-semester courses",
       "prerequisites": {
         "and": [
-          "CS2109S",
+          {
+            "or": [
+              "EE2012A",
+              "EE2012",
+              "ST2131",
+              "MA2216",
+              "ST2334",
+              "MA2116",
+              "MA2116T"
+            ]
+          },
           {
             "or": [
               "CS2040",
@@ -148,24 +212,21 @@
           },
           {
             "or": [
+              "MA1100",
+              "MA1100T",
+              "CS1231S",
+              "CS1231"
+            ]
+          },
+          {
+            "or": [
+              "MA2001",
               "MA1101R",
               "MA1311",
-              "MA1513",
               "MA1508E",
-              "MA2001",
+              "MA1513",
               "MA1522"
             ]
-          },
-          {
-            "or": [
-              "EE2012A",
-              "EE2012",
-              "ST2131",
-              "MA2116",
-              "MA2116T",
-              "ST2334",
-              "MA2216"
-            ]
           }
         ]
       },
@@ -178,81 +239,6 @@
         "CS2100",
         "CS2101",
         "CS2103T",
-        "CS2106",
-        "CS2109S",
-        "CS3230",
-        "MA1521",
-        "MA1522",
-        "ST2334"
-      ]
-    },
-    {
-      "type": "duplicate",
-      "subject": "CS3268",
-      "passed": true,
-      "detail": "Not previously completed or scheduled"
-    },
-    {
-      "type": "forbidden",
-      "subject": "CS3268",
-      "passed": true,
-      "detail": "New enrolment is permitted by the request"
-    },
-    {
-      "type": "eligibility",
-      "subject": "CS3268",
-      "passed": true,
-      "detail": "Selectable under the catalogue assumptions"
-    },
-    {
-      "type": "availability",
-      "subject": "CS3268",
-      "passed": true,
-      "detail": "Normal Semester 1; offered in [1]"
-    },
-    {
-      "type": "prerequisite",
-      "subject": "CS3268",
-      "passed": true,
-      "detail": "Prerequisite expression satisfied using only completed and earlier-semester courses",
-      "prerequisites": {
-        "and": [
-          {
-            "or": [
-              "CS2109S",
-              "CS2109HS",
-              "CS3243"
-            ]
-          },
-          {
-            "or": [
-              "ST2334",
-              {
-                "and": [
-                  {
-                    "or": [
-                      "ST2131",
-                      "MA2116",
-                      "MA2116T"
-                    ]
-                  },
-                  "ST2132"
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      "available_before": [
-        "CP3200",
-        "CS1101S",
-        "CS1231S",
-        "CS2030S",
-        "CS2040S",
-        "CS2100",
-        "CS2101",
-        "CS2103T",
-        "CS2106",
         "CS2109S",
         "CS3230",
         "MA1521",
@@ -270,7 +256,7 @@
       "type": "workload",
       "subject": "remaining semester 2",
       "passed": true,
-      "detail": "12 units <= 16 units"
+      "detail": "8 units <= 16 units"
     },
     {
       "type": "duplicate",
@@ -352,8 +338,7 @@
         "CS2109S",
         "CS3230",
         "CS3263",
-        "CS3264",
-        "CS3268",
+        "CS4261",
         "MA1521",
         "MA1522",
         "ST2334"
@@ -361,52 +346,73 @@
     },
     {
       "type": "duplicate",
-      "subject": "CS4277",
+      "subject": "CS4248",
       "passed": true,
       "detail": "Not previously completed or scheduled"
     },
     {
       "type": "forbidden",
-      "subject": "CS4277",
+      "subject": "CS4248",
       "passed": true,
       "detail": "New enrolment is permitted by the request"
     },
     {
       "type": "eligibility",
-      "subject": "CS4277",
+      "subject": "CS4248",
       "passed": true,
       "detail": "Selectable under the catalogue assumptions"
     },
     {
       "type": "availability",
-      "subject": "CS4277",
+      "subject": "CS4248",
       "passed": true,
-      "detail": "Normal Semester 2; offered in [2]"
+      "detail": "Normal Semester 2; offered in [1, 2]"
     },
     {
       "type": "prerequisite",
-      "subject": "CS4277",
+      "subject": "CS4248",
       "passed": true,
       "detail": "Prerequisite expression satisfied using only completed and earlier-semester courses",
       "prerequisites": {
         "and": [
           {
             "or": [
-              "MA2001",
-              "MA1522",
-              "MA1101R",
-              "MA1311",
-              "MA1506",
-              "MA1508E"
+              "CS2109S",
+              "CS2109HS",
+              "CS3244",
+              "MA3270",
+              "ST4248"
             ]
           },
           {
             "or": [
-              "CS2040",
-              "CS2040S",
-              "CS2040C",
-              "CS2040DE",
-              "CS2040HS"
+              "EE2012A",
+              "EE2012",
+              "ST2131",
+              "MA2216",
+              "MA2116",
+              "MA2116T",
+              "ST2334",
+              "YSC2243"
+            ]
+          },
+          {
+            "or": [
+              "MA1505",
+              "MA1507",
+              "MA1521",
+              "MA1102R",
+              "YSC1216",
+              "MA2002",
+              {
+                "nOf": [
+                  2,
+                  [
+                    "MA1511",
+                    "MA1512"
+                  ]
+                ]
+              }
             ]
           }
         ]
@@ -424,8 +430,7 @@
         "CS2109S",
         "CS3230",
         "CS3263",
-        "CS3264",
-        "CS3268",
+        "CS4261",
         "MA1521",
         "MA1522",
         "ST2334"
@@ -433,38 +438,140 @@
     },
     {
       "type": "duplicate",
-      "subject": "CS5339",
+      "subject": "remaining semester 3",
+      "passed": true,
+      "detail": "No duplicate codes within this semester"
+    },
+    {
+      "type": "workload",
+      "subject": "remaining semester 3",
+      "passed": true,
+      "detail": "4 units <= 16 units"
+    },
+    {
+      "type": "duplicate",
+      "subject": "CS3268",
       "passed": true,
       "detail": "Not previously completed or scheduled"
     },
     {
       "type": "forbidden",
-      "subject": "CS5339",
+      "subject": "CS3268",
       "passed": true,
       "detail": "New enrolment is permitted by the request"
     },
     {
       "type": "eligibility",
-      "subject": "CS5339",
+      "subject": "CS3268",
       "passed": true,
       "detail": "Selectable under the catalogue assumptions"
     },
     {
       "type": "availability",
-      "subject": "CS5339",
+      "subject": "CS3268",
       "passed": true,
-      "detail": "Normal Semester 2; offered in [2]"
+      "detail": "Normal Semester 1; offered in [1]"
     },
     {
       "type": "prerequisite",
-      "subject": "CS5339",
+      "subject": "CS3268",
       "passed": true,
       "detail": "Prerequisite expression satisfied using only completed and earlier-semester courses",
       "prerequisites": {
         "and": [
           {
             "or": [
-              "CS3264",
+              "CS2109S",
+              "CS2109HS",
+              "CS3243"
+            ]
+          },
+          {
+            "or": [
+              "ST2334",
+              {
+                "and": [
+                  {
+                    "or": [
+                      "ST2131",
+                      "MA2116",
+                      "MA2116T"
+                    ]
+                  },
+                  "ST2132"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "available_before": [
+        "CP3200",
+        "CS1101S",
+        "CS1231S",
+        "CS2030S",
+        "CS2040S",
+        "CS2100",
+        "CS2101",
+        "CS2103T",
+        "CS2106",
+        "CS2109S",
+        "CS3230",
+        "CS3263",
+        "CS4246",
+        "CS4248",
+        "CS4261",
+        "MA1521",
+        "MA1522",
+        "ST2334"
+      ]
+    },
+    {
+      "type": "duplicate",
+      "subject": "remaining semester 4",
+      "passed": true,
+      "detail": "No duplicate codes within this semester"
+    },
+    {
+      "type": "workload",
+      "subject": "remaining semester 4",
+      "passed": true,
+      "detail": "8 units <= 16 units"
+    },
+    {
+      "type": "duplicate",
+      "subject": "CS5242",
+      "passed": true,
+      "detail": "Not previously completed or scheduled"
+    },
+    {
+      "type": "forbidden",
+      "subject": "CS5242",
+      "passed": true,
+      "detail": "New enrolment is permitted by the request"
+    },
+    {
+      "type": "eligibility",
+      "subject": "CS5242",
+      "passed": true,
+      "detail": "Selectable under the catalogue assumptions"
+    },
+    {
+      "type": "availability",
+      "subject": "CS5242",
+      "passed": true,
+      "detail": "Normal Semester 2; offered in [1, 2]"
+    },
+    {
+      "type": "prerequisite",
+      "subject": "CS5242",
+      "passed": true,
+      "detail": "Prerequisite expression satisfied using only completed and earlier-semester courses",
+      "prerequisites": {
+        "and": [
+          {
+            "or": [
+              "CS2109S",
               "CS3244",
               "CG3201"
             ]
@@ -495,24 +602,14 @@
         "CS2109S",
         "CS3230",
         "CS3263",
-        "CS3264",
         "CS3268",
+        "CS4246",
+        "CS4248",
+        "CS4261",
         "MA1521",
         "MA1522",
         "ST2334"
       ]
-    },
-    {
-      "type": "duplicate",
-      "subject": "remaining semester 3",
-      "passed": true,
-      "detail": "No duplicate codes within this semester"
-    },
-    {
-      "type": "workload",
-      "subject": "remaining semester 3",
-      "passed": true,
-      "detail": "4 units <= 16 units"
     },
     {
       "type": "duplicate",
@@ -536,7 +633,7 @@
       "type": "availability",
       "subject": "CS5340",
       "passed": true,
-      "detail": "Normal Semester 1; offered in [1, 2]"
+      "detail": "Normal Semester 2; offered in [1, 2]"
     },
     {
       "type": "prerequisite",
@@ -594,11 +691,10 @@
         "CS2109S",
         "CS3230",
         "CS3263",
-        "CS3264",
         "CS3268",
         "CS4246",
-        "CS4277",
-        "CS5339",
+        "CS4248",
+        "CS4261",
         "MA1521",
         "MA1522",
         "ST2334"
@@ -606,7 +702,7 @@
     },
     {
       "type": "preclusion",
-      "subject": "CG3201/CS3264",
+      "subject": "CG2271/CS2106",
       "passed": true,
       "detail": "Cannot include both when at least one is newly enrolled"
     },
@@ -618,15 +714,15 @@
     },
     {
       "type": "preclusion",
-      "subject": "CS3244/CS3264",
+      "subject": "CS3263/CS4263",
       "passed": true,
       "detail": "Cannot include both when at least one is newly enrolled"
     },
     {
-      "type": "preclusion",
-      "subject": "CS3263/CS4263",
+      "type": "required",
+      "subject": "CS1101S",
       "passed": true,
-      "detail": "Cannot include both when at least one is newly enrolled"
+      "detail": "Present in completed record or new schedule"
     },
     {
       "type": "required",
@@ -728,7 +824,7 @@
       "type": "requirement",
       "subject": "breadth_upper",
       "passed": true,
-      "detail": "16 units >= 12"
+      "detail": "20 units >= 12"
     },
     {
       "type": "requirement",
@@ -740,7 +836,7 @@
       "type": "requirement",
       "subject": "ai_upper",
       "passed": true,
-      "detail": "1 courses >= 1"
+      "detail": "2 courses >= 1"
     },
     {
       "type": "requirement",
@@ -772,9 +868,9 @@
       "position": 1,
       "normal_semester": 1,
       "courses": [
+        "CS2106",
         "CS3263",
-        "CS3264",
-        "CS3268"
+        "CS4261"
       ],
       "units": 12.0,
       "max_units": 16
@@ -784,19 +880,28 @@
       "normal_semester": 2,
       "courses": [
         "CS4246",
-        "CS4277",
-        "CS5339"
+        "CS4248"
       ],
-      "units": 12.0,
+      "units": 8.0,
       "max_units": 16
     },
     {
       "position": 3,
       "normal_semester": 1,
       "courses": [
-        "CS5340"
+        "CS3268"
       ],
       "units": 4.0,
+      "max_units": 16
+    },
+    {
+      "position": 4,
+      "normal_semester": 2,
+      "courses": [
+        "CS5242",
+        "CS5340"
+      ],
+      "units": 8.0,
       "max_units": 16
     }
   ],
@@ -806,11 +911,11 @@
       "matched_courses": [
         "CP3200",
         "CS3263",
-        "CS3264",
         "CS3268",
         "CS4246",
-        "CS4277",
-        "CS5339",
+        "CS4248",
+        "CS4261",
+        "CS5242",
         "CS5340"
       ],
       "units": 34.0,
@@ -825,12 +930,13 @@
       "name": "breadth_upper",
       "matched_courses": [
         "CS4246",
-        "CS4277",
-        "CS5339",
+        "CS4248",
+        "CS4261",
+        "CS5242",
         "CS5340"
       ],
-      "units": 16.0,
-      "course_count": 4,
+      "units": 20.0,
+      "course_count": 5,
       "min_units": 12,
       "max_units": null,
       "min_courses": null,
@@ -842,9 +948,9 @@
       "matched_courses": [
         "CS2109S",
         "CS3263",
-        "CS3264",
         "CS3268",
-        "CS4246"
+        "CS4246",
+        "CS4248"
       ],
       "units": 20.0,
       "course_count": 5,
@@ -857,10 +963,11 @@
     {
       "name": "ai_upper",
       "matched_courses": [
-        "CS4246"
+        "CS4246",
+        "CS4248"
       ],
-      "units": 4.0,
-      "course_count": 1,
+      "units": 8.0,
+      "course_count": 2,
       "min_units": null,
       "max_units": null,
       "min_courses": 1,
@@ -905,10 +1012,10 @@
         "CS2109S",
         "CS3230",
         "CS3263",
-        "CS3264",
         "CS3268",
         "CS4246",
-        "CS4277",
+        "CS4248",
+        "CS4261",
         "MA1521",
         "MA1522",
         "ST2334"
