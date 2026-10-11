@@ -1,0 +1,56 @@
+{
+  "run": "csp16-pilot",
+  "scoring_policy_id": "outcome-v1-explanation-secondary",
+  "review_method": "Codex inspection against frozen specifications, translations and independent checker records.",
+  "student_team_review": "pending",
+  "primary_score_adjustments": [],
+  "primary_correct_unchanged": {"direct": 12, "assisted": 12},
+  "explanation_review": {
+    "scope": "All six feasible direct responses; content is a secondary manual finding.",
+    "responses_reviewed": 6,
+    "responses_with_numerical_errors": 2,
+    "findings": [
+      {
+        "case_id": "dev-h7-easy-01",
+        "approach": "direct",
+        "status": "numerical_error",
+        "claims": [
+          {"group": "ai_primary", "claimed_courses": 8, "checked_courses": 7},
+          {"group": "ai_upper", "claimed_courses": 4, "checked_courses": 3}
+        ],
+        "schedule_valid": true,
+        "response": "../runs/csp16-pilot/dev-h7-easy-01-direct/response.json",
+        "evidence": "../runs/csp16-pilot/dev-h7-easy-01-direct/check.json"
+      },
+      {
+        "case_id": "dev-h5-hard-01",
+        "approach": "direct",
+        "status": "numerical_error",
+        "claims": [
+          {"group": "ai_primary", "claimed_courses": 5, "checked_courses": 4}
+        ],
+        "schedule_valid": true,
+        "response": "../runs/csp16-pilot/dev-h5-hard-01-direct/response.json",
+        "evidence": "../runs/csp16-pilot/dev-h5-hard-01-direct/check.json"
+      }
+    ]
+  },
+  "translation_review": {
+    "scope": "The sole canonical mismatch among the twelve schema-valid assisted translations.",
+    "differences_reviewed": 1,
+    "findings": [
+      {
+        "case_id": "dev-h6-hard-02",
+        "approach": "assisted",
+        "canonical_match": false,
+        "differences": ["required"],
+        "semantic_status": "equivalent",
+        "reason": "The only field difference adds LSM1301 to required. Both specifications fix LSM1301 at position 5, which already forces new enrolment. The added requirement is redundant in both directions.",
+        "primary_correct": true,
+        "specification": "../../data/benchmark/cases/dev-h6-hard-02.json",
+        "response": "../runs/csp16-pilot/dev-h6-hard-02-assisted/response.json",
+        "canonical_audit": "../runs/csp16-pilot/dev-h6-hard-02-assisted/translation_audit.json"
+      }
+    ]
+  }
+}

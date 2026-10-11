@@ -1,0 +1,13 @@
+{
+  "valid": true,
+  "cases": 144,
+  "feasible": 96,
+  "infeasible": 48,
+  "unique_specifications": 144,
+  "distinct_histories": {
+    "dev": 8,
+    "test": 70
+  },
+  "history_split_overlap": 0,
+  "model_calls": 0
+}

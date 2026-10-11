@@ -1,0 +1,2275 @@
+{
+  "format_version": 1,
+  "run_name": "csp16-evaluation-v1",
+  "status_at_freeze": "prepared; no model attempts started",
+  "created_at_utc": "2026-10-11T09:52:53.116674+00:00",
+  "client_timezone": "Asia/Shanghai",
+  "manifest_sha256": "fcdadf15789c04a1ae63594217a553a189a1b60a46046ddf221e4a3e0c31dbff",
+  "source_assumption_review": {
+    "status": "completed",
+    "reported_by": "user",
+    "reported_on_client_date": "2026-10-11",
+    "finding": "No major problems found.",
+    "basis": "User confirmation in the current chat; no additional independent review is claimed."
+  },
+  "selection": {
+    "split": "test",
+    "cases": 120,
+    "feasible": 84,
+    "infeasible": 36,
+    "horizon_difficulty_cells": {
+      "7/easy": {
+        "feasible": 7,
+        "infeasible": 3
+      },
+      "7/medium": {
+        "feasible": 7,
+        "infeasible": 3
+      },
+      "7/hard": {
+        "feasible": 7,
+        "infeasible": 3
+      },
+      "6/easy": {
+        "feasible": 7,
+        "infeasible": 3
+      },
+      "6/medium": {
+        "feasible": 7,
+        "infeasible": 3
+      },
+      "6/hard": {
+        "feasible": 7,
+        "infeasible": 3
+      },
+      "5/easy": {
+        "feasible": 7,
+        "infeasible": 3
+      },
+      "5/medium": {
+        "feasible": 7,
+        "infeasible": 3
+      },
+      "5/hard": {
+        "feasible": 7,
+        "infeasible": 3
+      },
+      "4/easy": {
+        "feasible": 7,
+        "infeasible": 3
+      },
+      "4/medium": {
+        "feasible": 7,
+        "infeasible": 3
+      },
+      "4/hard": {
+        "feasible": 7,
+        "infeasible": 3
+      }
+    },
+    "approaches": [
+      "direct",
+      "assisted"
+    ],
+    "planned_attempts": 240,
+    "model_attempts_at_freeze": 0
+  },
+  "tests": {
+    "command": ".venv\\Scripts\\python.exe -B -m pytest -q -p no:cacheprovider",
+    "exit_code": 0,
+    "passed": 25,
+    "summary": "25 passed in 1.19s",
+    "execution_note": "Ran outside the filesystem sandbox to allow the existing Microsoft Store Python interpreter to launch."
+  },
+  "runtime": {
+    "python": "3.11.9",
+    "executable": "E:\\NUS\\AY26-27 Sem 1\\CS3263\\Project\\CS3263Project\\.venv\\Scripts\\python.exe",
+    "base_executable": "C:\\Users\\Lu Ruijian\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "codex_cli": "codex-cli 0.162.0-alpha.17.2",
+    "codex_executable": "C:\\Users\\Lu Ruijian\\AppData\\Local\\OpenAI\\Codex\\bin\\2e5e00daee91c61d\\codex.EXE",
+    "dependency_versions": {
+      "absl-py": "2.5.1",
+      "attrs": "26.1.0",
+      "beautifulsoup4": "4.15.0",
+      "colorama": "0.4.6",
+      "immutabledict": "4.3.1",
+      "iniconfig": "2.3.1",
+      "jsonschema": "4.26.0",
+      "jsonschema-specifications": "2025.9.1",
+      "numpy": "2.4.6",
+      "ortools": "9.15.6755",
+      "packaging": "26.3",
+      "pandas": "3.0.6",
+      "pluggy": "1.6.0",
+      "protobuf": "6.33.6",
+      "Pygments": "2.21.0",
+      "pytest": "9.1.1",
+      "python-dateutil": "2.9.0.post0",
+      "referencing": "0.37.0",
+      "rpds-py": "2026.9.1",
+      "six": "1.17.0",
+      "soupsieve": "2.10",
+      "typing_extensions": "4.16.0",
+      "tzdata": "2026.5"
+    },
+    "requirements_lock_matches": true
+  },
+  "git": {
+    "head": "4162aab72ff67091405d5ce181ee775ee41011b9",
+    "status_before_snapshot_creation": " M README.md\n M src/degree_planner/codex_runner.py\n M src/degree_planner/evaluate.py\n?? results/csp16-pilot/\n?? results/runs/csp16-pilot/\n?? tests/test_evaluate.py\n",
+    "snapshot_basis": "Exact current working files, including existing uncommitted changes; no Git commit was made."
+  },
+  "scoring_policy": {
+    "id": "outcome-v1-explanation-secondary",
+    "primary": {
+      "feasible": "A schema-valid plan passes the independent checker against the original specification.",
+      "infeasible": "A schema-valid infeasible answer agrees with the validated gold label.",
+      "denominator": "Completed selected attempts, including execution and output failures; pending and unselected attempts excluded."
+    },
+    "explanations": {
+      "role": "Secondary manual review; explanation content does not change primary scores.",
+      "infeasibility": "Any sufficient contradiction is acceptable; the annotated witness need not be the only cause.",
+      "format": "Output schema requirements still apply; where required, the explanation field remains mandatory."
+    },
+    "translations": {
+      "role": "Separate diagnostic; canonical field differences do not change primary outcome scores.",
+      "semantic_review": "Differences require review as equivalent, non-equivalent or unresolved; outcome agreement alone does not establish fidelity."
+    }
+  },
+  "snapshot": {
+    "directory": "frozen",
+    "files": 426,
+    "bytes": 8594566,
+    "sha256": {
+      "AGENTS.md": "a7fab21fb9272e6a0be8801a65dc3a5d2e11ddaf8af27b6f82130a144152e8ed",
+      "CONTRIBUTIONS.md": "7c2f584cae5846d102ffc3fbe33134962c768e1af7bd751e76f20407c0d841d4",
+      "data/benchmark/cases/dev-h4-easy-01.json": "3280e1ca581f7acb87c50b3fa678abce6ccd921c9710ab89a0b885225f34419b",
+      "data/benchmark/cases/dev-h4-easy-02.json": "d30f8395c77fe2c06e1721051dbe48da9e8a10d89402cc22cea1d6edd7418550",
+      "data/benchmark/cases/dev-h4-hard-01.json": "a8f5b4df17a6a17d791649e22c5a58f8aa810e5693b419353c9eab2e3d5aa05e",
+      "data/benchmark/cases/dev-h4-hard-02.json": "894d99d0decd6adeea402a101daa1440db026dcf399f704b3c562d9306e5b63f",
+      "data/benchmark/cases/dev-h4-medium-01.json": "c3338b72e9052e78128e3ab21ebb26d616ef8c741003d7fd0b030a4c7138e64c",
+      "data/benchmark/cases/dev-h4-medium-02.json": "7f8f8e64f66a02d821580f1e59e53c756044ee16067d8b128dfd233606add741",
+      "data/benchmark/cases/dev-h5-easy-01.json": "7fa0250afa1af0a03eddc3614fe9019e59b7d04e6341303dcc86082ef4ef1603",
+      "data/benchmark/cases/dev-h5-easy-02.json": "467998bf5f976ce377cfe0bee43f4107f5d012278b8113c6db5702873bfdf99b",
+      "data/benchmark/cases/dev-h5-hard-01.json": "aac6e53a13270151f9271a399fc5821bd16681b91fc54ccf09eefdf03939e15e",
+      "data/benchmark/cases/dev-h5-hard-02.json": "f4d991246b045e7acd3f7f7ebcb0dbf07d21f42c949b271b85c2e55542c01448",
+      "data/benchmark/cases/dev-h5-medium-01.json": "430e22feba5da4c4fee1216c2e0ab844cf1296f5e1a3c31acecc859e04aa626d",
+      "data/benchmark/cases/dev-h5-medium-02.json": "a8a249d29277e5c6e675e0ff61875504a3d267c7a78056a71248331e5f45f816",
+      "data/benchmark/cases/dev-h6-easy-01.json": "de247111d193f67a19b221cf6a2627ebf5999df7c71385128058eb20b9ffa3b4",
+      "data/benchmark/cases/dev-h6-easy-02.json": "1467ff2056cadaa84d0ff3f286ba5ea906c069035e09ebc1eb395cb1bb044a2a",
+      "data/benchmark/cases/dev-h6-hard-01.json": "987aa1c86ab3309415d08040063d13aa437132ce5bd70a9e098b42b3fd3e8d32",
+      "data/benchmark/cases/dev-h6-hard-02.json": "7861881cbd2d5cca944a98bae60a71050ffb7802100bb8ab4b08f40b213c59a5",
+      "data/benchmark/cases/dev-h6-medium-01.json": "21c2fb9bb544ab30dbb9c9f3a22a8b64b3ff0693dc7383e3f8cf41e846af975f",
+      "data/benchmark/cases/dev-h6-medium-02.json": "77552f999f075dd27f920efd12c61d3c93266ef4cf79f7687852492f3291f71d",
+      "data/benchmark/cases/dev-h7-easy-01.json": "2334f8db63fa184152ddade7fa50c08af398510ae3c2b6c350c057cf46f91e8b",
+      "data/benchmark/cases/dev-h7-easy-02.json": "bf59114234fa3a0e4507641c3226617b97bc7000f3cc05e9b106c23acc1f6c97",
+      "data/benchmark/cases/dev-h7-hard-01.json": "0bec94b029c0399f4a142fbfc4f32616e1ca896d92bc772311f7cdac7509bf41",
+      "data/benchmark/cases/dev-h7-hard-02.json": "df919e533488f2e915b8c62000c5a3e73319574a438c97c5a17c8c19ab5c8c4b",
+      "data/benchmark/cases/dev-h7-medium-01.json": "11c8376a75232727e5fd840088dddbdf65cb8eeb40f9154546c72b4f3bc70e9e",
+      "data/benchmark/cases/dev-h7-medium-02.json": "8802a2048134f831d2a82dac8cca95f1c3e87e54b154f77b17953bfd43767d28",
+      "data/benchmark/cases/test-h4-easy-01.json": "68ecb8d0c2dcae3c44fc8b554b7beafea9640c7585f3583b35655a44340d9cc3",
+      "data/benchmark/cases/test-h4-easy-02.json": "1c69f504fbaf47415713f2586e92b40f1dbf27290d7661cdab6407f7af3fde11",
+      "data/benchmark/cases/test-h4-easy-03.json": "d43bbe729c9adf040ddfa3f75ed8ce41dcce1b06938d4d6de7a6f9563c4663de",
+      "data/benchmark/cases/test-h4-easy-04.json": "d6c5f93612b062d52aa2fa125d846256a96fa3d13c37b9ca07895dd7d35a078c",
+      "data/benchmark/cases/test-h4-easy-05.json": "25134f10d58e69e3ebf3a2037c9dc5b704efff542487319cab07d37ce30d93d2",
+      "data/benchmark/cases/test-h4-easy-06.json": "49938f4c7d290d0b40df9898a6cb4568cab24aa1c73caad72b1dada00336c8cd",
+      "data/benchmark/cases/test-h4-easy-07.json": "1181149cc2f8f9c6afdb08f553b97417ca69df71a3f4e09e3bf22c4728eb1f71",
+      "data/benchmark/cases/test-h4-easy-08.json": "4bdacd1801745c2955034afa98a8c6473afa62dad817270e9c5bd75fdcfc164e",
+      "data/benchmark/cases/test-h4-easy-09.json": "87d0a7527552321869d830570f751a9fe30aabc7f2943cbb80ab065413f5aba9",
+      "data/benchmark/cases/test-h4-easy-10.json": "300bff0d8f8ef7a1be59161ea833286872d9d1a02dd3504698e276daaaf637d1",
+      "data/benchmark/cases/test-h4-hard-01.json": "e81d35c513fd3791ab39c43e76f9e72f639c7234af37cfb99dc5f4f4cec3085c",
+      "data/benchmark/cases/test-h4-hard-02.json": "ee8b94cc1791aca6fa972fdd836e4166d5dd6a997396d68fad6c29874468eabe",
+      "data/benchmark/cases/test-h4-hard-03.json": "4b3f6b95d81a0317f05f66e01bd7f4f4301606b1437aca1d8b24c0019e1a358d",
+      "data/benchmark/cases/test-h4-hard-04.json": "2eaefb9e9ac661a883825a3e22f6b413db6a5c2e787cc57d47c763310934f335",
+      "data/benchmark/cases/test-h4-hard-05.json": "e1eeed86186b0fcdfb8d5fca7d100756b488e3628fb6baf8a7e7a17bafaba696",
+      "data/benchmark/cases/test-h4-hard-06.json": "4fca16e418f2d17db402688890e20e260cfa225a6fdd34fd98de4df7478a2def",
+      "data/benchmark/cases/test-h4-hard-07.json": "f47e3e1c265db54525c70b2998b10a3c1f2e2c31c837f4a7fdc44a04a5d283ac",
+      "data/benchmark/cases/test-h4-hard-08.json": "55dabbfbd9263005038d97a883475e02b709f355cefdccae9cf6216e7a31e210",
+      "data/benchmark/cases/test-h4-hard-09.json": "932ee9e8a1da83cb2fe4b2e1b4ce1b1836244b0f2ebb7e0129bb8864ef1a0908",
+      "data/benchmark/cases/test-h4-hard-10.json": "fbd7c043dbeeab218489c798f95ae3f02e9c4117a5dc72c7c65519c73ef9b87e",
+      "data/benchmark/cases/test-h4-medium-01.json": "8d07eb6269f02e3bee1ff3474b5dedd0dd090fc33e92a0780bda89e97195ae0b",
+      "data/benchmark/cases/test-h4-medium-02.json": "ea74aa4d63adcd77dc62a9085739f88b33b01adf7f2f5bfe8b4c5396602710f9",
+      "data/benchmark/cases/test-h4-medium-03.json": "1127406acd455c155cd66dfc663de793dac7d93ff9af875d29d466ff25f1cbfa",
+      "data/benchmark/cases/test-h4-medium-04.json": "fad2efa9f0da9d8f61e3793405e04db13105d5deab2cb0e59e07f00aa40c5765",
+      "data/benchmark/cases/test-h4-medium-05.json": "d4a681c7868dbd5df4116e3d575f8dce03f8f27cc27f80940ac19bbebc2c4ca3",
+      "data/benchmark/cases/test-h4-medium-06.json": "6a085c8513dc6d135bd8455b39cfaf0b30928eade71b9d803df4c87e5e1f361f",
+      "data/benchmark/cases/test-h4-medium-07.json": "855b12f1820f802a99e1f720239cc090e8bcbb0d3f15739e0fb51560471d1945",
+      "data/benchmark/cases/test-h4-medium-08.json": "860fa26877b30fce3724752718ab23c563b5c29a68808b8362ec98a3c64ef716",
+      "data/benchmark/cases/test-h4-medium-09.json": "3e1dc957e536e15de4e3078395360773653c82fe972e0ef75cebc83728c5a5f9",
+      "data/benchmark/cases/test-h4-medium-10.json": "bbbbc968f3f9ecc9cb6b628a35d81039aa2f2a0860e688089437c60310345a19",
+      "data/benchmark/cases/test-h5-easy-01.json": "69b8baf3d1779999b20421f1315b2e9f01b1136529b61c84e1505b94932f9b16",
+      "data/benchmark/cases/test-h5-easy-02.json": "55bc5b008e1466ab1a0712e4b2677660c38634ed739b94e71a93e22520c10bec",
+      "data/benchmark/cases/test-h5-easy-03.json": "f4d0336da71a7f351b9c9c245cea6d291dcdbe7c69a1fe921df8d25cdd47ee61",
+      "data/benchmark/cases/test-h5-easy-04.json": "b559dee698bdc26cffdaaf0bc412735d14e8216d6d99f1adb43fa12aa57653e3",
+      "data/benchmark/cases/test-h5-easy-05.json": "e27163f7ae467b43221905e04cc76c4eae44df6ac5439820daf302bc3de4a340",
+      "data/benchmark/cases/test-h5-easy-06.json": "1ab2a32d25975ee499ee1516dd7b39cd06f99e6adbd19b0b3b165d746222955f",
+      "data/benchmark/cases/test-h5-easy-07.json": "5880d558f466c437fa13cb076baa1a4dab3fa86109c0d163b4a8ae0c6044d22f",
+      "data/benchmark/cases/test-h5-easy-08.json": "177ff6c01628d19e9d669704468a19b235eb8f398b3365d5a68a27504eb713df",
+      "data/benchmark/cases/test-h5-easy-09.json": "c9d04629b742443292c9f9cc8676d5a17fb3ff596b0c06cdf0e945ff2a983f7f",
+      "data/benchmark/cases/test-h5-easy-10.json": "585cd75ef8053225a2b2fca97e2f671ada767ff2c9f70430b8039e409b2ee5ed",
+      "data/benchmark/cases/test-h5-hard-01.json": "4058c5c118fccd665f828a565a5c9def141032df4c6c3a16e81d8b2c734bf95d",
+      "data/benchmark/cases/test-h5-hard-02.json": "769b7b8c309deb8a39b614e7022c8b066be49565a86cb11044433ea42299d1a0",
+      "data/benchmark/cases/test-h5-hard-03.json": "220959a5f6c4089af6397f463438f1f2669a579ce79dddada4abdcaf9dea4da6",
+      "data/benchmark/cases/test-h5-hard-04.json": "26c2e7679864e5a516e1a11cf0bdadd020b045cdff2a79a65c4f4fe7a188297e",
+      "data/benchmark/cases/test-h5-hard-05.json": "639b950e9a3c834eb194f118148c5ea62519cceade5af43177ed9a4439646ad6",
+      "data/benchmark/cases/test-h5-hard-06.json": "7d7fc189ee8ba064e49e1cd70cdd2a42a7ea8fd1b5fd8e0dba35a2fdadbc69bc",
+      "data/benchmark/cases/test-h5-hard-07.json": "ef92016b911dd0bafdea7a48150f8491cbfc77bd39b7bb2a8ec670606f485e02",
+      "data/benchmark/cases/test-h5-hard-08.json": "8b820a2f6ae92962513691834162f035a016731cd74abf511be93e6a23eab1b4",
+      "data/benchmark/cases/test-h5-hard-09.json": "921df780cc072e2300d1a76e1056441855de5fa25a4d737862b8a1304e24e1fd",
+      "data/benchmark/cases/test-h5-hard-10.json": "a170b2b970dfab39d558fc9fe55a5ebc89750273b30e1fe12e9163ea3251d341",
+      "data/benchmark/cases/test-h5-medium-01.json": "d8209dfc9478133fccf47d2f5d3d2f52fe39aea6ed5062e3411e6f1dda080d77",
+      "data/benchmark/cases/test-h5-medium-02.json": "00d3290314a66637ceb917fa79a2014c053ab5d9c5e44d9e588028fdd716a64f",
+      "data/benchmark/cases/test-h5-medium-03.json": "5fe51143a081189eca2b817fac520747ae7b4179e8aea5f1da680bfd1950b7bb",
+      "data/benchmark/cases/test-h5-medium-04.json": "40326275891293afea6a60045f4ebc49ca75313e8c9464a7ae849e23373f9564",
+      "data/benchmark/cases/test-h5-medium-05.json": "6f703f922f66563690ea0332e92c83ac7421618cb092f5b507cf2d59142d7456",
+      "data/benchmark/cases/test-h5-medium-06.json": "6632936debc743ed09c4382921580c81be032f0235ce8596fa9bf6220e2271ea",
+      "data/benchmark/cases/test-h5-medium-07.json": "11b2d6a7b970617f321568c66e4117a043e300621f48a3c36610ff97946f59f8",
+      "data/benchmark/cases/test-h5-medium-08.json": "b147c1bc798fbbc57dd7e951c56c8a1555db130c5c8a497c5d3919967169f0ff",
+      "data/benchmark/cases/test-h5-medium-09.json": "098dbe235a77e6c6e58c4dddc0bd7296fe3ab2be0b2137c8c85be98b06ccb9f3",
+      "data/benchmark/cases/test-h5-medium-10.json": "b300734721d5d8393333b9e031bcf197c5df26fa15c6840297a24fbca7c93e2e",
+      "data/benchmark/cases/test-h6-easy-01.json": "fc66fb74f3e1579247a286427c66d4e8d654c4092b04f986195b195abb9f3eba",
+      "data/benchmark/cases/test-h6-easy-02.json": "330afe95094015bd466b532de10052ab7afc50a7ab2218822cea7b2ad34366c6",
+      "data/benchmark/cases/test-h6-easy-03.json": "774e113b28ff099dddd68f534fde80f3ce172382aab510c4ffa58f0a4f6feb97",
+      "data/benchmark/cases/test-h6-easy-04.json": "54925d6886c7eb8132ece524043d933167c10cc792ed11a28b67a9beaa9503e7",
+      "data/benchmark/cases/test-h6-easy-05.json": "ab7782140178a482799320f63c71336b5bf823e5e2e3c7e054020ff6121969f4",
+      "data/benchmark/cases/test-h6-easy-06.json": "a7032b55be36a6bd3d3f59f54b51358dc39c7f093179e631d70e2fe200184486",
+      "data/benchmark/cases/test-h6-easy-07.json": "5ffd6462eaf2420ce66159e8b2d801f1df97f637416cdb3471fb37aa855a3c94",
+      "data/benchmark/cases/test-h6-easy-08.json": "8e3f0ef7307e80fe90b82b5da39559be0b81cdb88960717c891614014c45b2df",
+      "data/benchmark/cases/test-h6-easy-09.json": "80f5856c546c171170495248b20ba4ca2c3e1b8b10cd8873a900028c78d95879",
+      "data/benchmark/cases/test-h6-easy-10.json": "9a0dffdf3a42eb977c5dfa047fe2eb251d6a1b4ac590a66cab4f0dd04c8d53e7",
+      "data/benchmark/cases/test-h6-hard-01.json": "31aa863e80d1abdac8d3e24a819e7f9b17cd42ad88ff86dc11e873cc1b98a88e",
+      "data/benchmark/cases/test-h6-hard-02.json": "47b962e9848874b0156006121d7a07f6cb7bda19a67c5abcae1334f4fdc00360",
+      "data/benchmark/cases/test-h6-hard-03.json": "f115b7e608b9dc0e44fc34348ccb952c3dddea4c59bbf9d46ad7eed38c410545",
+      "data/benchmark/cases/test-h6-hard-04.json": "634a31d04edd58261f1a8a283d8037d4b778f49bf21fb8e79b3fb46b3b66626d",
+      "data/benchmark/cases/test-h6-hard-05.json": "13262c0f7536c2a34357c5fd0d04cc56ae7a6da732efd2ba5f2b15fcdc1511a1",
+      "data/benchmark/cases/test-h6-hard-06.json": "969091b847d8651a10465ebdda6cdad3875a62ab180960fe7404f0ea275d2ba5",
+      "data/benchmark/cases/test-h6-hard-07.json": "b43c663ec2badaa2560d733cb7f62c7429a7128747f5782d7959d81d765331a5",
+      "data/benchmark/cases/test-h6-hard-08.json": "05396a0a40df9742846316ad385577eb1989e692e343feda196a068cb040b5be",
+      "data/benchmark/cases/test-h6-hard-09.json": "19c7dbd67d4b8ec1fe98cc2f0b8577c681ce3d54f21403d29868e90ac78beeed",
+      "data/benchmark/cases/test-h6-hard-10.json": "cb31138e3712d9497d1d3bbe5231f80be7cfd200cef1c2ae4d5d5c2b3d58a3ad",
+      "data/benchmark/cases/test-h6-medium-01.json": "db41733938e51957dbb88b6c7817a13e86cb2001e204ebaa6c5f8fcd1c943576",
+      "data/benchmark/cases/test-h6-medium-02.json": "ab31769b21920fdacb584a92bd67e07f8b33f986460fc605e01cf362bf8f8a9c",
+      "data/benchmark/cases/test-h6-medium-03.json": "3f5acea6fa284a9cd510e2a352471f9e7e8314470a9e32b2c64c3530efb2c883",
+      "data/benchmark/cases/test-h6-medium-04.json": "4ec22c03d1678b6ec1d4de32ca387920e66c4d36730d1499bbde5073162a3ac1",
+      "data/benchmark/cases/test-h6-medium-05.json": "0bc945543f0f34fe88bcaeb71bc9bdcf82035426ef8f738e8ac0622c3379b116",
+      "data/benchmark/cases/test-h6-medium-06.json": "8f143e6c294ee296471c040e9ec0a76bc4cbfcc2ddb15bde291811a9d8d1e940",
+      "data/benchmark/cases/test-h6-medium-07.json": "75cadf88a9ed55534578b3c6894d26533cbab5f4116c12710357ea326c5e4d7b",
+      "data/benchmark/cases/test-h6-medium-08.json": "063bc4d9f5ac2a4645513e6ca711846040b673a074e1b02feb988142f4b1f549",
+      "data/benchmark/cases/test-h6-medium-09.json": "36e9410f8f481edd71b989a985692d2c74be0f0af20d4f2dcb8ba8d75528cae0",
+      "data/benchmark/cases/test-h6-medium-10.json": "84e3cfbeb5a4b671522a0d932c92983b67c53d8fd62637df7be9b969eeed4252",
+      "data/benchmark/cases/test-h7-easy-01.json": "60fe42dbc73e5459d26eae6df119fe0c6ec061e216437733815514cb4b4815d0",
+      "data/benchmark/cases/test-h7-easy-02.json": "a8ba9e5789ddf082a14bbd7fdb4ad86a607217dd28d8ebf77802f3765131a507",
+      "data/benchmark/cases/test-h7-easy-03.json": "97323d2db44a8bbb04fc3c782cbeee7ea847db4297546ecfd4e3dd5d5b62d74b",
+      "data/benchmark/cases/test-h7-easy-04.json": "f99d9934686cace54594647030eabf3db585feee638dfeacac7e151623dfc255",
+      "data/benchmark/cases/test-h7-easy-05.json": "4a17f1a86241db583b9610b38962fe68550939ccc3b061a1f9827235807f94c0",
+      "data/benchmark/cases/test-h7-easy-06.json": "ba2bc340d082544703a8fffcee1db2a9f21902e8ca51b28ec856f023e850fdc3",
+      "data/benchmark/cases/test-h7-easy-07.json": "23b8eb71650e6c8960b792fcc367b3b24f42b727c1a713995a040d5dc006c894",
+      "data/benchmark/cases/test-h7-easy-08.json": "3732b50071fa045ea23a993430d72aa2490767d76ea01175d4b72c0c14a3775d",
+      "data/benchmark/cases/test-h7-easy-09.json": "76de80146f28e557b4422229e753861fbd48d649b3c157e8faa5cc63eeec3f50",
+      "data/benchmark/cases/test-h7-easy-10.json": "67c6b2aa29478c9ac3d8deb9000e7e5d1f22652a6b5ab56e359b3d19831001b8",
+      "data/benchmark/cases/test-h7-hard-01.json": "a063da562273195f5e5e8ae66b4eeac044a440bbf717bdb952c699e7ad5eb628",
+      "data/benchmark/cases/test-h7-hard-02.json": "e7801ab981fbb74fc7c39611d40548c6b062c27a83b2ac33cbecc3dde11a7730",
+      "data/benchmark/cases/test-h7-hard-03.json": "4816da41ca79ed1fc412b628093c8c745b7694b3efc60a9e9b27c48f2ad9641e",
+      "data/benchmark/cases/test-h7-hard-04.json": "eabcaf99ccf6952e5fa65c0f10c9a6c9871df8424d183b7d6b39212def9ac52a",
+      "data/benchmark/cases/test-h7-hard-05.json": "df8e9bba669bfdce555d4fe0ac12411de5d461a09fc9409b6534f10ca44c8f37",
+      "data/benchmark/cases/test-h7-hard-06.json": "a001b89fb1f323421bbd4b8dd209c7de6c503fbfb3eb4b906e4717b9c63a09a5",
+      "data/benchmark/cases/test-h7-hard-07.json": "f223c4634d165b26dd9eb5f7c70c8cb9e8fd0814428b207a65ed31b7cc9bbafd",
+      "data/benchmark/cases/test-h7-hard-08.json": "dd46ff5408eb7b5fccd3b2caba748329e62a715592b4971bde2771a3117a7c1b",
+      "data/benchmark/cases/test-h7-hard-09.json": "3f8563c988d3682bcbf5da4b345cfe1b2f23586ae5008acb9dbd6af14818a9af",
+      "data/benchmark/cases/test-h7-hard-10.json": "a48946a3a17ab77d0952a1cf80bdd00698489b88628fa8f279b0118c3700e8bf",
+      "data/benchmark/cases/test-h7-medium-01.json": "27c0be342a4da621d88dee53e3aed68f0b440732bdf01daa26795107c33e0a4a",
+      "data/benchmark/cases/test-h7-medium-02.json": "d3da747727942225de84b648d713d84c8bd3fe739eeefbe2f5238806dadfc8cc",
+      "data/benchmark/cases/test-h7-medium-03.json": "938ef784de8816c1310f175595610380a1f83cf7446193a26dfaefb6e795ac12",
+      "data/benchmark/cases/test-h7-medium-04.json": "3110b01a1e57c4a77730da501426942eaac8374017bb839dead88bbca17eef3a",
+      "data/benchmark/cases/test-h7-medium-05.json": "a5c35592cd743a95887c498591efb581aa4894028daa3edea37fc9becedea066",
+      "data/benchmark/cases/test-h7-medium-06.json": "22fbec375f89c4616a7e6e7a9f86c648f9bdf806ab86a430abf16b17bbbca732",
+      "data/benchmark/cases/test-h7-medium-07.json": "77f9905ec3a67a2de4a0ac0025dfcff40f9b428ecd8a49fa4bdf9670e511aabe",
+      "data/benchmark/cases/test-h7-medium-08.json": "2109cacd688832d6b1fc8cc6490e7c074f15978210d4a97aec677c7c819d9c43",
+      "data/benchmark/cases/test-h7-medium-09.json": "bb0da0be62f64fddfa5f5ea50dfda23e42414d54f75e1257395f133124d8037a",
+      "data/benchmark/cases/test-h7-medium-10.json": "1c9ffb6950e6cf1555740a0c6d24efedc70f7a1d58e14041665a8d3ac2653d72",
+      "data/benchmark/dev.jsonl": "737f54077586fca6c5df4e273a47efb68ed618260b5ce0c215f17e7ae4fad1bb",
+      "data/benchmark/gold.jsonl": "4a3888e84140e822144be9125a103e9aa8941bae35cb466484b0dd83eff62a62",
+      "data/benchmark/index.csv": "edf1b83949de770b0eae4fccb978e07aa1b9cf356f0506c8a4a4a983302a5432",
+      "data/benchmark/manifest.json": "33c15b653e7e950ef33b2c02d0d16b3ba74ae035e22ac10968d3190db8277f7f",
+      "data/benchmark/README.md": "49d54c46fb9a30cbac65ac7d1f1f9f58a369ae0b5d7a78c39af32c10b2f3a218",
+      "data/benchmark/review/dev-h4-easy-01.md": "a3cf9ab79a880dc6021f72678c6aeb4b13f97832e600d37c75804a11a3f931ae",
+      "data/benchmark/review/dev-h4-easy-02.md": "af0aa23b74142008d1a70b396d0870da2d9f428cb42bb3ff587e677d26839429",
+      "data/benchmark/review/dev-h4-hard-01.md": "ff7529dd6d10ea54b5dd4d0e3845331a678b5392e6b8927a322c0c9f183b2773",
+      "data/benchmark/review/dev-h4-hard-02.md": "ba03c454823dde1177d106b605aaa5fe08a8ac33a63b808c5bd6d712d7fc08b5",
+      "data/benchmark/review/dev-h4-medium-01.md": "5b9cc71e9518344aab2ebe52a3dc4dda903c59a6e204adb6ad417401c9c44edf",
+      "data/benchmark/review/dev-h4-medium-02.md": "fc837e8bac2778d786f9d78a9948c7f2512fd8abddcf6878f1d8cc53c1aa4db3",
+      "data/benchmark/review/dev-h5-easy-01.md": "1f230010869a90b05023563dac9205f294cf17147f3ae3db01c88b8b449e1226",
+      "data/benchmark/review/dev-h5-easy-02.md": "7eba75ea38d42fbee9a7ee876d1f6345084d3341ee9a49582199eb8b407267ca",
+      "data/benchmark/review/dev-h5-hard-01.md": "66dda4a12a3b801a279e2107b052af1b35df4243d02b18992be8e3b09a0eb879",
+      "data/benchmark/review/dev-h5-hard-02.md": "8582578438a19f3eb30371434b412a4543dd11c62fd376d9b27272672e5aa69c",
+      "data/benchmark/review/dev-h5-medium-01.md": "b165966b3b809700dbe8608e280349c81637de5abbd22c1c1b772ef75b59f611",
+      "data/benchmark/review/dev-h5-medium-02.md": "9f3aa37ffc9a173151d1774c91f6de32271ceb3bdd8a69a2c48c61130f39c84c",
+      "data/benchmark/review/dev-h6-easy-01.md": "20f79766bc57411fd2e0ecaf5e4540308a426222e86f1580a40e648e1098c327",
+      "data/benchmark/review/dev-h6-easy-02.md": "0e221806a1c365c9193edd5e96a9e3e48fb6c2cb0e110dfc8f32dc9fd85e722c",
+      "data/benchmark/review/dev-h6-hard-01.md": "02211e43038dfd86af0114ec7af653661f01c2e624f552f2ebca94193368913f",
+      "data/benchmark/review/dev-h6-hard-02.md": "64f7ee57e001315b065ca04db21cc5f4197da14643713e72ae61582121fa4b12",
+      "data/benchmark/review/dev-h6-medium-01.md": "511eeaec32de94ee6379c9c8e2335be99d4baed106887c16a9f1f341f7954441",
+      "data/benchmark/review/dev-h6-medium-02.md": "1612d4ca88833ff4e60e0cef0a44f24e5c35fb7e6eef69b5c5a804b0d2e13d14",
+      "data/benchmark/review/dev-h7-easy-01.md": "8d0d3bf8fff95e5bdf86ba3fcc86c59d014de190600ab4f428528940b633693b",
+      "data/benchmark/review/dev-h7-easy-02.md": "d943a418e00c7fc2920cca2c1a30c3d7cc382ee8facf34a4fc8039c1e5a5c969",
+      "data/benchmark/review/dev-h7-hard-01.md": "fbd30d089596d865be688f4dbdf88fa010ec5cde68530f8d8268da6c7b1543f2",
+      "data/benchmark/review/dev-h7-hard-02.md": "ca45d035a6324c18591caf9f4dc5b07b335aae99e8c6b644ea57284a0a3a5c3c",
+      "data/benchmark/review/dev-h7-medium-01.md": "bed02323802175af484e8d751d41bcbe2213b08481587c5f6049cd05d6191563",
+      "data/benchmark/review/dev-h7-medium-02.md": "9fc9b931b55690920b8bce17e631dc4174a860cfde9c77324f4b7edbdbd9c1a7",
+      "data/benchmark/review/test-h4-easy-01.md": "74d9890b610021011895db7e951703af6c444999087db28c2a36b4671aeda047",
+      "data/benchmark/review/test-h4-easy-02.md": "dc5b525e9feca9137b3a8762e5ca56f0905c370afd9cfe0df7d20f606bf8bd45",
+      "data/benchmark/review/test-h4-easy-03.md": "2342fcc36f64158a7294ebe513f341558bce285ae2407118ab053231e7bee7fe",
+      "data/benchmark/review/test-h4-easy-04.md": "73633c1b813b684cd4e588a9aee0829426a8e1836c5a26b01b2fccc00965a3d1",
+      "data/benchmark/review/test-h4-easy-05.md": "ad72a90e84266db59e336ab1199f8aa121db907402fab138242f03ec7348a681",
+      "data/benchmark/review/test-h4-easy-06.md": "894963097990b21b54ee62a34cc44be693afc0a681bbc51fbbf8c0213f2f676d",
+      "data/benchmark/review/test-h4-easy-07.md": "4bcced03457ef45fa1693c86ad19be2cf976458cf98f5fd978a2692663c2880f",
+      "data/benchmark/review/test-h4-easy-08.md": "ecceea4ae99b149c990284df83016fbdd67481823eae90565a303d6208fad721",
+      "data/benchmark/review/test-h4-easy-09.md": "066496e300b07dbe7d1708f6a06e4539ca506a9cba91ef8faea55bdd34c60139",
+      "data/benchmark/review/test-h4-easy-10.md": "9b0ae55ceabfe5a14d73d66f49adaa62b0cf06dad6b2af6f6e2f59f348c9b3e4",
+      "data/benchmark/review/test-h4-hard-01.md": "00a08724c7186298c3a7858951962de86dc23017af9852bb234c992786f5d903",
+      "data/benchmark/review/test-h4-hard-02.md": "3d03f00e7584965c0b79d0add702ecd028ad1ea33645d252278ab36308899a1e",
+      "data/benchmark/review/test-h4-hard-03.md": "c14c26ef9cb3b82a2f761cfacbb15395bf0030264904f8b34c741a5f7e3a130c",
+      "data/benchmark/review/test-h4-hard-04.md": "14f07dfc75421f3396b423545dcc10e6637895197c49536105162ef5b063ab05",
+      "data/benchmark/review/test-h4-hard-05.md": "503580633f252db47c94f4bfdc5f07bcd7239bddf98502e1f67f41585f22ec6c",
+      "data/benchmark/review/test-h4-hard-06.md": "83986afdd343e2218cc9d5417b88c935a3118ea116f77f09e9b71503f369ce63",
+      "data/benchmark/review/test-h4-hard-07.md": "5637af15ef492355b79390071181b68eca4e73e33207b6b9690f78c7148b9178",
+      "data/benchmark/review/test-h4-hard-08.md": "ff24ebda5de3ff9add22c4b3e6791f28f849f68b14cf9daf0d3ed281083db623",
+      "data/benchmark/review/test-h4-hard-09.md": "6a099cc223f11f7f652d348102966545a0d94fde6508de17524d4417e7eaeaad",
+      "data/benchmark/review/test-h4-hard-10.md": "e358419bea244daf2d236e7d8bce8ccd2a37a26565f2c4d9ffb1cab30eb3978e",
+      "data/benchmark/review/test-h4-medium-01.md": "c9ed641897d3e291dc0505274f4dfbca1f76f9961990a470a9e8eb0661aaa692",
+      "data/benchmark/review/test-h4-medium-02.md": "b8c0d3a5e7650b0bec8125802e37b459fc220728dd644fd28d4d574cffe83ba8",
+      "data/benchmark/review/test-h4-medium-03.md": "8b38de2517575552ede5a472c68f2e24d07b369518eb9768ebb9937633268bf7",
+      "data/benchmark/review/test-h4-medium-04.md": "6f2efcb9ee1dee6c21b463e2fa0c6fb28e629a02fc80ff56f0b39386ff066b68",
+      "data/benchmark/review/test-h4-medium-05.md": "5d62361733715ec372bab67b3c445839eb12b42ee30b8fa6e91c68775cff2401",
+      "data/benchmark/review/test-h4-medium-06.md": "729a0d67b53efd56882c98e088773f241fc06a80f0f7f67eafc36eddab105826",
+      "data/benchmark/review/test-h4-medium-07.md": "d4cac4dc41d3d74da81cc476f978e37e5180238ba1dddd33b1a921cecae225f6",
+      "data/benchmark/review/test-h4-medium-08.md": "98536a05f5ee1bdb56318b81fd77e035c60fb48f3ae4e21ee9716f383dac0833",
+      "data/benchmark/review/test-h4-medium-09.md": "338ceaf2632230fb4f39555629e4d28b83048f55b6044f5c0817f3e89d70b15d",
+      "data/benchmark/review/test-h4-medium-10.md": "f4d326fa38ebb749079b9b83d88e7989263a163b321166204a2a2a376ae5fa1f",
+      "data/benchmark/review/test-h5-easy-01.md": "db2dea0244ccc69303c3a51621e768c5505fe02990e9369b6c59aec04e2bc7c3",
+      "data/benchmark/review/test-h5-easy-02.md": "1c3ecedaa83c45f290671b15eebc97349a7918b58971580b87fc06210bc5fc98",
+      "data/benchmark/review/test-h5-easy-03.md": "d01e57b86e97045a8da7cd1fcbd354ec39960c2f797f2738c15e7aaea2e0f800",
+      "data/benchmark/review/test-h5-easy-04.md": "21180e063c72e53d8e85a0aad4b07909a17d2781d52702c216df458dd0077fd4",
+      "data/benchmark/review/test-h5-easy-05.md": "9edd931c280ed610a34a3c0f39772aa17307ef5f025de350fc9c551a6957f77f",
+      "data/benchmark/review/test-h5-easy-06.md": "2366741da42d98cf26591abe9d0100466466e02cbddc05d900906b233b413a3e",
+      "data/benchmark/review/test-h5-easy-07.md": "b151519054eedee1eab52a576ff3de3ca977137d1abc875a2cb4705ab7d241ea",
+      "data/benchmark/review/test-h5-easy-08.md": "0a660037a547c44aed3d1e36367db0d1deb3d4c415a81b52ded0efc6fafc7eba",
+      "data/benchmark/review/test-h5-easy-09.md": "60bd22364f727001997d75ecddc002f3c00011a66547e8cd89f6dad7348862d2",
+      "data/benchmark/review/test-h5-easy-10.md": "b3b65b7dd8097c7aa9c75daa1f09797a13f5019fdfb7f2ed07f51af501651002",
+      "data/benchmark/review/test-h5-hard-01.md": "12cc7e4aa48cb692c8fdece62c4440e8b91d011c8cdfeb9b8b7e909a310d4dc1",
+      "data/benchmark/review/test-h5-hard-02.md": "de052c164119a8faa86f62b07c18f58acd2ffed61c4176e3c02afc8ca5b77ee9",
+      "data/benchmark/review/test-h5-hard-03.md": "97482df4afe5c518e4667175037aebf459e4775eeb8a1ba3ae12e1b44c4591d3",
+      "data/benchmark/review/test-h5-hard-04.md": "2048f1139a91f7f8e9ae5e245e1bdaef64c365784eb3f606bd2864b1732c49e6",
+      "data/benchmark/review/test-h5-hard-05.md": "477b0a384c116b6a8728b7e33ea0378894a7cf13fb13861081bd5d43ab9f5cf5",
+      "data/benchmark/review/test-h5-hard-06.md": "e147b267aa13463dfcbdda10d8a5c6b65bac98224691bf5b0ae9eaa4eacd8e4c",
+      "data/benchmark/review/test-h5-hard-07.md": "eecee741f0859c4b1964bd35319d16591f711508cadec6e6673bc772c27ad9b5",
+      "data/benchmark/review/test-h5-hard-08.md": "490cae3129b3c1862dc59b3c4d471bd0f3719f703fa59274391806180503b7fd",
+      "data/benchmark/review/test-h5-hard-09.md": "01f58f0a2a003ffc9bb18caf38abcc56bec2bf3b9692be2e718a133473e33c68",
+      "data/benchmark/review/test-h5-hard-10.md": "9aab839cf958bee7c3d08521525d075565c51d6c56025a7e22a7c78a50d7dd38",
+      "data/benchmark/review/test-h5-medium-01.md": "26c317ca2d31ee9984ac12a4055f21ffef6e447e484e12cfc19592c63978fed8",
+      "data/benchmark/review/test-h5-medium-02.md": "402c4d3ba097eb134d24f305a68b540c11b9d96dc97ab2b9776784e0dc4aead2",
+      "data/benchmark/review/test-h5-medium-03.md": "25bee8169dac481efb5367aac89edc0d2250f9055fd00e07071c095621aac2f9",
+      "data/benchmark/review/test-h5-medium-04.md": "4f214463763f124c68dcbe08f7a25a12b4f9a67966745a917fc4c3c288673223",
+      "data/benchmark/review/test-h5-medium-05.md": "4d1b58419d068774ddc5a53a11452143fc48fee9da1c7722d3c9bfa7c7249326",
+      "data/benchmark/review/test-h5-medium-06.md": "6293e3fc15ec936615a3e1a81ff833051ad5f88333aa5b7badf59b1ebe6fd18a",
+      "data/benchmark/review/test-h5-medium-07.md": "c9a3ee2d9351b6d80cbbd990ce14fd2cb95806a2ef4699654bf251e4e8186e01",
+      "data/benchmark/review/test-h5-medium-08.md": "4c137c117991964de0bec4925b0924206503b72568aea9182c15a7af73dbbe55",
+      "data/benchmark/review/test-h5-medium-09.md": "881f8d5bf7c86bb3d8d5134b96106a139a2b6feb20142d8a558a52d5f0a7fadb",
+      "data/benchmark/review/test-h5-medium-10.md": "64323a3436ca67f507b164cf0f2d14d333dabf434ffa4ac284bba918852e5c96",
+      "data/benchmark/review/test-h6-easy-01.md": "44f4579841be99249e5f5433e8f413f8e189ac6c89cf837b1ce074d57d4221f8",
+      "data/benchmark/review/test-h6-easy-02.md": "c42fca06f8f2868ba15fc085cb81f874926ce646877b083607741c8a60c1f234",
+      "data/benchmark/review/test-h6-easy-03.md": "d0e8e07e760f459bcf81780c7867096d1251b48332998b17080304f763d462f6",
+      "data/benchmark/review/test-h6-easy-04.md": "7d449dde4b8749e666a6dc95f837029bf91936ad37e0b27db4d1401171460951",
+      "data/benchmark/review/test-h6-easy-05.md": "6bdb2320ff5ff2a8efca01320c4c0eb34c5896b8aeadcbc6a3b072d1e850d1db",
+      "data/benchmark/review/test-h6-easy-06.md": "af67c5a2f03b17d68c176ed133638034c4d364617664751f65aa6211dedf654b",
+      "data/benchmark/review/test-h6-easy-07.md": "f0b2dfa9c3f6455ee258299f7257311d997734a2278c782f09222d119e7a5e89",
+      "data/benchmark/review/test-h6-easy-08.md": "e410609076b9868971a1cbbadc649d87b157f04a45590b9bd964bcc536146b51",
+      "data/benchmark/review/test-h6-easy-09.md": "f3e595ea5d46687444732f4d0d87535a351b9e2f3aea45c178d479d55c483345",
+      "data/benchmark/review/test-h6-easy-10.md": "2571b9fc08c4dff27cc3e5f748651847940ab3beac129c18844d687808e52088",
+      "data/benchmark/review/test-h6-hard-01.md": "b0f9e61d145d6190181bba6af67b0250b69f4df12d3adb75daabc72454fce0f2",
+      "data/benchmark/review/test-h6-hard-02.md": "5c9ae4aafe4150d629328c2c8d72890ed742425209c80cefeadbd883ceb8a5f0",
+      "data/benchmark/review/test-h6-hard-03.md": "97ba6bb8cda35b009542a23839bbd23eee59e7ae0ac84aef1910d4cd085746eb",
+      "data/benchmark/review/test-h6-hard-04.md": "d9e6bba6f8f6f07d86199a5ce75d9167f99d1510fe7ee5ed739969c20c1e7381",
+      "data/benchmark/review/test-h6-hard-05.md": "150658816b6c8e55373ec9bda2437ff403e6ed2f0505ffcd6738f95f5a9fb7a0",
+      "data/benchmark/review/test-h6-hard-06.md": "13e5bcadb297f3b117b855f2b53c1549420fe05e855072b244d2f231f586e95e",
+      "data/benchmark/review/test-h6-hard-07.md": "c7793038e08176540ac9671de8521fefd084f398e7f227da64845b2a97a738ca",
+      "data/benchmark/review/test-h6-hard-08.md": "2ad2448df0d8f8fa289950e8460af8be73cb528abb37bfbb1e864693d5a41540",
+      "data/benchmark/review/test-h6-hard-09.md": "5fbf5b4c0a48e51a2ca8ccb5624df42c141c43b4de406a796bca401dad6d340a",
+      "data/benchmark/review/test-h6-hard-10.md": "20664e6dc7c7772387400213a52ecf0505702889174692b3b3f31e007b4a5dbd",
+      "data/benchmark/review/test-h6-medium-01.md": "b6fbb807e84df552323644c31730a791688c34bf4ce4f5afa014930e5c988bbe",
+      "data/benchmark/review/test-h6-medium-02.md": "822890c9ad61b6bbf6ce3ecdcb2c020a7b39801feb3bb9e87109d5231f55a2a2",
+      "data/benchmark/review/test-h6-medium-03.md": "527c93a407be7e284e6b0a2f25f837c36d39e64871986209c7ddb1143137d430",
+      "data/benchmark/review/test-h6-medium-04.md": "4393a0286c2e0de12e9d8e2edc948f15e96f9647b762ca73b5db218aa5ed5421",
+      "data/benchmark/review/test-h6-medium-05.md": "559ddc8faeab6fe2d38db28cc6b481278d9359ba015c7d35bf53a3a05d808ed9",
+      "data/benchmark/review/test-h6-medium-06.md": "666c9cbf14f3f5f4090a3f7ada767a696d357c2d07554ca9905b3d1719806a7c",
+      "data/benchmark/review/test-h6-medium-07.md": "c7946b74f2af0f2c1ed5de157fd3855362cebed034fa86344fbbc21580647c23",
+      "data/benchmark/review/test-h6-medium-08.md": "92b3f5e513b99dba364819510f45ddc11907ae48992d8984efcd6b2adb2a7153",
+      "data/benchmark/review/test-h6-medium-09.md": "b511777f874517b9b69dac655c55e97bbc3d433c96ea5c6a50396f55b3962e39",
+      "data/benchmark/review/test-h6-medium-10.md": "993f110c69c07e8822052b69486271da33a8744d192f90481464da1fcb28b787",
+      "data/benchmark/review/test-h7-easy-01.md": "d6e21dab442d63077e3c24bad1251dac14c1bdf1d121c0ee12b4f413999633c3",
+      "data/benchmark/review/test-h7-easy-02.md": "cd6c9d45d93651e7d113d3fcff1442531e4d73ecdb74382c05de210963fb115b",
+      "data/benchmark/review/test-h7-easy-03.md": "2d1232ae6833d0e888d3563033a7faf8b43a79f82c81baaf522e425080bacbe7",
+      "data/benchmark/review/test-h7-easy-04.md": "642e75afef4c80a6e05e5ce67df32c3998642ee9ca64ebc71802e205c29d6ad2",
+      "data/benchmark/review/test-h7-easy-05.md": "23ec5e36cbe2d1c5e2b616723c58b2e52aa955c52608133dc5f9b35a98b45aeb",
+      "data/benchmark/review/test-h7-easy-06.md": "b2c7c4076728d3f673fcc6099aa497a26c29cbcb28af7d4e89313e818e80ca3a",
+      "data/benchmark/review/test-h7-easy-07.md": "ebd9657e34cca3d8b83ef4e52ecb16687f8dd51010b70ec30cc2334cd1721516",
+      "data/benchmark/review/test-h7-easy-08.md": "7cbb8330b6761c53fd4b2a419d9f055883b4ea1effed0bdccd4377c86076f1c0",
+      "data/benchmark/review/test-h7-easy-09.md": "fb74e6203c17f9c459d72c730c6cf41c771bacf08cca714668da861a7c8c5312",
+      "data/benchmark/review/test-h7-easy-10.md": "c3ba823ebfcf80fe9c687c04e62b985d3feebc00057b3a90e146b18b0181533b",
+      "data/benchmark/review/test-h7-hard-01.md": "5a94fabc506b085032e20da7d092ae5294b2d9a0ada067afba234eaf487e0990",
+      "data/benchmark/review/test-h7-hard-02.md": "56bcd4ebf47f3ee4f7779febc3622b722690356eee536dad0d20e5f1d596ef1a",
+      "data/benchmark/review/test-h7-hard-03.md": "8a8cf7217f571331b23b7a934cda4d6c7e9e33abed3b8a6ffb03732521556d51",
+      "data/benchmark/review/test-h7-hard-04.md": "5910097730b9be3b8960723b673fda544cc49649ccb0ff9093093c8dfba874c0",
+      "data/benchmark/review/test-h7-hard-05.md": "50a5c7e336f32d8b6d54b4e9a34afa3a6a53aeddb62be0b19fb26d3ca9ab03f7",
+      "data/benchmark/review/test-h7-hard-06.md": "ae5f182c9413d4a837f5784ea270aafae625d0121bd85aa63c17a2588d007f2e",
+      "data/benchmark/review/test-h7-hard-07.md": "8dc58d2fb86117485b3cbcd2f8caf7c70c10f5fa71c9ec8986cc7d5be97355d3",
+      "data/benchmark/review/test-h7-hard-08.md": "f5f05b0b06e74fcfe059b638f0e638fc49838195caae1fde94223ff82206ba2b",
+      "data/benchmark/review/test-h7-hard-09.md": "3634d41f95eaa07b350413bfbdea3355121b78a5b109ebe3d5954330cf02d0d2",
+      "data/benchmark/review/test-h7-hard-10.md": "b8eaacb9079b149afb0cecdceb04e04cf07b6f15d6356d631d7938e4b605c644",
+      "data/benchmark/review/test-h7-medium-01.md": "c4dbcb44e594b03ef14d7e74082da7adf3a7139eaffa0bea748731085d25d001",
+      "data/benchmark/review/test-h7-medium-02.md": "b81b7d689e157e008bf70b98c185c74c2b369051f41889e6239ca500b16de169",
+      "data/benchmark/review/test-h7-medium-03.md": "67b44c98dd4f2f7c0b7b520be86fecd5062b358ad374052d24ed9af10600e692",
+      "data/benchmark/review/test-h7-medium-04.md": "f3e9a88c5b3bbca3cb8e15ab0293481f818c9fafab87490eead0b8f023c9f3c5",
+      "data/benchmark/review/test-h7-medium-05.md": "0e77eae01f4d5604c6cb951270e908c6f0fdcf9ef25f195530b1844277587dff",
+      "data/benchmark/review/test-h7-medium-06.md": "61ca74640852c8534dae4af88b288ecc10daf504a9226739c372b2cfce7dfe9a",
+      "data/benchmark/review/test-h7-medium-07.md": "deda59bb08d946b83a47dbf8ed6d6af67d72b0dedabd630a7192a196e7ca7ff2",
+      "data/benchmark/review/test-h7-medium-08.md": "6aa23a59d1e045dc394d90265904b81ccae2ad66cec1eefd76581f48c682db3c",
+      "data/benchmark/review/test-h7-medium-09.md": "9344dc699cfa50ee9dc6d887b74cb914a627b9b4c72e1bfadd48576c098e62d6",
+      "data/benchmark/review/test-h7-medium-10.md": "f7a4401263a9f03d2826e861589994bb5625306a9b541960cf2d2267c13dcace",
+      "data/benchmark/test.jsonl": "7327fe73b99382d93268bd66a589899703cff9c41d107f8d9ea31ec053f5903b",
+      "data/benchmark/validation.json": "0642dc3e4c50c6c8bd74920a1b628db34bf6ad93019755356277ba6dde782c7c",
+      "data/courses.json": "334da6099be466a8a2f2e072d015c27511574aac2290505c79a72f431f6fbd47",
+      "data/examples/ai-remaining.json": "067c4972bc3bb78ae8cfaac4f4a639362017b750477b194152bf6bcb6544e2e7",
+      "data/examples/foundation-remaining.json": "c523a4e9398a302efed414207154341963931cac712cf31e1e5a21c745e01b64",
+      "data/raw/CG1111A.json": "e84906d86bed0c6b7f0dad35a14ac6fb9ed8860595911ee7ba735f8bf66a942f",
+      "data/raw/CG2271.json": "f4a9b1f1eb3027c8cfec7a9842c73b8f7ed95c529003c32a7c35600d862da7ef",
+      "data/raw/CG3201.json": "6f9ae51b62b732235d28b6a810c60a84377c70533a0f22f41729f2f4e6d24889",
+      "data/raw/course_records.json": "f02cf5b390cfe705d710609d134fb958d234189ad8ca45f680d9399516dc73e6",
+      "data/raw/cs-26-27.html": "6feeaa26a5e52dc129c080218e56d1b91d268d62aec6182e8315cb295a449cff",
+      "data/raw/CS1010.json": "8c9b4cbce1a970072a78a774a2677825dd6fd44c18b1ec93da1ac153a284e182",
+      "data/raw/CS1010A.json": "2d3c20c9d1b1d76379e39db74ffa56407f47a4b1e286e8f00c4a03b0ef137259",
+      "data/raw/CS1010E.json": "a7329db76dd2eab5a181c4367561cab6dbea92871aaef3dd222a60215451a06d",
+      "data/raw/CS1010HS.json": "84d939d8c0eb5dbffdbfce20b38b6ec910ac64d81ca0bcd2cb881dc6bf9dbb29",
+      "data/raw/CS1010S.json": "fa4c9f72015d956f4dddb67906c07ca704752396e59f91cf299479771d471828",
+      "data/raw/CS1010X.json": "ef62c2259a073c3b0f1fa66eb0bc80a11c15e46d112e54170d6dc59e463855be",
+      "data/raw/CS1101S.json": "8957248dc3e85319c4ad29fef21564ad6b186e52f6fa02ca7860956a89f672c1",
+      "data/raw/CS1231.json": "6b1b8443f553eddb004f5800f5909fc19581e47e5709d6d2295eadb3d9b75f18",
+      "data/raw/CS1231S.json": "3b7597f5a5d80d9b12c7042583a71994e49ebd19cfff110f8bc51543c163fca1",
+      "data/raw/CS2030.json": "948fe60b65db466b58bbd2c6d614cc4f7a4c88e5f006cb2eb5b6ea152f141b80",
+      "data/raw/CS2030DE.json": "d2f9f627263fad9c1b7ca45bd4e240741a5542a5cd907e21378bd260aa10d54c",
+      "data/raw/CS2030S.json": "e79aa9d349548514d6df3090d1aeee7026c4a86bfab250b2df546e1c61718957",
+      "data/raw/CS2040.json": "7fe3eeb2b04648460c99d1a80e5adc51ce894743d6a1fa7797f44c84529b6b79",
+      "data/raw/CS2040C.json": "2e8cecd7f62c2e581d1cf1a3b408b2342a592193bf3983e5918a07e37251cc2b",
+      "data/raw/CS2040DE.json": "b1dcfd0ca8fd9dea839c9be3e54a67a7292c74a8a4e9efdaeee7d9326bf692c4",
+      "data/raw/CS2040HS.json": "295c6ebca62b917a7d978c96a8a2e0d0fad826d6d68d919b6d194dc1288b8c7e",
+      "data/raw/CS2040S.json": "06e276c6900b506d5bd26c2705676400d7459468d3ae9f1219fb43cb433c401f",
+      "data/raw/CS2100.json": "ec652f63cf3b81f06a7218685948a29177fabcad4b0804b06ffbbbab57e6b355",
+      "data/raw/CS2100DE.json": "717f6058886932188db2a709a3609ed2679f8ae1b1c6fb694439f560543fbf6d",
+      "data/raw/CS2100HS.json": "067ec3e17165d4b9c897072f3d7e738212ea649003f37eb9ae3841c41884171b",
+      "data/raw/CS2101.json": "12577bfe1d32711ed8d3b2fe434a0317e8a26f56c8c6c7e2bb2eb1689ecd5093",
+      "data/raw/CS2102.json": "9e0517b47c6fd821e5ec722dcc763f7876dde61b2950343a20801621033947ae",
+      "data/raw/CS2103T.json": "89654a86354e67f914785cc704664514da9e9c0edb029ec46e4355e91f059404",
+      "data/raw/CS2106.json": "6730119cc28578bf017f12ba5c1e9fc0dacdb7bac10a1c6492b2561302b462e6",
+      "data/raw/CS2109HS.json": "16cf98c3a58f05f2ea01f1d5f501db10498aa0c6a2adb29d0a69dc7b4a61882c",
+      "data/raw/CS2109S.json": "f4a6965bbb0a34abc8c9f2e6eee2f05662dc954a2a104e29bfa7cf0b4d61ae89",
+      "data/raw/CS2113.json": "d80f695318c2a88a667924cc4792a70f42309d7aa42cc1c13348d2f2fd0a38a0",
+      "data/raw/CS2220.json": "39da8de0efa3bf526117b1d4bbc63210ab48f91e0aed6eb0ce9fbd985b5a1988",
+      "data/raw/CS3230.json": "5d5d31f5733293ba2e0e8213be5a86b0f1c6df5e4e13df83857f0b9579d51cc5",
+      "data/raw/CS3243.json": "405d836523629a5888865386a2458bb693dc4ac06584350f64cbda25351ade2e",
+      "data/raw/CS3244.json": "26edac8b5248b28664c3339117c39357f2fb793cf1b7085d3cf744486c2da481",
+      "data/raw/CS3263.json": "dc9cacb45fff2fcc64ee632d7fbccf0ded03b3f2263d17f6f368e23f41da587b",
+      "data/raw/CS3264.json": "77d8a8fa1eb0c813c4858e22595de03b6bf47c4ed466fbcd4c0354eab36589c0",
+      "data/raw/CS3268.json": "1dfbdaa75897ad24241d920c7ba28b82955c7a9b8ab2f5f61eaa752cc572630d",
+      "data/raw/CS4220.json": "c6f60dc3f3c44f64241c5a3cebbc741ec193a41b269fb3864b816c641a9e2ceb",
+      "data/raw/CS4243.json": "d9cf02ca4fe2a36df95cfc7d84a09e1461e8c2710f6413d5059ef2ca80792647",
+      "data/raw/CS4246.json": "4846ae90c88c567b20a4711f87184bef21ca8311fd4e30e0918489d94fb889f9",
+      "data/raw/CS4248.json": "2ad8bec10f24fd23f5eb1073ba4fc5d8b5f24d7064f101f117cac17bbaa80b31",
+      "data/raw/CS4261.json": "dfb4c37bfc6a26a141153a610a897fa936dbe27125d70d5dddba054ae28caf7b",
+      "data/raw/CS4262.json": "32cc68a2f44be432dce65e7e69ad1ef248eb6c658002d8cc29ddd0f8b24c3f90",
+      "data/raw/CS4263.json": "90a2a8988e3029f830bcbfc9590382583af88989c38e28b77f2c6dd1d93a421b",
+      "data/raw/CS4277.json": "7f87fa925c5dd38f0e43f8d85db2bc7f2b449827db7e740162bcfc9dc00a9c70",
+      "data/raw/CS4278.json": "3c423437adda5911c1aa78c3ec82122785fca8607fdbc513b67d26961d8d9b15",
+      "data/raw/CS5228.json": "d0940ac9172d24db824e918f4a3fc35fe1a286c2ebb7a64964de4c89bdf63422",
+      "data/raw/CS5242.json": "9d9c51f3aba46b3226cba7460ca389376e0f22699b4b487df6958dab2965166c",
+      "data/raw/CS5260.json": "9f11ee66dce59c2fc9d261642fc5a7d2b64cbbc0a10fa1a925cae4bb8aa11789",
+      "data/raw/CS5339.json": "94d74ef3a267766def8bb322bdbbe00da06ae79feced2417b249a6fea879cde7",
+      "data/raw/CS5340.json": "60990cb0c7ed68e6575a4f0a0f1ec7f88b0da87c47b525c0a72ef74d25ef4828",
+      "data/raw/EE1111B.json": "94d2e2b3324df2861582cef1162849543ab2e9412c2e0d2d6bb6b17c345d1e6e",
+      "data/raw/EE2012.json": "b25b2d9375aac2037923babb1481fcc3e9875c3508548a703fc02801a6ae43fb",
+      "data/raw/EE2028.json": "3a63f8cc43bd5e55e27245e5d9b0ffdaac6bf456a424b9289b969aceb1c91cac",
+      "data/raw/EE2111A.json": "16d305af534658f2744d225175651f8be36b37b821a52ca0d606f83f550f32fa",
+      "data/raw/EE2211.json": "6b1b48b5d873685bae6faeb9a7abf096fbda282ae8281c093179be8169f557e9",
+      "data/raw/EE2213.json": "617d4fd4e0aa906b4b563b7d700f029a035959bb32847f66f701cd2efbe43ad7",
+      "data/raw/focus.html": "89923039b634569b33b89c0ef924d7b1ba9e1aa0545532594d44610ebe5ccb80",
+      "data/raw/LSM1301.json": "f79435b2a8683f9b6bf300e446a5f11265a50b1e23d3a1669f9f76c6e55cc550",
+      "data/raw/MA1100.json": "018b1cc43f24f1c55dae705e5bb668a8004d3aa01051db26c3439fbebc054050",
+      "data/raw/MA1100T.json": "c6dc45237b36225e04ab86117501ff4c4b8c03ffa3b51b2f9031d52d2f2d6822",
+      "data/raw/MA1301.json": "f716db79694ba930955146625484956011e453f1ad9e83f78cefa239f1dfe565",
+      "data/raw/MA1301X.json": "856d334a0c09d688747c7ff8fe03c2f87a99f6a680a6a52837dbe7d09e699f3d",
+      "data/raw/MA1505.json": "cfd71add755ecb29925d7a44214940a51bcef68e01b9b48067450e179d3da85a",
+      "data/raw/MA1508E.json": "5acfc4dd5fb03245eb8f10c8a3162efb1cff09389f7003ce61496694b7dba54a",
+      "data/raw/MA1511.json": "b475c0744fe76e694b0d808592716191d3809cd521fa1127837d80ffc129e29a",
+      "data/raw/MA1512.json": "cb0af4127f4d826090694df5c02b7d497a7545b6234b307d0f34b0c186d7f1b5",
+      "data/raw/MA1513.json": "f65e377bfa28f56d1828ef79834ba0525c27528f91e2f5c394f55d602910e4ac",
+      "data/raw/MA1521.json": "827494f336bf27b59ffb41bcde51761f14c5a10cec64f0c379fb2f80aa051411",
+      "data/raw/MA1522.json": "a4d0757dc7d207e1e5f24c0e4a8ce4ca10707d657184d607293c3d70a31f2e6e",
+      "data/raw/MA1531.json": "1907c33f27c4f136ff6ae55a90d4198d3b2716a29352bd6af322afaf89bbde5b",
+      "data/raw/MA2001.json": "dbbb36d5bf1454d15605657c97a426ba5bd815a6b1e4982765a88c5425327b66",
+      "data/raw/MA2002.json": "96b284fac18d571c4d41e69b3829381934ae2d53da88cd0aab32940890ec4e67",
+      "data/raw/MA2104.json": "29277cef84184eda90880b564f9bc5a3ed9c06ff97dceb77ce9dd91f66b771c1",
+      "data/raw/MA2116.json": "e2ed852909476829c96756434b3c9ba96901df86c610fcbee2357f812b42ffcc",
+      "data/raw/MA2116T.json": "e5b04c6973b39c6dae53ec3fd5e4e57d49795ec90a471b5d47b5f9a40d60bb04",
+      "data/raw/MA2311.json": "3ef457a10b7449802270b08d2f01e4eeae465662466a3a84a22d22bf7d3c7d91",
+      "data/raw/MA3270.json": "c57dce148df7e9d6542a21d6c86b2e7c15def73be9428036a8eae79aef9dca49",
+      "data/raw/moduleList.json": "995e9781a627e126ba00861cf5b511f810a32935cdd99e3e4d1305d2ad7bf80f",
+      "data/raw/ST1131.json": "47a03db64be8a587114beefd83e98a46205cb560dfc496c909d39eb3ac0628cb",
+      "data/raw/ST2131.json": "58736a9307ca3f33ced1e676315699f4ad358b106bf1b3f18f53192a0b40e872",
+      "data/raw/ST2132.json": "68a409576c7febf26ca5207925f8230034ba1e61d64ea9d3473cd7ff762cab59",
+      "data/raw/ST2334.json": "d1e49beab39d0afb1157e3c57d69a48dee3fa38015c934c4d4d7c6c0ab6b292b",
+      "data/raw/ST3131.json": "b0614e9d4ded1fffeb35ab868aea7b57e8dfac392bd3d16c7b37411157249994",
+      "data/raw/ST3248.json": "f8fbc2aabd3637c3fba46ededb2b8c518fcd13fbcc790181c9622649dfb090f4",
+      "data/raw/ST4248.json": "9c1521dc4e3b4e6bffb602856b7b8a7b8e2f9f3e5ef708cbcba7ee4086bc8ab3",
+      "data/raw/UTC2851.json": "7dc842f4745eb1d0fdabb49e5b19ddaf1df2908c884039b4e8255625149edb97",
+      "data/raw/ZB2101.json": "944a9b635be6fbaaae910a37366de576c2d8885eab19bbf464427fe288196a6c",
+      "data/requirements.json": "14bdcdbec4ca6097d455375f8d7f66a47514be9b791e4418746f7c1a943f3f69",
+      "data/review.json": "77d9d4363e89a7981307a0d05cad19be51b16f2f1b0cad34039a67c019d74b96",
+      "data/sources.json": "96f864fa51d89beea8eedec9e4dedb2f24746fdd5205c0e64e932c7de10df290",
+      "experiment.json": "d8ebad505f7de332e14577514704e6dbe167e2b16ec90d6e8d89b9b1abeb2125",
+      "prompts/direct.txt": "7969ed0d4b8a57bd513c12aa1541d41ca7d613b8e665833cb31ac0232bbdf0f6",
+      "prompts/plan.schema.json": "d6bdec9d8f765f79803dcde70104f3e66ff6b4eba5a9a7a453d22cc9ffac4cca",
+      "prompts/spec.schema.json": "be3f69285e7a9b8752ec7d3eec9a96fdfc6a8c76ce25839d6e61fce1bdd7bb0f",
+      "prompts/translate.txt": "7bb4b8a28c7b487cb55b1970808b71221c2d1c2d1bef2cfea773d9e7b846a069",
+      "pyproject.toml": "230253239cd0e1588c4fb2416ec158d02ad2a6587c3ebfe077d5d4f61ea16cab",
+      "README.md": "70a95404c25a53b3c0f74076b48044523df3ddc987cb2bbb51bcf79a984bb6b1",
+      "requirements-lock.txt": "5fb0a8355793d955b305b78e3dc987d2391836157754b801993b3e22a0d0c949",
+      "src/degree_planner/__init__.py": "c7bbd03106ceb647a14dbe248244bd5e93fe50eeda08afe47e1c2caa4b8836e3",
+      "src/degree_planner/__main__.py": "fe9417e693779dc525fd6cd45181e938d844d1187a553aa319d8a05cea74a037",
+      "src/degree_planner/benchmark.py": "c6ae4084efdc658d16a79b640f12f53e5fbed44e7db7cd86c8be123c58830cb1",
+      "src/degree_planner/checker.py": "c804d3f44ae5f23921069c8434dc8ec3823c9feb08c5ed10fd9066f4cf28afa4",
+      "src/degree_planner/codex_runner.py": "8da7dfb7a71696bfd58355f85ca1f35fee1f25889a8f3dd5f3aa9400568b6cd5",
+      "src/degree_planner/collect.py": "e9f1c4cb4c0d8b44061576f5ad0d4ea63e330592f1301499a040dd0aa518969b",
+      "src/degree_planner/csp.py": "5d7994be1d2bae4ffffe679b59e313001ede410b3ebf05c69c7a73406653b6bf",
+      "src/degree_planner/evaluate.py": "d36080efcd2c989c8670943242207d49f22e72f20ff703c221728f8ebaa92ac5",
+      "src/degree_planner/histories.py": "1405fd3b8e869bdfaceee84b4ef75e3401c676b4ec3cf8d353efc64b534197ee",
+      "src/degree_planner/inspection.py": "0ec7c2acd25de9808e9205fff0ba0c21896552b55ce23f1032357379066ad081",
+      "src/degree_planner/normalize.py": "b1131301a52f7604c91f532d4e855e84509e327e9d38d221ea448226f67dc4a1",
+      "src/degree_planner/policy.py": "c06103711734b32248458ddf14334feeab7827255fd2141fb79f9f0f6365e611",
+      "src/degree_planner/protocol.py": "3ab1be8a97fcc6129deeb60fb8d72cb3bb86cf096775e9a8ef18b837d004b70b",
+      "src/degree_planner/schemas.py": "1301914a07c96664c3b76d9b19e89e431e4519b4d41dcfbbc5341d53aa661436",
+      "src/degree_planner/solver.py": "be16d1045f38bd96b237ef9550ffaf11b2f4168c6086140d97ff364cc3b25631",
+      "src/nus_degree_planner.egg-info/dependency_links.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "src/nus_degree_planner.egg-info/entry_points.txt": "e16aa38fd6b7a1b4bc6c89cd4a538da2b543978a9cc9687d3c2ac5d32e9fa7db",
+      "src/nus_degree_planner.egg-info/PKG-INFO": "4f300ccac036f80190266d46a9734b239367dcf7ccbb68180a76c8d6ace0281e",
+      "src/nus_degree_planner.egg-info/requires.txt": "4c1764801c769411f941918a6f50b63e378e9d3463cbae2adab1a913a26df155",
+      "src/nus_degree_planner.egg-info/SOURCES.txt": "633cffa34b6c62758fc6daf12dfa8945931f07d57586e7529c78a473e6754fe1",
+      "src/nus_degree_planner.egg-info/top_level.txt": "ab1ea3abe92e7b745fa516a1678a24aea0047ff324ae0013a02c49882d7e9138",
+      "tests/test_benchmark.py": "ad75a33ff40a96460dfb0a1e5d8aedbc1b28dc9735aa067807d86a34effa73e8",
+      "tests/test_evaluate.py": "dde02ece941173adfedf6317fa1394f7e65190dff1581614f7022694c24cff85",
+      "tests/test_planning.py": "2c06ccc933b889ad266d175dd0e1e25ac7fb3d1270215fbeecc6ee51b02cf2de",
+      "tests/test_protocol.py": "6412142706175a8dde4f52bec67f47ecc4e6e8ac11adc41525d49d0df5dd58a2"
+    }
+  },
+  "prepared_attempts": [
+    {
+      "case_order": 1,
+      "case_id": "test-h7-easy-01",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "ca93b8d00239ab3bed29ec922b41a333c03b6647a21714ad65d290c1da122e13"
+    },
+    {
+      "case_order": 1,
+      "case_id": "test-h7-easy-01",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "924d05c80ab072feb7b316288e1fe29a5ba8941ea94cb64f7ab50e9f58f487e5"
+    },
+    {
+      "case_order": 2,
+      "case_id": "test-h7-easy-02",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "f539ba43e8a990bbafb119d4d0c86879975cecce991d413758e53103aaed5d2a"
+    },
+    {
+      "case_order": 2,
+      "case_id": "test-h7-easy-02",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "0e4dc13754fc2a734b91336850b15da8217b5471d4342e7fcd41ad718b7b0b28"
+    },
+    {
+      "case_order": 3,
+      "case_id": "test-h7-easy-03",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "d63ac4f17bab4baf7e763e86edf635e88d6ae36c5fef561c2b574d3a8fdcba49"
+    },
+    {
+      "case_order": 3,
+      "case_id": "test-h7-easy-03",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "8e28b4e72fea1ebcfea4f3d53b4e6810cd3a83bdd49fb78a3f1225a0032b9a78"
+    },
+    {
+      "case_order": 4,
+      "case_id": "test-h7-easy-04",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "ec8613972fd20c756b969e455b102a5ecb4e6152b18c136bfb11e1268a0a6500"
+    },
+    {
+      "case_order": 4,
+      "case_id": "test-h7-easy-04",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "23d85affd20eecc4d20d9be92c3bb3946c782351524b96bb6f49758fc119fe66"
+    },
+    {
+      "case_order": 5,
+      "case_id": "test-h7-easy-05",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "09bb865892e5a1db2a71e1f25625ed7db5df9d152d1cde4a79a908497427e2e2"
+    },
+    {
+      "case_order": 5,
+      "case_id": "test-h7-easy-05",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "c64fce78e7cb0fded413833904a3fde52bdd9d5faf98594368bc8d3794439d0b"
+    },
+    {
+      "case_order": 6,
+      "case_id": "test-h7-easy-06",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "0cd8828ec0e7a992856e791846e4065f6b03faf3edb83c06d376874c681cd45d"
+    },
+    {
+      "case_order": 6,
+      "case_id": "test-h7-easy-06",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "01727dd2a2ed0a69ee5039bb206da2ad8917920533668c7a1c418fd65d350a8a"
+    },
+    {
+      "case_order": 7,
+      "case_id": "test-h7-easy-07",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "db9c6d9811fddea0bacb6485c65b1772856d49f0d839c20a9dfed45025a4772d"
+    },
+    {
+      "case_order": 7,
+      "case_id": "test-h7-easy-07",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "c1396ca0d35b354ed4fb51dd606efb683e9ee4535f368c13f5f3becba774a76f"
+    },
+    {
+      "case_order": 8,
+      "case_id": "test-h7-easy-08",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "ae606ff4ea51d637a7e879131b6bb452a5a85078a85a642e5087afd27dda7344"
+    },
+    {
+      "case_order": 8,
+      "case_id": "test-h7-easy-08",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "1801f041f280e2e518bbef04f5e995a7916ab25f485b44b2233cebe3c99843fc"
+    },
+    {
+      "case_order": 9,
+      "case_id": "test-h7-easy-09",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "938c45b6898b9a92dd672b8470d2ceef7ab06efcfceffcea1e0040551a0ea4f0"
+    },
+    {
+      "case_order": 9,
+      "case_id": "test-h7-easy-09",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "4380c7d90d708ecf2c0fa265771ba3dc9230818dd214c351aeadb6970bdb99ce"
+    },
+    {
+      "case_order": 10,
+      "case_id": "test-h7-easy-10",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "71b1fe3604af0eb4928dd7e00b8038e5fc8805d50c2cfdc917db61cc9b19ab2e"
+    },
+    {
+      "case_order": 10,
+      "case_id": "test-h7-easy-10",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "af20a04d7423d303389b399526ee91d36e19847e1118cf0e8877fadb4306b730"
+    },
+    {
+      "case_order": 11,
+      "case_id": "test-h7-medium-01",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "edf77ecfe13b8c2b8ee9acf7003e24035f8aa5598a1ff97e087d1c5158fc8ad8"
+    },
+    {
+      "case_order": 11,
+      "case_id": "test-h7-medium-01",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "6657ab5ba6134193e5152b9de8467e65ec9ae52771982f4dcdfa283f30c2d79b"
+    },
+    {
+      "case_order": 12,
+      "case_id": "test-h7-medium-02",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "33832903dc530fb9ef89c582397d3c9857cba501730a5da72faa31e59fc4d855"
+    },
+    {
+      "case_order": 12,
+      "case_id": "test-h7-medium-02",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "4f9a45763a298235e64cfbd6add43e26bd1eb5a8ae3ad5de01cf4fa329245980"
+    },
+    {
+      "case_order": 13,
+      "case_id": "test-h7-medium-03",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "2703fc1e8b345f0b9a10af777690349585c799ceb1954f10da1fb156c9ea263c"
+    },
+    {
+      "case_order": 13,
+      "case_id": "test-h7-medium-03",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "dd7e1a12650abc5de7cdc4f48a145044884da77e491d73c5bdfe58ebd94f6d7d"
+    },
+    {
+      "case_order": 14,
+      "case_id": "test-h7-medium-04",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "3e4403b22950f4cbd287febac4a9adae581fb4b5bd825e74bcecc314905983f3"
+    },
+    {
+      "case_order": 14,
+      "case_id": "test-h7-medium-04",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "b75beb97502a56994a2155c6807a5af0b10cbb576f5b61d47e6622c1605557f3"
+    },
+    {
+      "case_order": 15,
+      "case_id": "test-h7-medium-05",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "15a865dc73dd853f8f983acbf5ab7106ff1b64a31e4ff60d70b799e277b926b6"
+    },
+    {
+      "case_order": 15,
+      "case_id": "test-h7-medium-05",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "ad09772b3efad48e7534110dd9ee670e0dd2e23ce9a4f09c4791cbfa58a13fcb"
+    },
+    {
+      "case_order": 16,
+      "case_id": "test-h7-medium-06",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "f304fa966113898c06c8368cadfce463ca1e33d85fedd0ebbddead6212534c49"
+    },
+    {
+      "case_order": 16,
+      "case_id": "test-h7-medium-06",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "3913b954461b414a6c5ca3f725d0966a0fbfaaabe141b62e49be332a392e8b43"
+    },
+    {
+      "case_order": 17,
+      "case_id": "test-h7-medium-07",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "92332b2f8e8518b5b83dfe03acb6531bcbe0ab256b3288d922d4ab750828e3da"
+    },
+    {
+      "case_order": 17,
+      "case_id": "test-h7-medium-07",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "3250a0dfe9afb632bda7793200ce456bcceb9a6292ada3d6b7c81f75e3fd92f0"
+    },
+    {
+      "case_order": 18,
+      "case_id": "test-h7-medium-08",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "6796ae4b7af0dbb39905ec5e9374069187a68b8af6bb1b05529d4960e0450d6b"
+    },
+    {
+      "case_order": 18,
+      "case_id": "test-h7-medium-08",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "986515e28c9f1a0623f33f14c6d0a0747f6824c1f8d9a4723bdd7bf1685b61dc"
+    },
+    {
+      "case_order": 19,
+      "case_id": "test-h7-medium-09",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "0037253f5521268cb955ec2e86eb6b8190c9865c6d7efa9b88664e44d7f94c3a"
+    },
+    {
+      "case_order": 19,
+      "case_id": "test-h7-medium-09",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "ecf693a8f83667fde75040121a96b94ee1c56870f7a1b12612a06f9cc2be0b3e"
+    },
+    {
+      "case_order": 20,
+      "case_id": "test-h7-medium-10",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "536c90849f88e97785b9a7635cfd797170792dd52eff7f8bb9ab734c5a9829e0"
+    },
+    {
+      "case_order": 20,
+      "case_id": "test-h7-medium-10",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "2962201d81f7db96225adcf995c25c93ec4d0f50303451caa14230ab1846c594"
+    },
+    {
+      "case_order": 21,
+      "case_id": "test-h7-hard-01",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "54f6581ab74f9c3c56fd991ef4889e9da6805dee725492f9db8ba2998e98a461"
+    },
+    {
+      "case_order": 21,
+      "case_id": "test-h7-hard-01",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "fd1636fb87dd401e4c9e5706862490513db2bfdea051f06932edb7903dbbb595"
+    },
+    {
+      "case_order": 22,
+      "case_id": "test-h7-hard-02",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "8659a1231c6b365703d6010e018bb6d8eefd530ba7a866112dbb26217f4ee349"
+    },
+    {
+      "case_order": 22,
+      "case_id": "test-h7-hard-02",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "6c66dd4939773d9e8be8d11ceb006338f8cc646ccb13c699471cea9864bfbee0"
+    },
+    {
+      "case_order": 23,
+      "case_id": "test-h7-hard-03",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "72fcd2c54677dad8b54b9dac97ff9e323d1db8c8d05f3562e26c53fc77a81ea1"
+    },
+    {
+      "case_order": 23,
+      "case_id": "test-h7-hard-03",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "458ca4b36191d37f56ca203b25e9345f0c4e51c5365bb9164144adcc28a4b72e"
+    },
+    {
+      "case_order": 24,
+      "case_id": "test-h7-hard-04",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "d3897ac6ccc9286f2286b89c1813b507bc53132ae0c4287a1e626769ab3efef4"
+    },
+    {
+      "case_order": 24,
+      "case_id": "test-h7-hard-04",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "b3cb5f90d61f422ccff42d189ede5ba61366740057b4af4606859b782acdc02e"
+    },
+    {
+      "case_order": 25,
+      "case_id": "test-h7-hard-05",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "f69b0fabac4c5c88be175a0c1b359644f615860040da10482aac8ff7b6741279"
+    },
+    {
+      "case_order": 25,
+      "case_id": "test-h7-hard-05",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "96f65662e21c7a32c93f58470120dafe1e9b00f21c23b9f2648b5e8e17623bb6"
+    },
+    {
+      "case_order": 26,
+      "case_id": "test-h7-hard-06",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "d5188a4ec428e60a35e326151ca62fd4bec06b6c60a3f7dd33e7f55f492e3e83"
+    },
+    {
+      "case_order": 26,
+      "case_id": "test-h7-hard-06",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "619294db4482ae1db6f0a774882da75f85f442afc5976849962c061087409d3e"
+    },
+    {
+      "case_order": 27,
+      "case_id": "test-h7-hard-07",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "179fbdad44b8add3893a723836f5032517bfcbcbc1044e1ad39616185741a8e4"
+    },
+    {
+      "case_order": 27,
+      "case_id": "test-h7-hard-07",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "b89fb54de9825716a9b76fa2f55cf2b1786bc71dfa1291224f5dd12bdfae33a9"
+    },
+    {
+      "case_order": 28,
+      "case_id": "test-h7-hard-08",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "1de227a0d0497c7ba44d5d4947627d4b3455372c14e95debdfedba4d8263b51d"
+    },
+    {
+      "case_order": 28,
+      "case_id": "test-h7-hard-08",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "a5b375ef5f291786cee623b18d62e8c9277735b5e6102f77515cdfc26247f4fb"
+    },
+    {
+      "case_order": 29,
+      "case_id": "test-h7-hard-09",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "981bba063e033c5b1f2b7c73c1db34edef31024cea73dc4df6fa742a980ae7a5"
+    },
+    {
+      "case_order": 29,
+      "case_id": "test-h7-hard-09",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "03d06c613a5fde3b9e0b9a4a679ead5a3a044a38dbf1daad90fd76daaadb3f83"
+    },
+    {
+      "case_order": 30,
+      "case_id": "test-h7-hard-10",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "a20d0fbd945ce408ed092f75694e0e4a2acf60e83c89ee321aefaa26bdf141e5"
+    },
+    {
+      "case_order": 30,
+      "case_id": "test-h7-hard-10",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "26f28bb7c3125f8dbfaf6895f0408a144f7a85f916dae523d4b32df72cf09aa8"
+    },
+    {
+      "case_order": 31,
+      "case_id": "test-h6-easy-01",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "e81d92f3b0493ce8b102eb298774e632addb56ff5d5d6b0b573c3b6ea2a3c146"
+    },
+    {
+      "case_order": 31,
+      "case_id": "test-h6-easy-01",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "fa21fda4eca027256a8d7a30250db9fd31763e42445a34681f4a914a63e76c9e"
+    },
+    {
+      "case_order": 32,
+      "case_id": "test-h6-easy-02",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "96b80214481fa7235be1cd103b1dda24239122a02c119b9ad3f3752b7f0766c7"
+    },
+    {
+      "case_order": 32,
+      "case_id": "test-h6-easy-02",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "e564024d93d5099f1e82a4e699f688703520c0eb30c06bbc57ef8a41cff56788"
+    },
+    {
+      "case_order": 33,
+      "case_id": "test-h6-easy-03",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "9abc521a523c3fe29e1c3af7ef6a72864d87403cd93f3144330c69d98b7dafa2"
+    },
+    {
+      "case_order": 33,
+      "case_id": "test-h6-easy-03",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "9a453238187be637e25e65e6a9d4a8e29256f30da4d5c721d8817e0fd790f649"
+    },
+    {
+      "case_order": 34,
+      "case_id": "test-h6-easy-04",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "879f485554c0858050a3a267c1b222bd8ba57ceeda42805fb2b96280484ad7f6"
+    },
+    {
+      "case_order": 34,
+      "case_id": "test-h6-easy-04",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "8ed01a8d14ec39fbe4a098fd65e54159fc98ff6d7859b1325bf5007f77c14691"
+    },
+    {
+      "case_order": 35,
+      "case_id": "test-h6-easy-05",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "44e10ae7578955ea1a489b3fc6cdf1b901e7b7ff25a3eea6e9c2128025bdb862"
+    },
+    {
+      "case_order": 35,
+      "case_id": "test-h6-easy-05",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "00944ec8e3cc88281cb6e84c1102b44459609dd56f38f4ce14ff236c3406956e"
+    },
+    {
+      "case_order": 36,
+      "case_id": "test-h6-easy-06",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "005d3b6f42e94830f2d585d138a8ed452ee22ccda5b44f3f21e46a2fb0e174ca"
+    },
+    {
+      "case_order": 36,
+      "case_id": "test-h6-easy-06",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "f5398549682be1c6268ce3732331da504e0af60be66d26b56605fd2a1ec071d1"
+    },
+    {
+      "case_order": 37,
+      "case_id": "test-h6-easy-07",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "09a2a255b565772242c052dba7e3919e3491ba0e45a217a050bce90006554eb0"
+    },
+    {
+      "case_order": 37,
+      "case_id": "test-h6-easy-07",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "920f55683c85fc627279b1ddce87abb0a928de7b1aaa3f9a1e8b49e841ac05f0"
+    },
+    {
+      "case_order": 38,
+      "case_id": "test-h6-easy-08",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "41170c907f328a8466fdf5b1c2bed9c9e2a5f06cadcd461fa43bbb0ec847ed49"
+    },
+    {
+      "case_order": 38,
+      "case_id": "test-h6-easy-08",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "f24700c7a8363bbf32fbde30c87871566bb2cd264612be229499f16e52f98879"
+    },
+    {
+      "case_order": 39,
+      "case_id": "test-h6-easy-09",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "c8aeb37450e75502ee8c4da735f007c012d89fd6aa36a005d536c99a69e0379f"
+    },
+    {
+      "case_order": 39,
+      "case_id": "test-h6-easy-09",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "df89bdaceaf881d751b7d264329c4bcd9781e9b323c95cd8ec6e706b56d1c913"
+    },
+    {
+      "case_order": 40,
+      "case_id": "test-h6-easy-10",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "bc2ed7b967e9acb4985be47f9d904fc21e97096a732a2f632a0eaa31cb8429aa"
+    },
+    {
+      "case_order": 40,
+      "case_id": "test-h6-easy-10",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "ea75940f821b7e77f993d8621d1213833d2f39f5eabe38f0b142664bfab535e6"
+    },
+    {
+      "case_order": 41,
+      "case_id": "test-h6-medium-01",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "5caf415ba9dbc026777c27af6e2c7ed5a23399840a1237fd3b99f90f884e1041"
+    },
+    {
+      "case_order": 41,
+      "case_id": "test-h6-medium-01",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "a51d9c68bdf6c7432a19a59307dbf76936b0ade7d7150ea484d8988d98f1586d"
+    },
+    {
+      "case_order": 42,
+      "case_id": "test-h6-medium-02",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "fffa1581f08396f96ea4ea9073b770fa4c2980d2f3959ccfe5521161ae254c6d"
+    },
+    {
+      "case_order": 42,
+      "case_id": "test-h6-medium-02",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "a54b4fbb2782f5f678e169fed2e33c27136e73b773b2c54a68a337cd044f5ef5"
+    },
+    {
+      "case_order": 43,
+      "case_id": "test-h6-medium-03",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "0adbffbd46fa6cf2f1f8bacb5af0b65d772ea3214925f86ea2b6dcc47082e936"
+    },
+    {
+      "case_order": 43,
+      "case_id": "test-h6-medium-03",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "f0d1ce31507b96f9bdda2cda6f28b86919df3036ccdb0e4d893461df841b3a65"
+    },
+    {
+      "case_order": 44,
+      "case_id": "test-h6-medium-04",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "43515b6e9c2b409ebf23a6242ec504bddb56f2be6b5b99793d713d79f9b6d397"
+    },
+    {
+      "case_order": 44,
+      "case_id": "test-h6-medium-04",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "60446dd94cb52456a5a78c9fca307a1373121216eec1c529a01f4c774b0b5203"
+    },
+    {
+      "case_order": 45,
+      "case_id": "test-h6-medium-05",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "e118b24b0787ea8b8e6ce942458a11dfc871df539bd5f6eba3a8520f9be34f56"
+    },
+    {
+      "case_order": 45,
+      "case_id": "test-h6-medium-05",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "c725f567e64818472ad04b75db9a3fac79f8cdc4b498c1b89de2e71da76518f0"
+    },
+    {
+      "case_order": 46,
+      "case_id": "test-h6-medium-06",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "c7ebbdd97dafa96b617391f24858840baf930744be816185d910c809e9f89b2d"
+    },
+    {
+      "case_order": 46,
+      "case_id": "test-h6-medium-06",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "d45b3155dae877a50180f401262b65d9c269b23b65c50fadf5b5497353b3dce1"
+    },
+    {
+      "case_order": 47,
+      "case_id": "test-h6-medium-07",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "e2b57027b335c10851d9aea91177c1694ff926f1539a1ab505a1ebabeea3fa54"
+    },
+    {
+      "case_order": 47,
+      "case_id": "test-h6-medium-07",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "73990c0f3ee132e3ef44038c00459dae9914d15455059820107551689c237fdf"
+    },
+    {
+      "case_order": 48,
+      "case_id": "test-h6-medium-08",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "65ddada0342d4d8aa00dc3ef20c1391c265344601601ae3d340e803d5c8d3a03"
+    },
+    {
+      "case_order": 48,
+      "case_id": "test-h6-medium-08",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "33e0b3d9aeb8f6c97d6ad8e38089a9bb21c11f3767e63b05c7ac639876061d00"
+    },
+    {
+      "case_order": 49,
+      "case_id": "test-h6-medium-09",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "91dc3fb9b6b9cc337ff01c0eed67a64516a6464a3141c336abe0cc60294b8ee2"
+    },
+    {
+      "case_order": 49,
+      "case_id": "test-h6-medium-09",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "8208fbcaafbc76d395724caff9e683d292ef2b98fca891c4d25a83dea67537d4"
+    },
+    {
+      "case_order": 50,
+      "case_id": "test-h6-medium-10",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "c178de86f440d24f349e32aa6ae21b8e73142fa849e880ea81974e1c8b6eb328"
+    },
+    {
+      "case_order": 50,
+      "case_id": "test-h6-medium-10",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "58189d7c9bc56494529c90b82a12372bc0e8c66768f33d3fec5bf34e32e15a91"
+    },
+    {
+      "case_order": 51,
+      "case_id": "test-h6-hard-01",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "295c5893616ca4b7743d59b63b95fe9bd1c20e872ae09011d31c48c2f57487f1"
+    },
+    {
+      "case_order": 51,
+      "case_id": "test-h6-hard-01",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "25dae06fd0378d2219beabf154930435def2ccd3d695fc330d6a59684a0df4af"
+    },
+    {
+      "case_order": 52,
+      "case_id": "test-h6-hard-02",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "289e6697a71d6fad7723b970370298a80765c875b37ff1ee89e82d72d94dd3fa"
+    },
+    {
+      "case_order": 52,
+      "case_id": "test-h6-hard-02",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "be1c941efd0e87807167ecfdfde8d089c93b1c6920be751856fde7882afd2e73"
+    },
+    {
+      "case_order": 53,
+      "case_id": "test-h6-hard-03",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "ff93b99197c98ae96d2295bbda79dcc7fb9c5eef143b5fd6def4d2698cfe6599"
+    },
+    {
+      "case_order": 53,
+      "case_id": "test-h6-hard-03",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "7a337826fbb4600c47c5b5567cad001067701d18ece076dd876bfdd2c786c867"
+    },
+    {
+      "case_order": 54,
+      "case_id": "test-h6-hard-04",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "ebd976c5a6241628345386769667b25312f801f33831feea4f16df28d983e333"
+    },
+    {
+      "case_order": 54,
+      "case_id": "test-h6-hard-04",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "11ae9e98ef2fb7ab78a906db90f40b03fd4272a6aa971da7dc70028b194499c4"
+    },
+    {
+      "case_order": 55,
+      "case_id": "test-h6-hard-05",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "8025d29fc380f576114febaf2abde0de4ea69d4bb42d68eac8e911676db1beca"
+    },
+    {
+      "case_order": 55,
+      "case_id": "test-h6-hard-05",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "7bdb18f704a78724cf28dd2d637c72a5a0fa1537740500d704e756f3a795c86c"
+    },
+    {
+      "case_order": 56,
+      "case_id": "test-h6-hard-06",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "ab849435d5bd66220b43c25e96c4d9caac871c5df7f9cf5f793ec0da9753af21"
+    },
+    {
+      "case_order": 56,
+      "case_id": "test-h6-hard-06",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "34963f1dacc79d6a77739cc346f9b9680a9c4cf4ca37d676e756fb8bec1acf64"
+    },
+    {
+      "case_order": 57,
+      "case_id": "test-h6-hard-07",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "d80678563702774555bcaf97d81d49b99ea10b5ab8285244080b231aaae294c8"
+    },
+    {
+      "case_order": 57,
+      "case_id": "test-h6-hard-07",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "fd64ecb4e5bc1a1b91356a2d862c8b113ae01ce1f3775be55781cc6dc0a16a22"
+    },
+    {
+      "case_order": 58,
+      "case_id": "test-h6-hard-08",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "935e5c66a5a500deae3c6e91bf6fac155f5defba85c83f7d586064910323ac13"
+    },
+    {
+      "case_order": 58,
+      "case_id": "test-h6-hard-08",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "9cdfd56cc66d12a3e29d4056a2f9c15404cbb4e18b27556908e7a09b2994896e"
+    },
+    {
+      "case_order": 59,
+      "case_id": "test-h6-hard-09",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "ac433bd37a42b2c775d0a20cc20208cf17d321d4740dcce7d4719dac497c69d5"
+    },
+    {
+      "case_order": 59,
+      "case_id": "test-h6-hard-09",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "54add5a1931b2da297f13e9c52664d31bcc82bb3e5c6ba7cdeea7513f5396844"
+    },
+    {
+      "case_order": 60,
+      "case_id": "test-h6-hard-10",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "d67aea7aa4119e641fa586eff88524e7bbaae0cee7d648c17cd123864aafd9eb"
+    },
+    {
+      "case_order": 60,
+      "case_id": "test-h6-hard-10",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "277df67f39a245aa8005d233e716491e04df858ceca69a9375131d5770bed0c4"
+    },
+    {
+      "case_order": 61,
+      "case_id": "test-h5-easy-01",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "dea0e931d82b50cacc1011a7c872ce49e4f06872338ff85acd3dbf0036d62ac9"
+    },
+    {
+      "case_order": 61,
+      "case_id": "test-h5-easy-01",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "9a2a4f719ff32a06bd085ae046ccd290eedb416ae139d965813e8c6230194fd5"
+    },
+    {
+      "case_order": 62,
+      "case_id": "test-h5-easy-02",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "e81c5eab9b414eba04e7fa2573b85ced76935a377b442e80c96997c303f080b4"
+    },
+    {
+      "case_order": 62,
+      "case_id": "test-h5-easy-02",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "1f3aa1f3f4d60aeedd8204e5ec6b2fe54b7ab92ce3d15e211964b5d1621b168d"
+    },
+    {
+      "case_order": 63,
+      "case_id": "test-h5-easy-03",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "2a36e9a22a5021a6aafd2ef1313ece55c266aad62b89771d233fc725d63b8a2a"
+    },
+    {
+      "case_order": 63,
+      "case_id": "test-h5-easy-03",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "acf8c62d8cbed3c9f85dbf7a271c115f83de3e973f8dfaffcb97bcd601ec10b7"
+    },
+    {
+      "case_order": 64,
+      "case_id": "test-h5-easy-04",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "23deb3635b43526b6c5ae47b8b612c49e0f63de57507edaea52972b9bc4be071"
+    },
+    {
+      "case_order": 64,
+      "case_id": "test-h5-easy-04",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "9903677e01cf40d04860e702ae656cb7edf7d28c2b036ed81ea8e783a6099239"
+    },
+    {
+      "case_order": 65,
+      "case_id": "test-h5-easy-05",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "8ad174812d4fedb0cf6de21c5e3fdbb16c495ece9afc9b55344d1744899dcebb"
+    },
+    {
+      "case_order": 65,
+      "case_id": "test-h5-easy-05",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "4a2d1fc9c6728217fa1520c250d72892999817f7affa4795cc33feea54904388"
+    },
+    {
+      "case_order": 66,
+      "case_id": "test-h5-easy-06",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "fd0a22ee90cb2c71a62902950ea250ea8bc40aacac6035785d4afad2c65c66ee"
+    },
+    {
+      "case_order": 66,
+      "case_id": "test-h5-easy-06",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "49fa12ff0cd5deb5c387bb44ccd09354de844e04932f2f2c7b2104faf881b593"
+    },
+    {
+      "case_order": 67,
+      "case_id": "test-h5-easy-07",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "8b37abb16342c4186f2cbc95b2acdf9fdcb02807ce50192b8dd00afa9e30ba9e"
+    },
+    {
+      "case_order": 67,
+      "case_id": "test-h5-easy-07",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "5ae6c852de8c67423d00952f8d51d4128db6e2ea15b1ac25ede2b5621b391716"
+    },
+    {
+      "case_order": 68,
+      "case_id": "test-h5-easy-08",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "cde3dc6fdd3b121e7e933336885dd0181dd95178a5cfbeb8d513170c4881b13c"
+    },
+    {
+      "case_order": 68,
+      "case_id": "test-h5-easy-08",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "9f3fbd3a1a5960b3819e3d6355215aaca206bcdc07fd1f80a343dc361b92cfbe"
+    },
+    {
+      "case_order": 69,
+      "case_id": "test-h5-easy-09",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "f806930f42380abe82e6b27f95448ea44e3310a01695c3ab34d84ef80b170763"
+    },
+    {
+      "case_order": 69,
+      "case_id": "test-h5-easy-09",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "aa0024cbe79ea091be320dbec87dd1261f5d48b702e135cdd9aab3ea4e278504"
+    },
+    {
+      "case_order": 70,
+      "case_id": "test-h5-easy-10",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "7be38a90efb77e404e331a2671518e69d6ca84ac2e32af4972b21dd3fe993117"
+    },
+    {
+      "case_order": 70,
+      "case_id": "test-h5-easy-10",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "fdbf09ed75a745f320c6ad7f35d6ab067d91efe26eaef30da52fc5c5b4e06898"
+    },
+    {
+      "case_order": 71,
+      "case_id": "test-h5-medium-01",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "42a223fcbf4b27d93d9c2bceec3810b3519024df4074591e7e050edc8ad6948f"
+    },
+    {
+      "case_order": 71,
+      "case_id": "test-h5-medium-01",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "0a0ab60ac292a6f5bafe0288be0f1c2a8fbc683b4ecbe95d891f6b8a99cbbb47"
+    },
+    {
+      "case_order": 72,
+      "case_id": "test-h5-medium-02",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "749fbe8e9478d1fdefad3aaf076f192745532baacf9c3c7741e4734e0f474e49"
+    },
+    {
+      "case_order": 72,
+      "case_id": "test-h5-medium-02",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "9ae258e5563e0098e4d7f07b3d06258aa32906b3aae2d0a2c5b483ba2df1d089"
+    },
+    {
+      "case_order": 73,
+      "case_id": "test-h5-medium-03",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "b0454c4a6046bb7af9f5083cd7b2c029666003047cb7f8d5d0e62eacbdbdaf48"
+    },
+    {
+      "case_order": 73,
+      "case_id": "test-h5-medium-03",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "ccb23d14799ea725b0c8ed6bb7d5c688d4d381c459ce3b3ce9fbdd7b4fab88e1"
+    },
+    {
+      "case_order": 74,
+      "case_id": "test-h5-medium-04",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "270901e196495cb6f8ae222185b192e728a32a9cc1c81dbe52991f0e830cf02c"
+    },
+    {
+      "case_order": 74,
+      "case_id": "test-h5-medium-04",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "377fa320079dad2dac1f6f03380ace8d24202c72ea470c6bc1cc77e0eb6e1d36"
+    },
+    {
+      "case_order": 75,
+      "case_id": "test-h5-medium-05",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "90b13d6b184834542680c077255acf962d7824c997baf16149a158b8ac3109b4"
+    },
+    {
+      "case_order": 75,
+      "case_id": "test-h5-medium-05",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "ba85abe59842c70d5919fff62c10245c5607ac0e831d2244c9055b0469f86793"
+    },
+    {
+      "case_order": 76,
+      "case_id": "test-h5-medium-06",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "9ec8ed1151bfca55b589eaa1c1c895fc5f5bd02cffa775b6824da85e93343076"
+    },
+    {
+      "case_order": 76,
+      "case_id": "test-h5-medium-06",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "9d951a71f08971079f219149b35f09037856dc49bf618cbe0db286a9005fc743"
+    },
+    {
+      "case_order": 77,
+      "case_id": "test-h5-medium-07",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "575185dff583240982e9c82aadcda5f0d9bab0debe50f2d4ccf6cab7b8b5bad1"
+    },
+    {
+      "case_order": 77,
+      "case_id": "test-h5-medium-07",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "88d50258486905e43ede640305c2a3fb3875c8b47a6a4c374fdc14e0816f1257"
+    },
+    {
+      "case_order": 78,
+      "case_id": "test-h5-medium-08",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "fde5b553a4a945e1c4ec8eb1e478de3c3f46cf12db54db37a92dd60735c43d2f"
+    },
+    {
+      "case_order": 78,
+      "case_id": "test-h5-medium-08",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "4cbee67c5bf28b03007ef5ea41f91457903286f312d6db41ca481bf5a92e0a38"
+    },
+    {
+      "case_order": 79,
+      "case_id": "test-h5-medium-09",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "a0cf9c61b59a5c6ebf0a09677d28bd5e8ef5239cc2cca90dfa5c33221c84fc64"
+    },
+    {
+      "case_order": 79,
+      "case_id": "test-h5-medium-09",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "37a948a7b5a30f5e051f5274ebc7bc83b58ffe29fb8165a290f82083aaeffd3e"
+    },
+    {
+      "case_order": 80,
+      "case_id": "test-h5-medium-10",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "7e5e03170a713d0be4147d9dcaa671b4db94429e71e93524df6b3796ca4c2b27"
+    },
+    {
+      "case_order": 80,
+      "case_id": "test-h5-medium-10",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "fe6e35f9cc90f46b83878e9d803a440f065164f97f9aee9e87aef584699170f9"
+    },
+    {
+      "case_order": 81,
+      "case_id": "test-h5-hard-01",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "1ed174a5c8ab85dee42d998795e3963935890a8383f51629014c79f759132f79"
+    },
+    {
+      "case_order": 81,
+      "case_id": "test-h5-hard-01",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "c3a9e96868665fe71609539a06b47621273926198542c46017870a011f978bb1"
+    },
+    {
+      "case_order": 82,
+      "case_id": "test-h5-hard-02",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "6cd8920e202cc1edf5bfeb3eff9412cd46500e7b85c524f30474c73e3d5e1670"
+    },
+    {
+      "case_order": 82,
+      "case_id": "test-h5-hard-02",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "898a2a102d528f8fdc461ca2b0b546a61faedf89b88a573e5e6546fb862e9b96"
+    },
+    {
+      "case_order": 83,
+      "case_id": "test-h5-hard-03",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "108d3c5f41891035ef94e8e4bb807e8b345ff0189815484d8761c175b4b35aad"
+    },
+    {
+      "case_order": 83,
+      "case_id": "test-h5-hard-03",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "821eb564150b59eb9e03b2a19f18fa24933cfcb9f18dadd2d8f7b7fcd3acec86"
+    },
+    {
+      "case_order": 84,
+      "case_id": "test-h5-hard-04",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "40c8665462ef762d2ada926a1598d4564a72f1deef982057b9312b1046035535"
+    },
+    {
+      "case_order": 84,
+      "case_id": "test-h5-hard-04",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "da39f25d95b5ae6d39e02c59e254d8c29858bd36325577724ce9efb4858cde73"
+    },
+    {
+      "case_order": 85,
+      "case_id": "test-h5-hard-05",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "a8ca23ea931c11e0d0da067925d8801acc144e201da2260af312ae8974b6bb0d"
+    },
+    {
+      "case_order": 85,
+      "case_id": "test-h5-hard-05",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "3738f6283392bf154dcf4ce1812fc476d6bb51fada93d5a0e2823e2b03c614cc"
+    },
+    {
+      "case_order": 86,
+      "case_id": "test-h5-hard-06",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "54a61fec878685270432062ad256870d23d8119d81e999b380faa1923d8c5c66"
+    },
+    {
+      "case_order": 86,
+      "case_id": "test-h5-hard-06",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "9ca84059f4b763e501a8369aca82f0d6ee9fae357696b3f2e11e839817bf23dd"
+    },
+    {
+      "case_order": 87,
+      "case_id": "test-h5-hard-07",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "60e9436ea6136a280cbcc27c00b3d2e97a06c6b6fa78a8cc29206d280db5e363"
+    },
+    {
+      "case_order": 87,
+      "case_id": "test-h5-hard-07",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "c825e42fe42439f9577e4712af3f853032acd97d4356689b63b0f5d28f6ff2a2"
+    },
+    {
+      "case_order": 88,
+      "case_id": "test-h5-hard-08",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "c77e0080d55baf14f4aa41312539ae97072f2a1259c1314d1206826504131543"
+    },
+    {
+      "case_order": 88,
+      "case_id": "test-h5-hard-08",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "1f2546ae1b452887e4de964e5c531cde352661d8f4c89fb25a66ad272ff84bda"
+    },
+    {
+      "case_order": 89,
+      "case_id": "test-h5-hard-09",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "0af98394ef5b13976d7b0f4c47c2eaa8a7438937071f89b722f4623494350ba0"
+    },
+    {
+      "case_order": 89,
+      "case_id": "test-h5-hard-09",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "417ee85736bc6b0def010221c1a9fcadd62c2cb274ce3288935caa2ca3999116"
+    },
+    {
+      "case_order": 90,
+      "case_id": "test-h5-hard-10",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "ebd23befe5cfefa2985161dd3d9e81a0eacdd0315563a8e1e5248011c35ee47c"
+    },
+    {
+      "case_order": 90,
+      "case_id": "test-h5-hard-10",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "d5cfc2aba49229e87eb17842c1625ff7bed35f125a4237143c7a4571a0e060bb"
+    },
+    {
+      "case_order": 91,
+      "case_id": "test-h4-easy-01",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "6946344e97ce380cd72c603f4246994ccc49043fc4c775c74feb9f8814823206"
+    },
+    {
+      "case_order": 91,
+      "case_id": "test-h4-easy-01",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "8baf7433751096af9b25bc32b72a6e55aba6eb140ca9c51a5d863abc588a29f2"
+    },
+    {
+      "case_order": 92,
+      "case_id": "test-h4-easy-02",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "7f685f290264e87e84f5de616af736d86e375bd59ac64d8c0e756a83a6a74f40"
+    },
+    {
+      "case_order": 92,
+      "case_id": "test-h4-easy-02",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "512fb2eb226bafec660b73860c20777b59a1b773a876f27b2115daa93fb7ed4f"
+    },
+    {
+      "case_order": 93,
+      "case_id": "test-h4-easy-03",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "11d69f9ebe9fa636a50b81fc3b2dae4a1e5b4e16292a1ba6a7627e9e8a11b108"
+    },
+    {
+      "case_order": 93,
+      "case_id": "test-h4-easy-03",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "4a4dc3de05581a9e9664a09a5ee1f38bd2fb8a4bb8ff9a9608d3ee19ebf4beb8"
+    },
+    {
+      "case_order": 94,
+      "case_id": "test-h4-easy-04",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "76f11f12ab707d2d5b47a34110ee7f521d3033d7156abd06c43c8eeac35f6380"
+    },
+    {
+      "case_order": 94,
+      "case_id": "test-h4-easy-04",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "2016a956325d92274fca740cd090c3107e3611db0b60e61ebe157ddad6ff5464"
+    },
+    {
+      "case_order": 95,
+      "case_id": "test-h4-easy-05",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "2c8d252f11d6ae2db66a7912efca5919561742a3674eda30618e571e6791ec11"
+    },
+    {
+      "case_order": 95,
+      "case_id": "test-h4-easy-05",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "4e67236c6daf92053fa5f787dc46755f94fa16058fd5cc963a7eaa6b9bcdcb05"
+    },
+    {
+      "case_order": 96,
+      "case_id": "test-h4-easy-06",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "a5ab2010dd4e4b2ee3012875f0acc4702da2dabebab543e635ad117961fd35bb"
+    },
+    {
+      "case_order": 96,
+      "case_id": "test-h4-easy-06",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "1e07805500435d7660177226ec5cc227c97f0dc2275966ee624de43a1b4567e9"
+    },
+    {
+      "case_order": 97,
+      "case_id": "test-h4-easy-07",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "2c33b578c38155ca7eaf429b3343d3900932135e7e5de8c9c0d2ceb819672893"
+    },
+    {
+      "case_order": 97,
+      "case_id": "test-h4-easy-07",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "3e7d851dc9f02bc6e78348639ad8473c5842fba2caf16912803343a340063a44"
+    },
+    {
+      "case_order": 98,
+      "case_id": "test-h4-easy-08",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "13c3ccceb70477995c631cd82d6f68f90038c31aa32d6f2d637fc51a8e622597"
+    },
+    {
+      "case_order": 98,
+      "case_id": "test-h4-easy-08",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "cd82c9168585fb9ae6de16979ae75ce0c6124ce3721d2853584d037951af01df"
+    },
+    {
+      "case_order": 99,
+      "case_id": "test-h4-easy-09",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "99c594907730af31b29dd3329410759153ab53ca7c58d86a9f6e6801904a9414"
+    },
+    {
+      "case_order": 99,
+      "case_id": "test-h4-easy-09",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "df1f8609f6ca6349a6cb83f6ec904d130f3d12064b26b6f9d929f21cf0d2357a"
+    },
+    {
+      "case_order": 100,
+      "case_id": "test-h4-easy-10",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "58263b25075bf43f6ced14c10dd297b5fa8f46922292f1cd4aad72563b4ee7fe"
+    },
+    {
+      "case_order": 100,
+      "case_id": "test-h4-easy-10",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "30327145b5a7c838aead8b997c8afa4f9ec29660aa282f41a35cb800f2878f70"
+    },
+    {
+      "case_order": 101,
+      "case_id": "test-h4-medium-01",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "9b42795b53e1537d92a5dfa002e4f871ec6ded1b5d2371ddb268ff2933021d19"
+    },
+    {
+      "case_order": 101,
+      "case_id": "test-h4-medium-01",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "7e6e115e3894b97fb340aac8e057f5fe90c0e3ad1582562300289a758ed7c7b9"
+    },
+    {
+      "case_order": 102,
+      "case_id": "test-h4-medium-02",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "a022256254e4cd1b22f01ab4e68c94c0874dc2d86b3ee67abfed19a926001a14"
+    },
+    {
+      "case_order": 102,
+      "case_id": "test-h4-medium-02",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "000f6b72532840893a40d56cca54ba0a686826e6fccab9db42943307a4368950"
+    },
+    {
+      "case_order": 103,
+      "case_id": "test-h4-medium-03",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "f00c1b1aef744a259f0bb15099244f385b2f4328c7dc2a5248f914b2110e8a2f"
+    },
+    {
+      "case_order": 103,
+      "case_id": "test-h4-medium-03",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "800b2193bef9ba0a2e0647b8edff8b4ebc09a5e667437cdd301495a7839dad99"
+    },
+    {
+      "case_order": 104,
+      "case_id": "test-h4-medium-04",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "c20035bbb275d3dae02c3891c84bd17d71b83b77720cc97d0e6bf03f46e93598"
+    },
+    {
+      "case_order": 104,
+      "case_id": "test-h4-medium-04",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "fb74b58d7c0bb88a1d41446d0a80fb13b5c4971a0e4c75342aad156e6f6f887d"
+    },
+    {
+      "case_order": 105,
+      "case_id": "test-h4-medium-05",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "35df847f749bb0964d4015aa02d53db94f8a0e23dd78df1455d54141f9ea935f"
+    },
+    {
+      "case_order": 105,
+      "case_id": "test-h4-medium-05",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "acf9ffa26683f3d65a884d10e834a94c0176e247581a4253c8ef1ce85ac6dc92"
+    },
+    {
+      "case_order": 106,
+      "case_id": "test-h4-medium-06",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "4589d611d3a45f1d70a8cfbcd24dbfd3fa0c15d502dcfbd8694d6af2cdba7582"
+    },
+    {
+      "case_order": 106,
+      "case_id": "test-h4-medium-06",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "2930167271b364d0d3cbc8bb2ca6079150b969a9607c568bacf19d1adcd2f6a7"
+    },
+    {
+      "case_order": 107,
+      "case_id": "test-h4-medium-07",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "03cbbb32eae2a328e0efaad2f8adb547b72334bb7dfe539f5ec5ca45f2782f58"
+    },
+    {
+      "case_order": 107,
+      "case_id": "test-h4-medium-07",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "a1e0565c79e039f3aadd803b633b315f786752d798fdb71729a7c374c5054edb"
+    },
+    {
+      "case_order": 108,
+      "case_id": "test-h4-medium-08",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "7086b46a8ab1f87a93b7b4afc094d4b7b4a547c9490c781350a5e79655b388fd"
+    },
+    {
+      "case_order": 108,
+      "case_id": "test-h4-medium-08",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "978433ed58001e25572cc392c5aacedd4c92f7086b2b20e9be01491209658ebd"
+    },
+    {
+      "case_order": 109,
+      "case_id": "test-h4-medium-09",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "d5f4d43cfb7dfc3071e6ca4b68cf0d719bbfa52372dc307ec1d5b7f2a5c46c0c"
+    },
+    {
+      "case_order": 109,
+      "case_id": "test-h4-medium-09",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "20d3fd2cf93e6945d587972b703802e9f3311feae3a11d832dce20cd9be2cf37"
+    },
+    {
+      "case_order": 110,
+      "case_id": "test-h4-medium-10",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "f27f1515b2ee904cb3fb758b5d4a19645bcfb2635a3ed6526b0858236ced4aa9"
+    },
+    {
+      "case_order": 110,
+      "case_id": "test-h4-medium-10",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "74fd55d223e948c0d1a43a9326c441dfb9e200c15151cbcf38d748b59ce85c73"
+    },
+    {
+      "case_order": 111,
+      "case_id": "test-h4-hard-01",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "7040afdaf428eb45b92e48da99950cc7ab5751a866311700dc5b8c28f63aeaa2"
+    },
+    {
+      "case_order": 111,
+      "case_id": "test-h4-hard-01",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "4dfa6adb0cfca464a70090e7c497bd5ce2f9ea5a42f417f000d37df0f26e9b56"
+    },
+    {
+      "case_order": 112,
+      "case_id": "test-h4-hard-02",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "394678ca88e16662c4a431ef27ad3900dca31929eaeb1d293fbe500126520acf"
+    },
+    {
+      "case_order": 112,
+      "case_id": "test-h4-hard-02",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "9b0d69048f50eacc18a111651724e591c1c47f6bb8368d5975a31651a13e3753"
+    },
+    {
+      "case_order": 113,
+      "case_id": "test-h4-hard-03",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "8daf8f166698c50c60cfa196d37cdc89405f01c89738061ea736291a85ad856f"
+    },
+    {
+      "case_order": 113,
+      "case_id": "test-h4-hard-03",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "a8d0878c103824fcd8850bf5d15b4d685e3d7601715f6db5cf1ab7f53bdf9d71"
+    },
+    {
+      "case_order": 114,
+      "case_id": "test-h4-hard-04",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "d71abe2011b3c255427dbe83d22020386319b65985a8e502eea7b514e259f6be"
+    },
+    {
+      "case_order": 114,
+      "case_id": "test-h4-hard-04",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "1d783a82c2de347300e94d9ebf348dfcbe991a11a50eebbbf93e9edd58c602f0"
+    },
+    {
+      "case_order": 115,
+      "case_id": "test-h4-hard-05",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "c4edb4b32b5c25c9e3d9122f964b29b01deaee7e405d91eeb722e11ec1c96d2a"
+    },
+    {
+      "case_order": 115,
+      "case_id": "test-h4-hard-05",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "bfc33f27caf537308a965d259c196eedf3337101fe25aaf73538883db2a35598"
+    },
+    {
+      "case_order": 116,
+      "case_id": "test-h4-hard-06",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "b033990a6940b74f7f1f88b839ddeafc7a5cb62a63b218512893e5f0cb7cb8e7"
+    },
+    {
+      "case_order": 116,
+      "case_id": "test-h4-hard-06",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "a2b17cdfe83dac34063228f414001c8295d073b88d8967ac1f241ec73a47914b"
+    },
+    {
+      "case_order": 117,
+      "case_id": "test-h4-hard-07",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "f42ed8100f90354b06a16d6285777a5f645f728fcbd4f12a9b37072d04ce530b"
+    },
+    {
+      "case_order": 117,
+      "case_id": "test-h4-hard-07",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "c706f39cf5b33850481c668cc02d42ebc1b8d253a04fd73ebf746bd868adacba"
+    },
+    {
+      "case_order": 118,
+      "case_id": "test-h4-hard-08",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "34f7f78075b017456bb8cb56282fcea94c78ce75f4e47022e51c6816e5296f96"
+    },
+    {
+      "case_order": 118,
+      "case_id": "test-h4-hard-08",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "fd40b19a45014bef60ef7a47c32058237a3e6605d2cccaca9c731557ce0a6b2d"
+    },
+    {
+      "case_order": 119,
+      "case_id": "test-h4-hard-09",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "431ddabde1e6f9a1ce5ecfd95626cefe87c9fffe0c9699c8362676c232f31b46"
+    },
+    {
+      "case_order": 119,
+      "case_id": "test-h4-hard-09",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "713133eb87a57a62a34646c743e3cf5932813ea655dbc68ac277f395098d1a2a"
+    },
+    {
+      "case_order": 120,
+      "case_id": "test-h4-hard-10",
+      "approach": "direct",
+      "attempt": 1,
+      "prompt_sha256": "876dbe6f0e8cd6424e5ac3b57be0a4331bc6341cc7993b2fbbce3ed4466bc68c"
+    },
+    {
+      "case_order": 120,
+      "case_id": "test-h4-hard-10",
+      "approach": "assisted",
+      "attempt": 1,
+      "prompt_sha256": "6c4b0448974b9e879c56146cdb3713430788bed076e8fd16e4296164993c9bdb"
+    }
+  ],
+  "verification": {
+    "validated_benchmark_hashes_match": true,
+    "current_manifest_compatible_with_runner_and_evaluator": true,
+    "frozen_manifest_and_benchmark_hashes_match": true,
+    "snapshot_copies_match_original_bytes": true,
+    "all_240_prepared_prompt_hashes_match_snapshot": true,
+    "runner_schema_generation_preserves_frozen_schema_bytes": true,
+    "source_inputs_and_existing_pilot_files_unchanged": true,
+    "docs_unchanged": true,
+    "docs_sha256": {
+      "docs/CS3263_Project_Guidelines.md": "5c2cec45c705beec07c05941f875f0a78b5c037d972dc1fd288037de73a1d47d",
+      "docs/CS3263_Project_Proposal.md": "dceb287fc896e0a1e2b3778ce190b5fef3074e1bce41a426378536364363cb01"
+    },
+    "existing_pilot_files": 163,
+    "existing_pilot_tree_sha256": "63b8f3849059ded8901785a95982e513b65ff360d999e0a1c0730e4a05cd6f96"
+  },
+  "next_commands": {
+    "run": ".venv\\Scripts\\python.exe -m degree_planner run --split test --name csp16-evaluation-v1",
+    "evaluate": ".venv\\Scripts\\python.exe -m degree_planner evaluate --split test --name csp16-evaluation-v1"
+  }
+}

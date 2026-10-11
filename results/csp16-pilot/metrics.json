@@ -1,0 +1,733 @@
+{
+  "run": {
+    "name": "csp16-pilot",
+    "split": "dev",
+    "selected_case_ids": [
+      "dev-h7-easy-01",
+      "dev-h7-medium-02",
+      "dev-h7-hard-01",
+      "dev-h6-easy-02",
+      "dev-h6-medium-01",
+      "dev-h6-hard-02",
+      "dev-h5-easy-01",
+      "dev-h5-medium-02",
+      "dev-h5-hard-01",
+      "dev-h4-easy-02",
+      "dev-h4-medium-01",
+      "dev-h4-hard-02"
+    ],
+    "selected_cases": 12,
+    "split_cases": 24,
+    "unselected_cases": 12,
+    "accuracy_denominator": "Completed selected attempts, including execution and output failures; pending attempts excluded."
+  },
+  "direct": {
+    "total": 12,
+    "attempted": 12,
+    "pending": 0,
+    "unselected": 12,
+    "feasible_valid": 6,
+    "feasible_total": 6,
+    "infeasible_correct": 6,
+    "infeasible_total": 6,
+    "false_infeasibility": 0,
+    "overall_correct": 12,
+    "accuracy_completed": 1.0,
+    "execution_statuses": {
+      "ok": 12
+    },
+    "outcomes": {
+      "valid_plan": 6,
+      "correct_infeasibility": 6
+    },
+    "translations_audited": 0,
+    "canonical_translations": 0,
+    "correct_with_translation_differences": 0,
+    "mean_total_seconds": 13.72,
+    "reported_input_tokens": 233280,
+    "reported_output_tokens": 5279
+  },
+  "assisted": {
+    "total": 12,
+    "attempted": 12,
+    "pending": 0,
+    "unselected": 12,
+    "feasible_valid": 6,
+    "feasible_total": 6,
+    "infeasible_correct": 6,
+    "infeasible_total": 6,
+    "false_infeasibility": 0,
+    "overall_correct": 12,
+    "accuracy_completed": 1.0,
+    "execution_statuses": {
+      "ok": 12
+    },
+    "outcomes": {
+      "valid_plan": 6,
+      "correct_infeasibility": 6
+    },
+    "translations_audited": 12,
+    "canonical_translations": 11,
+    "correct_with_translation_differences": 1,
+    "mean_total_seconds": 21.27,
+    "reported_input_tokens": 235966,
+    "reported_output_tokens": 13567
+  },
+  "paired": {
+    "completed_cases": 12,
+    "both_correct": 12,
+    "direct_only_correct": 0,
+    "assisted_only_correct": 0,
+    "neither_correct": 0
+  },
+  "by_horizon_difficulty": [
+    {
+      "remaining_semesters": 7,
+      "difficulty": "easy",
+      "direct": {
+        "total": 1,
+        "attempted": 1,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 1,
+        "feasible_total": 1,
+        "infeasible_correct": 0,
+        "infeasible_total": 0,
+        "false_infeasibility": 0,
+        "overall_correct": 1,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 1
+        },
+        "outcomes": {
+          "valid_plan": 1
+        },
+        "translations_audited": 0,
+        "canonical_translations": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 16.64,
+        "reported_input_tokens": 19375,
+        "reported_output_tokens": 625
+      },
+      "assisted": {
+        "total": 1,
+        "attempted": 1,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 1,
+        "feasible_total": 1,
+        "infeasible_correct": 0,
+        "infeasible_total": 0,
+        "false_infeasibility": 0,
+        "overall_correct": 1,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 1
+        },
+        "outcomes": {
+          "valid_plan": 1
+        },
+        "translations_audited": 1,
+        "canonical_translations": 1,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 25.39,
+        "reported_input_tokens": 19595,
+        "reported_output_tokens": 1215
+      }
+    },
+    {
+      "remaining_semesters": 7,
+      "difficulty": "medium",
+      "direct": {
+        "total": 1,
+        "attempted": 1,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 0,
+        "feasible_total": 0,
+        "infeasible_correct": 1,
+        "infeasible_total": 1,
+        "false_infeasibility": 0,
+        "overall_correct": 1,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 1
+        },
+        "outcomes": {
+          "correct_infeasibility": 1
+        },
+        "translations_audited": 0,
+        "canonical_translations": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 7.84,
+        "reported_input_tokens": 19416,
+        "reported_output_tokens": 152
+      },
+      "assisted": {
+        "total": 1,
+        "attempted": 1,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 0,
+        "feasible_total": 0,
+        "infeasible_correct": 1,
+        "infeasible_total": 1,
+        "false_infeasibility": 0,
+        "overall_correct": 1,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 1
+        },
+        "outcomes": {
+          "correct_infeasibility": 1
+        },
+        "translations_audited": 1,
+        "canonical_translations": 1,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 19.77,
+        "reported_input_tokens": 19640,
+        "reported_output_tokens": 1068
+      }
+    },
+    {
+      "remaining_semesters": 7,
+      "difficulty": "hard",
+      "direct": {
+        "total": 1,
+        "attempted": 1,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 1,
+        "feasible_total": 1,
+        "infeasible_correct": 0,
+        "infeasible_total": 0,
+        "false_infeasibility": 0,
+        "overall_correct": 1,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 1
+        },
+        "outcomes": {
+          "valid_plan": 1
+        },
+        "translations_audited": 0,
+        "canonical_translations": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 22.19,
+        "reported_input_tokens": 19465,
+        "reported_output_tokens": 842
+      },
+      "assisted": {
+        "total": 1,
+        "attempted": 1,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 1,
+        "feasible_total": 1,
+        "infeasible_correct": 0,
+        "infeasible_total": 0,
+        "false_infeasibility": 0,
+        "overall_correct": 1,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 1
+        },
+        "outcomes": {
+          "valid_plan": 1
+        },
+        "translations_audited": 1,
+        "canonical_translations": 1,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 19.33,
+        "reported_input_tokens": 19687,
+        "reported_output_tokens": 1092
+      }
+    },
+    {
+      "remaining_semesters": 6,
+      "difficulty": "easy",
+      "direct": {
+        "total": 1,
+        "attempted": 1,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 0,
+        "feasible_total": 0,
+        "infeasible_correct": 1,
+        "infeasible_total": 1,
+        "false_infeasibility": 0,
+        "overall_correct": 1,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 1
+        },
+        "outcomes": {
+          "correct_infeasibility": 1
+        },
+        "translations_audited": 0,
+        "canonical_translations": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 7.12,
+        "reported_input_tokens": 19390,
+        "reported_output_tokens": 145
+      },
+      "assisted": {
+        "total": 1,
+        "attempted": 1,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 0,
+        "feasible_total": 0,
+        "infeasible_correct": 1,
+        "infeasible_total": 1,
+        "false_infeasibility": 0,
+        "overall_correct": 1,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 1
+        },
+        "outcomes": {
+          "correct_infeasibility": 1
+        },
+        "translations_audited": 1,
+        "canonical_translations": 1,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 19.97,
+        "reported_input_tokens": 19614,
+        "reported_output_tokens": 998
+      }
+    },
+    {
+      "remaining_semesters": 6,
+      "difficulty": "medium",
+      "direct": {
+        "total": 1,
+        "attempted": 1,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 1,
+        "feasible_total": 1,
+        "infeasible_correct": 0,
+        "infeasible_total": 0,
+        "false_infeasibility": 0,
+        "overall_correct": 1,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 1
+        },
+        "outcomes": {
+          "valid_plan": 1
+        },
+        "translations_audited": 0,
+        "canonical_translations": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 20.39,
+        "reported_input_tokens": 19421,
+        "reported_output_tokens": 736
+      },
+      "assisted": {
+        "total": 1,
+        "attempted": 1,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 1,
+        "feasible_total": 1,
+        "infeasible_correct": 0,
+        "infeasible_total": 0,
+        "false_infeasibility": 0,
+        "overall_correct": 1,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 1
+        },
+        "outcomes": {
+          "valid_plan": 1
+        },
+        "translations_audited": 1,
+        "canonical_translations": 1,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 19.58,
+        "reported_input_tokens": 19645,
+        "reported_output_tokens": 1068
+      }
+    },
+    {
+      "remaining_semesters": 6,
+      "difficulty": "hard",
+      "direct": {
+        "total": 1,
+        "attempted": 1,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 0,
+        "feasible_total": 0,
+        "infeasible_correct": 1,
+        "infeasible_total": 1,
+        "false_infeasibility": 0,
+        "overall_correct": 1,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 1
+        },
+        "outcomes": {
+          "correct_infeasibility": 1
+        },
+        "translations_audited": 0,
+        "canonical_translations": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 10.7,
+        "reported_input_tokens": 19511,
+        "reported_output_tokens": 243
+      },
+      "assisted": {
+        "total": 1,
+        "attempted": 1,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 0,
+        "feasible_total": 0,
+        "infeasible_correct": 1,
+        "infeasible_total": 1,
+        "false_infeasibility": 0,
+        "overall_correct": 1,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 1
+        },
+        "outcomes": {
+          "correct_infeasibility": 1
+        },
+        "translations_audited": 1,
+        "canonical_translations": 0,
+        "correct_with_translation_differences": 1,
+        "mean_total_seconds": 20.37,
+        "reported_input_tokens": 19739,
+        "reported_output_tokens": 1203
+      }
+    },
+    {
+      "remaining_semesters": 5,
+      "difficulty": "easy",
+      "direct": {
+        "total": 1,
+        "attempted": 1,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 1,
+        "feasible_total": 1,
+        "infeasible_correct": 0,
+        "infeasible_total": 0,
+        "false_infeasibility": 0,
+        "overall_correct": 1,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 1
+        },
+        "outcomes": {
+          "valid_plan": 1
+        },
+        "translations_audited": 0,
+        "canonical_translations": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 16.39,
+        "reported_input_tokens": 19395,
+        "reported_output_tokens": 547
+      },
+      "assisted": {
+        "total": 1,
+        "attempted": 1,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 1,
+        "feasible_total": 1,
+        "infeasible_correct": 0,
+        "infeasible_total": 0,
+        "false_infeasibility": 0,
+        "overall_correct": 1,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 1
+        },
+        "outcomes": {
+          "valid_plan": 1
+        },
+        "translations_audited": 1,
+        "canonical_translations": 1,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 20.64,
+        "reported_input_tokens": 19619,
+        "reported_output_tokens": 1135
+      }
+    },
+    {
+      "remaining_semesters": 5,
+      "difficulty": "medium",
+      "direct": {
+        "total": 1,
+        "attempted": 1,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 0,
+        "feasible_total": 0,
+        "infeasible_correct": 1,
+        "infeasible_total": 1,
+        "false_infeasibility": 0,
+        "overall_correct": 1,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 1
+        },
+        "outcomes": {
+          "correct_infeasibility": 1
+        },
+        "translations_audited": 0,
+        "canonical_translations": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 7.42,
+        "reported_input_tokens": 19440,
+        "reported_output_tokens": 161
+      },
+      "assisted": {
+        "total": 1,
+        "attempted": 1,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 0,
+        "feasible_total": 0,
+        "infeasible_correct": 1,
+        "infeasible_total": 1,
+        "false_infeasibility": 0,
+        "overall_correct": 1,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 1
+        },
+        "outcomes": {
+          "correct_infeasibility": 1
+        },
+        "translations_audited": 1,
+        "canonical_translations": 1,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 23.0,
+        "reported_input_tokens": 19666,
+        "reported_output_tokens": 1161
+      }
+    },
+    {
+      "remaining_semesters": 5,
+      "difficulty": "hard",
+      "direct": {
+        "total": 1,
+        "attempted": 1,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 1,
+        "feasible_total": 1,
+        "infeasible_correct": 0,
+        "infeasible_total": 0,
+        "false_infeasibility": 0,
+        "overall_correct": 1,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 1
+        },
+        "outcomes": {
+          "valid_plan": 1
+        },
+        "translations_audited": 0,
+        "canonical_translations": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 18.42,
+        "reported_input_tokens": 19489,
+        "reported_output_tokens": 694
+      },
+      "assisted": {
+        "total": 1,
+        "attempted": 1,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 1,
+        "feasible_total": 1,
+        "infeasible_correct": 0,
+        "infeasible_total": 0,
+        "false_infeasibility": 0,
+        "overall_correct": 1,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 1
+        },
+        "outcomes": {
+          "valid_plan": 1
+        },
+        "translations_audited": 1,
+        "canonical_translations": 1,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 21.53,
+        "reported_input_tokens": 19715,
+        "reported_output_tokens": 1250
+      }
+    },
+    {
+      "remaining_semesters": 4,
+      "difficulty": "easy",
+      "direct": {
+        "total": 1,
+        "attempted": 1,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 0,
+        "feasible_total": 0,
+        "infeasible_correct": 1,
+        "infeasible_total": 1,
+        "false_infeasibility": 0,
+        "overall_correct": 1,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 1
+        },
+        "outcomes": {
+          "correct_infeasibility": 1
+        },
+        "translations_audited": 0,
+        "canonical_translations": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 7.06,
+        "reported_input_tokens": 19412,
+        "reported_output_tokens": 123
+      },
+      "assisted": {
+        "total": 1,
+        "attempted": 1,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 0,
+        "feasible_total": 0,
+        "infeasible_correct": 1,
+        "infeasible_total": 1,
+        "false_infeasibility": 0,
+        "overall_correct": 1,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 1
+        },
+        "outcomes": {
+          "correct_infeasibility": 1
+        },
+        "translations_audited": 1,
+        "canonical_translations": 1,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 22.55,
+        "reported_input_tokens": 19632,
+        "reported_output_tokens": 982
+      }
+    },
+    {
+      "remaining_semesters": 4,
+      "difficulty": "medium",
+      "direct": {
+        "total": 1,
+        "attempted": 1,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 1,
+        "feasible_total": 1,
+        "infeasible_correct": 0,
+        "infeasible_total": 0,
+        "false_infeasibility": 0,
+        "overall_correct": 1,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 1
+        },
+        "outcomes": {
+          "valid_plan": 1
+        },
+        "translations_audited": 0,
+        "canonical_translations": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 18.7,
+        "reported_input_tokens": 19444,
+        "reported_output_tokens": 694
+      },
+      "assisted": {
+        "total": 1,
+        "attempted": 1,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 1,
+        "feasible_total": 1,
+        "infeasible_correct": 0,
+        "infeasible_total": 0,
+        "false_infeasibility": 0,
+        "overall_correct": 1,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 1
+        },
+        "outcomes": {
+          "valid_plan": 1
+        },
+        "translations_audited": 1,
+        "canonical_translations": 1,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 18.39,
+        "reported_input_tokens": 19670,
+        "reported_output_tokens": 1029
+      }
+    },
+    {
+      "remaining_semesters": 4,
+      "difficulty": "hard",
+      "direct": {
+        "total": 1,
+        "attempted": 1,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 0,
+        "feasible_total": 0,
+        "infeasible_correct": 1,
+        "infeasible_total": 1,
+        "false_infeasibility": 0,
+        "overall_correct": 1,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 1
+        },
+        "outcomes": {
+          "correct_infeasibility": 1
+        },
+        "translations_audited": 0,
+        "canonical_translations": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 11.78,
+        "reported_input_tokens": 19522,
+        "reported_output_tokens": 317
+      },
+      "assisted": {
+        "total": 1,
+        "attempted": 1,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 0,
+        "feasible_total": 0,
+        "infeasible_correct": 1,
+        "infeasible_total": 1,
+        "false_infeasibility": 0,
+        "overall_correct": 1,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 1
+        },
+        "outcomes": {
+          "correct_infeasibility": 1
+        },
+        "translations_audited": 1,
+        "canonical_translations": 1,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 24.73,
+        "reported_input_tokens": 19744,
+        "reported_output_tokens": 1366
+      }
+    }
+  ]
+}

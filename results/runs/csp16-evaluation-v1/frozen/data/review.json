@@ -1,0 +1,82 @@
+{
+  "status": "AI source-audited; team review still required before submission",
+  "assumptions": [
+    "Passed courses meet D-grade prerequisite thresholds.",
+    "Standard CS student has qualifying mathematics and English proficiency.",
+    "Programme-specific preclusion conditions resolved for single-degree CS; listed course preclusions retained."
+  ],
+  "entries": [
+    {
+      "course": "CS1101S",
+      "flags": [],
+      "decisions": [
+        "Assume qualifying mathematics for standard CS admission."
+      ],
+      "text": ""
+    },
+    {
+      "course": "CS1231S",
+      "flags": [],
+      "decisions": [
+        "Assume qualifying pre-university mathematics; documented alternative to MA1301/X."
+      ],
+      "text": "If undertaking an Undergraduate Degree THEN ( must have completed 1 of 06 MATHEMATICS/07 FURTHER MATHEMATICS/21 PURE MATHEMATICS/22 APPLIED MATHEMATICS at a grade of at least E OR must have completed 1 of MA1301/MA1301X at a grade of at least D)"
+    },
+    {
+      "course": "CS2040HS",
+      "flags": [
+        "Non-course prerequisite leaf: CS1010%:D"
+      ],
+      "decisions": [],
+      "text": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of any Courses beginning with CS1010 at a grade of at least D, CS1101S/UTC2851 at a grade of at least D)"
+    },
+    {
+      "course": "CS2101",
+      "flags": [],
+      "decisions": [
+        "Assume CS programme eligibility and the English proficiency prerequisite are satisfied."
+      ],
+      "text": "If undertaking an Undergraduate Degree THEN must have completed EP ENGLISH LANGUAGE PROFICIENCY TEST at a grade of at least N AND must be undertaking 1 of 2001CEGHON Bachelor of Engineering (Computer Engineering) (Hons), 0300ISPHON Bachelor of Computing (Information Security) (Hons) Co-op, 0300ISHON Bachelor of Computing (Information Systems) (Hons), 0300ISCHON Bachelor of Computing (Information Security) (Hons), 0300CSHON Bachelor of Computing (Computer Science) (Hons), 0300AIHON Bachelor of Computing (Artificial Intelligence) (Hons)"
+    },
+    {
+      "course": "CS2103T",
+      "flags": [],
+      "decisions": [
+        "CS programme and English proficiency assumed satisfied; course prerequisites retained."
+      ],
+      "text": "If undertaking an Undergraduate Degree THEN ( must have completed 1 of CS2030/CS2030DE/CS2030HS/CS2030S at a grade of at least D AND must have completed 1 of CS2040/CS2040C/CS2040DE/CS2040HS/CS2040S at a grade of at least D AND must have completed EP ENGLISH LANGUAGE PROFICIENCY TEST at a grade of at least N AND must be undertaking 1 of 0300CSHON Bachelor of Computing (Computer Science) (Hons), 0300ISCHON Bachelor of Computing (Information Security) (Hons), 0300ISHON Bachelor of Computing (Information Systems) (Hons), 0300ISPHON Bachelor of Computing (Information Security) (Hons) Co-op, 2001CEGHON Bachelor of Engineering (Computer Engineering) (Hons), 0300AIHON Bachelor of Computing (Artificial Intelligence) (Hons), 0300AISHON Bachelor of Computing (Business Artificial Intelligence Systems) (Hons))"
+    },
+    {
+      "course": "EE2028",
+      "flags": [
+        "Non-course prerequisite leaf: CS1010%:D"
+      ],
+      "decisions": [],
+      "text": "If undertaking an Undergraduate DegreeTHEN(( must have completed 1 of CG1111A/EE1111B/EE2111A at a grade of at least D)AND( must have completed 1 of UTC2851 at a grade of at least D, any Courses beginning with CS1010 at a grade of at least D))"
+    },
+    {
+      "course": "EE2211",
+      "flags": [
+        "Non-course prerequisite leaf: CS1010%:D"
+      ],
+      "decisions": [],
+      "text": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of UTC2851/any Courses beginning with CS1010 at a grade of at least D)AND( must have completed 1 of MA1505/MA1511 at a grade of at least D)AND( must have completed 1 of MA1508E/MA1513 at a grade of at least D)"
+    },
+    {
+      "course": "MA1521",
+      "flags": [],
+      "decisions": [
+        "Assume qualifying pre-university mathematics; documented alternative to MA1301/X."
+      ],
+      "text": "If undertaking an Undergraduate Degree THEN (( must have completed 1 of 06 MATHEMATICS/07 FURTHER MATHEMATICS at a grade of at least E) OR ( must have completed 1 of MA1301/MA1301X at a grade of at least D))"
+    },
+    {
+      "course": "MA1522",
+      "flags": [],
+      "decisions": [
+        "Assume qualifying pre-university mathematics for standard CS admission."
+      ],
+      "text": "If undertaking an Undergraduate Degree THEN (( must have completed 1 of 06 MATHEMATICS/07 FURTHER MATHEMATICS at a grade of at least E) OR ( must have completed 1 of MA1301/MA1301X at a grade of at least D))"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "canonical_match": false,
+  "differences": [
+    "required"
+  ],
+  "interpretation": "Field differences require semantic review; outcome correctness is scored separately."
+}

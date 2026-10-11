@@ -1,0 +1,1 @@
+{"status":"infeasible","semesters":[],"explanation":"Mandatory foundation course CS2109S and your required course CS3243 mutually preclude each other. Neither is already completed, so both would need new enrollment, which violates the supplied preclusion constraints. No semester plan can satisfy every requirement."}

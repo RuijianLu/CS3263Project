@@ -2,7 +2,7 @@
 
 **Current version: a feasibility CSP with a maximum of 16 modelled units per normal semester.** There is no scheduling or course-count objective. The implementation addresses proposal sub-problems (1) course selection, (2) prerequisites, and (3) semester allocation. Preferences are deferred.
 
-Current work is local CSP construction, solution validation, and a new **24-development/120-evaluation benchmark**. No model comparison has been run for this version. Programme interpretations still require review.
+The **24-development/120-evaluation benchmark** is locally validated. A 12-case paired development pilot is complete: both approaches answered 12/12 correctly. See [the pilot comparison and inspection](results/csp16-pilot/review.md) for runtime, translation equivalence and explanation errors. The user confirmed the source and assumption review complete on 11 October 2026, with no major problems found. The 120-case evaluation is frozen as csp16-evaluation-v1 and has not been run.
 
 Start with the readable results:
 
@@ -366,7 +366,32 @@ Browse [data/benchmark/README.md](data/benchmark/README.md), index.csv, or indiv
 .venv\Scripts\python.exe -m degree_planner check data/benchmark/cases/dev-h7-easy-01.json results/validation/dev-h7-easy-01/plan.json
 ~~~
 
-Generation is seeded and specifications are reproducible for the same frozen facts and implementation. Reference schedules are any satisfying assignments; an OR-Tools/runtime change can produce a different schedule. Comparison commands check the validated input/source hashes before making model calls. Use separate run names such as csp16-pilot (dev) and csp16-evaluation (test); a run cannot mix splits or changed settings. Review the cases before starting the model pilot. No model pilot or evaluation has been run on this benchmark yet.
+Generation is seeded and specifications are reproducible for the same frozen facts and implementation. Reference schedules are any satisfying assignments; an OR-Tools/runtime change can produce a different schedule. Comparison commands check the validated input/source hashes before making model calls. A run cannot mix splits, selected cases or changed settings. The generated benchmark guide records construction without model calls; subsequent experiment results are saved separately.
+
+The completed pilot used the first 12 development cases and one attempt per approach per case:
+
+The recorded command was .venv\Scripts\python.exe -m degree_planner run --split dev --limit 12 --name csp16-pilot. The saved pilot outputs remain unchanged. The reporting-policy revision below changes the evaluator fingerprint, so the current implementation requires a separately named experiment rather than resuming or overwriting csp16-pilot. Its original evaluator is retained at [frozen_sources/evaluate.py](results/runs/csp16-pilot/frozen_sources/evaluate.py), matching the pilot manifest hash.
+
+The run manifest freezes the selected case IDs. summary.csv retains all split cases with a selected flag; accuracy denominators include only completed selected attempts. Pending cases and execution failures are reported separately. analysis.md and metrics.json include paired results, horizon/difficulty breakdowns, canonical translation differences, runtime and usage. review.md records manual inspection, including equivalent translations and explanation errors. Raw responses, prompts, events and diagnostics are preserved under results/runs/csp16-pilot/. Source or prompt changes require a separately named experiment.
+
+The prepared held-out experiment is **csp16-evaluation-v1**, selecting all 120 test cases for 240 planned attempts. Its [manifest](results/runs/csp16-evaluation-v1/manifest.json) freezes the current protocol; [freeze metadata](results/runs/csp16-evaluation-v1/freeze.json) records the review confirmation, runtime, passing 25-test suite, snapshot inventory and prepared prompt hashes. Exact copies of the dataset, prompts, configuration, implementation and tests are retained under results/runs/csp16-evaluation-v1/frozen/. Preparation made no model calls. The settings remain gpt-6.1-sol, medium reasoning effort, a 180-second process timeout, a 10-second solver limit and one attempt per approach per case.
+
+To execute and then score this frozen experiment from the project root:
+
+~~~powershell
+.venv\Scripts\python.exe -m degree_planner run --split test --name csp16-evaluation-v1
+.venv\Scripts\python.exe -m degree_planner evaluate --split test --name csp16-evaluation-v1
+~~~
+
+The existing fingerprint checks reject changed inputs, implementation, settings or case selection under this run name. Keep the primary scoring policy below fixed throughout the evaluation.
+
+### Evaluation scoring policy
+
+Policy outcome-v1-explanation-secondary retains the pilot's primary correctness rules. A feasible answer must pass the output schema and the independent checker against the original request. An infeasible answer must pass the output schema and agree with the validated gold label. Completed selected attempts form the accuracy denominator; execution failures, malformed outputs and unknown answers count as unsuccessful, while pending and unselected attempts are excluded.
+
+Explanation content is a secondary manual finding and does not change the primary score. Output schema requirements still apply. Record incorrect numerical claims and unsupported reasoning separately; an infeasibility explanation may use any sufficient contradiction rather than reproducing the annotated witness. A witness annotation does not establish that the mechanism is the sole cause or that proof difficulty matches the designed request difficulty.
+
+Translation auditing distinguishes a canonical field match from semantic fidelity. The revised summary.csv uses translation_canonical_match and translation_semantic_status instead of the ambiguous translation_faithful field. A difference receives review_required until separately reviewed as equivalent, non-equivalent or unresolved. An outcome that agrees with gold does not establish an equivalent translation. The policy is included in new metrics.json and analysis.md outputs. [manual_audit.json](results/csp16-pilot/manual_audit.json) records the pilot's two explanation-error cases and its equivalent redundant requirement, without altering existing scores; student-team review remains pending.
 
 ## Testcase study stage and completed courses
 
@@ -427,7 +452,7 @@ Read results/validation/my-case/report.md for the schedule, semester unit totals
 
 Interpret status carefully: feasible with independent validation PASS is a checked schedule; infeasible is CP-SAT's conclusion for the supplied specification; unknown means neither a solution nor an infeasibility proof was found within the search limit. The checker validates feasible schedules only, so it cannot independently certify infeasible or unknown output. Those statuses make the solve command exit unsuccessfully even though the saved artifacts remain available. You can retry unknown with a longer --time-limit, without treating it as infeasible.
 
-These commands test the symbolic solver and checker. They do not call a language model. request.txt is a generated description for inspection, not an input to solve, and assumes the standard programme groups. Adding a custom case to model evaluation requires a reviewed natural-language request and validated JSONL/gold entries; editing a convenience export alone does not change the active benchmark. Keep gold specifications and reference schedules out of model prompts. The generated benchmark is ready for review; its model comparison has not yet been run.
+These commands test the symbolic solver and checker. They do not call a language model. request.txt is a generated description for inspection, not an input to solve, and assumes the standard programme groups. Adding a custom case to model evaluation requires a reviewed natural-language request and validated JSONL/gold entries; editing a convenience export alone does not change the active benchmark. Keep gold specifications and reference schedules out of model prompts. The 12-case development comparison is complete; the held-out evaluation remains pending.
 
 ## Sources and unresolved rules
 
@@ -435,7 +460,7 @@ Course facts come from the [NUSMods API](https://api.nusmods.com/v2/). Programme
 
 There are 86 NUSMods records plus one completed-credit-only CP3200 record from the official programme page. CP3200 is not a current-year offering. Missing curriculum-listed courses appear in data/sources.json. Unresolved wildcard prerequisites are recorded in data/review.json and blocked from new selection.
 
-The 16-unit cap is a project policy and is stored separately from source facts in the requirements snapshot and policy.py. All programme interpretations and synthetic completed records still need student-team review.
+The 16-unit cap is a project policy and is stored separately from source facts in the requirements snapshot and policy.py. The user confirmed the source and assumption review complete on 11 October 2026, with no major problems found; the confirmation is retained in the evaluation freeze metadata.
 
 ## Historical experiment and deferred work
 
@@ -448,9 +473,9 @@ All 30 historical cases pre-completed CS1101S and MA1521. Eight of the 24 evalua
 - Exact original inputs and core solver sources: results/historical/32-unit-inputs/.
 - Original Git commit: 468f5b79ddf2c8c363e354f3c5367431a7a0d8d7.
 
-Those results do not describe the current 16-unit feasibility CSP. Changing the cap can change feasibility labels. The original benchmark was replaced in the active data/benchmark/ only after confirming the archived copies matched exactly. run and evaluate reject historical labels, changed source facts, or changed validated artifacts before making model calls or changing results. The fresh benchmark is ready for a separately named pilot after review.
+Those results do not describe the current 16-unit feasibility CSP. Changing the cap can change feasibility labels. The original benchmark was replaced in the active data/benchmark/ only after confirming the archived copies matched exactly. run and evaluate reject historical labels, changed source facts, or changed validated artifacts before making model calls or changing results. The current comparison uses the separately named csp16-pilot run.
 
-Model comparisons and preferences remain future work. The new 144-case benchmark has been generated and locally validated.
+The current 12-case model pilot is complete. The 120-case evaluation, further comparisons and preferences remain future work. The new 144-case benchmark has been generated and locally validated.
 
 ## Files and proposal mapping
 

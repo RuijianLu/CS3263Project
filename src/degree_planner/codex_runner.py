@@ -135,21 +135,29 @@ def run(root, split="dev", limit=None, run_name="initial", approaches=("direct",
         raise ValueError("Initial protocol allows one attempt per case")
     write_schemas(root)
     cases = load_jsonl(root / f"data/benchmark/{split}.jsonl")
-    if limit is not None: cases = cases[:limit]
+    if limit is not None:
+        if not 1 <= limit <= len(cases):
+            raise ValueError("Limit must select at least one case and cannot exceed the split size")
+        cases = cases[:limit]
+    case_ids = [case["id"] for case in cases]
     base = root / "results/runs" / run_name
     if not base.resolve().is_relative_to((root / "results/runs").resolve()):
         raise ValueError("Run name must stay within results/runs")
     base.mkdir(parents=True, exist_ok=True)
     if not (base / "manifest.json").exists():
         write_json(base / "manifest.json", {
-            "configuration": config, "split": split, "artifact_sha256": fingerprints(root, split),
+            "configuration": config, "split": split, "case_ids": case_ids,
+            "artifact_sha256": fingerprints(root, split),
             "cli_version": subprocess.check_output([shutil.which("codex"), "--version"], text=True).strip(),
             "catalogue_sha256": hashlib.sha256((root / "data/courses.json").read_bytes()).hexdigest(),
             "requirements_sha256": hashlib.sha256((root / "data/requirements.json").read_bytes()).hexdigest(),
             "benchmark_sha256": hashlib.sha256((root / f"data/benchmark/{split}.jsonl").read_bytes()).hexdigest(),
             "protocol": "Fresh session; tools disabled and audited; no repairs or retries; subscription authentication."
         })
-    verify_manifest(root, read_json(base / "manifest.json"), split, config)
+    manifest = read_json(base / "manifest.json")
+    verify_manifest(root, manifest, split, config)
+    if manifest.get("case_ids", case_ids) != case_ids:
+        raise ValueError("Selected cases changed within a run; choose a separate run name")
     for case in cases:
         for approach in approaches:
             destination = base / f"{case['id']}-{approach}"

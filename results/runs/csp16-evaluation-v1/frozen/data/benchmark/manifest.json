@@ -1,0 +1,53 @@
+{
+  "version": "csp16-stage-v1",
+  "seed": 3263,
+  "objective": null,
+  "max_units": 16,
+  "runtime": {
+    "python": "3.11.9",
+    "ortools": "9.15.6755"
+  },
+  "development_cases": 24,
+  "evaluation_cases": 120,
+  "evaluation_feasible": 84,
+  "evaluation_infeasible": 36,
+  "local_validation": {
+    "valid": true,
+    "cases": 144,
+    "feasible": 96,
+    "infeasible": 48,
+    "unique_specifications": 144,
+    "distinct_histories": {
+      "dev": 8,
+      "test": 70
+    },
+    "history_split_overlap": 0,
+    "model_calls": 0
+  },
+  "model_calls": 0,
+  "source_sha256": {
+    "data/courses.json": "334da6099be466a8a2f2e072d015c27511574aac2290505c79a72f431f6fbd47",
+    "data/requirements.json": "14bdcdbec4ca6097d455375f8d7f66a47514be9b791e4418746f7c1a943f3f69",
+    "src/degree_planner/benchmark.py": "c6ae4084efdc658d16a79b640f12f53e5fbed44e7db7cd86c8be123c58830cb1",
+    "src/degree_planner/histories.py": "1405fd3b8e869bdfaceee84b4ef75e3401c676b4ec3cf8d353efc64b534197ee",
+    "src/degree_planner/csp.py": "5d7994be1d2bae4ffffe679b59e313001ede410b3ebf05c69c7a73406653b6bf",
+    "src/degree_planner/solver.py": "be16d1045f38bd96b237ef9550ffaf11b2f4168c6086140d97ff364cc3b25631",
+    "src/degree_planner/checker.py": "c804d3f44ae5f23921069c8434dc8ec3823c9feb08c5ed10fd9066f4cf28afa4",
+    "src/degree_planner/schemas.py": "1301914a07c96664c3b76d9b19e89e431e4519b4d41dcfbbc5341d53aa661436",
+    "src/degree_planner/policy.py": "c06103711734b32248458ddf14334feeab7827255fd2141fb79f9f0f6365e611"
+  },
+  "artifact_sha256": {
+    "dev.jsonl": "737f54077586fca6c5df4e273a47efb68ed618260b5ce0c215f17e7ae4fad1bb",
+    "test.jsonl": "7327fe73b99382d93268bd66a589899703cff9c41d107f8d9ea31ec053f5903b",
+    "gold.jsonl": "4a3888e84140e822144be9125a103e9aa8941bae35cb466484b0dd83eff62a62",
+    "index.csv": "edf1b83949de770b0eae4fccb978e07aa1b9cf356f0506c8a4a4a983302a5432",
+    "validation.json": "0642dc3e4c50c6c8bd74920a1b628db34bf6ad93019755356277ba6dde782c7c"
+  },
+  "limitations": [
+    "Designed difficulty is not empirical model difficulty.",
+    "Synthetic cases reuse histories within splits and share constraint mechanisms across splits.",
+    "Academic completed-course sets are split-disjoint; this is not population representativeness.",
+    "Separate CP3200 credit is an idealized internship exception.",
+    "Source interpretations still require review; no model comparison has been run."
+  ]
+}

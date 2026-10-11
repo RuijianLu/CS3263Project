@@ -1,0 +1,481 @@
+{
+  "retrieved_at_utc": "2026-10-09T15:11:25.098951+00:00",
+  "sources": [
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CG1111A.json",
+      "file": "data/raw/CG1111A.json",
+      "sha256": "e84906d86bed0c6b7f0dad35a14ac6fb9ed8860595911ee7ba735f8bf66a942f"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CG2271.json",
+      "file": "data/raw/CG2271.json",
+      "sha256": "f4a9b1f1eb3027c8cfec7a9842c73b8f7ed95c529003c32a7c35600d862da7ef"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CG3201.json",
+      "file": "data/raw/CG3201.json",
+      "sha256": "6f9ae51b62b732235d28b6a810c60a84377c70533a0f22f41729f2f4e6d24889"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS1010.json",
+      "file": "data/raw/CS1010.json",
+      "sha256": "8c9b4cbce1a970072a78a774a2677825dd6fd44c18b1ec93da1ac153a284e182"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS1010A.json",
+      "file": "data/raw/CS1010A.json",
+      "sha256": "2d3c20c9d1b1d76379e39db74ffa56407f47a4b1e286e8f00c4a03b0ef137259"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS1010E.json",
+      "file": "data/raw/CS1010E.json",
+      "sha256": "a7329db76dd2eab5a181c4367561cab6dbea92871aaef3dd222a60215451a06d"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS1010HS.json",
+      "file": "data/raw/CS1010HS.json",
+      "sha256": "84d939d8c0eb5dbffdbfce20b38b6ec910ac64d81ca0bcd2cb881dc6bf9dbb29"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS1010S.json",
+      "file": "data/raw/CS1010S.json",
+      "sha256": "fa4c9f72015d956f4dddb67906c07ca704752396e59f91cf299479771d471828"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS1010X.json",
+      "file": "data/raw/CS1010X.json",
+      "sha256": "ef62c2259a073c3b0f1fa66eb0bc80a11c15e46d112e54170d6dc59e463855be"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS1101S.json",
+      "file": "data/raw/CS1101S.json",
+      "sha256": "8957248dc3e85319c4ad29fef21564ad6b186e52f6fa02ca7860956a89f672c1"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS1231.json",
+      "file": "data/raw/CS1231.json",
+      "sha256": "6b1b8443f553eddb004f5800f5909fc19581e47e5709d6d2295eadb3d9b75f18"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS1231S.json",
+      "file": "data/raw/CS1231S.json",
+      "sha256": "3b7597f5a5d80d9b12c7042583a71994e49ebd19cfff110f8bc51543c163fca1"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS2030.json",
+      "file": "data/raw/CS2030.json",
+      "sha256": "948fe60b65db466b58bbd2c6d614cc4f7a4c88e5f006cb2eb5b6ea152f141b80"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS2030DE.json",
+      "file": "data/raw/CS2030DE.json",
+      "sha256": "d2f9f627263fad9c1b7ca45bd4e240741a5542a5cd907e21378bd260aa10d54c"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS2030S.json",
+      "file": "data/raw/CS2030S.json",
+      "sha256": "e79aa9d349548514d6df3090d1aeee7026c4a86bfab250b2df546e1c61718957"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS2040.json",
+      "file": "data/raw/CS2040.json",
+      "sha256": "7fe3eeb2b04648460c99d1a80e5adc51ce894743d6a1fa7797f44c84529b6b79"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS2040C.json",
+      "file": "data/raw/CS2040C.json",
+      "sha256": "2e8cecd7f62c2e581d1cf1a3b408b2342a592193bf3983e5918a07e37251cc2b"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS2040DE.json",
+      "file": "data/raw/CS2040DE.json",
+      "sha256": "b1dcfd0ca8fd9dea839c9be3e54a67a7292c74a8a4e9efdaeee7d9326bf692c4"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS2040HS.json",
+      "file": "data/raw/CS2040HS.json",
+      "sha256": "295c6ebca62b917a7d978c96a8a2e0d0fad826d6d68d919b6d194dc1288b8c7e"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS2040S.json",
+      "file": "data/raw/CS2040S.json",
+      "sha256": "06e276c6900b506d5bd26c2705676400d7459468d3ae9f1219fb43cb433c401f"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS2100.json",
+      "file": "data/raw/CS2100.json",
+      "sha256": "ec652f63cf3b81f06a7218685948a29177fabcad4b0804b06ffbbbab57e6b355"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS2100DE.json",
+      "file": "data/raw/CS2100DE.json",
+      "sha256": "717f6058886932188db2a709a3609ed2679f8ae1b1c6fb694439f560543fbf6d"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS2100HS.json",
+      "file": "data/raw/CS2100HS.json",
+      "sha256": "067ec3e17165d4b9c897072f3d7e738212ea649003f37eb9ae3841c41884171b"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS2101.json",
+      "file": "data/raw/CS2101.json",
+      "sha256": "12577bfe1d32711ed8d3b2fe434a0317e8a26f56c8c6c7e2bb2eb1689ecd5093"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS2102.json",
+      "file": "data/raw/CS2102.json",
+      "sha256": "9e0517b47c6fd821e5ec722dcc763f7876dde61b2950343a20801621033947ae"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS2103T.json",
+      "file": "data/raw/CS2103T.json",
+      "sha256": "89654a86354e67f914785cc704664514da9e9c0edb029ec46e4355e91f059404"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS2106.json",
+      "file": "data/raw/CS2106.json",
+      "sha256": "6730119cc28578bf017f12ba5c1e9fc0dacdb7bac10a1c6492b2561302b462e6"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS2109HS.json",
+      "file": "data/raw/CS2109HS.json",
+      "sha256": "16cf98c3a58f05f2ea01f1d5f501db10498aa0c6a2adb29d0a69dc7b4a61882c"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS2109S.json",
+      "file": "data/raw/CS2109S.json",
+      "sha256": "f4a6965bbb0a34abc8c9f2e6eee2f05662dc954a2a104e29bfa7cf0b4d61ae89"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS2113.json",
+      "file": "data/raw/CS2113.json",
+      "sha256": "d80f695318c2a88a667924cc4792a70f42309d7aa42cc1c13348d2f2fd0a38a0"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS2220.json",
+      "file": "data/raw/CS2220.json",
+      "sha256": "39da8de0efa3bf526117b1d4bbc63210ab48f91e0aed6eb0ce9fbd985b5a1988"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS3230.json",
+      "file": "data/raw/CS3230.json",
+      "sha256": "5d5d31f5733293ba2e0e8213be5a86b0f1c6df5e4e13df83857f0b9579d51cc5"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS3243.json",
+      "file": "data/raw/CS3243.json",
+      "sha256": "405d836523629a5888865386a2458bb693dc4ac06584350f64cbda25351ade2e"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS3244.json",
+      "file": "data/raw/CS3244.json",
+      "sha256": "26edac8b5248b28664c3339117c39357f2fb793cf1b7085d3cf744486c2da481"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS3263.json",
+      "file": "data/raw/CS3263.json",
+      "sha256": "dc9cacb45fff2fcc64ee632d7fbccf0ded03b3f2263d17f6f368e23f41da587b"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS3264.json",
+      "file": "data/raw/CS3264.json",
+      "sha256": "77d8a8fa1eb0c813c4858e22595de03b6bf47c4ed466fbcd4c0354eab36589c0"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS3268.json",
+      "file": "data/raw/CS3268.json",
+      "sha256": "1dfbdaa75897ad24241d920c7ba28b82955c7a9b8ab2f5f61eaa752cc572630d"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS4220.json",
+      "file": "data/raw/CS4220.json",
+      "sha256": "c6f60dc3f3c44f64241c5a3cebbc741ec193a41b269fb3864b816c641a9e2ceb"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS4243.json",
+      "file": "data/raw/CS4243.json",
+      "sha256": "d9cf02ca4fe2a36df95cfc7d84a09e1461e8c2710f6413d5059ef2ca80792647"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS4246.json",
+      "file": "data/raw/CS4246.json",
+      "sha256": "4846ae90c88c567b20a4711f87184bef21ca8311fd4e30e0918489d94fb889f9"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS4248.json",
+      "file": "data/raw/CS4248.json",
+      "sha256": "2ad8bec10f24fd23f5eb1073ba4fc5d8b5f24d7064f101f117cac17bbaa80b31"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS4261.json",
+      "file": "data/raw/CS4261.json",
+      "sha256": "dfb4c37bfc6a26a141153a610a897fa936dbe27125d70d5dddba054ae28caf7b"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS4262.json",
+      "file": "data/raw/CS4262.json",
+      "sha256": "32cc68a2f44be432dce65e7e69ad1ef248eb6c658002d8cc29ddd0f8b24c3f90"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS4263.json",
+      "file": "data/raw/CS4263.json",
+      "sha256": "90a2a8988e3029f830bcbfc9590382583af88989c38e28b77f2c6dd1d93a421b"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS4277.json",
+      "file": "data/raw/CS4277.json",
+      "sha256": "7f87fa925c5dd38f0e43f8d85db2bc7f2b449827db7e740162bcfc9dc00a9c70"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS4278.json",
+      "file": "data/raw/CS4278.json",
+      "sha256": "3c423437adda5911c1aa78c3ec82122785fca8607fdbc513b67d26961d8d9b15"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS5228.json",
+      "file": "data/raw/CS5228.json",
+      "sha256": "d0940ac9172d24db824e918f4a3fc35fe1a286c2ebb7a64964de4c89bdf63422"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS5242.json",
+      "file": "data/raw/CS5242.json",
+      "sha256": "9d9c51f3aba46b3226cba7460ca389376e0f22699b4b487df6958dab2965166c"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS5260.json",
+      "file": "data/raw/CS5260.json",
+      "sha256": "9f11ee66dce59c2fc9d261642fc5a7d2b64cbbc0a10fa1a925cae4bb8aa11789"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS5339.json",
+      "file": "data/raw/CS5339.json",
+      "sha256": "94d74ef3a267766def8bb322bdbbe00da06ae79feced2417b249a6fea879cde7"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/CS5340.json",
+      "file": "data/raw/CS5340.json",
+      "sha256": "60990cb0c7ed68e6575a4f0a0f1ec7f88b0da87c47b525c0a72ef74d25ef4828"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/EE1111B.json",
+      "file": "data/raw/EE1111B.json",
+      "sha256": "94d2e2b3324df2861582cef1162849543ab2e9412c2e0d2d6bb6b17c345d1e6e"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/EE2012.json",
+      "file": "data/raw/EE2012.json",
+      "sha256": "b25b2d9375aac2037923babb1481fcc3e9875c3508548a703fc02801a6ae43fb"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/EE2028.json",
+      "file": "data/raw/EE2028.json",
+      "sha256": "3a63f8cc43bd5e55e27245e5d9b0ffdaac6bf456a424b9289b969aceb1c91cac"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/EE2111A.json",
+      "file": "data/raw/EE2111A.json",
+      "sha256": "16d305af534658f2744d225175651f8be36b37b821a52ca0d606f83f550f32fa"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/EE2211.json",
+      "file": "data/raw/EE2211.json",
+      "sha256": "6b1b48b5d873685bae6faeb9a7abf096fbda282ae8281c093179be8169f557e9"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/EE2213.json",
+      "file": "data/raw/EE2213.json",
+      "sha256": "617d4fd4e0aa906b4b563b7d700f029a035959bb32847f66f701cd2efbe43ad7"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/LSM1301.json",
+      "file": "data/raw/LSM1301.json",
+      "sha256": "f79435b2a8683f9b6bf300e446a5f11265a50b1e23d3a1669f9f76c6e55cc550"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/MA1100.json",
+      "file": "data/raw/MA1100.json",
+      "sha256": "018b1cc43f24f1c55dae705e5bb668a8004d3aa01051db26c3439fbebc054050"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/MA1100T.json",
+      "file": "data/raw/MA1100T.json",
+      "sha256": "c6dc45237b36225e04ab86117501ff4c4b8c03ffa3b51b2f9031d52d2f2d6822"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/MA1301.json",
+      "file": "data/raw/MA1301.json",
+      "sha256": "f716db79694ba930955146625484956011e453f1ad9e83f78cefa239f1dfe565"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/MA1301X.json",
+      "file": "data/raw/MA1301X.json",
+      "sha256": "856d334a0c09d688747c7ff8fe03c2f87a99f6a680a6a52837dbe7d09e699f3d"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/MA1505.json",
+      "file": "data/raw/MA1505.json",
+      "sha256": "cfd71add755ecb29925d7a44214940a51bcef68e01b9b48067450e179d3da85a"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/MA1508E.json",
+      "file": "data/raw/MA1508E.json",
+      "sha256": "5acfc4dd5fb03245eb8f10c8a3162efb1cff09389f7003ce61496694b7dba54a"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/MA1511.json",
+      "file": "data/raw/MA1511.json",
+      "sha256": "b475c0744fe76e694b0d808592716191d3809cd521fa1127837d80ffc129e29a"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/MA1512.json",
+      "file": "data/raw/MA1512.json",
+      "sha256": "cb0af4127f4d826090694df5c02b7d497a7545b6234b307d0f34b0c186d7f1b5"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/MA1513.json",
+      "file": "data/raw/MA1513.json",
+      "sha256": "f65e377bfa28f56d1828ef79834ba0525c27528f91e2f5c394f55d602910e4ac"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/MA1521.json",
+      "file": "data/raw/MA1521.json",
+      "sha256": "827494f336bf27b59ffb41bcde51761f14c5a10cec64f0c379fb2f80aa051411"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/MA1522.json",
+      "file": "data/raw/MA1522.json",
+      "sha256": "a4d0757dc7d207e1e5f24c0e4a8ce4ca10707d657184d607293c3d70a31f2e6e"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/MA1531.json",
+      "file": "data/raw/MA1531.json",
+      "sha256": "1907c33f27c4f136ff6ae55a90d4198d3b2716a29352bd6af322afaf89bbde5b"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/MA2001.json",
+      "file": "data/raw/MA2001.json",
+      "sha256": "dbbb36d5bf1454d15605657c97a426ba5bd815a6b1e4982765a88c5425327b66"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/MA2002.json",
+      "file": "data/raw/MA2002.json",
+      "sha256": "96b284fac18d571c4d41e69b3829381934ae2d53da88cd0aab32940890ec4e67"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/MA2104.json",
+      "file": "data/raw/MA2104.json",
+      "sha256": "29277cef84184eda90880b564f9bc5a3ed9c06ff97dceb77ce9dd91f66b771c1"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/MA2116.json",
+      "file": "data/raw/MA2116.json",
+      "sha256": "e2ed852909476829c96756434b3c9ba96901df86c610fcbee2357f812b42ffcc"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/MA2116T.json",
+      "file": "data/raw/MA2116T.json",
+      "sha256": "e5b04c6973b39c6dae53ec3fd5e4e57d49795ec90a471b5d47b5f9a40d60bb04"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/MA2311.json",
+      "file": "data/raw/MA2311.json",
+      "sha256": "3ef457a10b7449802270b08d2f01e4eeae465662466a3a84a22d22bf7d3c7d91"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/MA3270.json",
+      "file": "data/raw/MA3270.json",
+      "sha256": "c57dce148df7e9d6542a21d6c86b2e7c15def73be9428036a8eae79aef9dca49"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/ST1131.json",
+      "file": "data/raw/ST1131.json",
+      "sha256": "47a03db64be8a587114beefd83e98a46205cb560dfc496c909d39eb3ac0628cb"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/ST2131.json",
+      "file": "data/raw/ST2131.json",
+      "sha256": "58736a9307ca3f33ced1e676315699f4ad358b106bf1b3f18f53192a0b40e872"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/ST2132.json",
+      "file": "data/raw/ST2132.json",
+      "sha256": "68a409576c7febf26ca5207925f8230034ba1e61d64ea9d3473cd7ff762cab59"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/ST2334.json",
+      "file": "data/raw/ST2334.json",
+      "sha256": "d1e49beab39d0afb1157e3c57d69a48dee3fa38015c934c4d4d7c6c0ab6b292b"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/ST3131.json",
+      "file": "data/raw/ST3131.json",
+      "sha256": "b0614e9d4ded1fffeb35ab868aea7b57e8dfac392bd3d16c7b37411157249994"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/ST3248.json",
+      "file": "data/raw/ST3248.json",
+      "sha256": "f8fbc2aabd3637c3fba46ededb2b8c518fcd13fbcc790181c9622649dfb090f4"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/ST4248.json",
+      "file": "data/raw/ST4248.json",
+      "sha256": "9c1521dc4e3b4e6bffb602856b7b8a7b8e2f9f3e5ef708cbcba7ee4086bc8ab3"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/UTC2851.json",
+      "file": "data/raw/UTC2851.json",
+      "sha256": "7dc842f4745eb1d0fdabb49e5b19ddaf1df2908c884039b4e8255625149edb97"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/modules/ZB2101.json",
+      "file": "data/raw/ZB2101.json",
+      "sha256": "944a9b635be6fbaaae910a37366de576c2d8885eab19bbf464427fe288196a6c"
+    },
+    {
+      "url": "https://www.comp.nus.edu.sg/cug/per-cohort/cs/cs-26-27/",
+      "file": "data/raw/cs-26-27.html",
+      "sha256": "6feeaa26a5e52dc129c080218e56d1b91d268d62aec6182e8315cb295a449cff"
+    },
+    {
+      "url": "https://www.comp.nus.edu.sg/programmes/ug/focus/",
+      "file": "data/raw/focus.html",
+      "sha256": "89923039b634569b33b89c0ef924d7b1ba9e1aa0545532594d44610ebe5ccb80"
+    },
+    {
+      "url": "https://api.nusmods.com/v2/2026-2027/moduleList.json",
+      "file": "data/raw/moduleList.json",
+      "sha256": "995e9781a627e126ba00861cf5b511f810a32935cdd99e3e4d1305d2ad7bf80f"
+    }
+  ],
+  "missing_course_codes": [
+    "CP3200",
+    "CS1010J",
+    "CS2030HS",
+    "CS2113T",
+    "CS4244",
+    "CS4269",
+    "CS5215",
+    "DCS2008",
+    "DSC2008",
+    "EE2007",
+    "EE2012A",
+    "EE2024",
+    "LSM2104",
+    "LSM2241",
+    "MA1101R",
+    "MA1102R",
+    "MA1311",
+    "MA1312",
+    "MA1506",
+    "MA1507",
+    "MA2216",
+    "ST1131A",
+    "ST1232",
+    "YSC1212",
+    "YSC1216",
+    "YSC2229",
+    "YSC2232",
+    "YSC2243"
+  ],
+  "review_status": "Programme groups transcribed from official page; course review recorded in courses.json."
+}

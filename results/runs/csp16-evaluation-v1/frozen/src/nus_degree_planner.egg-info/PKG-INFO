@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: nus-degree-planner
+Version: 0.1.0
+Summary: CS3263 direct Codex planning versus translation to a CSP solver
+Requires-Python: >=3.11
+Requires-Dist: ortools<10,>=9.10
+Requires-Dist: beautifulsoup4<5,>=4.12
+Requires-Dist: jsonschema<5,>=4.22
+Provides-Extra: dev
+Requires-Dist: pytest<10,>=8; extra == "dev"

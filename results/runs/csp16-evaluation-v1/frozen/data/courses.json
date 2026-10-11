@@ -1,0 +1,3358 @@
+{
+  "CG1111A": {
+    "code": "CG1111A",
+    "title": "Engineering Principles and Practice I",
+    "units": 4.0,
+    "level": 1000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1
+    ],
+    "prerequisites": null,
+    "corequisites": [],
+    "preclusions": [
+      "BN2111",
+      "EE1111B",
+      "EE2111A",
+      "ESP2111",
+      "ME2104",
+      "ME2105",
+      "RB2101"
+    ],
+    "raw_prerequisite": "",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHENmust not have completed 1 of BN2111/EE1111B/EE2111A/ESP2111/ME2104/ME2105/RB2101",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CG1111A.json"
+  },
+  "CG2271": {
+    "code": "CG2271",
+    "title": "Real-Time Operating Systems",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "CS2040C",
+        "CS2040",
+        "CS2040S"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CS2106",
+      "CS2271"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of CS2040/CS2040C/CS2040S at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of CS2106/CS2271 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CG2271.json"
+  },
+  "CG3201": {
+    "code": "CG3201",
+    "title": "Machine Learning and Deep Learning",
+    "units": 4.0,
+    "level": 3000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "EE2211",
+        "EE2213"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "BT4240",
+      "CS2109S",
+      "CS3244",
+      "CS3264",
+      "DMX1401AI",
+      "DMX1501AI",
+      "EE4802",
+      "IE4213"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of EE2211/EE2213 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of BT4240/CS2109S/CS3244/CS3264/DMX1401AI/DMX1501AI/EE4802/IE4213)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CG3201.json"
+  },
+  "CS1010": {
+    "code": "CS1010",
+    "title": "Programming Methodology",
+    "units": 4.0,
+    "level": 1000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": null,
+    "corequisites": [],
+    "preclusions": [
+      "CS1010A",
+      "CS1010E",
+      "CS1010HS",
+      "CS1010J",
+      "CS1010S",
+      "CS1010X",
+      "CS1101S",
+      "UTC2851"
+    ],
+    "raw_prerequisite": "",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of CS1010A/CS1010E/CS1010HS/CS1010J/CS1010S/CS1010X/CS1101S/UTC2851 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS1010.json"
+  },
+  "CS1010A": {
+    "code": "CS1010A",
+    "title": "Programming Methodology",
+    "units": 4.0,
+    "level": 1000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": null,
+    "corequisites": [],
+    "preclusions": [
+      "CS1010",
+      "CS1010E",
+      "CS1010HS",
+      "CS1010J",
+      "CS1010S",
+      "CS1010X",
+      "CS1101S",
+      "UTC2851"
+    ],
+    "raw_prerequisite": "",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of CS1010/CS1010E/CS1010HS/CS1010J/CS1010S/CS1010X/CS1101S/UTC2851 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS1010A.json"
+  },
+  "CS1010E": {
+    "code": "CS1010E",
+    "title": "Programming Methodology",
+    "units": 4.0,
+    "level": 1000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": null,
+    "corequisites": [],
+    "preclusions": [
+      "CS1010",
+      "CS1010A",
+      "CS1010HS",
+      "CS1010J",
+      "CS1010S",
+      "CS1010X",
+      "CS1101S",
+      "UTC2851"
+    ],
+    "raw_prerequisite": "",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of CS1010/CS1010A/CS1010HS/CS1010J/CS1010S/CS1010X/CS1101S/UTC2851 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS1010E.json"
+  },
+  "CS1010HS": {
+    "code": "CS1010HS",
+    "title": "Programming Methodology",
+    "units": 4.0,
+    "level": 1000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      2
+    ],
+    "prerequisites": null,
+    "corequisites": [],
+    "preclusions": [
+      "CS1010",
+      "CS1010A",
+      "CS1010E",
+      "CS1010J",
+      "CS1010S",
+      "CS1010X",
+      "CS1101S",
+      "UTC2851"
+    ],
+    "raw_prerequisite": "",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of CS1010/CS1010A/CS1010E/CS1010J/CS1010S/CS1010X/CS1101S/UTC2851 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS1010HS.json"
+  },
+  "CS1010S": {
+    "code": "CS1010S",
+    "title": "Programming Methodology",
+    "units": 4.0,
+    "level": 1000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": null,
+    "corequisites": [],
+    "preclusions": [
+      "CS1010",
+      "CS1010A",
+      "CS1010E",
+      "CS1010HS",
+      "CS1010J",
+      "CS1010X",
+      "CS1101S",
+      "UTC2851"
+    ],
+    "raw_prerequisite": "",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of CS1010/CS1010A/CS1010E/CS1010HS/CS1010J/CS1010X/CS1101S/UTC2851 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS1010S.json"
+  },
+  "CS1010X": {
+    "code": "CS1010X",
+    "title": "Programming Methodology",
+    "units": 4.0,
+    "level": 1000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      2
+    ],
+    "prerequisites": null,
+    "corequisites": [],
+    "preclusions": [
+      "CS1010",
+      "CS1010A",
+      "CS1010E",
+      "CS1010HS",
+      "CS1010J",
+      "CS1010S",
+      "CS1101S",
+      "UTC2851"
+    ],
+    "raw_prerequisite": "",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of CS1010/CS1010A/CS1010E/CS1010HS/CS1010J/CS1010S/CS1101S/UTC2851 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS1010X.json"
+  },
+  "CS1101S": {
+    "code": "CS1101S",
+    "title": "Programming Methodology",
+    "units": 4.0,
+    "level": 1000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": true,
+    "corequisites": [],
+    "preclusions": [
+      "CS1010",
+      "CS1010A",
+      "CS1010E",
+      "CS1010HS",
+      "CS1010J",
+      "CS1010S",
+      "CS1010X",
+      "UTC2851"
+    ],
+    "raw_prerequisite": "",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of CS1010/CS1010A/CS1010E/CS1010HS/CS1010J/CS1010S/CS1010X/UTC2851 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [
+      "Assume qualifying mathematics for standard CS admission."
+    ],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS1101S.json"
+  },
+  "CS1231": {
+    "code": "CS1231",
+    "title": "Discrete Structures",
+    "units": 4.0,
+    "level": 1000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "MA1301X",
+        "MA1301"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CS1231S",
+      "MA1100",
+      "MA1100T"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN(( must have completed 1 of 06 MATHEMATICS/07 FURTHER MATHEMATICS/21 PURE MATHEMATICS/22 APPLIED MATHEMATICS at a grade of at least E)OR( must have completed 1 of MA1301/MA1301X at a grade of at least D))",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of CS1231S/MA1100/MA1100T at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS1231.json"
+  },
+  "CS1231S": {
+    "code": "CS1231S",
+    "title": "Discrete Structures",
+    "units": 4.0,
+    "level": 1000,
+    "category": "foundation",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": true,
+    "corequisites": [],
+    "preclusions": [
+      "CS1231",
+      "MA1100",
+      "MA1100T"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN ( must have completed 1 of 06 MATHEMATICS/07 FURTHER MATHEMATICS/21 PURE MATHEMATICS/22 APPLIED MATHEMATICS at a grade of at least E OR must have completed 1 of MA1301/MA1301X at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN ( must not have completed 1 of CS1231/MA1100/MA1100T at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [
+      "Assume qualifying pre-university mathematics; documented alternative to MA1301/X."
+    ],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS1231S.json"
+  },
+  "CS2030": {
+    "code": "CS2030",
+    "title": "Programming Methodology II",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "CS1010",
+        "CS1010E",
+        "CS1010X",
+        "CS1101S",
+        "CS1010S",
+        "CS1010J",
+        "CS1010A",
+        "CS1010HS",
+        "UTC2851"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CS1020",
+      "CS1020E",
+      "CS2020",
+      "CS2030DE",
+      "CS2030S"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of CS1010/CS1010A/CS1010E/CS1010HS/CS1010J/CS1010S/CS1010X/CS1101S/UTC2851 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of CS1020/CS1020E/CS2020 at a grade of at least DANDmust not have completed 1 of CS2030DE/CS2030S at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS2030.json"
+  },
+  "CS2030DE": {
+    "code": "CS2030DE",
+    "title": "Programming Methodology II",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "CS1010",
+        "CS1010E",
+        "CS1010X",
+        "CS1101S",
+        "CS1010S",
+        "CS1010J",
+        "CS1010A"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CS2030",
+      "CS2030S"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN ( must have completed 1 of CS1010/CS1010A/CS1010E/CS1010J/CS1010S/CS1010X/CS1101S at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN (( must not have completed 1 of CS2030/CS2030S at a grade of at least D) AND (must not be undertaking 0300CSMIN Computer Science (Minor)) AND (must not be undertaking 0300CS2MJ Computer Science (2nd Major)))",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS2030DE.json"
+  },
+  "CS2030S": {
+    "code": "CS2030S",
+    "title": "Programming Methodology II",
+    "units": 4.0,
+    "level": 2000,
+    "category": "foundation",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "CS1010",
+        "CS1010E",
+        "CS1010X",
+        "CS1101S",
+        "CS1010S",
+        "CS1010J",
+        "CS1010A",
+        "CS1010HS",
+        "UTC2851"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CS2030",
+      "CS2030DE",
+      "CS2030HS"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN ( must have completed 1 of CS1010/CS1010A/CS1010E/CS1010HS/CS1010J/CS1010S/CS1010X/CS1101S/UTC2851 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN ( must not have completed 1 of CS2030/CS2030DE/CS2030HS at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS2030S.json"
+  },
+  "CS2040": {
+    "code": "CS2040",
+    "title": "Data Structures and Algorithms",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "CS1010",
+        "CS1010E",
+        "CS1010X",
+        "CS1101S",
+        "CS1010S",
+        "CS1010J",
+        "CS1010A",
+        "CS1010HS",
+        "UTC2851"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CS1020",
+      "CS1020E",
+      "CS2010",
+      "CS2020",
+      "CS2040C",
+      "CS2040DE",
+      "CS2040HS",
+      "CS2040S"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of CS1010/CS1010A/CS1010E/CS1010HS/CS1010J/CS1010S/CS1010X/CS1101S/UTC2851 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of CS1020/CS1020E/CS2010/CS2020/CS2040C/CS2040DE/CS2040HS/CS2040S at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS2040.json"
+  },
+  "CS2040C": {
+    "code": "CS2040C",
+    "title": "Data Structures and Algorithms",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "CS1010",
+        "CS1010E",
+        "CS1010X",
+        "CS1101S",
+        "CS1010S",
+        "CS1010J",
+        "CS1010A",
+        "CS1010HS",
+        "UTC2851"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CS1020",
+      "CS1020E",
+      "CS2010",
+      "CS2020",
+      "CS2040",
+      "CS2040DE",
+      "CS2040HS",
+      "CS2040S"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of CS1010/CS1010A/CS1010E/CS1010HS/CS1010J/CS1010S/CS1010X/CS1101S/UTC2851 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of CS1020/CS1020E/CS2010/CS2020/CS2040/CS2040DE/CS2040HS/CS2040S at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS2040C.json"
+  },
+  "CS2040DE": {
+    "code": "CS2040DE",
+    "title": "Data Structures and Algorithms",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "CS1010",
+        "CS1010E",
+        "CS1010X",
+        "CS1101S",
+        "CS1010S",
+        "CS1010J",
+        "CS1010A"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CS2040",
+      "CS2040C",
+      "CS2040S"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN ( must have completed 1 of CS1010/CS1010A/CS1010E/CS1010J/CS1010S/CS1010X/CS1101S at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN (( must not have completed 1 of CS2040/CS2040C/CS2040S at a grade of at least D) AND (must not be undertaking 0300CSMIN Computer Science (Minor)) AND (must not be undertaking 0300CS2MJ Computer Science (2nd Major)))",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS2040DE.json"
+  },
+  "CS2040HS": {
+    "code": "CS2040HS",
+    "title": "Data Structures and Algorithms",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": false,
+    "corequisites": [],
+    "preclusions": [
+      "CS2040"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of any Courses beginning with CS1010 at a grade of at least D, CS1101S/UTC2851 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN((must not be undertaking 1006DSAHON Bachelor of Science - Data Science and Analytics (Hons)ANDmust not be undertaking 1006DSEXDP Bachelor of Science - Data Sci & Econs (Hons) XDPANDmust not be undertaking 0300CS2MJ Computer Science (2nd Major)ANDmust not be undertaking 0300CSMIN Computer Science (Minor)ANDmust not be undertaking 0300CSHON Bachelor of Computing (Computer Science) (Hons))OR( must not have completed any Courses beginning with CS2040 at a grade of at least D))",
+    "selectable": false,
+    "review_flags": [
+      "Non-course prerequisite leaf: CS1010%:D"
+    ],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS2040HS.json"
+  },
+  "CS2040S": {
+    "code": "CS2040S",
+    "title": "Data Structures and Algorithms",
+    "units": 4.0,
+    "level": 2000,
+    "category": "foundation",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "and": [
+        {
+          "or": [
+            "CS1010",
+            "CS1010E",
+            "CS1010X",
+            "CS1101S",
+            "CS1010S",
+            "CS1010J",
+            "CS1010A",
+            "CS1010HS",
+            "UTC2851"
+          ]
+        },
+        {
+          "or": [
+            "CS1231S",
+            "CS1231",
+            "MA1100",
+            "MA1100T"
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CS1020",
+      "CS1020E",
+      "CS2010",
+      "CS2020",
+      "CS2040",
+      "CS2040C",
+      "CS2040DE",
+      "CS2040HS"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of CS1010/CS1010A/CS1010E/CS1010HS/CS1010J/CS1010S/CS1010X/CS1101S/UTC2851 at a grade of at least DANDmust have completed 1 of CS1231/CS1231S/MA1100/MA1100T at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of CS1020/CS1020E/CS2010/CS2020/CS2040/CS2040C/CS2040DE/CS2040HS at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS2040S.json"
+  },
+  "CS2100": {
+    "code": "CS2100",
+    "title": "Computer Organisation",
+    "units": 4.0,
+    "level": 2000,
+    "category": "foundation",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "YSC1212",
+        "CS1010",
+        "CS1010J",
+        "CS1010E",
+        "CS1010S",
+        "CS1010X",
+        "CS1101S",
+        "CS1010A",
+        "CS1010HS",
+        "UTC2851"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CS2100DE",
+      "CS2100HS"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of CS1010/CS1010A/CS1010E/CS1010HS/CS1010J/CS1010S/CS1010X/CS1101S/UTC2851/YSC1212 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN(( must not have completed 1 of CS2100DE/CS2100HS at a grade of at least D)OR(must not be undertaking 0604ELEHON Bachelor of Engineering (Electrical Engineering) (Hons), 2001CEGHON Bachelor of Engineering (Computer Engineering) (Hons)))",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS2100.json"
+  },
+  "CS2100DE": {
+    "code": "CS2100DE",
+    "title": "Computer Organisation",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "CS1010",
+        "CS1010E",
+        "CS1010X",
+        "CS1101S",
+        "CS1010S",
+        "CS1010J",
+        "CS1010A"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CG2028",
+      "CS2100",
+      "CS2100R"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN ( must have completed 1 of CS1010/CS1010A/CS1010E/CS1010J/CS1010S/CS1010X/CS1101S at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN (( must not have completed 1 of CG2028/CS2100/CS2100R at a grade of at least D) AND (must not be undertaking 0300CSMIN Computer Science (Minor)) AND (must not be undertaking 0300CS2MJ Computer Science (2nd Major)))",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS2100DE.json"
+  },
+  "CS2100HS": {
+    "code": "CS2100HS",
+    "title": "Computer Organisation",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1
+    ],
+    "prerequisites": {
+      "or": [
+        "YSC1212",
+        "CS1010",
+        "CS1010J",
+        "CS1010E",
+        "CS1010S",
+        "CS1010X",
+        "CS1101S",
+        "CS1010A",
+        "CS1010HS",
+        "UTC2851"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CG2028",
+      "CS2100",
+      "CS2100DE",
+      "EE2028"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of CS1010/CS1010A/CS1010E/CS1010HS/CS1010J/CS1010S/CS1010X/CS1101S/UTC2851/YSC1212 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN(( must not have completed 1 of CG2028/CS2100/CS2100DE/EE2028 at a grade of at least D)OR(must not be undertaking 0300CS2MJ Computer Science (2nd Major)ORmust not be undertaking 0300CSMIN Computer Science (Minor)))",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS2100HS.json"
+  },
+  "CS2101": {
+    "code": "CS2101",
+    "title": "Effective Communication for Computing Professionals",
+    "units": 4.0,
+    "level": 2000,
+    "category": "foundation",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": true,
+    "corequisites": [],
+    "preclusions": [
+      "CS2101X",
+      "CS2103",
+      "CS2113",
+      "ES2002",
+      "ES2007D",
+      "IS2101"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN must have completed EP ENGLISH LANGUAGE PROFICIENCY TEST at a grade of at least N AND must be undertaking 1 of 2001CEGHON Bachelor of Engineering (Computer Engineering) (Hons), 0300ISPHON Bachelor of Computing (Information Security) (Hons) Co-op, 0300ISHON Bachelor of Computing (Information Systems) (Hons), 0300ISCHON Bachelor of Computing (Information Security) (Hons), 0300CSHON Bachelor of Computing (Computer Science) (Hons), 0300AIHON Bachelor of Computing (Artificial Intelligence) (Hons)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN must not have completed 1 of CS2101X/CS2103/CS2113/ES2002/ES2007D/IS2101 at a grade of at least D",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [
+      "Assume CS programme eligibility and the English proficiency prerequisite are satisfied."
+    ],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS2101.json"
+  },
+  "CS2102": {
+    "code": "CS2102",
+    "title": "Database Systems",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "and": [
+        {
+          "or": [
+            "CS1231",
+            "MA1100",
+            "MA1100T",
+            "CS1231S"
+          ]
+        },
+        {
+          "or": [
+            "CS2030S",
+            "CS2030",
+            "CS2030DE",
+            "CS2030HS",
+            "YSC2229",
+            "CS2040",
+            "CS2040C",
+            "CS2040S",
+            "CS2040DE",
+            "CS2040HS"
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CS2102S",
+      "IT2002"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN ( must have completed 1 of CS1231/CS1231S/MA1100/MA1100T at a grade of at least D AND must have completed 1 of CS2030/CS2030DE/CS2030HS/CS2030S/CS2040/CS2040C/CS2040DE/CS2040HS/CS2040S/YSC2229 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN ( must not have completed 1 of CS2102S/IT2002 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS2102.json"
+  },
+  "CS2103T": {
+    "code": "CS2103T",
+    "title": "Software Engineering",
+    "units": 4.0,
+    "level": 2000,
+    "category": "foundation",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "and": [
+        {
+          "or": [
+            "CS2030",
+            "CS2030S",
+            "CS2030DE",
+            "CS2030HS"
+          ]
+        },
+        {
+          "or": [
+            "CS2040",
+            "CS2040S",
+            "CS2040C",
+            "CS2040DE",
+            "CS2040HS"
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CG1413",
+      "CS2103",
+      "CS2103DE",
+      "CS2113",
+      "CS2113T",
+      "EG1413",
+      "ES1601",
+      "ES2002",
+      "ES2007D",
+      "ES2007S",
+      "IS2101"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN ( must have completed 1 of CS2030/CS2030DE/CS2030HS/CS2030S at a grade of at least D AND must have completed 1 of CS2040/CS2040C/CS2040DE/CS2040HS/CS2040S at a grade of at least D AND must have completed EP ENGLISH LANGUAGE PROFICIENCY TEST at a grade of at least N AND must be undertaking 1 of 0300CSHON Bachelor of Computing (Computer Science) (Hons), 0300ISCHON Bachelor of Computing (Information Security) (Hons), 0300ISHON Bachelor of Computing (Information Systems) (Hons), 0300ISPHON Bachelor of Computing (Information Security) (Hons) Co-op, 2001CEGHON Bachelor of Engineering (Computer Engineering) (Hons), 0300AIHON Bachelor of Computing (Artificial Intelligence) (Hons), 0300AISHON Bachelor of Computing (Business Artificial Intelligence Systems) (Hons))",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN (( must not have completed 1 of CS2103/CS2103DE/CS2113/CS2113T at a grade of at least D) AND must not have completed 1 of CG1413/EG1413/ES1601/ES2007D/ES2007S, ES2002/IS2101 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [
+      "CS programme and English proficiency assumed satisfied; course prerequisites retained."
+    ],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS2103T.json"
+  },
+  "CS2106": {
+    "code": "CS2106",
+    "title": "Introduction to Operating Systems",
+    "units": 4.0,
+    "level": 2000,
+    "category": "foundation",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "CS2100",
+        "CS2100DE",
+        "CS2100HS",
+        "EE2007",
+        "EE2024",
+        "EE2028"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CG2271",
+      "EE4214"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of CS2100/CS2100DE/CS2100HS/EE2007/EE2024/EE2028 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of CG2271/EE4214 at a grade of at least DOR(must not be undertaking 2001CEGHON Bachelor of Engineering (Computer Engineering) (Hons)))",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS2106.json"
+  },
+  "CS2109HS": {
+    "code": "CS2109HS",
+    "title": "Introduction to AI and Machine Learning",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1
+    ],
+    "prerequisites": {
+      "and": [
+        {
+          "or": [
+            "CS2040",
+            "CS2040C",
+            "CS2040DE",
+            "CS2040HS",
+            "CS2040S",
+            "YSC2229"
+          ]
+        },
+        {
+          "or": [
+            {
+              "nOf": [
+                2,
+                [
+                  "MA1511",
+                  "MA1512"
+                ]
+              ]
+            },
+            "MA1312",
+            "MA1505",
+            "MA1521",
+            "MA2002",
+            "MA1531"
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CG3201",
+      "CS2109S",
+      "CS3243",
+      "CS3244",
+      "DMX1401AI",
+      "EE2211",
+      "IT3011"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN ( must have completed 1 of CS2040/CS2040C/CS2040DE/CS2040HS/CS2040S/YSC2229 at a grade of at least D AND ( must have completed all of MA1511/MA1512 at a grade of at least D OR must have completed 1 of MA1312/MA1505/MA1521/MA1531/MA2002 at a grade of at least D))",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN ( must not have completed 1 of CG3201/CS2109S/CS3243/CS3244/DMX1401AI/EE2211/IT3011 at a grade of at least D) AND ((must not be undertaking 0300CS2MJ Computer Science (2nd Major)) AND (must not be undertaking 0300CSMIN Computer Science (Minor)) AND (must not be undertaking 0300CSHON Bachelor of Computing (Computer Science) (Hons)))",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS2109HS.json"
+  },
+  "CS2109S": {
+    "code": "CS2109S",
+    "title": "Introduction to AI and Machine Learning",
+    "units": 4.0,
+    "level": 2000,
+    "category": "foundation",
+    "ai_primary": true,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "and": [
+        {
+          "or": [
+            "YSC2229",
+            "CS2040S",
+            "CS2040C",
+            "CS2040HS",
+            "CS2040",
+            "CS2040DE"
+          ]
+        },
+        {
+          "or": [
+            {
+              "nOf": [
+                2,
+                [
+                  "MA1511",
+                  "MA1512"
+                ]
+              ]
+            },
+            "MA1521",
+            "MA2002",
+            "MA1102R",
+            "MA1312",
+            "MA1507",
+            "MA1505"
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CG3201",
+      "CS2109HS",
+      "CS3243",
+      "CS3244",
+      "DMX1401AI",
+      "EE2211",
+      "IT3011"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN ( must have completed 1 of CS2040/CS2040C/CS2040DE/CS2040HS/CS2040S/YSC2229 at a grade of at least D AND ( must have completed all of MA1511/MA1512 at a grade of at least D OR must have completed 1 of MA1102R/MA1312/MA1505/MA1507/MA1521/MA2002 at a grade of at least D))",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN ( must not have completed 1 of CG3201/CS2109HS/CS3243/CS3244/DMX1401AI/EE2211/IT3011 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS2109S.json"
+  },
+  "CS2113": {
+    "code": "CS2113",
+    "title": "Software Engineering & Object-Oriented Programming",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "CS2040C",
+        "CS2040S",
+        "CS2040",
+        "CS2040HS",
+        "CS2040DE"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CS2103",
+      "CS2103DE",
+      "CS2103T",
+      "CS2113T"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of CS2040/CS2040C/CS2040DE/CS2040HS/CS2040S at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of CS2103/CS2103DE/CS2103T/CS2113T at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS2113.json"
+  },
+  "CS2220": {
+    "code": "CS2220",
+    "title": "Introduction to Computational Biology",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1
+    ],
+    "prerequisites": {
+      "or": [
+        "CS2040",
+        "CS2040S",
+        "CS2040C",
+        "CS2040DE",
+        "CS2040HS"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of CS2040/CS2040C/CS2040DE/CS2040HS/CS2040S at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS2220.json"
+  },
+  "CS3230": {
+    "code": "CS3230",
+    "title": "Design and Analysis of Algorithms",
+    "units": 4.0,
+    "level": 3000,
+    "category": "foundation",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "and": [
+        {
+          "or": [
+            "YSC2229",
+            "CS2040S",
+            "CS2040",
+            "CS2040C",
+            "CS2040DE",
+            "CS2040HS"
+          ]
+        },
+        {
+          "or": [
+            "CS1231",
+            "CS1231S",
+            "MA1100T",
+            "MA1100"
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of CS2040/CS2040C/CS2040DE/CS2040HS/CS2040S/YSC2229 at a grade of at least DANDmust have completed 1 of CS1231/CS1231S/MA1100/MA1100T at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS3230.json"
+  },
+  "CS3243": {
+    "code": "CS3243",
+    "title": "Introduction to Artificial Intelligence",
+    "units": 4.0,
+    "level": 3000,
+    "category": "breadth",
+    "ai_primary": true,
+    "offered_semesters": [
+      2
+    ],
+    "prerequisites": {
+      "and": [
+        {
+          "or": [
+            "CS2040",
+            "CS2040C",
+            "CS2040S",
+            "CS2040DE",
+            "CS2040HS",
+            "YSC2229"
+          ]
+        },
+        {
+          "or": [
+            "CS1231S",
+            "CS1231",
+            "MA1100T",
+            "MA1100"
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CS2109HS",
+      "CS2109S",
+      "CS3263"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN must have completed 1 of CS2040/CS2040C/CS2040DE/CS2040HS/CS2040S/YSC2229 at a grade of at least D AND must have completed 1 of CS1231/CS1231S/MA1100/MA1100T at a grade of at least D",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN must not have completed 1 of CS2109HS/CS2109S/CS3263 at a grade of at least D",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS3243.json"
+  },
+  "CS3244": {
+    "code": "CS3244",
+    "title": "Machine Learning",
+    "units": 4.0,
+    "level": 3000,
+    "category": "breadth",
+    "ai_primary": true,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "and": [
+        {
+          "or": [
+            "CS2040",
+            "CS2040C",
+            "CS2040S",
+            "CS2040DE",
+            "CS2040HS",
+            "YSC2229"
+          ]
+        },
+        {
+          "or": [
+            "EE2012A",
+            "EE2012",
+            "YSC2243",
+            "ST2131",
+            "ST2334",
+            "MA2116",
+            "MA2116T",
+            "MA2216"
+          ]
+        },
+        {
+          "or": [
+            {
+              "nOf": [
+                2,
+                [
+                  "MA1511",
+                  "MA1512"
+                ]
+              ]
+            },
+            {
+              "and": [
+                {
+                  "or": [
+                    "MA2001",
+                    "MA1522",
+                    "MA1508E",
+                    "MA1311",
+                    "MA1513",
+                    "MA1101R"
+                  ]
+                },
+                {
+                  "or": [
+                    "MA2002",
+                    "MA1521",
+                    "MA1505",
+                    "MA1507",
+                    "MA1102R"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "BT4240",
+      "CG3201",
+      "CS2109HS",
+      "CS2109S",
+      "CS3264",
+      "DMX1401AI",
+      "EE3703",
+      "EE4802",
+      "IT3011"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN must have completed 1 of CS2040/CS2040C/CS2040DE/CS2040HS/CS2040S/YSC2229 at a grade of at least D AND must have completed 1 of EE2012/EE2012A/MA2116/MA2116T/MA2216/ST2131/ST2334/YSC2243 at a grade of at least D AND ( must have completed all of MA1511/MA1512 at a grade of at least D OR must have completed 1 of MA1101R/MA1311/MA1508E/MA1513/MA1522/MA2001 at a grade of at least D AND must have completed 1 of MA1102R/MA1505/MA1507/MA1521/MA2002 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN ( must not have completed 1 of BT4240/CG3201/CS2109HS/CS2109S/CS3264/DMX1401AI/EE3703/EE4802/IT3011 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS3244.json"
+  },
+  "CS3263": {
+    "code": "CS3263",
+    "title": "Foundations of Artificial Intelligence",
+    "units": 4.0,
+    "level": 3000,
+    "category": "breadth",
+    "ai_primary": true,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "and": [
+        {
+          "or": [
+            "CS2109S",
+            "CS2109HS"
+          ]
+        },
+        {
+          "or": [
+            "CS2040",
+            "CS2040S",
+            "CS2040C",
+            "CS2040DE",
+            "CS2040HS"
+          ]
+        },
+        {
+          "or": [
+            "MA2001",
+            "MA1522",
+            "MA1513",
+            "MA1508E",
+            "MA1101R"
+          ]
+        },
+        {
+          "or": [
+            "EE2012A",
+            "EE2012",
+            "ST2131",
+            "MA2116",
+            "MA2116T",
+            "ST2334",
+            "MA2216"
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CS3243"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN must have completed 1 of CS2109HS/CS2109S at a grade of at least D AND must have completed 1 of CS2040/CS2040C/CS2040DE/CS2040HS/CS2040S at a grade of at least D AND must have completed 1 of MA1101R/MA1508E/MA1513/MA1522/MA2001 at a grade of at least D AND must have completed 1 of EE2012/EE2012A/MA2116/MA2116T/MA2216/ST2131/ST2334 at a grade of at least D",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN must not have completed CS3243 at a grade of at least D",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS3263.json"
+  },
+  "CS3264": {
+    "code": "CS3264",
+    "title": "Foundations of Machine Learning",
+    "units": 4.0,
+    "level": 3000,
+    "category": "breadth",
+    "ai_primary": true,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "and": [
+        "CS2109S",
+        {
+          "or": [
+            "CS2040",
+            "CS2040S",
+            "CS2040C",
+            "CS2040DE",
+            "CS2040HS"
+          ]
+        },
+        {
+          "or": [
+            "MA1101R",
+            "MA1311",
+            "MA1513",
+            "MA1508E",
+            "MA2001",
+            "MA1522"
+          ]
+        },
+        {
+          "or": [
+            "EE2012A",
+            "EE2012",
+            "ST2131",
+            "MA2116",
+            "MA2116T",
+            "ST2334",
+            "MA2216"
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CG3201",
+      "CS3244"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHENmust have completed CS2109S at a grade of at least DANDmust have completed 1 of CS2040/CS2040C/CS2040DE/CS2040HS/CS2040S at a grade of at least DANDmust have completed 1 of MA1101R/MA1311/MA1508E/MA1513/MA1522/MA2001 at a grade of at least DANDmust have completed 1 of EE2012/EE2012A/MA2116/MA2116T/MA2216/ST2131/ST2334 at a grade of at least D",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of CG3201/CS3244 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS3264.json"
+  },
+  "CS3268": {
+    "code": "CS3268",
+    "title": "Responsible AI: from Algorithms to Impact",
+    "units": 4.0,
+    "level": 3000,
+    "category": "breadth",
+    "ai_primary": true,
+    "offered_semesters": [
+      1
+    ],
+    "prerequisites": {
+      "and": [
+        {
+          "or": [
+            "CS2109S",
+            "CS2109HS",
+            "CS3243"
+          ]
+        },
+        {
+          "or": [
+            "ST2334",
+            {
+              "and": [
+                {
+                  "or": [
+                    "ST2131",
+                    "MA2116",
+                    "MA2116T"
+                  ]
+                },
+                "ST2132"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN (( must have completed 1 of CS2109HS/CS2109S/CS3243 at a grade of at least D) AND (( must have completed ST2334 at a grade of at least D) OR (( must have completed 1 of MA2116/MA2116T/ST2131 at a grade of at least D) AND ( must have completed ST2132 at a grade of at least D))))",
+    "raw_corequisite": "",
+    "raw_preclusion": "",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS3268.json"
+  },
+  "CS4220": {
+    "code": "CS4220",
+    "title": "Knowledge Discovery Methods in Bioinformatics",
+    "units": 4.0,
+    "level": 4000,
+    "category": "breadth",
+    "ai_primary": false,
+    "offered_semesters": [
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "CS2220",
+        "LSM2104",
+        "LSM2241",
+        "ZB2101"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of CS2220/LSM2104/LSM2241/ZB2101 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS4220.json"
+  },
+  "CS4243": {
+    "code": "CS4243",
+    "title": "Computer Vision and Pattern Recognition",
+    "units": 4.0,
+    "level": 4000,
+    "category": "breadth",
+    "ai_primary": true,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "and": [
+        {
+          "or": [
+            "YSC2232",
+            "MA2001",
+            "MA1101R",
+            "MA1311",
+            "MA1508E",
+            "MA1513",
+            "MA1522"
+          ]
+        },
+        {
+          "or": [
+            "ST1131",
+            "ST1131A",
+            "ST1232",
+            "ST2131",
+            "MA2116",
+            "MA2116T",
+            "MA2216",
+            "EE2012A",
+            "EE2012",
+            "ST2334",
+            "YSC2243"
+          ]
+        },
+        {
+          "or": [
+            "CS2030",
+            "CS2030S",
+            "CS2030DE",
+            "CS2030HS",
+            "CS2113",
+            "CS2113T"
+          ]
+        },
+        {
+          "or": [
+            "YSC2229",
+            "CS2040",
+            "CS2040S",
+            "CS2040DE",
+            "CS2040C",
+            "CS2040HS"
+          ]
+        },
+        {
+          "or": [
+            "MA1102R",
+            "MA2002",
+            "YSC1216",
+            "MA1505",
+            "MA1521",
+            "MA1507",
+            {
+              "nOf": [
+                2,
+                [
+                  "MA1512",
+                  "MA1511"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "EE4212",
+      "EE4704"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN ( must have completed 1 of MA1101R/MA1311/MA1508E/MA1513/MA1522/MA2001/YSC2232 at a grade of at least D AND must have completed 1 of EE2012/EE2012A/MA2116/MA2116T/MA2216/ST1131/ST1131A/ST1232/ST2131/ST2334/YSC2243 at a grade of at least D AND (( must have completed 1 of CS2030/CS2030DE/CS2030HS/CS2030S/CS2113/CS2113T at a grade of at least D AND must have completed 1 of CS2040/CS2040C/CS2040DE/CS2040HS/CS2040S/YSC2229 at a grade of at least D)) AND (( must have completed 1 of MA1102R/MA1505/MA1507/MA1521/MA2002/YSC1216 at a grade of at least D) OR ( must have completed all of MA1511/MA1512 at a grade of at least D)))",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN ( must not have completed 1 of EE4212/EE4704 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS4243.json"
+  },
+  "CS4246": {
+    "code": "CS4246",
+    "title": "Reinforcement Learning and Sequential Decision Making",
+    "units": 4.0,
+    "level": 4000,
+    "category": "breadth",
+    "ai_primary": true,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "and": [
+        {
+          "or": [
+            "EE2012A",
+            "EE2012",
+            "ST2132",
+            "ST2334",
+            {
+              "and": [
+                {
+                  "or": [
+                    "ST2131",
+                    "MA2116",
+                    "MA2116T",
+                    "MA2216"
+                  ]
+                },
+                {
+                  "or": [
+                    "ST1131",
+                    "ST1232",
+                    "DCS2008",
+                    "ST1131A"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "or": [
+            "CS3243",
+            "CS3263"
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CS5446"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN(( must have completed 1 of EE2012/EE2012A/ST2132/ST2334 at a grade of at least DOR( must have completed 1 of MA2116/MA2116T/MA2216/ST2131 at a grade of at least DANDmust have completed 1 of DCS2008/ST1131/ST1131A/ST1232 at a grade of at least D))ANDmust have completed 1 of CS3243/CS3263 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed CS5446 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS4246.json"
+  },
+  "CS4248": {
+    "code": "CS4248",
+    "title": "Introduction to Large Language Models",
+    "units": 4.0,
+    "level": 4000,
+    "category": "breadth",
+    "ai_primary": true,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "and": [
+        {
+          "or": [
+            "CS2109S",
+            "CS2109HS",
+            "CS3244",
+            "MA3270",
+            "ST4248"
+          ]
+        },
+        {
+          "or": [
+            "EE2012A",
+            "EE2012",
+            "ST2131",
+            "MA2216",
+            "MA2116",
+            "MA2116T",
+            "ST2334",
+            "YSC2243"
+          ]
+        },
+        {
+          "or": [
+            "MA1505",
+            "MA1507",
+            "MA1521",
+            "MA1102R",
+            "YSC1216",
+            "MA2002",
+            {
+              "nOf": [
+                2,
+                [
+                  "MA1511",
+                  "MA1512"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CS5246",
+      "DSA4213"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN (( must have completed 1 of CS2109HS/CS2109S/CS3244/MA3270/ST4248 at a grade of at least D AND must have completed 1 of EE2012/EE2012A/MA2116/MA2116T/MA2216/ST2131/ST2334/YSC2243 at a grade of at least D) AND ( must have completed 1 of MA1102R/MA1505/MA1507/MA1521/MA2002/YSC1216 at a grade of at least D OR must have completed all of MA1511/MA1512 at a grade of at least D))",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN must not have completed CS5246/DSA4213 at a grade of at least D",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS4248.json"
+  },
+  "CS4261": {
+    "code": "CS4261",
+    "title": "Algorithmic Mechanism Design",
+    "units": 4.0,
+    "level": 4000,
+    "category": "breadth",
+    "ai_primary": false,
+    "offered_semesters": [
+      1
+    ],
+    "prerequisites": {
+      "and": [
+        {
+          "or": [
+            "EE2012A",
+            "EE2012",
+            "ST2131",
+            "MA2216",
+            "ST2334",
+            "MA2116",
+            "MA2116T"
+          ]
+        },
+        {
+          "or": [
+            "CS2040",
+            "CS2040S",
+            "CS2040C",
+            "CS2040DE",
+            "CS2040HS"
+          ]
+        },
+        {
+          "or": [
+            "MA1100",
+            "MA1100T",
+            "CS1231S",
+            "CS1231"
+          ]
+        },
+        {
+          "or": [
+            "MA2001",
+            "MA1101R",
+            "MA1311",
+            "MA1508E",
+            "MA1513",
+            "MA1522"
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CS5461"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of EE2012/EE2012A/MA2116/MA2116T/MA2216/ST2131/ST2334 at a grade of at least DANDmust have completed 1 of CS2040/CS2040C/CS2040DE/CS2040HS/CS2040S at a grade of at least DANDmust have completed 1 of CS1231/CS1231S/MA1100/MA1100T at a grade of at least DANDmust have completed 1 of MA1101R/MA1311/MA1508E/MA1513/MA1522/MA2001 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed CS5461 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS4261.json"
+  },
+  "CS4262": {
+    "code": "CS4262",
+    "title": "Machine Learning Systems",
+    "units": 4.0,
+    "level": 4000,
+    "category": "breadth",
+    "ai_primary": true,
+    "offered_semesters": [
+      2
+    ],
+    "prerequisites": {
+      "and": [
+        {
+          "or": [
+            "CS2106",
+            "CG2271"
+          ]
+        },
+        {
+          "or": [
+            "CS3244",
+            "CS3264",
+            "CG3201"
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CS5462"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHENmust have completed CG2271/CS2106 at a grade of at least DANDmust have completed CG3201/CS3244/CS3264 at a grade of at least D",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHENmust not have completed CS5462 at a grade of at least D",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS4262.json"
+  },
+  "CS4263": {
+    "code": "CS4263",
+    "title": "Artificial Intelligence Principles",
+    "units": 4.0,
+    "level": 4000,
+    "category": "breadth",
+    "ai_primary": true,
+    "offered_semesters": [
+      1
+    ],
+    "prerequisites": {
+      "and": [
+        {
+          "or": [
+            "CS2040",
+            "CS2040C",
+            "CS2040S",
+            "CS2040DE",
+            "CS2040HS"
+          ]
+        },
+        {
+          "or": [
+            "CS1231",
+            "CS1231S",
+            "MA1100",
+            "MA1100T"
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CS2109S",
+      "CS3243",
+      "CS3263"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN(( must have completed 1 of CS2040/CS2040C/CS2040DE/CS2040HS/CS2040S at a grade of at least D)AND( must have completed 1 of CS1231/CS1231S/MA1100/MA1100T at a grade of at least D))",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHENmust not have completed CS2109S/CS3243/CS3263 at a grade of at least D",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS4263.json"
+  },
+  "CS4277": {
+    "code": "CS4277",
+    "title": "3D Computer Vision",
+    "units": 4.0,
+    "level": 4000,
+    "category": "breadth",
+    "ai_primary": false,
+    "offered_semesters": [
+      2
+    ],
+    "prerequisites": {
+      "and": [
+        {
+          "or": [
+            "MA2001",
+            "MA1522",
+            "MA1101R",
+            "MA1311",
+            "MA1506",
+            "MA1508E"
+          ]
+        },
+        {
+          "or": [
+            "CS2040",
+            "CS2040S",
+            "CS2040C",
+            "CS2040DE",
+            "CS2040HS"
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CS5477"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of MA1101R/MA1311/MA1506/MA1508E/MA1522/MA2001 at a grade of at least DANDmust have completed 1 of CS2040/CS2040C/CS2040DE/CS2040HS/CS2040S at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed CS5477 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS4277.json"
+  },
+  "CS4278": {
+    "code": "CS4278",
+    "title": "Intelligent Robots: Algorithms and Systems",
+    "units": 4.0,
+    "level": 4000,
+    "category": "breadth",
+    "ai_primary": false,
+    "offered_semesters": [
+      1
+    ],
+    "prerequisites": {
+      "and": [
+        {
+          "or": [
+            "CS3263",
+            "CS3243"
+          ]
+        },
+        {
+          "or": [
+            "MA2001",
+            "MA1522",
+            "MA1101R",
+            "MA1311",
+            "MA1508E",
+            "MA1513"
+          ]
+        },
+        {
+          "or": [
+            "EE2012",
+            "EE2012A",
+            "ST2131",
+            "ST2334",
+            "MA2116",
+            "MA2116T",
+            "MA2216"
+          ]
+        },
+        {
+          "or": [
+            "MA2002",
+            "MA1102R",
+            "MA1505",
+            "MA1507",
+            "MA1521",
+            {
+              "nOf": [
+                2,
+                [
+                  "MA1512",
+                  "MA1511"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CS5478"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of CS3243/CS3263 at a grade of at least DANDmust have completed 1 of MA1101R/MA1311/MA1508E/MA1513/MA1522/MA2001 at a grade of at least DANDmust have completed 1 of EE2012/EE2012A/MA2116/MA2116T/MA2216/ST2131/ST2334 at a grade of at least DAND( must have completed 1 of MA1102R/MA1505/MA1507/MA1521/MA2002 at a grade of at least DOR( must have completed all of MA1511/MA1512 at a grade of at least D)))",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed CS5478 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS4278.json"
+  },
+  "CS5228": {
+    "code": "CS5228",
+    "title": "Knowledge Discovery and Data Mining",
+    "units": 4.0,
+    "level": 5000,
+    "category": "breadth",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "and": [
+        {
+          "or": [
+            "CS2109S",
+            "CS3243"
+          ]
+        },
+        "CS2102",
+        {
+          "or": [
+            "EE2012A",
+            "EE2012",
+            "ST2132",
+            "ST2334",
+            {
+              "and": [
+                {
+                  "or": [
+                    "ST2131",
+                    "MA2216",
+                    "MA2116T",
+                    "MA2116"
+                  ]
+                },
+                {
+                  "or": [
+                    "ST1131A",
+                    "ST1131",
+                    "DSC2008",
+                    "ST1232"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of CS2109S/CS3243 at a grade of at least DANDmust have completed CS2102 at a grade of at least DAND(( must have completed 1 of EE2012/EE2012A/ST2132/ST2334 at a grade of at least D)OR( must have completed 1 of MA2116/MA2116T/MA2216/ST2131 at a grade of at least DANDmust have completed 1 of DSC2008/ST1131/ST1131A/ST1232 at a grade of at least D)))",
+    "raw_corequisite": "",
+    "raw_preclusion": "",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS5228.json"
+  },
+  "CS5242": {
+    "code": "CS5242",
+    "title": "Neural Networks and Deep Learning",
+    "units": 4.0,
+    "level": 5000,
+    "category": "breadth",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "and": [
+        {
+          "or": [
+            "CS2109S",
+            "CS3244",
+            "CG3201"
+          ]
+        },
+        {
+          "or": [
+            "EE2012",
+            "EE2012A",
+            "MA2216",
+            "MA2116",
+            "MA2116T",
+            "ST2131",
+            "ST2334"
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of CG3201/CS2109S/CS3244 at a grade of at least DANDmust have completed 1 of EE2012/EE2012A/MA2116/MA2116T/MA2216/ST2131/ST2334 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS5242.json"
+  },
+  "CS5260": {
+    "code": "CS5260",
+    "title": "Neural Networks and Deep Learning II",
+    "units": 4.0,
+    "level": 5000,
+    "category": "breadth",
+    "ai_primary": false,
+    "offered_semesters": [
+      2
+    ],
+    "prerequisites": "CS5242",
+    "corequisites": [],
+    "preclusions": [],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN must have completed CS5242 at a grade of at least D",
+    "raw_corequisite": "",
+    "raw_preclusion": "",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS5260.json"
+  },
+  "CS5339": {
+    "code": "CS5339",
+    "title": "Theory and Algorithms for Machine Learning",
+    "units": 4.0,
+    "level": 5000,
+    "category": "breadth",
+    "ai_primary": false,
+    "offered_semesters": [
+      2
+    ],
+    "prerequisites": {
+      "and": [
+        {
+          "or": [
+            "CS3264",
+            "CS3244",
+            "CG3201"
+          ]
+        },
+        {
+          "or": [
+            "EE2012",
+            "EE2012A",
+            "MA2216",
+            "MA2116",
+            "MA2116T",
+            "ST2131",
+            "ST2334"
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of CG3201/CS3244/CS3264 at a grade of at least DANDmust have completed 1 of EE2012/EE2012A/MA2116/MA2116T/MA2216/ST2131/ST2334 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS5339.json"
+  },
+  "CS5340": {
+    "code": "CS5340",
+    "title": "Uncertainty Modelling in AI",
+    "units": 4.0,
+    "level": 5000,
+    "category": "breadth",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "and": [
+        {
+          "or": [
+            "CS3263",
+            "CS3243"
+          ]
+        },
+        {
+          "or": [
+            "EE2012A",
+            "EE2012",
+            "ST2132",
+            "ST2334",
+            {
+              "and": [
+                {
+                  "or": [
+                    "ST2131",
+                    "MA2216",
+                    "MA2116",
+                    "MA2116T"
+                  ]
+                },
+                {
+                  "or": [
+                    "ST1131A",
+                    "ST1131",
+                    "DSC2008",
+                    "ST1232"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of CS3243/CS3263 at a grade of at least DAND(( must have completed 1 of EE2012/EE2012A/ST2132/ST2334 at a grade of at least D)OR( must have completed 1 of MA2116/MA2116T/MA2216/ST2131 at a grade of at least DANDmust have completed 1 of DSC2008/ST1131/ST1131A/ST1232 at a grade of at least D)))",
+    "raw_corequisite": "",
+    "raw_preclusion": "",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/CS5340.json"
+  },
+  "EE1111B": {
+    "code": "EE1111B",
+    "title": "Electrical & Computer Engineering Principles & Practice",
+    "units": 4.0,
+    "level": 1000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [],
+    "prerequisites": null,
+    "corequisites": [],
+    "preclusions": [
+      "CG1111A",
+      "EE2111A"
+    ],
+    "raw_prerequisite": "",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN ( must not have completed 1 of CG1111A/EE2111A at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/EE1111B.json"
+  },
+  "EE2012": {
+    "code": "EE2012",
+    "title": "Analytical Methods in Electrical and Computer Engineering",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "nOf": [
+        2,
+        [
+          "MA1511",
+          "MA1512"
+        ]
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CE2407A",
+      "EE2012A",
+      "ST2131",
+      "ST2334"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed all of MA1511/MA1512 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of CE2407A/EE2012A/ST2131/ST2334 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/EE2012.json"
+  },
+  "EE2028": {
+    "code": "EE2028",
+    "title": "Microcontroller Programming and Interfacing",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": false,
+    "corequisites": [],
+    "preclusions": [
+      "CG2028",
+      "EE2024"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN(( must have completed 1 of CG1111A/EE1111B/EE2111A at a grade of at least D)AND( must have completed 1 of UTC2851 at a grade of at least D, any Courses beginning with CS1010 at a grade of at least D))",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of CG2028/EE2024 at a grade of at least D)",
+    "selectable": false,
+    "review_flags": [
+      "Non-course prerequisite leaf: CS1010%:D"
+    ],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/EE2028.json"
+  },
+  "EE2111A": {
+    "code": "EE2111A",
+    "title": "Electrical Engineering Principles and Practice II",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      2
+    ],
+    "prerequisites": null,
+    "corequisites": [],
+    "preclusions": [
+      "CG1111A",
+      "EE1111B",
+      "ESP2111",
+      "ME2104",
+      "ME2105",
+      "RB2101"
+    ],
+    "raw_prerequisite": "",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of CG1111A/EE1111B/ESP2111/ME2104/ME2105/RB2101 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/EE2111A.json"
+  },
+  "EE2211": {
+    "code": "EE2211",
+    "title": "Introduction to Machine Learning",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": false,
+    "corequisites": [],
+    "preclusions": [],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of UTC2851/any Courses beginning with CS1010 at a grade of at least D)AND( must have completed 1 of MA1505/MA1511 at a grade of at least D)AND( must have completed 1 of MA1508E/MA1513 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "",
+    "selectable": false,
+    "review_flags": [
+      "Non-course prerequisite leaf: CS1010%:D"
+    ],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/EE2211.json"
+  },
+  "EE2213": {
+    "code": "EE2213",
+    "title": "Introduction to Artificial Intelligence",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "CS1010E",
+        "CS1010",
+        "CS1010X",
+        "CS1010S",
+        "CS1101S",
+        "CS1010J",
+        "CS1010A"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CS2109S"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHENmust have completed 1 of CS1010/CS1010A/CS1010E/CS1010J/CS1010S/CS1010X/CS1101S at a grade of at least D",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHENmust not have completed CS2109S at a grade of at least D",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/EE2213.json"
+  },
+  "LSM1301": {
+    "code": "LSM1301",
+    "title": "General Biology",
+    "units": 4.0,
+    "level": 1000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": null,
+    "corequisites": [],
+    "preclusions": [],
+    "raw_prerequisite": "",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN 11 BIOLOGY at a grade of at least E",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/LSM1301.json"
+  },
+  "MA1100": {
+    "code": "MA1100",
+    "title": "Basic Discrete Mathematics",
+    "units": 4.0,
+    "level": 1000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "MA1301",
+        "MA1301X"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CS1231",
+      "CS1231S",
+      "MA1100T",
+      "YSC2209"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN (( must have completed 1 of 06 MATHEMATICS/07 FURTHER MATHEMATICS at a grade of at least E) OR ( must have completed 1 of MA1301/MA1301X at a grade of at least D))",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN ( must not have completed 1 of CS1231/CS1231S/MA1100T/YSC2209 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/MA1100.json"
+  },
+  "MA1100T": {
+    "code": "MA1100T",
+    "title": "Basic Discrete Mathematics (T)",
+    "units": 4.0,
+    "level": 1000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1
+    ],
+    "prerequisites": {
+      "or": [
+        "MA1301",
+        "MA1301X"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CS1231",
+      "CS1231S",
+      "MA1100",
+      "YSC2209"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN (( must have completed 1 of 06 MATHEMATICS/07 FURTHER MATHEMATICS at a grade of at least E) OR ( must have completed 1 of MA1301/MA1301X at a grade of at least D))",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN ( must not have completed 1 of CS1231/CS1231S/MA1100/YSC2209 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/MA1100T.json"
+  },
+  "MA1301": {
+    "code": "MA1301",
+    "title": "Introductory Mathematics",
+    "units": 4.0,
+    "level": 1000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": null,
+    "corequisites": [],
+    "preclusions": [],
+    "raw_prerequisite": "",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN (( 1 of 06 MATHEMATICS/07 FURTHER MATHEMATICS at a grade of at least E) AND ( must not have completed 1 of any Courses beginning with MA at a grade of at least D))",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/MA1301.json"
+  },
+  "MA1301X": {
+    "code": "MA1301X",
+    "title": "Introductory Mathematics",
+    "units": 4.0,
+    "level": 1000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      2
+    ],
+    "prerequisites": null,
+    "corequisites": [],
+    "preclusions": [],
+    "raw_prerequisite": "",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN (( 1 of 06 MATHEMATICS/07 FURTHER MATHEMATICS at a grade of at least E) AND ( must not have completed 1 of any Courses beginning with MA at a grade of at least D))",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/MA1301X.json"
+  },
+  "MA1505": {
+    "code": "MA1505",
+    "title": "Mathematics I",
+    "units": 4.0,
+    "level": 1000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1
+    ],
+    "prerequisites": {
+      "or": [
+        "MA1301",
+        "MA1301X"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "MA1312",
+      "MA1511",
+      "MA1521",
+      "MA2002",
+      "MA2311",
+      "PC2174A",
+      "YSC1216"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN (( must have completed 1 of 06 MATHEMATICS/07 FURTHER MATHEMATICS at a grade of at least E) OR ( must have completed 1 of MA1301/MA1301X at a grade of at least D))",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN (( must not have completed 1 of MA1312/MA1511/MA1521/MA2002/MA2311/PC2174A/YSC1216 at a grade of at least D) AND (must not be undertaking 1 of 1003QFNHON Bachelor of Science - Quantitative Finance (Hons), 1003MAHON Bachelor of Science - Mathematics (Hons), 1006DSAHON Bachelor of Science (Data Science and Analytics) (Hons), 1006DSEXDP Bachelor of Science - Data Sci & Econs (Hons) XDP, 1006STHON Bachelor of Science - Statistics (Hons)))",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/MA1505.json"
+  },
+  "MA1508E": {
+    "code": "MA1508E",
+    "title": "Linear Algebra for Engineering",
+    "units": 4.0,
+    "level": 1000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "MA1301",
+        "MA1301X"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "MA1311",
+      "MA1513",
+      "MA1522",
+      "MA2001",
+      "YSC2232"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN (( must have completed 1 of 06 MATHEMATICS/07 FURTHER MATHEMATICS at a grade of at least E) OR ( must have completed 1 of MA1301/MA1301X at a grade of at least D))",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN ( must not have completed 1 of MA1311/MA1513/MA1522/MA2001/YSC2232 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/MA1508E.json"
+  },
+  "MA1511": {
+    "code": "MA1511",
+    "title": "Engineering Calculus",
+    "units": 2.0,
+    "level": 1000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "MA1301",
+        "MA1301X"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "MA1312",
+      "MA1505",
+      "MA1521",
+      "MA2002",
+      "MA2311",
+      "PC2134",
+      "PC2174A",
+      "YSC1216"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN(( must have completed 1 of 06 MATHEMATICS/07 FURTHER MATHEMATICS at a grade of at least E)OR( must have completed 1 of MA1301/MA1301X at a grade of at least D))",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of MA1312/MA1505/MA1521/MA2002/MA2311/PC2134/PC2174A/YSC1216 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/MA1511.json"
+  },
+  "MA1512": {
+    "code": "MA1512",
+    "title": "Differential Equations for Engineering",
+    "units": 2.0,
+    "level": 1000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "MA1301",
+        "MA1301X"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "PC2134"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN (( must have completed 1 of 06 MATHEMATICS/07 FURTHER MATHEMATICS at a grade of at least E) OR ( must have completed 1 of MA1301/MA1301X at a grade of at least D))",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN ( must not have completed PC2134 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/MA1512.json"
+  },
+  "MA1513": {
+    "code": "MA1513",
+    "title": "Linear Algebra with Differential Equations",
+    "units": 2.0,
+    "level": 1000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "MA1301",
+        "MA1301X"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "MA1311",
+      "MA1508E",
+      "MA1522",
+      "MA2001",
+      "YSC2232"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN (( must have completed 1 of 06 MATHEMATICS/07 FURTHER MATHEMATICS at a grade of at least E) OR ( must have completed 1 of MA1301/MA1301X at a grade of at least D))",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN ( must not have completed 1 of MA1311/MA1508E/MA1522/MA2001/YSC2232 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/MA1513.json"
+  },
+  "MA1521": {
+    "code": "MA1521",
+    "title": "Calculus for Computing",
+    "units": 4.0,
+    "level": 1000,
+    "category": "mathematics",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": true,
+    "corequisites": [],
+    "preclusions": [
+      "MA1312",
+      "MA1505",
+      "MA1511",
+      "MA2002",
+      "YSC1216"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN (( must have completed 1 of 06 MATHEMATICS/07 FURTHER MATHEMATICS at a grade of at least E) OR ( must have completed 1 of MA1301/MA1301X at a grade of at least D))",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN (( must not have completed 1 of MA1312/MA1505/MA1511/MA2002/YSC1216 at a grade of at least D) AND (must not be undertaking 1 of 0601BMEHON Bachelor of Engineering (Biomedical Engineering) (Hons), 0602CHEHON Bachelor of Engineering (Chemical Engineering) (Hons), 0604ELEHON Bachelor of Engineering (Electrical Engineering) (Hons), 0605ESPHON Bachelor of Engineering (Engineering Science) (Hons), 0607ISEHON Bachelor of Engineering (Industrial and Systems Engineering) (Hons), 0608MSEHON Bachelor of Engineering (Materials Science and Engineering) (Hons), 0609MEHON Bachelor of Engineering (Mechanical Engineering) (Hons), 0611CHEHON Bachelor of Technology (Chemical Engineering) (Hons), 0611ELCHON Bachelor of Technology (Electronics Engineering) (Hons), 0611IMEHON Bachelor of Technology (Industrial & Mgt Engineering) (Hons), 0611MEHON Bachelor of Technology (Mechanical Engineering) (Hons), 0613CEHON Bachelor of Engineering (Civil Engineering) (Hons), 0613EVEHON Bachelor of Engineering (Environmental Engineering) (Hons), 2001CEGHON Bachelor of Engineering (Computer Engineering) (Hons), 1003MAHON Bachelor of Science - Mathematics (Hons), 1003QFNHON Bachelor of Science - Quantitative Finance (Hons), 1006DSAHON Bachelor of Science (Data Science and Analytics) (Hons), 1006DSEXDP Bachelor of Science - Data Sci & Econs (Hons) XDP, 1006STHON Bachelor of Science - Statistics (Hons)))",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [
+      "Assume qualifying pre-university mathematics; documented alternative to MA1301/X."
+    ],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/MA1521.json"
+  },
+  "MA1522": {
+    "code": "MA1522",
+    "title": "Linear Algebra for Computing",
+    "units": 4.0,
+    "level": 1000,
+    "category": "mathematics",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": true,
+    "corequisites": [],
+    "preclusions": [
+      "MA1311",
+      "MA1508E",
+      "MA1513",
+      "MA2001",
+      "YSC2232"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN (( must have completed 1 of 06 MATHEMATICS/07 FURTHER MATHEMATICS at a grade of at least E) OR ( must have completed 1 of MA1301/MA1301X at a grade of at least D))",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN (( must not have completed 1 of MA1311/MA1508E/MA1513/MA2001/YSC2232 at a grade of at least D) AND (must not be undertaking 1 of 0601BMEHON Bachelor of Engineering (Biomedical Engineering) (Hons), 0602CHEHON Bachelor of Engineering (Chemical Engineering) (Hons), 0604ELEHON Bachelor of Engineering (Electrical Engineering) (Hons), 0605ESPHON Bachelor of Engineering (Engineering Science) (Hons), 0607ISEHON Bachelor of Engineering (Industrial and Systems Engineering) (Hons), 0608MSEHON Bachelor of Engineering (Materials Science and Engineering) (Hons), 0609MEHON Bachelor of Engineering (Mechanical Engineering) (Hons), 0611CHEHON Bachelor of Technology (Chemical Engineering) (Hons), 0611ELCHON Bachelor of Technology (Electronics Engineering) (Hons), 0611IMEHON Bachelor of Technology (Industrial & Mgt Engineering) (Hons), 0611MEHON Bachelor of Technology (Mechanical Engineering) (Hons), 0613CEHON Bachelor of Engineering (Civil Engineering) (Hons), 0613EVEHON Bachelor of Engineering (Environmental Engineering) (Hons), 1003MAHON Bachelor of Science - Mathematics (Hons), 1003QFNHON Bachelor of Science - Quantitative Finance (Hons), 1006DSAHON Bachelor of Science (Data Science and Analytics) (Hons), 1006DSEXDP Bachelor of Science - Data Sci & Econs (Hons) XDP, 1006STHON Bachelor of Science - Statistics (Hons), 2001CEGHON Bachelor of Engineering (Computer Engineering) (Hons)))",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [
+      "Assume qualifying pre-university mathematics for standard CS admission."
+    ],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/MA1522.json"
+  },
+  "MA1531": {
+    "code": "MA1531",
+    "title": "Calculus for Data Science",
+    "units": 4.0,
+    "level": 1000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "MA1301",
+        "MA1301X"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "MA1312",
+      "MA1505",
+      "MA1511",
+      "MA1521",
+      "MA2002",
+      "MA2104",
+      "YSC1216"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN(( must have completed 1 of 06 MATHEMATICS/07 FURTHER MATHEMATICS at a grade of at least E)OR( must have completed 1 of MA1301/MA1301X at a grade of at least D))",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN(( must not have completed 1 of YSC1216, MA1312/MA1505/MA1511/MA1521/MA2002/MA2104 at a grade of at least D)AND(must not be undertaking 1 of 1003MAHON Bachelor of Science - Mathematics (Hons), 1003QFNHON Bachelor of Science - Quantitative Finance (Hons), 1006STHON Bachelor of Science - Statistics (Hons), 0601BMEHON Bachelor of Engineering (Biomedical Engineering) (Hons), 0602CHEHON Bachelor of Engineering (Chemical Engineering) (Hons), 0604ELEHON Bachelor of Engineering (Electrical Engineering) (Hons), 0613CEHON Bachelor of Engineering (Civil Engineering) (Hons), 0605ESPHON Bachelor of Engineering (Engineering Science) (Hons), 0613EVEHON Bachelor of Engineering (Environmental Engineering) (Hons), 0607ISEHON Bachelor of Engineering (Industrial and Systems Engineering) (Hons), 0608MSEHON Bachelor of Engineering (Materials Science and Engineering) (Hons), 0609MEHON Bachelor of Engineering (Mechanical Engineering) (Hons), 0616IPMHON BEng (Infrastructure and Project Management) (Hons), 2001CEGHON Bachelor of Engineering (Computer Engineering) (Hons), 0300CSHON Bachelor of Computing (Computer Science) (Hons), 0300ISCHON Bachelor of Computing (Information Security) (Hons), 0300ISHON Bachelor of Computing (Information Systems) (Hons), 0300BZAHON Bachelor of Science (Business Analytics) (Hons)))",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/MA1531.json"
+  },
+  "MA2001": {
+    "code": "MA2001",
+    "title": "Linear Algebra I",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "MA1301",
+        "MA1301X"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "MA1508E",
+      "MA1513",
+      "MA1522",
+      "YSC2232"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN (( must have completed 1 of 06 MATHEMATICS/07 FURTHER MATHEMATICS at a grade of at least E) OR ( must have completed 1 of MA1301/MA1301X at a grade of at least D))",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN (( must not have completed 1 of MA1508E/MA1513/MA1522/YSC2232 at a grade of at least D) AND (must not be undertaking 1 of 0601BMEHON Bachelor of Engineering (Biomedical Engineering) (Hons), 0602CHEHON Bachelor of Engineering (Chemical Engineering) (Hons), 0604ELEHON Bachelor of Engineering (Electrical Engineering) (Hons), 0613CEHON Bachelor of Engineering (Civil Engineering) (Hons), 0605ESPHON Bachelor of Engineering (Engineering Science) (Hons), 0613EVEHON Bachelor of Engineering (Environmental Engineering) (Hons), 0607ISEHON Bachelor of Engineering (Industrial and Systems Engineering) (Hons), 0608MSEHON Bachelor of Engineering (Materials Science and Engineering) (Hons), 0609MEHON Bachelor of Engineering (Mechanical Engineering) (Hons), 2001CEGHON Bachelor of Engineering (Computer Engineering) (Hons), 0300CSHON Bachelor of Computing (Computer Science) (Hons), 0300BZAHON Bachelor of Science (Business Analytics) (Hons), 0300ISHON Bachelor of Computing (Information Systems) (Hons), 0616IPMHON BEng (Infrastructure and Project Management) (Hons), 0300ISCHON Bachelor of Computing (Information Security) (Hons)))",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/MA2001.json"
+  },
+  "MA2002": {
+    "code": "MA2002",
+    "title": "Calculus",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "MA1301",
+        "MA1301X"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "MA1312",
+      "MA1505",
+      "MA1521",
+      "YSC1216"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN (( must have completed 1 of 06 MATHEMATICS/07 FURTHER MATHEMATICS at a grade of at least E) OR ( must have completed 1 of MA1301/MA1301X at a grade of at least D))",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN (( must not have completed 1 of MA1312/MA1505/MA1521/YSC1216 at a grade of at least D) AND (must not be undertaking 1 of 0601BMEHON Bachelor of Engineering (Biomedical Engineering) (Hons), 0602CHEHON Bachelor of Engineering (Chemical Engineering) (Hons), 0604ELEHON Bachelor of Engineering (Electrical Engineering) (Hons), 0613CEHON Bachelor of Engineering (Civil Engineering) (Hons), 0605ESPHON Bachelor of Engineering (Engineering Science) (Hons), 0613EVEHON Bachelor of Engineering (Environmental Engineering) (Hons), 0607ISEHON Bachelor of Engineering (Industrial and Systems Engineering) (Hons), 0608MSEHON Bachelor of Engineering (Materials Science and Engineering) (Hons), 0609MEHON Bachelor of Engineering (Mechanical Engineering) (Hons), 2001CEGHON Bachelor of Engineering (Computer Engineering) (Hons), 0300CSHON Bachelor of Computing (Computer Science) (Hons), 0300ISCHON Bachelor of Computing (Information Security) (Hons), 0300ISHON Bachelor of Computing (Information Systems) (Hons), 0300BZAHON Bachelor of Science (Business Analytics) (Hons), 0616IPMHON BEng (Infrastructure and Project Management) (Hons)))",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/MA2002.json"
+  },
+  "MA2104": {
+    "code": "MA2104",
+    "title": "Multivariable Calculus",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "MA2002",
+        "MA1505",
+        "MA1511",
+        "MA1521"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "MA2311",
+      "PC2174A",
+      "YSC2252"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of MA1505/MA1511/MA1521/MA2002 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN(( must not have completed 1 of MA2311/PC2174A/YSC2252 at a grade of at least D))",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/MA2104.json"
+  },
+  "MA2116": {
+    "code": "MA2116",
+    "title": "Probability",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "MA1312",
+        "MA1505",
+        "MA1511",
+        "MA1521",
+        "MA2002"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "EC2303",
+      "MA2116T",
+      "MA2301",
+      "ST2131",
+      "ST2334",
+      "YSC2243"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of MA1312/MA1505/MA1511/MA1521/MA2002 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of EC2303/MA2116T/MA2301/ST2131/ST2334/YSC2243 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/MA2116.json"
+  },
+  "MA2116T": {
+    "code": "MA2116T",
+    "title": "Probability (T)",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1
+    ],
+    "prerequisites": {
+      "and": [
+        {
+          "or": [
+            "CS1231",
+            "CS1231S",
+            "MA1100",
+            "MA1100T"
+          ]
+        },
+        {
+          "or": [
+            "MA2104",
+            "MA2311"
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "EC2303",
+      "MA2116",
+      "MA2301",
+      "ST2131",
+      "ST2334",
+      "YSC2243"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN(( must have completed 1 of CS1231/CS1231S/MA1100/MA1100T at a grade of at least D)AND( must have completed 1 of MA2104/MA2311 at a grade of at least D))",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of EC2303/MA2116/MA2301/ST2131/ST2334/YSC2243 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/MA2116T.json"
+  },
+  "MA2311": {
+    "code": "MA2311",
+    "title": "Techniques in Advanced Calculus",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "MA2002",
+        "MA1312",
+        "MA1521"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "MA1505",
+      "MA1511",
+      "MA2104",
+      "MA2108",
+      "MA2108S"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of MA1312/MA1521/MA2002 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN(( must not have completed 1 of MA1505/MA1511/MA2104/MA2108/MA2108S at a grade of at least D)AND(must not be undertaking 1 of 1003MAHON Bachelor of Science - Mathematics (Hons), 1003QFNHON Bachelor of Science - Quantitative Finance (Hons)))",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/MA2311.json"
+  },
+  "MA3270": {
+    "code": "MA3270",
+    "title": "Mathematics for Artificial Intelligence",
+    "units": 4.0,
+    "level": 3000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1
+    ],
+    "prerequisites": {
+      "and": [
+        {
+          "or": [
+            "MA1508E",
+            "MA1513",
+            "MA1522",
+            "MA2001"
+          ]
+        },
+        {
+          "or": [
+            "MA1505",
+            "MA1511",
+            "MA2104",
+            "MA2311"
+          ]
+        },
+        {
+          "or": [
+            "MA2116",
+            "MA2116T",
+            "ST2131",
+            "ST2334"
+          ]
+        }
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN(( must have completed 1 of MA1508E/MA1513/MA1522/MA2001 at a grade of at least D)AND( must have completed 1 of MA1505/MA1511/MA2104/MA2311 at a grade of at least D)AND( must have completed 1 of MA2116/MA2116T/ST2131/ST2334 at a grade of at least D))",
+    "raw_corequisite": "",
+    "raw_preclusion": "",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/MA3270.json"
+  },
+  "ST1131": {
+    "code": "ST1131",
+    "title": "Introduction to Statistics and Statistical Computing",
+    "units": 4.0,
+    "level": 1000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "MA1301",
+        "MA1301X"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of MA1301/MA1301X at a grade of at least DORmust have completed 1 of 0006/06 MATHEMATICS at a grade of at least AO, 0007/07 FURTHER MATHEMATICS at a grade of at least AO, 21 PURE MATHEMATICS/22 APPLIED MATHEMATICS at a grade of at least AO)",
+    "raw_corequisite": "",
+    "raw_preclusion": "",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/ST1131.json"
+  },
+  "ST2131": {
+    "code": "ST2131",
+    "title": "Probability",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "MA1312",
+        "MA1505",
+        "MA1511",
+        "MA1521",
+        "MA2002"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "CE2407",
+      "EC2303",
+      "MA2116",
+      "MA2116T",
+      "MA2301",
+      "ST2334",
+      "YSC2243"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of MA1312/MA1505/MA1511/MA1521/MA2002 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of CE2407/EC2303/MA2116/MA2116T/MA2301/ST2334/YSC2243 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/ST2131.json"
+  },
+  "ST2132": {
+    "code": "ST2132",
+    "title": "Mathematical Statistics",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "ST2334",
+        "ST2131",
+        "MA2116",
+        "MA2116T"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed ST2334 at a grade of at least DORmust have completed ST2131 at a grade of at least DORmust have completed MA2116 at a grade of at least DORmust have completed MA2116T at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/ST2132.json"
+  },
+  "ST2334": {
+    "code": "ST2334",
+    "title": "Probability and Statistics",
+    "units": 4.0,
+    "level": 2000,
+    "category": "mathematics",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "MA1312",
+        "MA1505",
+        "MA1511",
+        "MA1521",
+        "MA2002"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "EC2303",
+      "MA2116",
+      "MA2116T",
+      "MA2301",
+      "ST2131"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of MA1312/MA1505/MA1511/MA1521/MA2002 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of EC2303/MA2116/MA2116T/MA2301/ST2131 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/ST2334.json"
+  },
+  "ST3131": {
+    "code": "ST3131",
+    "title": "Regression Analysis",
+    "units": 4.0,
+    "level": 3000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": {
+      "or": [
+        "ST2334",
+        "ST2131",
+        "MA2116",
+        "MA2116T"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "EC3303"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed ST2334 at a grade of at least DORmust have completed ST2131 at a grade of at least DORmust have completed MA2116 at a grade of at least DORmust have completed MA2116T at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed EC3303 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/ST3131.json"
+  },
+  "ST3248": {
+    "code": "ST3248",
+    "title": "Statistical Learning I",
+    "units": 4.0,
+    "level": 3000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1
+    ],
+    "prerequisites": {
+      "or": [
+        "ST2132",
+        "ST2334"
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "YSC4216"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed 1 of ST2132/ST2334 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed YSC4216 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/ST3248.json"
+  },
+  "ST4248": {
+    "code": "ST4248",
+    "title": "Statistical Learning II",
+    "units": 4.0,
+    "level": 4000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      2
+    ],
+    "prerequisites": {
+      "nOf": [
+        2,
+        [
+          "ST3131",
+          "ST3248"
+        ]
+      ]
+    },
+    "corequisites": [],
+    "preclusions": [
+      "YSC4216"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate DegreeTHEN( must have completed all of ST3131/ST3248 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed YSC4216 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/ST4248.json"
+  },
+  "UTC2851": {
+    "code": "UTC2851",
+    "title": "Problem Solving for Computing and AI",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": null,
+    "corequisites": [],
+    "preclusions": [
+      "CS1010",
+      "CS1101S",
+      "UTC2852"
+    ],
+    "raw_prerequisite": "",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate DegreeTHEN( must not have completed 1 of any Courses beginning with CS1010 at a grade of at least D, CS1101S/UTC2852 at a grade of at least D)",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/UTC2851.json"
+  },
+  "ZB2101": {
+    "code": "ZB2101",
+    "title": "Introductory Bioinformatics",
+    "units": 4.0,
+    "level": 2000,
+    "category": "prerequisite_support",
+    "ai_primary": false,
+    "offered_semesters": [
+      1,
+      2
+    ],
+    "prerequisites": "LSM1301",
+    "corequisites": [],
+    "preclusions": [
+      "LSM2241"
+    ],
+    "raw_prerequisite": "If undertaking an Undergraduate Degree THEN ( must have completed 1 of 0011/11 BIOLOGY at a grade of at least E OR must have completed LSM1301 at a grade of at least D)",
+    "raw_corequisite": "",
+    "raw_preclusion": "If undertaking an Undergraduate Degree THEN must not have completed LSM2241 at a grade of at least D",
+    "selectable": true,
+    "review_flags": [],
+    "interpretation_notes": [],
+    "source": "https://api.nusmods.com/v2/2026-2027/modules/ZB2101.json"
+  },
+  "CP3200": {
+    "code": "CP3200",
+    "title": "Internship (completed credit only)",
+    "units": 6,
+    "level": 3000,
+    "category": "industry",
+    "ai_primary": false,
+    "offered_semesters": [],
+    "prerequisites": null,
+    "corequisites": [],
+    "preclusions": [],
+    "raw_prerequisite": "",
+    "raw_corequisite": "",
+    "raw_preclusion": "",
+    "selectable": false,
+    "review_flags": [],
+    "interpretation_notes": [
+      "Credit value from official programme page; no claim of current-year offering."
+    ],
+    "source": "https://www.comp.nus.edu.sg/cug/per-cohort/cs/cs-26-27/"
+  }
+}
