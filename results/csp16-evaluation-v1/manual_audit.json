@@ -1,0 +1,257 @@
+{
+  "run": "csp16-evaluation-v1",
+  "split": "test",
+  "reviewed_at_utc": "2026-10-11T16:31:28.834464+00:00",
+  "reviewer": "Codex secondary audit; no additional human review is claimed",
+  "scoring_policy": "outcome-v1-explanation-secondary",
+  "primary_scores_unchanged": true,
+  "translation_review": {
+    "canonical_matches": 115,
+    "differences_reviewed": 5,
+    "equivalent": 5,
+    "non_equivalent": 0,
+    "unresolved": 0,
+    "basis": "Case-specific constraint equivalence, not shared solver outcomes.",
+    "cases": [
+      {
+        "case_id": "test-h6-easy-07",
+        "approach": "assisted",
+        "canonical_match": false,
+        "differences": [
+          "group:required"
+        ],
+        "semantic_status": "equivalent",
+        "reason": "The added group contains exactly the fourteen courses already required by the original specification and sets min_courses=14, with no other bounds. Requiring all fourteen group members repeats the existing individual required-course constraints; all other canonical fields match.",
+        "specification": "../../data/benchmark/cases/test-h6-easy-07.json",
+        "response": "../runs/csp16-evaluation-v1/test-h6-easy-07-assisted/response.json",
+        "evidence": {
+          "original_required": [
+            "CS1101S",
+            "CS1231S",
+            "CS2030S",
+            "CS2040S",
+            "CS2100",
+            "CS2101",
+            "CS2103T",
+            "CS2106",
+            "CS2109S",
+            "CS3230",
+            "CS4243",
+            "MA1521",
+            "MA1522",
+            "ST2334"
+          ],
+          "added_group": {
+            "name": "required",
+            "courses": [
+              "CS1231S",
+              "CS2030S",
+              "CS2040S",
+              "CS2100",
+              "CS2101",
+              "CS2103T",
+              "CS2106",
+              "CS2109S",
+              "CS3230",
+              "MA1521",
+              "MA1522",
+              "ST2334",
+              "CS1101S",
+              "CS4243"
+            ],
+            "min_units": null,
+            "max_units": null,
+            "min_courses": 14,
+            "max_courses": null
+          },
+          "compiler_semantics": "Individual requirements and group counts both use completed-or-enrolled indicators."
+        }
+      },
+      {
+        "case_id": "test-h4-easy-03",
+        "approach": "assisted",
+        "canonical_match": false,
+        "differences": [
+          "forbidden"
+        ],
+        "semantic_status": "equivalent",
+        "added_forbidden": [
+          "CP3200",
+          "CS2040HS",
+          "EE2028",
+          "EE2211"
+        ],
+        "reason": "The only canonical difference adds CP3200, CS2040HS, EE2028 and EE2211 to forbidden. All four have selectable=false in the frozen catalogue, so the compiler already prohibits their new enrolment. Forbidden applies only to new enrolment and does not remove completed CP3200 credit. These restrictions are redundant in both directions.",
+        "specification": "../../data/benchmark/cases/test-h4-easy-03.json",
+        "response": "../runs/csp16-evaluation-v1/test-h4-easy-03-assisted/response.json",
+        "evidence": {
+          "added_forbidden_selectable": {
+            "CP3200": false,
+            "CS2040HS": false,
+            "EE2028": false,
+            "EE2211": false
+          },
+          "compiler_semantics": "Non-selectable courses cannot be newly enrolled; forbidden does not remove completed credit."
+        }
+      },
+      {
+        "case_id": "test-h4-easy-07",
+        "approach": "assisted",
+        "canonical_match": false,
+        "differences": [
+          "forbidden"
+        ],
+        "semantic_status": "equivalent",
+        "added_forbidden": [
+          "CP3200",
+          "CS2040HS",
+          "EE2028",
+          "EE2211"
+        ],
+        "reason": "The only canonical difference adds CP3200, CS2040HS, EE2028 and EE2211 to forbidden. All four have selectable=false in the frozen catalogue, so the compiler already prohibits their new enrolment. Forbidden applies only to new enrolment and does not remove completed CP3200 credit. These restrictions are redundant in both directions.",
+        "specification": "../../data/benchmark/cases/test-h4-easy-07.json",
+        "response": "../runs/csp16-evaluation-v1/test-h4-easy-07-assisted/response.json",
+        "evidence": {
+          "added_forbidden_selectable": {
+            "CP3200": false,
+            "CS2040HS": false,
+            "EE2028": false,
+            "EE2211": false
+          },
+          "compiler_semantics": "Non-selectable courses cannot be newly enrolled; forbidden does not remove completed credit."
+        }
+      },
+      {
+        "case_id": "test-h4-hard-01",
+        "approach": "assisted",
+        "canonical_match": false,
+        "differences": [
+          "required",
+          "group:required"
+        ],
+        "semantic_status": "equivalent",
+        "reason": "The individual required list is replaced by a group containing exactly the original nineteen required courses with min_courses=19 and no other bounds. Group membership counts completed and newly enrolled courses, just as individual required constraints do. Requiring all nineteen members is equivalent in both directions; all other canonical fields match.",
+        "specification": "../../data/benchmark/cases/test-h4-hard-01.json",
+        "response": "../runs/csp16-evaluation-v1/test-h4-hard-01-assisted/response.json",
+        "evidence": {
+          "original_required": [
+            "CS1101S",
+            "CS1231S",
+            "CS2030S",
+            "CS2040S",
+            "CS2100",
+            "CS2101",
+            "CS2103T",
+            "CS2106",
+            "CS2109S",
+            "CS3230",
+            "CS3268",
+            "CS4220",
+            "CS4277",
+            "CS5228",
+            "CS5242",
+            "CS5260",
+            "MA1521",
+            "MA1522",
+            "ST2334"
+          ],
+          "added_group": {
+            "name": "required",
+            "courses": [
+              "CS1231S",
+              "CS2030S",
+              "CS2040S",
+              "CS2100",
+              "CS2101",
+              "CS2103T",
+              "CS2106",
+              "CS2109S",
+              "CS3230",
+              "MA1521",
+              "MA1522",
+              "ST2334",
+              "CS1101S",
+              "CS3268",
+              "CS4220",
+              "CS4277",
+              "CS5228",
+              "CS5242",
+              "CS5260"
+            ],
+            "min_units": null,
+            "max_units": null,
+            "min_courses": 19,
+            "max_courses": null
+          },
+          "compiler_semantics": "Individual requirements and group counts both use completed-or-enrolled indicators."
+        }
+      },
+      {
+        "case_id": "test-h4-hard-08",
+        "approach": "assisted",
+        "canonical_match": false,
+        "differences": [
+          "required"
+        ],
+        "semantic_status": "equivalent",
+        "added_required": [
+          "CS4278"
+        ],
+        "reason": "The only canonical difference adds CS4278 to required. The original specification already fixes CS4278 to semester 1, which forces its enrolment and thus entails the added required constraint. The two specifications are equivalent in both directions; this is not inferred from their shared infeasible status.",
+        "specification": "../../data/benchmark/cases/test-h4-hard-08.json",
+        "response": "../runs/csp16-evaluation-v1/test-h4-hard-08-assisted/response.json",
+        "evidence": {
+          "original_fixed": {
+            "course": "CS4278",
+            "semester": 1
+          },
+          "compiler_semantics": "A fixed new enrolment entails course completion and therefore its required indicator."
+        }
+      }
+    ]
+  },
+  "direct_primary_failures": [
+    {
+      "case_id": "test-h4-easy-01",
+      "approach": "direct",
+      "finding": "false_infeasibility",
+      "category": "completed_required_interpretation",
+      "reason": "The response treats the already passed, required CS1101S as forced new enrolment. In the frozen model, required courses may be satisfied by the completed record. CS1101S is completed and not fixed to a new semester; the validated reference plan therefore does not retake it.",
+      "response": "../runs/csp16-evaluation-v1/test-h4-easy-01-direct/response.json",
+      "specification": "../../data/benchmark/cases/test-h4-easy-01.json",
+      "methodological_note": "The translation prompt explicitly defines that completed mandatory courses remain in required. The direct prompt prohibits re-enrolment but does not explicitly define the wording 'include' for an already passed requested course. The error is scored against the frozen semantics; wording and prompt guidance merit separate follow-up.",
+      "evidence": {
+        "completed_required_course": "CS1101S",
+        "fixed_new_enrolment": false,
+        "reference_plan_valid": true
+      }
+    }
+  ],
+  "explanation_review": {
+    "scope": "Deterministic checks of explicitly matched AI-course counts, group-unit totals and semester-load claims in feasible direct responses. This parser is diagnostic and is not an exhaustive explanation audit.",
+    "matched_numeric_claims_checked": 453,
+    "feasible_responses_with_checked_claims": 83,
+    "confirmed_numeric_discrepancies": 17,
+    "feasible_responses_with_confirmed_numeric_errors": 15,
+    "details": "explanation_numeric_checks.json",
+    "limitation": "The numeric pattern audit covers explicit matched claims; it is not an exhaustive audit of every prose claim.",
+    "infeasibility_review": "All 36 correctly labelled direct infeasibility explanations were read for a sufficient contradiction. Alternative sufficient causes are accepted under the frozen policy."
+  },
+  "interpretation": {
+    "primary_accuracy_difference_percentage_points": 0.8333333333333334,
+    "runtime_difference_seconds": 9.19,
+    "paired_cases": {
+      "completed_cases": 120,
+      "both_correct": 119,
+      "direct_only_correct": 0,
+      "assisted_only_correct": 1,
+      "neither_correct": 0
+    },
+    "limits": [
+      "One assisted-only correct pair does not establish a broad reliability advantage.",
+      "Cases are correlated synthetic variants; designed difficulty is not empirically calibrated.",
+      "Different prompt guidance about completed mandatory courses prevents attributing the observed failure solely to solver use.",
+      "Perfect scores apply to this frozen restricted model and one attempt per case."
+    ]
+  }
+}

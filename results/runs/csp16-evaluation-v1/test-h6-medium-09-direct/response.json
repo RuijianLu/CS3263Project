@@ -1,0 +1,1 @@
+{"status":"infeasible","semesters":[],"explanation":"CS2101 and CS2103T must be newly enrolled together in the same semester. Your request fixes CS2103T in remaining semester 4 and CS2101 in remaining semester 6, contradicting this mandatory simultaneous-enrollment rule."}

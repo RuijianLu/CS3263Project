@@ -1,0 +1,34 @@
+{
+  "status": "feasible",
+  "semesters": [
+    [
+      "CS2109S",
+      "CS3230",
+      "ST2334"
+    ],
+    [
+      "CS2101",
+      "CS2103T",
+      "CS5242",
+      "MA1522"
+    ],
+    [],
+    [
+      "CS2102",
+      "CS3263",
+      "CS4243"
+    ],
+    [
+      "CS2100",
+      "CS4261",
+      "CS4278"
+    ],
+    [
+      "CS2106",
+      "CS3264",
+      "CS5228",
+      "CS5260"
+    ]
+  ],
+  "explanation": "Feasible assignment found; no optimization objective."
+}

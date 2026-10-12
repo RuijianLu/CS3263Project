@@ -1,0 +1,1 @@
+{"status":"infeasible","semesters":[],"explanation":"The request requires CS3243, CS3263 and CS2109S, but CS3243 is precluded by both CS3263 and CS2109S. These required courses therefore cannot all be included, regardless of scheduling. CS1101S is already completed and cannot be newly enrolled."}

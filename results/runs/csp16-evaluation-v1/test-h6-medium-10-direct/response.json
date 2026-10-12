@@ -1,0 +1,1 @@
+{"status":"infeasible","semesters":[],"explanation":"CS4246 in semester 4 requires CS3263 or CS3243 completed earlier. CS3263 is fixed to semester 4, so it cannot satisfy this prerequisite. The alternative CS3243 is precluded by both the required CS2109S and CS3263. Therefore the requested schedule is impossible."}

@@ -1,0 +1,1 @@
+{"status":"infeasible","semesters":[],"explanation":"CS4246 in remaining semester 4 requires CS3243 or CS3263 completed strictly earlier. CS3263 is required in that same semester, so it cannot satisfy the prerequisite. The alternative CS3243 is precluded by both required CS3263 and mandatory CS2109S. Therefore no plan can satisfy all constraints."}

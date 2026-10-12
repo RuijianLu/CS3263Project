@@ -1,0 +1,1 @@
+{"status":"infeasible","semesters":[],"explanation":"The remaining plan must include CS1101S, but CS1101S is already passed and previously completed courses cannot be newly enrolled. These constraints contradict each other."}

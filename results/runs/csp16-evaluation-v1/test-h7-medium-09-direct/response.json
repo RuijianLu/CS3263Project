@@ -1,0 +1,1 @@
+{"status":"infeasible","semesters":[],"explanation":"CS2101 and CS2103T must be newly enrolled together in the same semester, but the request fixes CS2101 in remaining semester 1 and CS2103T in remaining semester 7. These constraints are contradictory."}

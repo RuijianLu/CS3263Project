@@ -1,0 +1,1 @@
+{"status":"infeasible","semesters":[],"explanation":"CS4246 is required in remaining semester 6 and needs CS3263 or CS3243 completed strictly earlier. CS3263 is also fixed to semester 6, so it cannot satisfy that prerequisite. The alternative CS3243 precludes both mandatory CS2109S and required CS3263. Thus neither prerequisite branch is possible."}

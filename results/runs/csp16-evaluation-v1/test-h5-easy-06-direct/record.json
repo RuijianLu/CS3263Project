@@ -1,0 +1,20 @@
+{
+  "case_id": "test-h5-easy-06",
+  "approach": "direct",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "started_at_utc": "2026-10-11T15:37:51.018728+00:00",
+  "prompt_sha256": "fd0a22ee90cb2c71a62902950ea250ea8bc40aacac6035785d4afad2c65c66ee",
+  "status": "ok",
+  "usage": {
+    "input_tokens": 19398,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 528,
+    "reasoning_output_tokens": 321
+  },
+  "tool_items": [],
+  "attempt": 1,
+  "exit_code": 0,
+  "elapsed_seconds": 22.203
+}

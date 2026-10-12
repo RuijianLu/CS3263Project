@@ -1,0 +1,4540 @@
+{
+  "scope": "Deterministic checks of explicitly matched AI-course counts, group-unit totals and semester-load claims in feasible direct responses. This parser is diagnostic and is not an exhaustive explanation audit.",
+  "claims": [
+    {
+      "case_id": "test-h4-easy-02",
+      "group": "breadth",
+      "claim": "breadth totals 34 units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h4-easy-02",
+      "group": "breadth_upper",
+      "claim": "upper-level breadth totals 16 units",
+      "claimed": 16,
+      "actual": 16.0
+    },
+    {
+      "case_id": "test-h4-easy-02",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 16, 4 and 0 units",
+      "claimed": [
+        16,
+        16,
+        4,
+        0
+      ],
+      "actual": [
+        16.0,
+        16.0,
+        4.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h4-easy-03",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h4-easy-03",
+      "group": "breadth_upper",
+      "claim": "16 upper-level breadth units",
+      "claimed": 16,
+      "actual": 16.0
+    },
+    {
+      "case_id": "test-h4-easy-03",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h4-easy-03",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 16, 4 and 0 units",
+      "claimed": [
+        12,
+        16,
+        4,
+        0
+      ],
+      "actual": [
+        12.0,
+        16.0,
+        4.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h4-easy-04",
+      "group": "ai_primary",
+      "claim": "eight AI primary courses",
+      "claimed": 8,
+      "actual": 7
+    },
+    {
+      "case_id": "test-h4-easy-04",
+      "group": "ai_upper",
+      "claim": "four AI upper courses",
+      "claimed": 4,
+      "actual": 3
+    },
+    {
+      "case_id": "test-h4-easy-04",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h4-easy-04",
+      "group": "breadth_upper",
+      "claim": "16 upper-level breadth units",
+      "claimed": 16,
+      "actual": 16.0
+    },
+    {
+      "case_id": "test-h4-easy-04",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h4-easy-04",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 12, 8 and 0 units",
+      "claimed": [
+        16,
+        12,
+        8,
+        0
+      ],
+      "actual": [
+        16.0,
+        12.0,
+        8.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h4-easy-05",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h4-easy-05",
+      "group": "breadth_upper",
+      "claim": "16 upper-level breadth units",
+      "claimed": 16,
+      "actual": 16.0
+    },
+    {
+      "case_id": "test-h4-easy-05",
+      "group": "programme_lower",
+      "claim": "82 programme_lower units",
+      "claimed": 82,
+      "actual": 82.0
+    },
+    {
+      "case_id": "test-h4-easy-05",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h4-easy-05",
+      "group": "semester_loads",
+      "claim": "Semester loads are 4, 12, 16 and 8 units",
+      "claimed": [
+        4,
+        12,
+        16,
+        8
+      ],
+      "actual": [
+        4.0,
+        12.0,
+        16.0,
+        8.0
+      ]
+    },
+    {
+      "case_id": "test-h4-easy-06",
+      "group": "ai_primary",
+      "claim": "6 AI-primary courses",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h4-easy-06",
+      "group": "ai_upper",
+      "claim": "3 AI-upper courses",
+      "claimed": 3,
+      "actual": 3
+    },
+    {
+      "case_id": "test-h4-easy-06",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h4-easy-06",
+      "group": "breadth_upper",
+      "claim": "20 upper-level breadth units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h4-easy-06",
+      "group": "programme_lower",
+      "claim": "78 programme-lower units",
+      "claimed": 78,
+      "actual": 78.0
+    },
+    {
+      "case_id": "test-h4-easy-06",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h4-easy-06",
+      "group": "semester_loads",
+      "claim": "Semester loads are 8, 12, 12 and 0 units",
+      "claimed": [
+        8,
+        12,
+        12,
+        0
+      ],
+      "actual": [
+        8.0,
+        12.0,
+        12.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h4-easy-07",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h4-easy-07",
+      "group": "breadth_upper",
+      "claim": "20 breadth_upper units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h4-easy-07",
+      "group": "programme_lower",
+      "claim": "78 programme_lower units",
+      "claimed": 78,
+      "actual": 78.0
+    },
+    {
+      "case_id": "test-h4-easy-07",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 16, 4 and 4 units",
+      "claimed": [
+        16,
+        16,
+        4,
+        4
+      ],
+      "actual": [
+        16.0,
+        16.0,
+        4.0,
+        4.0
+      ]
+    },
+    {
+      "case_id": "test-h4-hard-01",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h4-hard-01",
+      "group": "breadth_upper",
+      "claim": "24 breadth_upper units",
+      "claimed": 24,
+      "actual": 24.0
+    },
+    {
+      "case_id": "test-h4-hard-01",
+      "group": "programme_lower",
+      "claim": "70 programme_lower units",
+      "claimed": 70,
+      "actual": 70.0
+    },
+    {
+      "case_id": "test-h4-hard-01",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 8, 4 and 12 units",
+      "claimed": [
+        16,
+        8,
+        4,
+        12
+      ],
+      "actual": [
+        16.0,
+        8.0,
+        4.0,
+        12.0
+      ]
+    },
+    {
+      "case_id": "test-h4-hard-02",
+      "group": "ai_primary",
+      "claim": "four AI primary courses",
+      "claimed": 4,
+      "actual": 4
+    },
+    {
+      "case_id": "test-h4-hard-02",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h4-hard-02",
+      "group": "breadth_upper",
+      "claim": "20 breadth_upper units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h4-hard-02",
+      "group": "programme_lower",
+      "claim": "74 programme_lower units",
+      "claimed": 74,
+      "actual": 74.0
+    },
+    {
+      "case_id": "test-h4-hard-02",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h4-hard-02",
+      "group": "semester_loads",
+      "claim": "Semester loads are 8, 4, 8 and 16 units",
+      "claimed": [
+        8,
+        4,
+        8,
+        16
+      ],
+      "actual": [
+        8.0,
+        4.0,
+        8.0,
+        12.0
+      ]
+    },
+    {
+      "case_id": "test-h4-hard-03",
+      "group": "ai_primary",
+      "claim": "four AI primary courses",
+      "claimed": 4,
+      "actual": 4
+    },
+    {
+      "case_id": "test-h4-hard-03",
+      "group": "ai_upper",
+      "claim": "two AI upper courses",
+      "claimed": 2,
+      "actual": 2
+    },
+    {
+      "case_id": "test-h4-hard-03",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h4-hard-03",
+      "group": "breadth_upper",
+      "claim": "24 breadth_upper units",
+      "claimed": 24,
+      "actual": 24.0
+    },
+    {
+      "case_id": "test-h4-hard-03",
+      "group": "programme_lower",
+      "claim": "74 programme_lower units",
+      "claimed": 74,
+      "actual": 74.0
+    },
+    {
+      "case_id": "test-h4-hard-03",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h4-hard-03",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 8, 12 and 8 units",
+      "claimed": [
+        12,
+        8,
+        12,
+        8
+      ],
+      "actual": [
+        12.0,
+        8.0,
+        12.0,
+        8.0
+      ]
+    },
+    {
+      "case_id": "test-h4-hard-04",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h4-hard-04",
+      "group": "breadth_upper",
+      "claim": "20 upper-level breadth units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h4-hard-04",
+      "group": "programme_lower",
+      "claim": "78 programme_lower units",
+      "claimed": 78,
+      "actual": 78.0
+    },
+    {
+      "case_id": "test-h4-hard-04",
+      "group": "semester_loads",
+      "claim": "Semester loads are 8, 12, 8 and 12 units",
+      "claimed": [
+        8,
+        12,
+        8,
+        12
+      ],
+      "actual": [
+        8.0,
+        12.0,
+        8.0,
+        12.0
+      ]
+    },
+    {
+      "case_id": "test-h4-hard-05",
+      "group": "breadth",
+      "claim": "38 breadth units",
+      "claimed": 38,
+      "actual": 38.0
+    },
+    {
+      "case_id": "test-h4-hard-05",
+      "group": "breadth_upper",
+      "claim": "24 breadth_upper units",
+      "claimed": 24,
+      "actual": 24.0
+    },
+    {
+      "case_id": "test-h4-hard-05",
+      "group": "programme_lower",
+      "claim": "74 programme_lower units",
+      "claimed": 74,
+      "actual": 74.0
+    },
+    {
+      "case_id": "test-h4-hard-05",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h4-hard-05",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 12, 8 and 12 units",
+      "claimed": [
+        12,
+        12,
+        8,
+        12
+      ],
+      "actual": [
+        12.0,
+        12.0,
+        8.0,
+        12.0
+      ]
+    },
+    {
+      "case_id": "test-h4-hard-06",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h4-hard-06",
+      "group": "breadth_upper",
+      "claim": "20 upper-level breadth units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h4-hard-06",
+      "group": "programme_lower",
+      "claim": "70 programme_lower units",
+      "claimed": 70,
+      "actual": 70.0
+    },
+    {
+      "case_id": "test-h4-hard-06",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h4-hard-06",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 16, 12 and 0 units",
+      "claimed": [
+        16,
+        16,
+        12,
+        0
+      ],
+      "actual": [
+        16.0,
+        16.0,
+        12.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h4-hard-07",
+      "group": "breadth",
+      "claim": "42 breadth units",
+      "claimed": 42,
+      "actual": 42.0
+    },
+    {
+      "case_id": "test-h4-hard-07",
+      "group": "breadth_upper",
+      "claim": "28 breadth_upper units",
+      "claimed": 28,
+      "actual": 28.0
+    },
+    {
+      "case_id": "test-h4-hard-07",
+      "group": "programme_lower",
+      "claim": "74 programme_lower units",
+      "claimed": 74,
+      "actual": 74.0
+    },
+    {
+      "case_id": "test-h4-hard-07",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h4-hard-07",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 8, 12 and 12 units",
+      "claimed": [
+        12,
+        8,
+        12,
+        12
+      ],
+      "actual": [
+        12.0,
+        8.0,
+        12.0,
+        12.0
+      ]
+    },
+    {
+      "case_id": "test-h4-medium-01",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h4-medium-01",
+      "group": "breadth_upper",
+      "claim": "20 upper-level breadth units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h4-medium-01",
+      "group": "programme_lower",
+      "claim": "78 programme_lower units",
+      "claimed": 78,
+      "actual": 78.0
+    },
+    {
+      "case_id": "test-h4-medium-01",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 16, 8 and 4 units",
+      "claimed": [
+        12,
+        16,
+        8,
+        4
+      ],
+      "actual": [
+        12.0,
+        16.0,
+        8.0,
+        4.0
+      ]
+    },
+    {
+      "case_id": "test-h4-medium-02",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h4-medium-02",
+      "group": "breadth_upper",
+      "claim": "20 upper-level breadth units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h4-medium-02",
+      "group": "programme_lower",
+      "claim": "82 programme_lower units",
+      "claimed": 82,
+      "actual": 82.0
+    },
+    {
+      "case_id": "test-h4-medium-02",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h4-medium-02",
+      "group": "semester_loads",
+      "claim": "Semester loads are 8, 12, 16 and 4 units",
+      "claimed": [
+        8,
+        12,
+        16,
+        4
+      ],
+      "actual": [
+        8.0,
+        12.0,
+        16.0,
+        4.0
+      ]
+    },
+    {
+      "case_id": "test-h4-medium-03",
+      "group": "ai_primary",
+      "claim": "five AI-primary courses",
+      "claimed": 5,
+      "actual": 5
+    },
+    {
+      "case_id": "test-h4-medium-03",
+      "group": "ai_upper",
+      "claim": "three AI-upper courses",
+      "claimed": 3,
+      "actual": 2
+    },
+    {
+      "case_id": "test-h4-medium-03",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h4-medium-03",
+      "group": "breadth_upper",
+      "claim": "20 upper-level breadth units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h4-medium-03",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h4-medium-03",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 16, 12 and 0 units",
+      "claimed": [
+        12,
+        16,
+        12,
+        0
+      ],
+      "actual": [
+        12.0,
+        16.0,
+        12.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h4-medium-04",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h4-medium-04",
+      "group": "breadth_upper",
+      "claim": "20 upper-level breadth units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h4-medium-04",
+      "group": "programme_lower",
+      "claim": "82 programme_lower units",
+      "claimed": 82,
+      "actual": 82.0
+    },
+    {
+      "case_id": "test-h4-medium-04",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h4-medium-04",
+      "group": "semester_loads",
+      "claim": "Semester loads are 4, 12, 16 and 8 units",
+      "claimed": [
+        4,
+        12,
+        16,
+        8
+      ],
+      "actual": [
+        4.0,
+        12.0,
+        16.0,
+        8.0
+      ]
+    },
+    {
+      "case_id": "test-h4-medium-05",
+      "group": "ai_primary",
+      "claim": "6 AI-primary courses",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h4-medium-05",
+      "group": "ai_upper",
+      "claim": "3 AI-upper courses",
+      "claimed": 3,
+      "actual": 2
+    },
+    {
+      "case_id": "test-h4-medium-05",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h4-medium-05",
+      "group": "breadth_upper",
+      "claim": "16 upper-level breadth units",
+      "claimed": 16,
+      "actual": 16.0
+    },
+    {
+      "case_id": "test-h4-medium-05",
+      "group": "programme_lower",
+      "claim": "82 programme_lower units",
+      "claimed": 82,
+      "actual": 82.0
+    },
+    {
+      "case_id": "test-h4-medium-05",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h4-medium-05",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 16, 8 and 0 units",
+      "claimed": [
+        16,
+        16,
+        8,
+        0
+      ],
+      "actual": [
+        16.0,
+        16.0,
+        8.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h4-medium-06",
+      "group": "ai_primary",
+      "claim": "five AI primary courses",
+      "claimed": 5,
+      "actual": 5
+    },
+    {
+      "case_id": "test-h4-medium-06",
+      "group": "ai_upper",
+      "claim": "three AI upper courses",
+      "claimed": 3,
+      "actual": 2
+    },
+    {
+      "case_id": "test-h4-medium-06",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h4-medium-06",
+      "group": "breadth_upper",
+      "claim": "20 breadth_upper units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h4-medium-06",
+      "group": "programme_lower",
+      "claim": "74 programme_lower units",
+      "claimed": 74,
+      "actual": 74.0
+    },
+    {
+      "case_id": "test-h4-medium-06",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h4-medium-06",
+      "group": "semester_loads",
+      "claim": "Semester loads are 8, 8, 12 and 8 units",
+      "claimed": [
+        8,
+        8,
+        12,
+        8
+      ],
+      "actual": [
+        8.0,
+        8.0,
+        12.0,
+        8.0
+      ]
+    },
+    {
+      "case_id": "test-h4-medium-07",
+      "group": "ai_primary",
+      "claim": "six AI-primary courses",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h4-medium-07",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h4-medium-07",
+      "group": "breadth_upper",
+      "claim": "20 upper-level breadth units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h4-medium-07",
+      "group": "programme_lower",
+      "claim": "82 programme_lower units",
+      "claimed": 82,
+      "actual": 82.0
+    },
+    {
+      "case_id": "test-h4-medium-07",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h4-medium-07",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 16, 8 and 0 units",
+      "claimed": [
+        16,
+        16,
+        8,
+        0
+      ],
+      "actual": [
+        16.0,
+        16.0,
+        8.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h5-easy-01",
+      "group": "ai_primary",
+      "claim": "six AI-primary courses",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h5-easy-01",
+      "group": "ai_upper",
+      "claim": "five AI-upper courses",
+      "claimed": 5,
+      "actual": 3
+    },
+    {
+      "case_id": "test-h5-easy-01",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h5-easy-01",
+      "group": "breadth_upper",
+      "claim": "20 upper-level breadth units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h5-easy-01",
+      "group": "programme_lower",
+      "claim": "82 programme_lower units",
+      "claimed": 82,
+      "actual": 82.0
+    },
+    {
+      "case_id": "test-h5-easy-01",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h5-easy-01",
+      "group": "semester_loads",
+      "claim": "loads of 16, 16, 16, 0, 0 units",
+      "claimed": [
+        16,
+        16,
+        16,
+        0,
+        0
+      ],
+      "actual": [
+        16.0,
+        16.0,
+        16.0,
+        0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h5-easy-02",
+      "group": "ai_primary",
+      "claim": "7 AI-primary courses",
+      "claimed": 7,
+      "actual": 7
+    },
+    {
+      "case_id": "test-h5-easy-02",
+      "group": "ai_upper",
+      "claim": "5 AI-upper courses",
+      "claimed": 5,
+      "actual": 4
+    },
+    {
+      "case_id": "test-h5-easy-02",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h5-easy-02",
+      "group": "breadth_upper",
+      "claim": "20 upper-level breadth units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h5-easy-02",
+      "group": "programme_lower",
+      "claim": "82 programme-lower units",
+      "claimed": 82,
+      "actual": 82.0
+    },
+    {
+      "case_id": "test-h5-easy-02",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h5-easy-02",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 16, 12, 0 and 0 units",
+      "claimed": [
+        16,
+        16,
+        12,
+        0,
+        0
+      ],
+      "actual": [
+        16.0,
+        16.0,
+        12.0,
+        0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h5-easy-03",
+      "group": "ai_primary",
+      "claim": "six AI primary courses",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h5-easy-03",
+      "group": "ai_upper",
+      "claim": "three AI upper courses",
+      "claimed": 3,
+      "actual": 3
+    },
+    {
+      "case_id": "test-h5-easy-03",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h5-easy-03",
+      "group": "breadth_upper",
+      "claim": "20 breadth_upper units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h5-easy-03",
+      "group": "industry",
+      "claim": "six industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h5-easy-03",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 16, 16, 4, and 0 units",
+      "claimed": [
+        12,
+        16,
+        16,
+        4,
+        0
+      ],
+      "actual": [
+        12.0,
+        16.0,
+        16.0,
+        4.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h5-easy-04",
+      "group": "ai_primary",
+      "claim": "seven AI-primary courses",
+      "claimed": 7,
+      "actual": 7
+    },
+    {
+      "case_id": "test-h5-easy-04",
+      "group": "ai_upper",
+      "claim": "four AI-upper courses",
+      "claimed": 4,
+      "actual": 3
+    },
+    {
+      "case_id": "test-h5-easy-04",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h5-easy-04",
+      "group": "breadth_upper",
+      "claim": "16 upper-level breadth units",
+      "claimed": 16,
+      "actual": 16.0
+    },
+    {
+      "case_id": "test-h5-easy-04",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h5-easy-04",
+      "group": "semester_loads",
+      "claim": "loads of 8, 16, 12, 8, and 0 units",
+      "claimed": [
+        8,
+        16,
+        12,
+        8,
+        0
+      ],
+      "actual": [
+        8.0,
+        16.0,
+        12.0,
+        8.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h5-easy-05",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h5-easy-05",
+      "group": "breadth_upper",
+      "claim": "20 upper-level breadth units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h5-easy-05",
+      "group": "programme_lower",
+      "claim": "82 programme_lower units",
+      "claimed": 82,
+      "actual": 82.0
+    },
+    {
+      "case_id": "test-h5-easy-05",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h5-easy-05",
+      "group": "semester_loads",
+      "claim": "loads of 12, 16, 16, 4, and 0 units",
+      "claimed": [
+        12,
+        16,
+        16,
+        4,
+        0
+      ],
+      "actual": [
+        12.0,
+        16.0,
+        16.0,
+        4.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h5-easy-06",
+      "group": "ai_primary",
+      "claim": "six AI primary courses",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h5-easy-06",
+      "group": "ai_upper",
+      "claim": "three AI upper courses",
+      "claimed": 3,
+      "actual": 3
+    },
+    {
+      "case_id": "test-h5-easy-06",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h5-easy-06",
+      "group": "breadth_upper",
+      "claim": "20 upper-level breadth units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h5-easy-06",
+      "group": "programme_lower",
+      "claim": "78 programme_lower units",
+      "claimed": 78,
+      "actual": 78.0
+    },
+    {
+      "case_id": "test-h5-easy-06",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h5-easy-06",
+      "group": "semester_loads",
+      "claim": "loads of 16, 16, 12, 0, 0 units",
+      "claimed": [
+        16,
+        16,
+        12,
+        0,
+        0
+      ],
+      "actual": [
+        16.0,
+        16.0,
+        12.0,
+        0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h5-easy-07",
+      "group": "ai_primary",
+      "claim": "7 AI-primary courses",
+      "claimed": 7,
+      "actual": 7
+    },
+    {
+      "case_id": "test-h5-easy-07",
+      "group": "ai_upper",
+      "claim": "3 AI-upper courses",
+      "claimed": 3,
+      "actual": 3
+    },
+    {
+      "case_id": "test-h5-easy-07",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h5-easy-07",
+      "group": "breadth_upper",
+      "claim": "16 upper-level breadth units",
+      "claimed": 16,
+      "actual": 16.0
+    },
+    {
+      "case_id": "test-h5-easy-07",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h5-easy-07",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 16, 12, 4 and 0 units",
+      "claimed": [
+        16,
+        16,
+        12,
+        4,
+        0
+      ],
+      "actual": [
+        16.0,
+        16.0,
+        12.0,
+        4.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h5-hard-01",
+      "group": "breadth",
+      "claim": "38 breadth units",
+      "claimed": 38,
+      "actual": 38.0
+    },
+    {
+      "case_id": "test-h5-hard-01",
+      "group": "breadth_upper",
+      "claim": "28 breadth_upper units",
+      "claimed": 28,
+      "actual": 28.0
+    },
+    {
+      "case_id": "test-h5-hard-01",
+      "group": "programme_lower",
+      "claim": "70 programme_lower units",
+      "claimed": 70,
+      "actual": 70.0
+    },
+    {
+      "case_id": "test-h5-hard-01",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h5-hard-01",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 8, 8, 16 and 12 units",
+      "claimed": [
+        12,
+        8,
+        8,
+        16,
+        12
+      ],
+      "actual": [
+        12.0,
+        8.0,
+        8.0,
+        16.0,
+        12.0
+      ]
+    },
+    {
+      "case_id": "test-h5-hard-02",
+      "group": "breadth",
+      "claim": "38 breadth units",
+      "claimed": 38,
+      "actual": 38.0
+    },
+    {
+      "case_id": "test-h5-hard-02",
+      "group": "breadth_upper",
+      "claim": "24 upper-level breadth units",
+      "claimed": 24,
+      "actual": 24.0
+    },
+    {
+      "case_id": "test-h5-hard-02",
+      "group": "programme_lower",
+      "claim": "82 programme_lower units",
+      "claimed": 82,
+      "actual": 82.0
+    },
+    {
+      "case_id": "test-h5-hard-02",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h5-hard-02",
+      "group": "semester_loads",
+      "claim": "Semester loads are 8, 16, 8, 4, and 12 units",
+      "claimed": [
+        8,
+        16,
+        8,
+        4,
+        12
+      ],
+      "actual": [
+        8.0,
+        16.0,
+        8.0,
+        4.0,
+        12.0
+      ]
+    },
+    {
+      "case_id": "test-h5-hard-03",
+      "group": "breadth",
+      "claim": "42 breadth units",
+      "claimed": 42,
+      "actual": 42.0
+    },
+    {
+      "case_id": "test-h5-hard-03",
+      "group": "breadth_upper",
+      "claim": "28 upper-level breadth units",
+      "claimed": 28,
+      "actual": 24.0
+    },
+    {
+      "case_id": "test-h5-hard-03",
+      "group": "programme_lower",
+      "claim": "74 programme_lower units",
+      "claimed": 74,
+      "actual": 74.0
+    },
+    {
+      "case_id": "test-h5-hard-03",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h5-hard-03",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 16, 12, 8 and 4 units",
+      "claimed": [
+        16,
+        16,
+        12,
+        8,
+        4
+      ],
+      "actual": [
+        16.0,
+        16.0,
+        12.0,
+        8.0,
+        4.0
+      ]
+    },
+    {
+      "case_id": "test-h5-hard-04",
+      "group": "ai_primary",
+      "claim": "four AI primary courses",
+      "claimed": 4,
+      "actual": 4
+    },
+    {
+      "case_id": "test-h5-hard-04",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h5-hard-04",
+      "group": "breadth_upper",
+      "claim": "20 breadth_upper units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h5-hard-04",
+      "group": "programme_lower",
+      "claim": "74 programme_lower units",
+      "claimed": 74,
+      "actual": 74.0
+    },
+    {
+      "case_id": "test-h5-hard-04",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h5-hard-04",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 4, 0, 8 and 16 units",
+      "claimed": [
+        16,
+        4,
+        0,
+        8,
+        16
+      ],
+      "actual": [
+        16.0,
+        4.0,
+        0,
+        8.0,
+        16.0
+      ]
+    },
+    {
+      "case_id": "test-h5-hard-05",
+      "group": "breadth",
+      "claim": "42 breadth units",
+      "claimed": 42,
+      "actual": 42.0
+    },
+    {
+      "case_id": "test-h5-hard-05",
+      "group": "breadth_upper",
+      "claim": "24 upper-level breadth units",
+      "claimed": 24,
+      "actual": 24.0
+    },
+    {
+      "case_id": "test-h5-hard-05",
+      "group": "programme_lower",
+      "claim": "74 programme_lower units",
+      "claimed": 74,
+      "actual": 74.0
+    },
+    {
+      "case_id": "test-h5-hard-05",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 12, 12, 12 and 4 units",
+      "claimed": [
+        16,
+        12,
+        12,
+        12,
+        4
+      ],
+      "actual": [
+        16.0,
+        12.0,
+        12.0,
+        12.0,
+        4.0
+      ]
+    },
+    {
+      "case_id": "test-h5-hard-06",
+      "group": "breadth",
+      "claim": "38 breadth units",
+      "claimed": 38,
+      "actual": 38.0
+    },
+    {
+      "case_id": "test-h5-hard-06",
+      "group": "breadth_upper",
+      "claim": "20 breadth_upper units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h5-hard-06",
+      "group": "programme_lower",
+      "claim": "78 programme_lower units",
+      "claimed": 78,
+      "actual": 78.0
+    },
+    {
+      "case_id": "test-h5-hard-06",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h5-hard-06",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 16, 16, 4 and 4 units",
+      "claimed": [
+        12,
+        16,
+        16,
+        4,
+        4
+      ],
+      "actual": [
+        12.0,
+        16.0,
+        16.0,
+        4.0,
+        4.0
+      ]
+    },
+    {
+      "case_id": "test-h5-hard-07",
+      "group": "ai_primary",
+      "claim": "five AI primary courses",
+      "claimed": 5,
+      "actual": 5
+    },
+    {
+      "case_id": "test-h5-hard-07",
+      "group": "ai_upper",
+      "claim": "two AI upper courses",
+      "claimed": 2,
+      "actual": 2
+    },
+    {
+      "case_id": "test-h5-hard-07",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h5-hard-07",
+      "group": "breadth_upper",
+      "claim": "20 breadth_upper units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h5-hard-07",
+      "group": "programme_lower",
+      "claim": "78 programme_lower units",
+      "claimed": 78,
+      "actual": 78.0
+    },
+    {
+      "case_id": "test-h5-hard-07",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h5-hard-07",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 12, 4, 8 and 8 units",
+      "claimed": [
+        12,
+        12,
+        4,
+        8,
+        8
+      ],
+      "actual": [
+        12.0,
+        12.0,
+        4.0,
+        8.0,
+        8.0
+      ]
+    },
+    {
+      "case_id": "test-h5-medium-01",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h5-medium-01",
+      "group": "breadth_upper",
+      "claim": "20 upper-level breadth units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h5-medium-01",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h5-medium-01",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 16, 8, 4 and 4 units",
+      "claimed": [
+        16,
+        16,
+        8,
+        4,
+        4
+      ],
+      "actual": [
+        16.0,
+        16.0,
+        8.0,
+        4.0,
+        4.0
+      ]
+    },
+    {
+      "case_id": "test-h5-medium-02",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h5-medium-02",
+      "group": "breadth_upper",
+      "claim": "24 breadth_upper units",
+      "claimed": 24,
+      "actual": 24.0
+    },
+    {
+      "case_id": "test-h5-medium-02",
+      "group": "programme_lower",
+      "claim": "78 programme_lower units",
+      "claimed": 78,
+      "actual": 78.0
+    },
+    {
+      "case_id": "test-h5-medium-02",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h5-medium-02",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 16, 8, 4 and 0 units",
+      "claimed": [
+        16,
+        16,
+        8,
+        4,
+        0
+      ],
+      "actual": [
+        16.0,
+        16.0,
+        8.0,
+        4.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h5-medium-03",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h5-medium-03",
+      "group": "breadth_upper",
+      "claim": "20 breadth_upper units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h5-medium-03",
+      "group": "programme_lower",
+      "claim": "70 programme_lower units",
+      "claimed": 70,
+      "actual": 70.0
+    },
+    {
+      "case_id": "test-h5-medium-03",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 4, 16, 8 and 4 units",
+      "claimed": [
+        12,
+        4,
+        16,
+        8,
+        4
+      ],
+      "actual": [
+        12.0,
+        4.0,
+        16.0,
+        8.0,
+        4.0
+      ]
+    },
+    {
+      "case_id": "test-h5-medium-04",
+      "group": "ai_primary",
+      "claim": "five AI primary courses",
+      "claimed": 5,
+      "actual": 5
+    },
+    {
+      "case_id": "test-h5-medium-04",
+      "group": "ai_upper",
+      "claim": "two AI upper courses",
+      "claimed": 2,
+      "actual": 2
+    },
+    {
+      "case_id": "test-h5-medium-04",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h5-medium-04",
+      "group": "breadth_upper",
+      "claim": "20 breadth_upper units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h5-medium-04",
+      "group": "programme_lower",
+      "claim": "70 programme_lower units",
+      "claimed": 70,
+      "actual": 70.0
+    },
+    {
+      "case_id": "test-h5-medium-04",
+      "group": "semester_loads",
+      "claim": "loads of 12, 16, 16, 4, and 0 units",
+      "claimed": [
+        12,
+        16,
+        16,
+        4,
+        0
+      ],
+      "actual": [
+        12.0,
+        16.0,
+        16.0,
+        4.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h5-medium-05",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h5-medium-05",
+      "group": "breadth_upper",
+      "claim": "20 breadth_upper units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h5-medium-05",
+      "group": "programme_lower",
+      "claim": "78 programme_lower units",
+      "claimed": 78,
+      "actual": 78.0
+    },
+    {
+      "case_id": "test-h5-medium-05",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 8, 12, 8 and 0 units",
+      "claimed": [
+        16,
+        8,
+        12,
+        8,
+        0
+      ],
+      "actual": [
+        16.0,
+        8.0,
+        12.0,
+        8.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h5-medium-06",
+      "group": "ai_primary",
+      "claim": "four AI primary courses",
+      "claimed": 4,
+      "actual": 4
+    },
+    {
+      "case_id": "test-h5-medium-06",
+      "group": "ai_upper",
+      "claim": "two AI upper courses",
+      "claimed": 2,
+      "actual": 2
+    },
+    {
+      "case_id": "test-h5-medium-06",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h5-medium-06",
+      "group": "breadth_upper",
+      "claim": "24 breadth_upper units",
+      "claimed": 24,
+      "actual": 24.0
+    },
+    {
+      "case_id": "test-h5-medium-06",
+      "group": "programme_lower",
+      "claim": "70 programme_lower units",
+      "claimed": 70,
+      "actual": 70.0
+    },
+    {
+      "case_id": "test-h5-medium-06",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h5-medium-06",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 8, 16, 8 and 8 units",
+      "claimed": [
+        12,
+        8,
+        16,
+        8,
+        8
+      ],
+      "actual": [
+        12.0,
+        8.0,
+        16.0,
+        8.0,
+        8.0
+      ]
+    },
+    {
+      "case_id": "test-h5-medium-07",
+      "group": "ai_primary",
+      "claim": "five AI primary courses",
+      "claimed": 5,
+      "actual": 5
+    },
+    {
+      "case_id": "test-h5-medium-07",
+      "group": "ai_upper",
+      "claim": "two AI upper courses",
+      "claimed": 2,
+      "actual": 2
+    },
+    {
+      "case_id": "test-h5-medium-07",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h5-medium-07",
+      "group": "breadth_upper",
+      "claim": "20 breadth_upper units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h5-medium-07",
+      "group": "programme_lower",
+      "claim": "74 programme_lower units",
+      "claimed": 74,
+      "actual": 74.0
+    },
+    {
+      "case_id": "test-h5-medium-07",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h5-medium-07",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 16, 16, 0 and 0 units",
+      "claimed": [
+        12,
+        16,
+        16,
+        0,
+        0
+      ],
+      "actual": [
+        12.0,
+        16.0,
+        16.0,
+        0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h6-easy-01",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h6-easy-01",
+      "group": "breadth_upper",
+      "claim": "20 breadth_upper units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h6-easy-01",
+      "group": "programme_lower",
+      "claim": "78 programme_lower units",
+      "claimed": 78,
+      "actual": 78.0
+    },
+    {
+      "case_id": "test-h6-easy-01",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h6-easy-01",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 16, 16, 16, 0 and 0 units",
+      "claimed": [
+        12,
+        16,
+        16,
+        16,
+        0,
+        0
+      ],
+      "actual": [
+        12.0,
+        16.0,
+        16.0,
+        16.0,
+        0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h6-easy-02",
+      "group": "ai_primary",
+      "claim": "five AI-primary courses",
+      "claimed": 5,
+      "actual": 5
+    },
+    {
+      "case_id": "test-h6-easy-02",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h6-easy-02",
+      "group": "breadth_upper",
+      "claim": "16 breadth_upper units",
+      "claimed": 16,
+      "actual": 16.0
+    },
+    {
+      "case_id": "test-h6-easy-02",
+      "group": "programme_lower",
+      "claim": "78 programme_lower units",
+      "claimed": 78,
+      "actual": 78.0
+    },
+    {
+      "case_id": "test-h6-easy-02",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h6-easy-02",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 4, 16, 16, 12 and 0 units",
+      "claimed": [
+        12,
+        4,
+        16,
+        16,
+        12,
+        0
+      ],
+      "actual": [
+        12.0,
+        4.0,
+        16.0,
+        16.0,
+        12.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h6-easy-03",
+      "group": "ai_primary",
+      "claim": "7 AI-primary courses",
+      "claimed": 7,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h6-easy-03",
+      "group": "ai_upper",
+      "claim": "3 AI-upper courses",
+      "claimed": 3,
+      "actual": 3
+    },
+    {
+      "case_id": "test-h6-easy-03",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h6-easy-03",
+      "group": "breadth_upper",
+      "claim": "20 upper-level breadth units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h6-easy-03",
+      "group": "programme_lower",
+      "claim": "78 programme_lower units",
+      "claimed": 78,
+      "actual": 78.0
+    },
+    {
+      "case_id": "test-h6-easy-03",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h6-easy-03",
+      "group": "semester_loads",
+      "claim": "Semester loads are 8, 4, 16, 16, 4 and 8 units",
+      "claimed": [
+        8,
+        4,
+        16,
+        16,
+        4,
+        8
+      ],
+      "actual": [
+        8.0,
+        4.0,
+        16.0,
+        16.0,
+        4.0,
+        8.0
+      ]
+    },
+    {
+      "case_id": "test-h6-easy-04",
+      "group": "ai_primary",
+      "claim": "six AI-primary courses",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h6-easy-04",
+      "group": "ai_upper",
+      "claim": "three AI-upper courses",
+      "claimed": 3,
+      "actual": 3
+    },
+    {
+      "case_id": "test-h6-easy-04",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h6-easy-04",
+      "group": "breadth_upper",
+      "claim": "20 upper-level breadth units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h6-easy-04",
+      "group": "programme_lower",
+      "claim": "78 programme-lower units",
+      "claimed": 78,
+      "actual": 78.0
+    },
+    {
+      "case_id": "test-h6-easy-04",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 16, 16, 8, 4 and 0 units",
+      "claimed": [
+        16,
+        16,
+        16,
+        8,
+        4,
+        0
+      ],
+      "actual": [
+        16.0,
+        16.0,
+        16.0,
+        8.0,
+        4.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h6-easy-05",
+      "group": "ai_primary",
+      "claim": "8 AI-primary courses",
+      "claimed": 8,
+      "actual": 8
+    },
+    {
+      "case_id": "test-h6-easy-05",
+      "group": "ai_upper",
+      "claim": "4 AI-upper courses",
+      "claimed": 4,
+      "actual": 4
+    },
+    {
+      "case_id": "test-h6-easy-05",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h6-easy-05",
+      "group": "breadth_upper",
+      "claim": "16 upper-level breadth units",
+      "claimed": 16,
+      "actual": 16.0
+    },
+    {
+      "case_id": "test-h6-easy-05",
+      "group": "programme_lower",
+      "claim": "82 programme-lower units",
+      "claimed": 82,
+      "actual": 82.0
+    },
+    {
+      "case_id": "test-h6-easy-05",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h6-easy-05",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 16, 16, 12, 0 and 0 units",
+      "claimed": [
+        12,
+        16,
+        16,
+        12,
+        0,
+        0
+      ],
+      "actual": [
+        12.0,
+        16.0,
+        16.0,
+        12.0,
+        0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h6-easy-06",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h6-easy-06",
+      "group": "breadth_upper",
+      "claim": "16 upper-level breadth units",
+      "claimed": 16,
+      "actual": 16.0
+    },
+    {
+      "case_id": "test-h6-easy-06",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h6-easy-06",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 16, 16, 8, 4 and 0 units",
+      "claimed": [
+        12,
+        16,
+        16,
+        8,
+        4,
+        0
+      ],
+      "actual": [
+        12.0,
+        16.0,
+        16.0,
+        8.0,
+        4.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h6-easy-07",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h6-easy-07",
+      "group": "breadth_upper",
+      "claim": "16 upper-level breadth units",
+      "claimed": 16,
+      "actual": 16.0
+    },
+    {
+      "case_id": "test-h6-easy-07",
+      "group": "programme_lower",
+      "claim": "82 programme_lower units",
+      "claimed": 82,
+      "actual": 82.0
+    },
+    {
+      "case_id": "test-h6-easy-07",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h6-easy-07",
+      "group": "semester_loads",
+      "claim": "Semester loads are 8, 8, 16, 16, 12 and 0 units",
+      "claimed": [
+        8,
+        8,
+        16,
+        16,
+        12,
+        0
+      ],
+      "actual": [
+        8.0,
+        8.0,
+        16.0,
+        16.0,
+        12.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h6-hard-01",
+      "group": "ai_primary",
+      "claim": "five AI-primary courses",
+      "claimed": 5,
+      "actual": 5
+    },
+    {
+      "case_id": "test-h6-hard-01",
+      "group": "ai_upper",
+      "claim": "three AI-upper courses",
+      "claimed": 3,
+      "actual": 2
+    },
+    {
+      "case_id": "test-h6-hard-01",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h6-hard-01",
+      "group": "breadth_upper",
+      "claim": "20 breadth_upper units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h6-hard-01",
+      "group": "programme_lower",
+      "claim": "74 programme_lower units",
+      "claimed": 74,
+      "actual": 74.0
+    },
+    {
+      "case_id": "test-h6-hard-01",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 12, 4, 8, 12 and 12 units",
+      "claimed": [
+        12,
+        12,
+        4,
+        8,
+        12,
+        12
+      ],
+      "actual": [
+        12.0,
+        12.0,
+        4.0,
+        8.0,
+        12.0,
+        12.0
+      ]
+    },
+    {
+      "case_id": "test-h6-hard-02",
+      "group": "ai_primary",
+      "claim": "four AI-primary courses",
+      "claimed": 4,
+      "actual": 4
+    },
+    {
+      "case_id": "test-h6-hard-02",
+      "group": "ai_upper",
+      "claim": "two AI-upper courses",
+      "claimed": 2,
+      "actual": 2
+    },
+    {
+      "case_id": "test-h6-hard-02",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h6-hard-02",
+      "group": "breadth_upper",
+      "claim": "24 upper-level breadth units",
+      "claimed": 24,
+      "actual": 24.0
+    },
+    {
+      "case_id": "test-h6-hard-02",
+      "group": "programme_lower",
+      "claim": "70 programme_lower units",
+      "claimed": 70,
+      "actual": 70.0
+    },
+    {
+      "case_id": "test-h6-hard-02",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h6-hard-02",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 12, 8, 8, 8 and 12 units",
+      "claimed": [
+        16,
+        12,
+        8,
+        8,
+        8,
+        12
+      ],
+      "actual": [
+        16.0,
+        12.0,
+        8.0,
+        8.0,
+        8.0,
+        12.0
+      ]
+    },
+    {
+      "case_id": "test-h6-hard-03",
+      "group": "breadth",
+      "claim": "38 breadth units",
+      "claimed": 38,
+      "actual": 38.0
+    },
+    {
+      "case_id": "test-h6-hard-03",
+      "group": "breadth_upper",
+      "claim": "24 upper-level breadth units",
+      "claimed": 24,
+      "actual": 24.0
+    },
+    {
+      "case_id": "test-h6-hard-03",
+      "group": "programme_lower",
+      "claim": "70 programme_lower units",
+      "claimed": 70,
+      "actual": 74.0
+    },
+    {
+      "case_id": "test-h6-hard-03",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 16, 16, 4, 8 and 8 units",
+      "claimed": [
+        16,
+        16,
+        16,
+        4,
+        8,
+        8
+      ],
+      "actual": [
+        16.0,
+        16.0,
+        16.0,
+        4.0,
+        8.0,
+        8.0
+      ]
+    },
+    {
+      "case_id": "test-h6-hard-04",
+      "group": "breadth",
+      "claim": "38 breadth units",
+      "claimed": 38,
+      "actual": 38.0
+    },
+    {
+      "case_id": "test-h6-hard-04",
+      "group": "breadth_upper",
+      "claim": "28 upper-level breadth units",
+      "claimed": 28,
+      "actual": 28.0
+    },
+    {
+      "case_id": "test-h6-hard-04",
+      "group": "programme_lower",
+      "claim": "74 programme_lower units",
+      "claimed": 74,
+      "actual": 74.0
+    },
+    {
+      "case_id": "test-h6-hard-04",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h6-hard-04",
+      "group": "semester_loads",
+      "claim": "Semester loads are 8, 16, 8, 12, 12 and 8 units",
+      "claimed": [
+        8,
+        16,
+        8,
+        12,
+        12,
+        8
+      ],
+      "actual": [
+        8.0,
+        16.0,
+        8.0,
+        12.0,
+        12.0,
+        8.0
+      ]
+    },
+    {
+      "case_id": "test-h6-hard-05",
+      "group": "ai_primary",
+      "claim": "six AI primary courses",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h6-hard-05",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h6-hard-05",
+      "group": "breadth_upper",
+      "claim": "20 upper-level breadth units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h6-hard-05",
+      "group": "programme_lower",
+      "claim": "82 programme_lower units",
+      "claimed": 82,
+      "actual": 82.0
+    },
+    {
+      "case_id": "test-h6-hard-05",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h6-hard-05",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 12, 12, 4, 8 and 8 units",
+      "claimed": [
+        16,
+        12,
+        12,
+        4,
+        8,
+        8
+      ],
+      "actual": [
+        16.0,
+        12.0,
+        12.0,
+        4.0,
+        8.0,
+        8.0
+      ]
+    },
+    {
+      "case_id": "test-h6-hard-06",
+      "group": "ai_primary",
+      "claim": "6 AI-primary courses",
+      "claimed": 6,
+      "actual": 5
+    },
+    {
+      "case_id": "test-h6-hard-06",
+      "group": "ai_upper",
+      "claim": "3 AI-upper courses",
+      "claimed": 3,
+      "actual": 2
+    },
+    {
+      "case_id": "test-h6-hard-06",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h6-hard-06",
+      "group": "breadth_upper",
+      "claim": "20 upper-level breadth units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h6-hard-06",
+      "group": "programme_lower",
+      "claim": "78 programme_lower units",
+      "claimed": 78,
+      "actual": 78.0
+    },
+    {
+      "case_id": "test-h6-hard-06",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h6-hard-06",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 12, 12, 8, 8 and 4 units",
+      "claimed": [
+        16,
+        12,
+        12,
+        8,
+        8,
+        4
+      ],
+      "actual": [
+        16.0,
+        12.0,
+        12.0,
+        8.0,
+        8.0,
+        4.0
+      ]
+    },
+    {
+      "case_id": "test-h6-hard-07",
+      "group": "ai_primary",
+      "claim": "six AI primary courses",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h6-hard-07",
+      "group": "breadth",
+      "claim": "42 breadth units",
+      "claimed": 42,
+      "actual": 42.0
+    },
+    {
+      "case_id": "test-h6-hard-07",
+      "group": "breadth_upper",
+      "claim": "24 upper-level breadth units",
+      "claimed": 24,
+      "actual": 24.0
+    },
+    {
+      "case_id": "test-h6-hard-07",
+      "group": "programme_lower",
+      "claim": "74 programme_lower units",
+      "claimed": 74,
+      "actual": 74.0
+    },
+    {
+      "case_id": "test-h6-hard-07",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h6-hard-07",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 8, 8, 16, 8 and 12 units",
+      "claimed": [
+        16,
+        8,
+        8,
+        16,
+        8,
+        12
+      ],
+      "actual": [
+        16.0,
+        8.0,
+        8.0,
+        16.0,
+        8.0,
+        12.0
+      ]
+    },
+    {
+      "case_id": "test-h6-medium-01",
+      "group": "ai_primary",
+      "claim": "7 AI-primary courses",
+      "claimed": 7,
+      "actual": 7
+    },
+    {
+      "case_id": "test-h6-medium-01",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h6-medium-01",
+      "group": "breadth_upper",
+      "claim": "16 upper-level breadth units",
+      "claimed": 16,
+      "actual": 16.0
+    },
+    {
+      "case_id": "test-h6-medium-01",
+      "group": "programme_lower",
+      "claim": "82 programme_lower units",
+      "claimed": 82,
+      "actual": 82.0
+    },
+    {
+      "case_id": "test-h6-medium-01",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 16, 16, 8, 4, and 4 units",
+      "claimed": [
+        12,
+        16,
+        16,
+        8,
+        4,
+        4
+      ],
+      "actual": [
+        12.0,
+        16.0,
+        16.0,
+        8.0,
+        4.0,
+        4.0
+      ]
+    },
+    {
+      "case_id": "test-h6-medium-02",
+      "group": "ai_primary",
+      "claim": "5 AI primary courses",
+      "claimed": 5,
+      "actual": 5
+    },
+    {
+      "case_id": "test-h6-medium-02",
+      "group": "ai_upper",
+      "claim": "2 AI upper courses",
+      "claimed": 2,
+      "actual": 2
+    },
+    {
+      "case_id": "test-h6-medium-02",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h6-medium-02",
+      "group": "breadth_upper",
+      "claim": "20 breadth_upper units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h6-medium-02",
+      "group": "programme_lower",
+      "claim": "74 programme_lower units",
+      "claimed": 74,
+      "actual": 74.0
+    },
+    {
+      "case_id": "test-h6-medium-02",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h6-medium-02",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 16, 16, 8, 0 and 4 units",
+      "claimed": [
+        16,
+        16,
+        16,
+        8,
+        0,
+        4
+      ],
+      "actual": [
+        16.0,
+        16.0,
+        16.0,
+        8.0,
+        0,
+        4.0
+      ]
+    },
+    {
+      "case_id": "test-h6-medium-03",
+      "group": "ai_primary",
+      "claim": "six AI primary courses",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h6-medium-03",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h6-medium-03",
+      "group": "breadth_upper",
+      "claim": "20 breadth_upper units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h6-medium-03",
+      "group": "programme_lower",
+      "claim": "78 programme_lower units",
+      "claimed": 78,
+      "actual": 78.0
+    },
+    {
+      "case_id": "test-h6-medium-03",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 16, 16, 12, 0 and 4 units",
+      "claimed": [
+        16,
+        16,
+        16,
+        12,
+        0,
+        4
+      ],
+      "actual": [
+        16.0,
+        16.0,
+        16.0,
+        12.0,
+        0,
+        4.0
+      ]
+    },
+    {
+      "case_id": "test-h6-medium-04",
+      "group": "breadth",
+      "claim": "38 breadth units",
+      "claimed": 38,
+      "actual": 38.0
+    },
+    {
+      "case_id": "test-h6-medium-04",
+      "group": "breadth_upper",
+      "claim": "24 upper-level breadth units",
+      "claimed": 24,
+      "actual": 24.0
+    },
+    {
+      "case_id": "test-h6-medium-04",
+      "group": "programme_lower",
+      "claim": "82 programme_lower units",
+      "claimed": 82,
+      "actual": 82.0
+    },
+    {
+      "case_id": "test-h6-medium-04",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h6-medium-04",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 16, 16, 12, 0 and 4 units",
+      "claimed": [
+        16,
+        16,
+        16,
+        12,
+        0,
+        4
+      ],
+      "actual": [
+        16.0,
+        16.0,
+        16.0,
+        12.0,
+        0,
+        4.0
+      ]
+    },
+    {
+      "case_id": "test-h6-medium-05",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h6-medium-05",
+      "group": "breadth_upper",
+      "claim": "16 upper-level breadth units",
+      "claimed": 16,
+      "actual": 16.0
+    },
+    {
+      "case_id": "test-h6-medium-05",
+      "group": "programme_lower",
+      "claim": "78 programme_lower units",
+      "claimed": 78,
+      "actual": 78.0
+    },
+    {
+      "case_id": "test-h6-medium-05",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h6-medium-05",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 0, 4, 16, 16 and 16 units",
+      "claimed": [
+        12,
+        0,
+        4,
+        16,
+        16,
+        16
+      ],
+      "actual": [
+        12.0,
+        0,
+        4.0,
+        16.0,
+        16.0,
+        16.0
+      ]
+    },
+    {
+      "case_id": "test-h6-medium-06",
+      "group": "breadth",
+      "claim": "breadth totals 34 units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h6-medium-06",
+      "group": "breadth_upper",
+      "claim": "upper breadth 16 units",
+      "claimed": 16,
+      "actual": 16.0
+    },
+    {
+      "case_id": "test-h6-medium-06",
+      "group": "programme_lower",
+      "claim": "programme_lower 78 units",
+      "claimed": 78,
+      "actual": 78.0
+    },
+    {
+      "case_id": "test-h6-medium-06",
+      "group": "industry",
+      "claim": "industry 6 units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h6-medium-06",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 8, 16, 16, 16 and 0 units",
+      "claimed": [
+        12,
+        8,
+        16,
+        16,
+        16,
+        0
+      ],
+      "actual": [
+        12.0,
+        8.0,
+        16.0,
+        16.0,
+        16.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h6-medium-07",
+      "group": "ai_primary",
+      "claim": "seven AI-primary courses",
+      "claimed": 7,
+      "actual": 7
+    },
+    {
+      "case_id": "test-h6-medium-07",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h6-medium-07",
+      "group": "breadth_upper",
+      "claim": "16 upper-level breadth units",
+      "claimed": 16,
+      "actual": 16.0
+    },
+    {
+      "case_id": "test-h7-easy-01",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h7-easy-01",
+      "group": "breadth_upper",
+      "claim": "16 breadth_upper units",
+      "claimed": 16,
+      "actual": 16.0
+    },
+    {
+      "case_id": "test-h7-easy-01",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h7-easy-01",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 16, 16, 12, 4, 0 and 0 units",
+      "claimed": [
+        16,
+        16,
+        16,
+        12,
+        4,
+        0,
+        0
+      ],
+      "actual": [
+        16.0,
+        16.0,
+        16.0,
+        12.0,
+        4.0,
+        0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h7-easy-02",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h7-easy-02",
+      "group": "breadth_upper",
+      "claim": "16 upper-level breadth units",
+      "claimed": 16,
+      "actual": 16.0
+    },
+    {
+      "case_id": "test-h7-easy-02",
+      "group": "programme_lower",
+      "claim": "82 programme_lower units",
+      "claimed": 82,
+      "actual": 82.0
+    },
+    {
+      "case_id": "test-h7-easy-02",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h7-easy-02",
+      "group": "semester_loads",
+      "claim": "loads of 16,16,16,16,8,0,0 units",
+      "claimed": [
+        16,
+        16,
+        16,
+        16,
+        8,
+        0,
+        0
+      ],
+      "actual": [
+        16.0,
+        16.0,
+        16.0,
+        16.0,
+        8.0,
+        0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h7-easy-03",
+      "group": "ai_primary",
+      "claim": "7 AI-primary courses",
+      "claimed": 7,
+      "actual": 7
+    },
+    {
+      "case_id": "test-h7-easy-03",
+      "group": "ai_upper",
+      "claim": "3 AI-upper courses",
+      "claimed": 3,
+      "actual": 3
+    },
+    {
+      "case_id": "test-h7-easy-03",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h7-easy-03",
+      "group": "breadth_upper",
+      "claim": "16 upper-level breadth units",
+      "claimed": 16,
+      "actual": 16.0
+    },
+    {
+      "case_id": "test-h7-easy-03",
+      "group": "programme_lower",
+      "claim": "82 programme-lower units",
+      "claimed": 82,
+      "actual": 82.0
+    },
+    {
+      "case_id": "test-h7-easy-03",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h7-easy-03",
+      "group": "semester_loads",
+      "claim": "loads are 12, 12, 16, 16, 16, 0 and 0 units",
+      "claimed": [
+        12,
+        12,
+        16,
+        16,
+        16,
+        0,
+        0
+      ],
+      "actual": [
+        12.0,
+        12.0,
+        16.0,
+        16.0,
+        16.0,
+        0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h7-easy-04",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h7-easy-04",
+      "group": "breadth_upper",
+      "claim": "16 upper breadth units",
+      "claimed": 16,
+      "actual": 16.0
+    },
+    {
+      "case_id": "test-h7-easy-04",
+      "group": "programme_lower",
+      "claim": "82 programme_lower units",
+      "claimed": 82,
+      "actual": 82.0
+    },
+    {
+      "case_id": "test-h7-easy-04",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h7-easy-04",
+      "group": "semester_loads",
+      "claim": "loads of 8,12,16,16,12,4,0 units",
+      "claimed": [
+        8,
+        12,
+        16,
+        16,
+        12,
+        4,
+        0
+      ],
+      "actual": [
+        8.0,
+        12.0,
+        16.0,
+        16.0,
+        12.0,
+        4.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h7-easy-05",
+      "group": "ai_primary",
+      "claim": "6 AI-primary courses",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h7-easy-05",
+      "group": "ai_upper",
+      "claim": "3 AI-upper courses",
+      "claimed": 3,
+      "actual": 3
+    },
+    {
+      "case_id": "test-h7-easy-05",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h7-easy-05",
+      "group": "breadth_upper",
+      "claim": "20 upper-level breadth units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h7-easy-05",
+      "group": "programme_lower",
+      "claim": "78 programme-lower units",
+      "claimed": 78,
+      "actual": 78.0
+    },
+    {
+      "case_id": "test-h7-easy-05",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h7-easy-05",
+      "group": "semester_loads",
+      "claim": "loads of 12, 12, 16, 16, 16, 0, 0 units",
+      "claimed": [
+        12,
+        12,
+        16,
+        16,
+        16,
+        0,
+        0
+      ],
+      "actual": [
+        12.0,
+        12.0,
+        16.0,
+        16.0,
+        16.0,
+        0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h7-easy-06",
+      "group": "ai_primary",
+      "claim": "six AI-primary courses",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h7-easy-06",
+      "group": "ai_upper",
+      "claim": "two AI-upper courses",
+      "claimed": 2,
+      "actual": 2
+    },
+    {
+      "case_id": "test-h7-easy-06",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h7-easy-06",
+      "group": "breadth_upper",
+      "claim": "16 upper-level breadth units",
+      "claimed": 16,
+      "actual": 16.0
+    },
+    {
+      "case_id": "test-h7-easy-06",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h7-easy-06",
+      "group": "semester_loads",
+      "claim": "Loads are 4, 16, 16, 16, 16, 4, 0 units",
+      "claimed": [
+        4,
+        16,
+        16,
+        16,
+        16,
+        4,
+        0
+      ],
+      "actual": [
+        4.0,
+        16.0,
+        16.0,
+        16.0,
+        16.0,
+        4.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h7-easy-07",
+      "group": "ai_primary",
+      "claim": "eight AI-primary courses",
+      "claimed": 8,
+      "actual": 8
+    },
+    {
+      "case_id": "test-h7-easy-07",
+      "group": "ai_upper",
+      "claim": "four AI-upper courses",
+      "claimed": 4,
+      "actual": 4
+    },
+    {
+      "case_id": "test-h7-easy-07",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h7-easy-07",
+      "group": "breadth_upper",
+      "claim": "16 upper-level breadth units",
+      "claimed": 16,
+      "actual": 16.0
+    },
+    {
+      "case_id": "test-h7-easy-07",
+      "group": "industry",
+      "claim": "six industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h7-easy-07",
+      "group": "semester_loads",
+      "claim": "loads of 16, 16, 16, 12, 4, 0, 0 units",
+      "claimed": [
+        16,
+        16,
+        16,
+        12,
+        4,
+        0,
+        0
+      ],
+      "actual": [
+        16.0,
+        16.0,
+        16.0,
+        12.0,
+        4.0,
+        0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h7-hard-01",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h7-hard-01",
+      "group": "breadth_upper",
+      "claim": "20 upper-level breadth units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h7-hard-01",
+      "group": "programme_lower",
+      "claim": "70 programme_lower units",
+      "claimed": 70,
+      "actual": 70.0
+    },
+    {
+      "case_id": "test-h7-hard-01",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h7-hard-01",
+      "group": "semester_loads",
+      "claim": "Loads are 12, 8, 8, 16, 16, 12 and 4 units",
+      "claimed": [
+        12,
+        8,
+        8,
+        16,
+        16,
+        12,
+        4
+      ],
+      "actual": [
+        12.0,
+        8.0,
+        8.0,
+        16.0,
+        16.0,
+        12.0,
+        4.0
+      ]
+    },
+    {
+      "case_id": "test-h7-hard-02",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h7-hard-02",
+      "group": "breadth_upper",
+      "claim": "20 breadth_upper units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h7-hard-02",
+      "group": "programme_lower",
+      "claim": "74 programme_lower units",
+      "claimed": 74,
+      "actual": 74.0
+    },
+    {
+      "case_id": "test-h7-hard-02",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h7-hard-02",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 8, 12, 12, 12, 12 and 4 units",
+      "claimed": [
+        12,
+        8,
+        12,
+        12,
+        12,
+        12,
+        4
+      ],
+      "actual": [
+        12.0,
+        8.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        4.0
+      ]
+    },
+    {
+      "case_id": "test-h7-hard-03",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h7-hard-03",
+      "group": "breadth_upper",
+      "claim": "16 upper-level breadth units",
+      "claimed": 16,
+      "actual": 16.0
+    },
+    {
+      "case_id": "test-h7-hard-03",
+      "group": "programme_lower",
+      "claim": "78 programme_lower units",
+      "claimed": 78,
+      "actual": 78.0
+    },
+    {
+      "case_id": "test-h7-hard-03",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h7-hard-03",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 4, 16, 4, 16, 16 and 4 units",
+      "claimed": [
+        12,
+        4,
+        16,
+        4,
+        16,
+        16,
+        4
+      ],
+      "actual": [
+        12.0,
+        4.0,
+        16.0,
+        4.0,
+        16.0,
+        16.0,
+        4.0
+      ]
+    },
+    {
+      "case_id": "test-h7-hard-04",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h7-hard-04",
+      "group": "breadth_upper",
+      "claim": "20 breadth_upper units",
+      "claimed": 20,
+      "actual": 24.0
+    },
+    {
+      "case_id": "test-h7-hard-04",
+      "group": "programme_lower",
+      "claim": "78 programme_lower units",
+      "claimed": 78,
+      "actual": 78.0
+    },
+    {
+      "case_id": "test-h7-hard-04",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h7-hard-04",
+      "group": "semester_loads",
+      "claim": "Semester loads are 8, 4, 16, 12, 12, 12 and 12 units",
+      "claimed": [
+        8,
+        4,
+        16,
+        12,
+        12,
+        12,
+        12
+      ],
+      "actual": [
+        8.0,
+        4.0,
+        16.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0
+      ]
+    },
+    {
+      "case_id": "test-h7-hard-05",
+      "group": "breadth",
+      "claim": "breadth totals 38 units",
+      "claimed": 38,
+      "actual": 38.0
+    },
+    {
+      "case_id": "test-h7-hard-05",
+      "group": "programme_lower",
+      "claim": "programme_lower totals 74 units",
+      "claimed": 74,
+      "actual": 74.0
+    },
+    {
+      "case_id": "test-h7-hard-05",
+      "group": "industry",
+      "claim": "Industry totals 6 units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h7-hard-05",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 4, 16, 16, 16, 0, and 12 units",
+      "claimed": [
+        16,
+        4,
+        16,
+        16,
+        16,
+        0,
+        12
+      ],
+      "actual": [
+        16.0,
+        4.0,
+        16.0,
+        16.0,
+        16.0,
+        0,
+        12.0
+      ]
+    },
+    {
+      "case_id": "test-h7-hard-06",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h7-hard-06",
+      "group": "breadth_upper",
+      "claim": "24 breadth_upper units",
+      "claimed": 24,
+      "actual": 24.0
+    },
+    {
+      "case_id": "test-h7-hard-06",
+      "group": "programme_lower",
+      "claim": "66 programme_lower units",
+      "claimed": 66,
+      "actual": 66.0
+    },
+    {
+      "case_id": "test-h7-hard-06",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h7-hard-06",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 16, 12, 8, 12, 0 and 8 units",
+      "claimed": [
+        16,
+        16,
+        12,
+        8,
+        12,
+        0,
+        8
+      ],
+      "actual": [
+        16.0,
+        16.0,
+        12.0,
+        8.0,
+        12.0,
+        0,
+        8.0
+      ]
+    },
+    {
+      "case_id": "test-h7-hard-07",
+      "group": "ai_primary",
+      "claim": "3 AI-primary courses",
+      "claimed": 3,
+      "actual": 3
+    },
+    {
+      "case_id": "test-h7-hard-07",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h7-hard-07",
+      "group": "breadth_upper",
+      "claim": "24 upper-level breadth units",
+      "claimed": 24,
+      "actual": 24.0
+    },
+    {
+      "case_id": "test-h7-hard-07",
+      "group": "programme_lower",
+      "claim": "74 programme-lower units",
+      "claimed": 74,
+      "actual": 74.0
+    },
+    {
+      "case_id": "test-h7-hard-07",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h7-medium-01",
+      "group": "breadth",
+      "claim": "breadth totals 34 units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h7-medium-01",
+      "group": "breadth_upper",
+      "claim": "breadth_upper 20 units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h7-medium-01",
+      "group": "programme_lower",
+      "claim": "programme_lower 70 units",
+      "claimed": 70,
+      "actual": 70.0
+    },
+    {
+      "case_id": "test-h7-medium-01",
+      "group": "industry",
+      "claim": "industry 6 units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h7-medium-01",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 4, 16, 16, 16, 8, and 0 units",
+      "claimed": [
+        12,
+        4,
+        16,
+        16,
+        16,
+        8,
+        0
+      ],
+      "actual": [
+        12.0,
+        4.0,
+        16.0,
+        16.0,
+        16.0,
+        8.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h7-medium-02",
+      "group": "ai_primary",
+      "claim": "four AI primary courses",
+      "claimed": 4,
+      "actual": 4
+    },
+    {
+      "case_id": "test-h7-medium-02",
+      "group": "ai_upper",
+      "claim": "two AI upper courses",
+      "claimed": 2,
+      "actual": 2
+    },
+    {
+      "case_id": "test-h7-medium-02",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h7-medium-02",
+      "group": "breadth_upper",
+      "claim": "24 breadth_upper units",
+      "claimed": 24,
+      "actual": 24.0
+    },
+    {
+      "case_id": "test-h7-medium-02",
+      "group": "programme_lower",
+      "claim": "74 programme_lower units",
+      "claimed": 74,
+      "actual": 74.0
+    },
+    {
+      "case_id": "test-h7-medium-02",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 12, 16, 16, 16, 8, and 0 units",
+      "claimed": [
+        12,
+        12,
+        16,
+        16,
+        16,
+        8,
+        0
+      ],
+      "actual": [
+        12.0,
+        12.0,
+        16.0,
+        16.0,
+        16.0,
+        8.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h7-medium-03",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h7-medium-03",
+      "group": "breadth_upper",
+      "claim": "16 upper-level breadth units",
+      "claimed": 16,
+      "actual": 16.0
+    },
+    {
+      "case_id": "test-h7-medium-03",
+      "group": "programme_lower",
+      "claim": "78 programme_lower units",
+      "claimed": 78,
+      "actual": 78.0
+    },
+    {
+      "case_id": "test-h7-medium-03",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 12, 16, 16, 8, 4, and 4 units",
+      "claimed": [
+        12,
+        12,
+        16,
+        16,
+        8,
+        4,
+        4
+      ],
+      "actual": [
+        12.0,
+        12.0,
+        16.0,
+        16.0,
+        8.0,
+        4.0,
+        4.0
+      ]
+    },
+    {
+      "case_id": "test-h7-medium-04",
+      "group": "ai_primary",
+      "claim": "five AI primary courses",
+      "claimed": 5,
+      "actual": 5
+    },
+    {
+      "case_id": "test-h7-medium-04",
+      "group": "ai_upper",
+      "claim": "four AI upper courses",
+      "claimed": 4,
+      "actual": 2
+    },
+    {
+      "case_id": "test-h7-medium-04",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h7-medium-04",
+      "group": "breadth_upper",
+      "claim": "20 breadth_upper units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h7-medium-04",
+      "group": "programme_lower",
+      "claim": "78 programme_lower units",
+      "claimed": 78,
+      "actual": 78.0
+    },
+    {
+      "case_id": "test-h7-medium-04",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h7-medium-04",
+      "group": "semester_loads",
+      "claim": "semester loads are 16, 16, 16, 12, 8, 8, and 0 units",
+      "claimed": [
+        16,
+        16,
+        16,
+        12,
+        8,
+        8,
+        0
+      ],
+      "actual": [
+        16.0,
+        16.0,
+        16.0,
+        12.0,
+        8.0,
+        8.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h7-medium-05",
+      "group": "ai_primary",
+      "claim": "six AI-primary courses",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h7-medium-05",
+      "group": "ai_upper",
+      "claim": "three AI-upper courses",
+      "claimed": 3,
+      "actual": 3
+    },
+    {
+      "case_id": "test-h7-medium-05",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h7-medium-05",
+      "group": "breadth_upper",
+      "claim": "20 breadth_upper units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h7-medium-05",
+      "group": "programme_lower",
+      "claim": "74 programme_lower units",
+      "claimed": 74,
+      "actual": 74.0
+    },
+    {
+      "case_id": "test-h7-medium-05",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 16, 16, 16, 4, 0, and 0 units",
+      "claimed": [
+        12,
+        16,
+        16,
+        16,
+        4,
+        0,
+        0
+      ],
+      "actual": [
+        12.0,
+        16.0,
+        16.0,
+        16.0,
+        4.0,
+        0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h7-medium-06",
+      "group": "ai_primary",
+      "claim": "8 AI-primary courses",
+      "claimed": 8,
+      "actual": 8
+    },
+    {
+      "case_id": "test-h7-medium-06",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h7-medium-06",
+      "group": "breadth_upper",
+      "claim": "16 upper-level breadth units",
+      "claimed": 16,
+      "actual": 16.0
+    },
+    {
+      "case_id": "test-h7-medium-06",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h7-medium-06",
+      "group": "semester_loads",
+      "claim": "Semester loads are 16, 16, 16, 12, 4, 8, and 0 units",
+      "claimed": [
+        16,
+        16,
+        16,
+        12,
+        4,
+        8,
+        0
+      ],
+      "actual": [
+        16.0,
+        16.0,
+        16.0,
+        12.0,
+        4.0,
+        8.0,
+        0
+      ]
+    },
+    {
+      "case_id": "test-h7-medium-07",
+      "group": "ai_primary",
+      "claim": "6 AI-primary courses",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h7-medium-07",
+      "group": "ai_upper",
+      "claim": "3 AI-upper courses",
+      "claimed": 3,
+      "actual": 3
+    },
+    {
+      "case_id": "test-h7-medium-07",
+      "group": "breadth",
+      "claim": "34 breadth units",
+      "claimed": 34,
+      "actual": 34.0
+    },
+    {
+      "case_id": "test-h7-medium-07",
+      "group": "breadth_upper",
+      "claim": "20 upper-level breadth units",
+      "claimed": 20,
+      "actual": 20.0
+    },
+    {
+      "case_id": "test-h7-medium-07",
+      "group": "programme_lower",
+      "claim": "82 programme-lower units",
+      "claimed": 82,
+      "actual": 82.0
+    },
+    {
+      "case_id": "test-h7-medium-07",
+      "group": "industry",
+      "claim": "6 industry units",
+      "claimed": 6,
+      "actual": 6
+    },
+    {
+      "case_id": "test-h7-medium-07",
+      "group": "semester_loads",
+      "claim": "Semester loads are 12, 12, 16, 16, 16, 0 and 4 units",
+      "claimed": [
+        12,
+        12,
+        16,
+        16,
+        16,
+        0,
+        4
+      ],
+      "actual": [
+        12.0,
+        12.0,
+        16.0,
+        16.0,
+        16.0,
+        0,
+        4.0
+      ]
+    }
+  ],
+  "discrepancies": [
+    {
+      "case_id": "test-h4-easy-04",
+      "group": "ai_primary",
+      "claim": "eight AI primary courses",
+      "claimed": 8,
+      "actual": 7,
+      "evidence": {
+        "matched_courses": [
+          "CS2109S",
+          "CS3263",
+          "CS3264",
+          "CS3268",
+          "CS4243",
+          "CS4246",
+          "CS4248"
+        ],
+        "course_count": 7,
+        "units": 28.0
+      }
+    },
+    {
+      "case_id": "test-h4-easy-04",
+      "group": "ai_upper",
+      "claim": "four AI upper courses",
+      "claimed": 4,
+      "actual": 3,
+      "evidence": {
+        "matched_courses": [
+          "CS4243",
+          "CS4246",
+          "CS4248"
+        ],
+        "course_count": 3,
+        "units": 12.0
+      }
+    },
+    {
+      "case_id": "test-h4-hard-02",
+      "group": "semester_loads",
+      "claim": "Semester loads are 8, 4, 8 and 16 units",
+      "claimed": [
+        8,
+        4,
+        8,
+        16
+      ],
+      "actual": [
+        8.0,
+        4.0,
+        8.0,
+        12.0
+      ],
+      "evidence": {
+        "semester_units": [
+          8.0,
+          4.0,
+          8.0,
+          12.0
+        ]
+      }
+    },
+    {
+      "case_id": "test-h4-medium-03",
+      "group": "ai_upper",
+      "claim": "three AI-upper courses",
+      "claimed": 3,
+      "actual": 2,
+      "evidence": {
+        "matched_courses": [
+          "CS4243",
+          "CS4248"
+        ],
+        "course_count": 2,
+        "units": 8.0
+      }
+    },
+    {
+      "case_id": "test-h4-medium-05",
+      "group": "ai_upper",
+      "claim": "3 AI-upper courses",
+      "claimed": 3,
+      "actual": 2,
+      "evidence": {
+        "matched_courses": [
+          "CS4243",
+          "CS4246"
+        ],
+        "course_count": 2,
+        "units": 8.0
+      }
+    },
+    {
+      "case_id": "test-h4-medium-06",
+      "group": "ai_upper",
+      "claim": "three AI upper courses",
+      "claimed": 3,
+      "actual": 2,
+      "evidence": {
+        "matched_courses": [
+          "CS4243",
+          "CS4248"
+        ],
+        "course_count": 2,
+        "units": 8.0
+      }
+    },
+    {
+      "case_id": "test-h5-easy-01",
+      "group": "ai_upper",
+      "claim": "five AI-upper courses",
+      "claimed": 5,
+      "actual": 3,
+      "evidence": {
+        "matched_courses": [
+          "CS4243",
+          "CS4246",
+          "CS4248"
+        ],
+        "course_count": 3,
+        "units": 12.0
+      }
+    },
+    {
+      "case_id": "test-h5-easy-02",
+      "group": "ai_upper",
+      "claim": "5 AI-upper courses",
+      "claimed": 5,
+      "actual": 4,
+      "evidence": {
+        "matched_courses": [
+          "CS4243",
+          "CS4246",
+          "CS4248",
+          "CS4262"
+        ],
+        "course_count": 4,
+        "units": 16.0
+      }
+    },
+    {
+      "case_id": "test-h5-easy-04",
+      "group": "ai_upper",
+      "claim": "four AI-upper courses",
+      "claimed": 4,
+      "actual": 3,
+      "evidence": {
+        "matched_courses": [
+          "CS4243",
+          "CS4246",
+          "CS4248"
+        ],
+        "course_count": 3,
+        "units": 12.0
+      }
+    },
+    {
+      "case_id": "test-h5-hard-03",
+      "group": "breadth_upper",
+      "claim": "28 upper-level breadth units",
+      "claimed": 28,
+      "actual": 24.0,
+      "evidence": {
+        "matched_courses": [
+          "CS4248",
+          "CS4262",
+          "CS5228",
+          "CS5242",
+          "CS5260",
+          "CS5340"
+        ],
+        "course_count": 6,
+        "units": 24.0
+      }
+    },
+    {
+      "case_id": "test-h6-easy-03",
+      "group": "ai_primary",
+      "claim": "7 AI-primary courses",
+      "claimed": 7,
+      "actual": 6,
+      "evidence": {
+        "matched_courses": [
+          "CS2109S",
+          "CS3263",
+          "CS3264",
+          "CS4243",
+          "CS4246",
+          "CS4248"
+        ],
+        "course_count": 6,
+        "units": 24.0
+      }
+    },
+    {
+      "case_id": "test-h6-hard-01",
+      "group": "ai_upper",
+      "claim": "three AI-upper courses",
+      "claimed": 3,
+      "actual": 2,
+      "evidence": {
+        "matched_courses": [
+          "CS4246",
+          "CS4262"
+        ],
+        "course_count": 2,
+        "units": 8.0
+      }
+    },
+    {
+      "case_id": "test-h6-hard-03",
+      "group": "programme_lower",
+      "claim": "70 programme_lower units",
+      "claimed": 70,
+      "actual": 74.0,
+      "evidence": {
+        "matched_courses": [
+          "CP3200",
+          "CS1231S",
+          "CS2030S",
+          "CS2040S",
+          "CS2100",
+          "CS2101",
+          "CS2103T",
+          "CS2106",
+          "CS2109S",
+          "CS3230",
+          "CS3263",
+          "CS3264",
+          "CS4243",
+          "CS4261",
+          "CS4278",
+          "MA1521",
+          "MA1522",
+          "ST2334"
+        ],
+        "course_count": 18,
+        "units": 74.0
+      }
+    },
+    {
+      "case_id": "test-h6-hard-06",
+      "group": "ai_primary",
+      "claim": "6 AI-primary courses",
+      "claimed": 6,
+      "actual": 5,
+      "evidence": {
+        "matched_courses": [
+          "CS2109S",
+          "CS3263",
+          "CS3264",
+          "CS4243",
+          "CS4246"
+        ],
+        "course_count": 5,
+        "units": 20.0
+      }
+    },
+    {
+      "case_id": "test-h6-hard-06",
+      "group": "ai_upper",
+      "claim": "3 AI-upper courses",
+      "claimed": 3,
+      "actual": 2,
+      "evidence": {
+        "matched_courses": [
+          "CS4243",
+          "CS4246"
+        ],
+        "course_count": 2,
+        "units": 8.0
+      }
+    },
+    {
+      "case_id": "test-h7-hard-04",
+      "group": "breadth_upper",
+      "claim": "20 breadth_upper units",
+      "claimed": 20,
+      "actual": 24.0,
+      "evidence": {
+        "matched_courses": [
+          "CS4220",
+          "CS4246",
+          "CS4261",
+          "CS4277",
+          "CS4278",
+          "CS5242"
+        ],
+        "course_count": 6,
+        "units": 24.0
+      }
+    },
+    {
+      "case_id": "test-h7-medium-04",
+      "group": "ai_upper",
+      "claim": "four AI upper courses",
+      "claimed": 4,
+      "actual": 2,
+      "evidence": {
+        "matched_courses": [
+          "CS4243",
+          "CS4248"
+        ],
+        "course_count": 2,
+        "units": 8.0
+      }
+    }
+  ],
+  "claims_checked": 453,
+  "cases_with_checked_claims": 83,
+  "cases_with_confirmed_numeric_errors": 15,
+  "review_status": "All listed discrepancies were checked against the literal claim and independently generated checker evidence; no primary scores changed."
+}

@@ -1,0 +1,910 @@
+{
+  "scoring_policy": {
+    "id": "outcome-v1-explanation-secondary",
+    "primary": {
+      "feasible": "A schema-valid plan passes the independent checker against the original specification.",
+      "infeasible": "A schema-valid infeasible answer agrees with the validated gold label.",
+      "denominator": "Completed selected attempts, including execution and output failures; pending and unselected attempts excluded."
+    },
+    "explanations": {
+      "role": "Secondary manual review; explanation content does not change primary scores.",
+      "infeasibility": "Any sufficient contradiction is acceptable; the annotated witness need not be the only cause.",
+      "format": "Output schema requirements still apply; where required, the explanation field remains mandatory."
+    },
+    "translations": {
+      "role": "Separate diagnostic; canonical field differences do not change primary outcome scores.",
+      "semantic_review": "Differences require review as equivalent, non-equivalent or unresolved; outcome agreement alone does not establish fidelity."
+    }
+  },
+  "run": {
+    "name": "csp16-evaluation-v1",
+    "split": "test",
+    "selected_case_ids": [
+      "test-h7-easy-01",
+      "test-h7-easy-02",
+      "test-h7-easy-03",
+      "test-h7-easy-04",
+      "test-h7-easy-05",
+      "test-h7-easy-06",
+      "test-h7-easy-07",
+      "test-h7-easy-08",
+      "test-h7-easy-09",
+      "test-h7-easy-10",
+      "test-h7-medium-01",
+      "test-h7-medium-02",
+      "test-h7-medium-03",
+      "test-h7-medium-04",
+      "test-h7-medium-05",
+      "test-h7-medium-06",
+      "test-h7-medium-07",
+      "test-h7-medium-08",
+      "test-h7-medium-09",
+      "test-h7-medium-10",
+      "test-h7-hard-01",
+      "test-h7-hard-02",
+      "test-h7-hard-03",
+      "test-h7-hard-04",
+      "test-h7-hard-05",
+      "test-h7-hard-06",
+      "test-h7-hard-07",
+      "test-h7-hard-08",
+      "test-h7-hard-09",
+      "test-h7-hard-10",
+      "test-h6-easy-01",
+      "test-h6-easy-02",
+      "test-h6-easy-03",
+      "test-h6-easy-04",
+      "test-h6-easy-05",
+      "test-h6-easy-06",
+      "test-h6-easy-07",
+      "test-h6-easy-08",
+      "test-h6-easy-09",
+      "test-h6-easy-10",
+      "test-h6-medium-01",
+      "test-h6-medium-02",
+      "test-h6-medium-03",
+      "test-h6-medium-04",
+      "test-h6-medium-05",
+      "test-h6-medium-06",
+      "test-h6-medium-07",
+      "test-h6-medium-08",
+      "test-h6-medium-09",
+      "test-h6-medium-10",
+      "test-h6-hard-01",
+      "test-h6-hard-02",
+      "test-h6-hard-03",
+      "test-h6-hard-04",
+      "test-h6-hard-05",
+      "test-h6-hard-06",
+      "test-h6-hard-07",
+      "test-h6-hard-08",
+      "test-h6-hard-09",
+      "test-h6-hard-10",
+      "test-h5-easy-01",
+      "test-h5-easy-02",
+      "test-h5-easy-03",
+      "test-h5-easy-04",
+      "test-h5-easy-05",
+      "test-h5-easy-06",
+      "test-h5-easy-07",
+      "test-h5-easy-08",
+      "test-h5-easy-09",
+      "test-h5-easy-10",
+      "test-h5-medium-01",
+      "test-h5-medium-02",
+      "test-h5-medium-03",
+      "test-h5-medium-04",
+      "test-h5-medium-05",
+      "test-h5-medium-06",
+      "test-h5-medium-07",
+      "test-h5-medium-08",
+      "test-h5-medium-09",
+      "test-h5-medium-10",
+      "test-h5-hard-01",
+      "test-h5-hard-02",
+      "test-h5-hard-03",
+      "test-h5-hard-04",
+      "test-h5-hard-05",
+      "test-h5-hard-06",
+      "test-h5-hard-07",
+      "test-h5-hard-08",
+      "test-h5-hard-09",
+      "test-h5-hard-10",
+      "test-h4-easy-01",
+      "test-h4-easy-02",
+      "test-h4-easy-03",
+      "test-h4-easy-04",
+      "test-h4-easy-05",
+      "test-h4-easy-06",
+      "test-h4-easy-07",
+      "test-h4-easy-08",
+      "test-h4-easy-09",
+      "test-h4-easy-10",
+      "test-h4-medium-01",
+      "test-h4-medium-02",
+      "test-h4-medium-03",
+      "test-h4-medium-04",
+      "test-h4-medium-05",
+      "test-h4-medium-06",
+      "test-h4-medium-07",
+      "test-h4-medium-08",
+      "test-h4-medium-09",
+      "test-h4-medium-10",
+      "test-h4-hard-01",
+      "test-h4-hard-02",
+      "test-h4-hard-03",
+      "test-h4-hard-04",
+      "test-h4-hard-05",
+      "test-h4-hard-06",
+      "test-h4-hard-07",
+      "test-h4-hard-08",
+      "test-h4-hard-09",
+      "test-h4-hard-10"
+    ],
+    "selected_cases": 120,
+    "split_cases": 120,
+    "unselected_cases": 0,
+    "accuracy_denominator": "Completed selected attempts, including execution and output failures; pending attempts excluded."
+  },
+  "direct": {
+    "total": 120,
+    "attempted": 120,
+    "pending": 0,
+    "unselected": 0,
+    "feasible_valid": 83,
+    "feasible_total": 84,
+    "infeasible_correct": 36,
+    "infeasible_total": 36,
+    "false_infeasibility": 1,
+    "overall_correct": 119,
+    "accuracy_completed": 0.9916666666666667,
+    "execution_statuses": {
+      "ok": 120
+    },
+    "outcomes": {
+      "valid_plan": 83,
+      "correct_infeasibility": 36,
+      "false_infeasibility": 1
+    },
+    "translations_audited": 0,
+    "canonical_translations": 0,
+    "translations_requiring_semantic_review": 0,
+    "correct_with_translation_differences": 0,
+    "mean_total_seconds": 22.41,
+    "reported_input_tokens": 2332737,
+    "reported_output_tokens": 62736
+  },
+  "assisted": {
+    "total": 120,
+    "attempted": 120,
+    "pending": 0,
+    "unselected": 0,
+    "feasible_valid": 84,
+    "feasible_total": 84,
+    "infeasible_correct": 36,
+    "infeasible_total": 36,
+    "false_infeasibility": 0,
+    "overall_correct": 120,
+    "accuracy_completed": 1.0,
+    "execution_statuses": {
+      "ok": 120
+    },
+    "outcomes": {
+      "valid_plan": 84,
+      "correct_infeasibility": 36
+    },
+    "translations_audited": 120,
+    "canonical_translations": 115,
+    "translations_requiring_semantic_review": 5,
+    "correct_with_translation_differences": 5,
+    "mean_total_seconds": 31.6,
+    "reported_input_tokens": 2359601,
+    "reported_output_tokens": 133277
+  },
+  "paired": {
+    "completed_cases": 120,
+    "both_correct": 119,
+    "direct_only_correct": 0,
+    "assisted_only_correct": 1,
+    "neither_correct": 0
+  },
+  "by_horizon_difficulty": [
+    {
+      "remaining_semesters": 7,
+      "difficulty": "easy",
+      "direct": {
+        "total": 10,
+        "attempted": 10,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 7,
+        "feasible_total": 7,
+        "infeasible_correct": 3,
+        "infeasible_total": 3,
+        "false_infeasibility": 0,
+        "overall_correct": 10,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 10
+        },
+        "outcomes": {
+          "valid_plan": 7,
+          "correct_infeasibility": 3
+        },
+        "translations_audited": 0,
+        "canonical_translations": 0,
+        "translations_requiring_semantic_review": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 21.42,
+        "reported_input_tokens": 193742,
+        "reported_output_tokens": 5005
+      },
+      "assisted": {
+        "total": 10,
+        "attempted": 10,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 7,
+        "feasible_total": 7,
+        "infeasible_correct": 3,
+        "infeasible_total": 3,
+        "false_infeasibility": 0,
+        "overall_correct": 10,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 10
+        },
+        "outcomes": {
+          "valid_plan": 7,
+          "correct_infeasibility": 3
+        },
+        "translations_audited": 10,
+        "canonical_translations": 10,
+        "translations_requiring_semantic_review": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 30.41,
+        "reported_input_tokens": 195968,
+        "reported_output_tokens": 10359
+      }
+    },
+    {
+      "remaining_semesters": 7,
+      "difficulty": "medium",
+      "direct": {
+        "total": 10,
+        "attempted": 10,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 7,
+        "feasible_total": 7,
+        "infeasible_correct": 3,
+        "infeasible_total": 3,
+        "false_infeasibility": 0,
+        "overall_correct": 10,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 10
+        },
+        "outcomes": {
+          "valid_plan": 7,
+          "correct_infeasibility": 3
+        },
+        "translations_audited": 0,
+        "canonical_translations": 0,
+        "translations_requiring_semantic_review": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 25.42,
+        "reported_input_tokens": 194179,
+        "reported_output_tokens": 5815
+      },
+      "assisted": {
+        "total": 10,
+        "attempted": 10,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 7,
+        "feasible_total": 7,
+        "infeasible_correct": 3,
+        "infeasible_total": 3,
+        "false_infeasibility": 0,
+        "overall_correct": 10,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 10
+        },
+        "outcomes": {
+          "valid_plan": 7,
+          "correct_infeasibility": 3
+        },
+        "translations_audited": 10,
+        "canonical_translations": 10,
+        "translations_requiring_semantic_review": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 31.12,
+        "reported_input_tokens": 196417,
+        "reported_output_tokens": 10847
+      }
+    },
+    {
+      "remaining_semesters": 7,
+      "difficulty": "hard",
+      "direct": {
+        "total": 10,
+        "attempted": 10,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 7,
+        "feasible_total": 7,
+        "infeasible_correct": 3,
+        "infeasible_total": 3,
+        "false_infeasibility": 0,
+        "overall_correct": 10,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 10
+        },
+        "outcomes": {
+          "valid_plan": 7,
+          "correct_infeasibility": 3
+        },
+        "translations_audited": 0,
+        "canonical_translations": 0,
+        "translations_requiring_semantic_review": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 26.57,
+        "reported_input_tokens": 194697,
+        "reported_output_tokens": 6526
+      },
+      "assisted": {
+        "total": 10,
+        "attempted": 10,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 7,
+        "feasible_total": 7,
+        "infeasible_correct": 3,
+        "infeasible_total": 3,
+        "false_infeasibility": 0,
+        "overall_correct": 10,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 10
+        },
+        "outcomes": {
+          "valid_plan": 7,
+          "correct_infeasibility": 3
+        },
+        "translations_audited": 10,
+        "canonical_translations": 10,
+        "translations_requiring_semantic_review": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 32.24,
+        "reported_input_tokens": 196953,
+        "reported_output_tokens": 11720
+      }
+    },
+    {
+      "remaining_semesters": 6,
+      "difficulty": "easy",
+      "direct": {
+        "total": 10,
+        "attempted": 10,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 7,
+        "feasible_total": 7,
+        "infeasible_correct": 3,
+        "infeasible_total": 3,
+        "false_infeasibility": 0,
+        "overall_correct": 10,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 10
+        },
+        "outcomes": {
+          "valid_plan": 7,
+          "correct_infeasibility": 3
+        },
+        "translations_audited": 0,
+        "canonical_translations": 0,
+        "translations_requiring_semantic_review": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 20.2,
+        "reported_input_tokens": 193881,
+        "reported_output_tokens": 4688
+      },
+      "assisted": {
+        "total": 10,
+        "attempted": 10,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 7,
+        "feasible_total": 7,
+        "infeasible_correct": 3,
+        "infeasible_total": 3,
+        "false_infeasibility": 0,
+        "overall_correct": 10,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 10
+        },
+        "outcomes": {
+          "valid_plan": 7,
+          "correct_infeasibility": 3
+        },
+        "translations_audited": 10,
+        "canonical_translations": 9,
+        "translations_requiring_semantic_review": 1,
+        "correct_with_translation_differences": 1,
+        "mean_total_seconds": 31.94,
+        "reported_input_tokens": 196109,
+        "reported_output_tokens": 10154
+      }
+    },
+    {
+      "remaining_semesters": 6,
+      "difficulty": "medium",
+      "direct": {
+        "total": 10,
+        "attempted": 10,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 7,
+        "feasible_total": 7,
+        "infeasible_correct": 3,
+        "infeasible_total": 3,
+        "false_infeasibility": 0,
+        "overall_correct": 10,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 10
+        },
+        "outcomes": {
+          "valid_plan": 7,
+          "correct_infeasibility": 3
+        },
+        "translations_audited": 0,
+        "canonical_translations": 0,
+        "translations_requiring_semantic_review": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 23.89,
+        "reported_input_tokens": 194290,
+        "reported_output_tokens": 5719
+      },
+      "assisted": {
+        "total": 10,
+        "attempted": 10,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 7,
+        "feasible_total": 7,
+        "infeasible_correct": 3,
+        "infeasible_total": 3,
+        "false_infeasibility": 0,
+        "overall_correct": 10,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 10
+        },
+        "outcomes": {
+          "valid_plan": 7,
+          "correct_infeasibility": 3
+        },
+        "translations_audited": 10,
+        "canonical_translations": 10,
+        "translations_requiring_semantic_review": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 30.35,
+        "reported_input_tokens": 196518,
+        "reported_output_tokens": 10879
+      }
+    },
+    {
+      "remaining_semesters": 6,
+      "difficulty": "hard",
+      "direct": {
+        "total": 10,
+        "attempted": 10,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 7,
+        "feasible_total": 7,
+        "infeasible_correct": 3,
+        "infeasible_total": 3,
+        "false_infeasibility": 0,
+        "overall_correct": 10,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 10
+        },
+        "outcomes": {
+          "valid_plan": 7,
+          "correct_infeasibility": 3
+        },
+        "translations_audited": 0,
+        "canonical_translations": 0,
+        "translations_requiring_semantic_review": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 25.69,
+        "reported_input_tokens": 194860,
+        "reported_output_tokens": 6149
+      },
+      "assisted": {
+        "total": 10,
+        "attempted": 10,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 7,
+        "feasible_total": 7,
+        "infeasible_correct": 3,
+        "infeasible_total": 3,
+        "false_infeasibility": 0,
+        "overall_correct": 10,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 10
+        },
+        "outcomes": {
+          "valid_plan": 7,
+          "correct_infeasibility": 3
+        },
+        "translations_audited": 10,
+        "canonical_translations": 10,
+        "translations_requiring_semantic_review": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 33.51,
+        "reported_input_tokens": 197110,
+        "reported_output_tokens": 12083
+      }
+    },
+    {
+      "remaining_semesters": 5,
+      "difficulty": "easy",
+      "direct": {
+        "total": 10,
+        "attempted": 10,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 7,
+        "feasible_total": 7,
+        "infeasible_correct": 3,
+        "infeasible_total": 3,
+        "false_infeasibility": 0,
+        "overall_correct": 10,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 10
+        },
+        "outcomes": {
+          "valid_plan": 7,
+          "correct_infeasibility": 3
+        },
+        "translations_audited": 0,
+        "canonical_translations": 0,
+        "translations_requiring_semantic_review": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 19.65,
+        "reported_input_tokens": 193991,
+        "reported_output_tokens": 4403
+      },
+      "assisted": {
+        "total": 10,
+        "attempted": 10,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 7,
+        "feasible_total": 7,
+        "infeasible_correct": 3,
+        "infeasible_total": 3,
+        "false_infeasibility": 0,
+        "overall_correct": 10,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 10
+        },
+        "outcomes": {
+          "valid_plan": 7,
+          "correct_infeasibility": 3
+        },
+        "translations_audited": 10,
+        "canonical_translations": 10,
+        "translations_requiring_semantic_review": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 30.18,
+        "reported_input_tokens": 196233,
+        "reported_output_tokens": 10008
+      }
+    },
+    {
+      "remaining_semesters": 5,
+      "difficulty": "medium",
+      "direct": {
+        "total": 10,
+        "attempted": 10,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 7,
+        "feasible_total": 7,
+        "infeasible_correct": 3,
+        "infeasible_total": 3,
+        "false_infeasibility": 0,
+        "overall_correct": 10,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 10
+        },
+        "outcomes": {
+          "valid_plan": 7,
+          "correct_infeasibility": 3
+        },
+        "translations_audited": 0,
+        "canonical_translations": 0,
+        "translations_requiring_semantic_review": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 23.15,
+        "reported_input_tokens": 194446,
+        "reported_output_tokens": 5590
+      },
+      "assisted": {
+        "total": 10,
+        "attempted": 10,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 7,
+        "feasible_total": 7,
+        "infeasible_correct": 3,
+        "infeasible_total": 3,
+        "false_infeasibility": 0,
+        "overall_correct": 10,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 10
+        },
+        "outcomes": {
+          "valid_plan": 7,
+          "correct_infeasibility": 3
+        },
+        "translations_audited": 10,
+        "canonical_translations": 10,
+        "translations_requiring_semantic_review": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 30.12,
+        "reported_input_tokens": 196682,
+        "reported_output_tokens": 11032
+      }
+    },
+    {
+      "remaining_semesters": 5,
+      "difficulty": "hard",
+      "direct": {
+        "total": 10,
+        "attempted": 10,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 7,
+        "feasible_total": 7,
+        "infeasible_correct": 3,
+        "infeasible_total": 3,
+        "false_infeasibility": 0,
+        "overall_correct": 10,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 10
+        },
+        "outcomes": {
+          "valid_plan": 7,
+          "correct_infeasibility": 3
+        },
+        "translations_audited": 0,
+        "canonical_translations": 0,
+        "translations_requiring_semantic_review": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 22.21,
+        "reported_input_tokens": 194950,
+        "reported_output_tokens": 5227
+      },
+      "assisted": {
+        "total": 10,
+        "attempted": 10,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 7,
+        "feasible_total": 7,
+        "infeasible_correct": 3,
+        "infeasible_total": 3,
+        "false_infeasibility": 0,
+        "overall_correct": 10,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 10
+        },
+        "outcomes": {
+          "valid_plan": 7,
+          "correct_infeasibility": 3
+        },
+        "translations_audited": 10,
+        "canonical_translations": 10,
+        "translations_requiring_semantic_review": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 30.5,
+        "reported_input_tokens": 197186,
+        "reported_output_tokens": 11433
+      }
+    },
+    {
+      "remaining_semesters": 4,
+      "difficulty": "easy",
+      "direct": {
+        "total": 10,
+        "attempted": 10,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 6,
+        "feasible_total": 7,
+        "infeasible_correct": 3,
+        "infeasible_total": 3,
+        "false_infeasibility": 1,
+        "overall_correct": 9,
+        "accuracy_completed": 0.9,
+        "execution_statuses": {
+          "ok": 10
+        },
+        "outcomes": {
+          "false_infeasibility": 1,
+          "valid_plan": 6,
+          "correct_infeasibility": 3
+        },
+        "translations_audited": 0,
+        "canonical_translations": 0,
+        "translations_requiring_semantic_review": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 19.02,
+        "reported_input_tokens": 194118,
+        "reported_output_tokens": 3804
+      },
+      "assisted": {
+        "total": 10,
+        "attempted": 10,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 7,
+        "feasible_total": 7,
+        "infeasible_correct": 3,
+        "infeasible_total": 3,
+        "false_infeasibility": 0,
+        "overall_correct": 10,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 10
+        },
+        "outcomes": {
+          "valid_plan": 7,
+          "correct_infeasibility": 3
+        },
+        "translations_audited": 10,
+        "canonical_translations": 8,
+        "translations_requiring_semantic_review": 2,
+        "correct_with_translation_differences": 2,
+        "mean_total_seconds": 34.4,
+        "reported_input_tokens": 196362,
+        "reported_output_tokens": 10842
+      }
+    },
+    {
+      "remaining_semesters": 4,
+      "difficulty": "medium",
+      "direct": {
+        "total": 10,
+        "attempted": 10,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 7,
+        "feasible_total": 7,
+        "infeasible_correct": 3,
+        "infeasible_total": 3,
+        "false_infeasibility": 0,
+        "overall_correct": 10,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 10
+        },
+        "outcomes": {
+          "valid_plan": 7,
+          "correct_infeasibility": 3
+        },
+        "translations_audited": 0,
+        "canonical_translations": 0,
+        "translations_requiring_semantic_review": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 21.36,
+        "reported_input_tokens": 194536,
+        "reported_output_tokens": 4852
+      },
+      "assisted": {
+        "total": 10,
+        "attempted": 10,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 7,
+        "feasible_total": 7,
+        "infeasible_correct": 3,
+        "infeasible_total": 3,
+        "false_infeasibility": 0,
+        "overall_correct": 10,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 10
+        },
+        "outcomes": {
+          "valid_plan": 7,
+          "correct_infeasibility": 3
+        },
+        "translations_audited": 10,
+        "canonical_translations": 10,
+        "translations_requiring_semantic_review": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 31.77,
+        "reported_input_tokens": 196776,
+        "reported_output_tokens": 11788
+      }
+    },
+    {
+      "remaining_semesters": 4,
+      "difficulty": "hard",
+      "direct": {
+        "total": 10,
+        "attempted": 10,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 7,
+        "feasible_total": 7,
+        "infeasible_correct": 3,
+        "infeasible_total": 3,
+        "false_infeasibility": 0,
+        "overall_correct": 10,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 10
+        },
+        "outcomes": {
+          "valid_plan": 7,
+          "correct_infeasibility": 3
+        },
+        "translations_audited": 0,
+        "canonical_translations": 0,
+        "translations_requiring_semantic_review": 0,
+        "correct_with_translation_differences": 0,
+        "mean_total_seconds": 20.34,
+        "reported_input_tokens": 195047,
+        "reported_output_tokens": 4958
+      },
+      "assisted": {
+        "total": 10,
+        "attempted": 10,
+        "pending": 0,
+        "unselected": 0,
+        "feasible_valid": 7,
+        "feasible_total": 7,
+        "infeasible_correct": 3,
+        "infeasible_total": 3,
+        "false_infeasibility": 0,
+        "overall_correct": 10,
+        "accuracy_completed": 1.0,
+        "execution_statuses": {
+          "ok": 10
+        },
+        "outcomes": {
+          "valid_plan": 7,
+          "correct_infeasibility": 3
+        },
+        "translations_audited": 10,
+        "canonical_translations": 8,
+        "translations_requiring_semantic_review": 2,
+        "correct_with_translation_differences": 2,
+        "mean_total_seconds": 32.67,
+        "reported_input_tokens": 197287,
+        "reported_output_tokens": 12132
+      }
+    }
+  ]
+}

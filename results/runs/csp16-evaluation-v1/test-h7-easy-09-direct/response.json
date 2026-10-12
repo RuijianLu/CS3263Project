@@ -1,0 +1,1 @@
+{"status":"infeasible","semesters":[],"explanation":"Mandatory foundation course CS2109S and requested course CS4263 cannot both be included: CS4263 explicitly precludes CS2109S. Taking CS4263 in remaining semester 7 does not remove this conflict, so no plan can satisfy every requirement."}

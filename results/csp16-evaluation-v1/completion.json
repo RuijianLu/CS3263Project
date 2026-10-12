@@ -1,0 +1,36 @@
+{
+  "run": "csp16-evaluation-v1",
+  "status": "completed",
+  "verified_at_utc": "2026-10-11T16:31:29.083465+00:00",
+  "first_attempt_started_at_utc": "2026-10-11T14:38:00.224228+00:00",
+  "freeze_manifest_sha256": "fcdadf15789c04a1ae63594217a553a189a1b60a46046ddf221e4a3e0c31dbff",
+  "completed_attempts": 240,
+  "completed_pairs": 120,
+  "execution_statuses": {
+    "ok": 240
+  },
+  "planned_attempts_only": true,
+  "attempts_per_case_approach": 1,
+  "tool_invocations": 0,
+  "prompt_hashes_matching_freeze": 240,
+  "prompt_hash_basis": "UTF-8 prompt text with universal newline normalization, matching the runner; prompt.txt uses native Windows CRLF.",
+  "source_files_matching_freeze": 426,
+  "snapshot_files_matching_freeze": 426,
+  "docs_unchanged": true,
+  "pilot_unchanged": true,
+  "benchmark_and_manifest_verified": true,
+  "frozen_scoring_policy_unchanged": true,
+  "raw_attempt_and_scoring_files": 1607,
+  "raw_attempt_and_scoring_tree_sha256": "ce6ede73bee091bf5d9f1be23044ccea10b96f29281062370efe29cf57ece09f",
+  "primary_outputs": {
+    "metrics.json": "fb151e408e256e541bb36c7415a0db30c269b7ae8c0cc8dcf696441e11afd163",
+    "summary.csv": "2266cde231c49931a69a13ad7ce54d1b06756ad0af0f79e618c85e2be5c0b555"
+  },
+  "translation_semantic_review": "manual_audit.json",
+  "analysis_and_secondary_output_sha256": {
+    "analysis.md": "57ffa3c42bc6ee076b9fdc2644c4962c0d8a9ebe38b026d32d87d0bc0bc005ee",
+    "manual_audit.json": "17e91b143cccdc4fec407b4eb812234737e84448061b83f63650bf19703d364b",
+    "explanation_numeric_checks.json": "e013bf8e1ee38df69d6da4eb916eac51d8d027f4d9cc354cd0ca40a391bffb3e",
+    "false_infeasibility_reference_check.json": "bdadce2e64a1555ab3c7f216ae6ec0797295cc399a7d034ed488c359625803ed"
+  }
+}
