@@ -50,26 +50,25 @@ Jonathan Graziano Yang & A0300413A & e1354779@u.nus.edu\\
 \bottomrule
 \end{tabular}
 \vfill
-{\large Report draft for team review\\14 October 2026\par}
+{\large Final project report\\11 November 2026\par}
 \end{titlepage}
 \pagenumbering{arabic}
 \hypersetup{pageanchor=true}
 
 \begin{abstract}
 We compare direct language-model planning with translation into a constraint
-satisfaction problem (CSP) followed by symbolic solving. The task concerns the
-remaining Programme Requirements of an NUS Computer Science student pursuing
-the Artificial Intelligence focus area, using a restricted catalogue and a
-16-unit semester workload cap. A frozen benchmark contains 120 evaluation
-cases: 84 feasible and 36 infeasible, distributed across four study horizons
-and three designed difficulty levels. Direct planning achieved 119/120 correct
+satisfaction problem (CSP) and symbolic solving. We study remaining NUS
+Computer Science Programme Requirements with the AI focus, a restricted
+catalogue and a 16-unit semester cap. The frozen evaluation contains 120
+cases: 84 feasible and 36 infeasible across four horizons and three designed
+difficulty levels. Direct planning achieved 119/120 correct
 outcomes; solver assistance achieved 120/120. Mean recorded process plus
 solver time was 22.41 and 31.60 seconds respectively. All five noncanonical
 translations were reviewed as semantically equivalent. A secondary audit
 identified 17 incorrect numeric claims in 15 otherwise valid direct-plan
-responses. The results demonstrate the value of evaluating schedule validity,
-translation fidelity and explanation accuracy separately. They provide
-limited evidence for a general accuracy advantage from solver assistance.
+responses. Both methods achieved near-ceiling outcome accuracy on these
+structured instances. Separating schedule validity, translation fidelity
+and explanation accuracy exposed errors concealed by the primary score.
 \end{abstract}
 
 \section{Introduction and research question}
@@ -89,9 +88,12 @@ constraints is acceptable.
 
 We contribute an explicit Boolean CSP, a benchmark with validated outcomes,
 and a paired evaluation separating schedule validity, translation fidelity
-and explanation accuracy. Primary scores approach the benchmark ceiling;
-the clearest additional finding is inaccurate numerical explanations
-accompanying valid plans.
+and explanation accuracy. Prior work couples language models with classical
+planning in LLM+P \cite{llmp} and with symbolic inference in Logic-LM
+\cite{logiclm}. We study this division of labour in a restricted degree-planning
+domain, with a fixed compiler and one attempt per request. Our contribution
+is the checked benchmark and case-level comparison, including inaccuracies
+in explanations of valid schedules.
 
 \section{Domain and scope}
 The domain is the AY2026/27 NUS BComp(Computer Science) admission cohort and AI
@@ -99,10 +101,13 @@ focus area. Official programme and focus-area pages provide the requirements;
 NUSMods supplies course records \cite{nuscohort,nusfocus,nusmods}. Source
 snapshots were collected on 9 October 2026. The normalized catalogue contains
 87 courses: nine foundations, three mathematics courses, 19 AI breadth
-courses, one credited internship and 55 prerequisite-support courses. Four
-courses are non-selectable under the frozen assumptions.
+courses, one credited internship and 55 prerequisite-support courses.
+CP3200 is completed-credit-only. CS2040HS, EE2028 and EE2211 are conservatively
+excluded from new enrolment because wildcard prerequisites remain unresolved
+by the normalizer; these exclusions reflect parsing limitations.
 
-The model covers the 80-unit Programme Requirements, excluding Common
+The nominal 80-unit Programme target combines 36 Foundation units,
+12 Mathematics units and at least 32 Breadth/Depth units. The model excludes Common
 Curriculum, Unrestricted Electives, GPA, exemptions, exchange mappings,
 dissertation substitutions, special terms, quotas and timetable clashes.
 Prerequisite-support courses consume workload without earning Programme
@@ -117,7 +122,37 @@ mathematics, English and programme-entry conditions are assumed satisfied;
 passed courses satisfy modelled grade thresholds. CP3200 contributes six
 completed internship units in every case, including early-stage profiles.
 Internship eligibility is not simulated. These choices define a simplified
-remaining-requirements planner rather than a complete graduation audit.
+remaining-requirements planner.
+
+\subsection{A representative planning request}
+In evaluation case \code{test-h4-easy-01}, the completed record includes
+CS1101S and the student has four remaining semesters, starting with normal
+Semester 1. The request contains the exact excerpt:
+\textquotedblleft My plan must include CS1101S, CS4277.\textquotedblright\
+Inclusion can be satisfied by past completion; only CS4277 needs new
+enrolment among these two requested courses. Table~\ref{tab:worked} shows the
+saved assisted schedule, which passes the original-specification checker.
+
+\begin{center}
+\begin{minipage}{\linewidth}
+\centering
+\captionof{table}{A checked schedule for the representative request.}
+\label{tab:worked}
+\begin{tabularx}{\linewidth}{@{}rrYr@{}}
+\toprule
+Position & Normal semester & New enrolments & Units\\
+\midrule
+1 & 1 & CS2100, CS3268, CS4261 & 12\\
+2 & 2 & CS2106, CS4243, CS4248 & 12\\
+3 & 1 & None & 0\\
+4 & 2 & CS3263, CS4277, CS5242 & 12\\
+\bottomrule
+\end{tabularx}
+\end{minipage}
+\end{center}
+CS2100 precedes CS2106, CS4277 is offered in the assigned normal semester,
+and CS1101S is not repeated. With no minimum load, semester 3 may remain
+empty; no optimization objective is applied.
 
 \par
 \section{Formal CSP formulation}
@@ -166,7 +201,8 @@ encoded. If $P_c(t)$ is the resulting prerequisite truth value, enforce
 $x_{c,t}\leq P_c(t)$. Unselected courses do not force their prerequisite chains.
 
 For an ordinary co-requisite $p$ of $c$, require
-$x_{c,t}\leq b_{p,t}+x_{p,t}$. The explicitly modelled CS2101/CS2103T pair
+$x_{c,t}\leq b_{p,t}+x_{p,t}$. Ordinary co-requisite lists are empty in this
+catalogue; the active CS2101/CS2103T pair
 has the stronger new-enrolment rule
 \[
  x_{\mathrm{CS2101},t}=x_{\mathrm{CS2103T},t}.
@@ -189,6 +225,10 @@ A fixed position refers to the remaining-semester index, not to the normal
 semester number. For example, positions in $[2,1,2]$ correspond to normal
 Semesters 2, 1 and 2.
 
+These constraints interact: CS4246 requires earlier CS3243 or CS3263, while
+mandatory CS2109S precludes CS3243 in the frozen catalogue. CS3263 therefore
+provides the usable prerequisite route.
+
 \par
 \subsection{Workload and requirement groups}
 Semester workload includes every newly enrolled catalogue course:
@@ -206,6 +246,7 @@ extra earned credits.
 
 \begin{center}
 \begin{minipage}{\linewidth}
+\centering
 \captionof{table}{Requirement groups in the frozen model.}
 \label{tab:groups}
 \begin{tabularx}{\linewidth}{@{}lY@{}}
@@ -218,15 +259,17 @@ AI primary & Available AI primaries, including foundation CS2109S; at least thre
 AI upper & AI primaries at level 4000 or above; at least one course.\\
 Industry & CP3200 in the selected pathway; 6--12 units.\\
 Other CP & Non-industry CP breadth courses; at most 12 units. This set is empty in the catalogue.\\
-Programme lower & Programme members at levels 1000--4000; at least 64 units, derived from the fixed 80-unit target.\\
+Programme lower & Programme members at levels 1000--4000; at least 64 units, representing 80\% of the fixed 80-unit target.\\
 \bottomrule
 \end{tabularx}
 \end{minipage}
 \end{center}
-Foundation and mathematics courses are individually mandatory. Their credits
-do not also count toward breadth. CS2109S can satisfy an AI focus count while
-remaining excluded from breadth credits. This distinction is important both
-for formal constraints and for explanations of a valid plan.
+Foundation and mathematics courses are individually mandatory; their credits
+do not also earn breadth credits. CS2109S can satisfy an AI focus count
+without contributing breadth units. The 80-unit target is a minimum, not an
+exact selected total: six CP3200 units plus four-unit breadth courses require
+at least 34 breadth units, yielding at least 82 Programme units. The 64-unit
+bound uses the fixed requirement, and permitted overshoot is accepted.
 
 \subsection{Solver implementation and independent checking}
 The implementation uses Python 3.11.9 and OR-Tools 9.15.6755. The Boolean
@@ -242,16 +285,11 @@ An independently implemented arithmetic and set-based checker assesses every
 feasible output against the \emph{original} specification. It checks schema,
 semester count, duplicates, eligibility, offerings, prerequisite order,
 co-requisites, preclusions, workload, request constraints and group totals.
-It does not invoke the solver to validate a schedule. The checker and solver
-share the normalized catalogue and interpretations, so this independence
-does not eliminate errors in shared source assumptions.
+It does not invoke the solver to validate a schedule.
 
-The pre-evaluation freeze records 25 passing implementation and protocol
-tests. They cover real-course examples, workload and prerequisite violations,
-completed credit, OR alternatives, preclusions, fractional credits, group
-accounting, and rejection of changed or historical experiment inputs.
-These checks support implementation consistency rather than certifying every
-institutional rule.
+The freeze records 25 passing tests covering real-course examples, invalid
+schedules, completed credit, logical prerequisites, preclusions, fractional
+credits, group accounting and experiment-input integrity.
 
 \par
 \section{Benchmark construction}
@@ -264,6 +302,7 @@ therefore includes 84 feasible and 36 infeasible requests.
 
 \begin{center}
 \begin{minipage}{\linewidth}
+\centering
 \captionof{table}{Study-stage profiles used to construct the benchmark.}
 \label{tab:stages}
 \begin{tabular}{@{}rrrr@{}}
@@ -290,6 +329,7 @@ not independent student samples or a template-disjoint generalization test.
 
 \begin{center}
 \begin{minipage}{\linewidth}
+\centering
 \captionof{table}{Designed restrictions in feasible requests.}
 \label{tab:difficulty}
 \begin{tabular}{@{}lrrr@{}}
@@ -331,19 +371,18 @@ contradiction.
 Evaluation cases were selected without language-model answers. A 12-case
 paired development pilot achieved 12/12 for both approaches and informed
 inspection and scoring; its scores are excluded from evaluation totals.
-A project participant reported source/assumption review complete on
-11 October 2026. Reference-label validation was automated; no separate
-case-by-case human label audit is claimed.
+Source and assumption review was confirmed on 11 October 2026.
+Reference-label validation uses the solver, independent
+schedule checks and recorded contradiction witnesses.
 
 \par
 \section{Evaluation methodology}
 \subsection{Paired approaches and information supplied}
 Both approaches receive the same natural-language request and frozen domain
-facts. The context includes normalized prerequisites, offerings, preclusions,
-eligibility, and an enumerated narrative of requirement-group membership
-and bounds. It excludes gold specifications, reference plans and labels.
-Consequently, the translation task is largely extraction into a fixed
-contract rather than interpretation of unprocessed university policy pages.
+facts: normalized course constraints and an enumerated narrative of group
+membership and bounds. Gold specifications, reference plans and labels are
+excluded. Translation extracts a fixed contract from supplied facts rather
+than interpreting unprocessed university policy pages.
 
 In \emph{direct planning}, the model returns a plan JSON object with status,
 one course list per remaining semester when feasible, and a brief explanation.
@@ -352,8 +391,16 @@ model returns a specification containing completed courses, alternating
 normal-semester numbers, workload cap, required and forbidden courses, fixed
 placements, and requirement groups. A fixed compiler independently enforces
 catalogue course constraints. The model generates no executable solver code.
-The evaluator then runs CP-SAT and checks a feasible schedule against the
-original specification.
+The evaluator then runs CP-SAT. The inference paths are
+\[
+\begin{aligned}
+\text{Direct:}\quad & \text{request + facts}\ \to\ \text{LLM}\ \to\ \text{plan},\\
+\text{Assisted:}\quad & \text{request + facts}\ \to\ \text{LLM}\ \to\
+\text{specification}\ \to\ \text{CP-SAT}\ \to\ \text{plan}.
+\end{aligned}
+\]
+Offline evaluation checks both plans against the same original specification;
+neither model receives checker feedback.
 
 The task-specific instructions differ. In particular, the translation prompt
 explicitly states that completed mandatory courses remain required; the
@@ -362,20 +409,17 @@ the meaning of requested inclusion for a passed course. This distinction is
 a potential confound in attributing any observed advantage to the solver.
 
 \subsection{Execution controls and provenance}
-The recorded model identifier is \code{gpt-6.1-sol}, with medium reasoning
-effort, accessed through subscription-authenticated Codex CLI
-\code{0.162.0-alpha.17.2}. Each case and approach receives one fresh ephemeral
-session, a schema-constrained response, and a 180-second process timeout.
-Web access, shell execution, apps and other tool capabilities are disabled,
-and event records are audited. Cases run in fixed order, direct followed
-by assisted. There are no response repairs, retries or feedback from
-reference outcomes.
+The recorded model is \code{gpt-6.1-sol} at medium reasoning effort, run
+through subscription-authenticated Codex CLI \code{0.162.0-alpha.17.2}.
+Each attempt uses a fresh ephemeral session, schema-constrained output
+and a 180-second timeout. Model-side tools are disabled and event records
+audited. Cases run in fixed order, direct then assisted, without repairs,
+retries or feedback from reference outcomes.
 
-The run \code{csp16-evaluation-v1} was frozen before evaluation. Its manifest
-records configuration, case order, scoring policy and hashes; a 426-file
-snapshot preserves inputs and implementation. Completion checks verified
-all 240 prompt hashes, frozen files, documentation and pilot evidence.
-Results and raw responses are preserved at commit \code{d251777} \cite{repo}.
+Run \code{csp16-evaluation-v1} freezes settings, case order, scoring and a
+426-file snapshot. Completion checks verified all 240 prompt hashes,
+frozen files, documentation and pilot evidence. Commit \code{d251777}
+preserves the implementation, results and raw responses \cite{repo}.
 
 \subsection{Scoring and secondary analysis}
 The primary policy, \code{outcome-v1-explanation-secondary}, accepts a
@@ -383,8 +427,7 @@ schema-valid feasible response only when its plan passes the original-specificat
 checker and the reference case is feasible. An infeasible prediction is
 correct when it agrees with a validated infeasible label. Unknown outputs,
 execution failures and malformed responses count as unsuccessful completed
-attempts. Accuracy uses completed selected attempts, with pending attempts
-reported separately.
+attempts. Accuracy uses completed selected attempts.
 
 Explanations do not change a valid schedule's primary score. They are
 reviewed separately. Translation auditing first compares unordered field
@@ -394,9 +437,8 @@ outcome alone is insufficient evidence of faithful translation.
 
 Runtime is recorded process time plus solver time for the assisted approach;
 shared post-hoc checking and manual review are excluded. CLI token counts
-are descriptive usage records, not dollar-cost estimates. The later numeric
-explanation audit is diagnostic and covers explicit matched claim patterns.
-It was not a separately preregistered comparative endpoint.
+describe usage, not dollar costs. The subsequent diagnostic explanation audit
+checks explicit numeric claim patterns.
 
 \par
 \section{Results}
@@ -409,6 +451,7 @@ case infeasible, producing the only primary failure.
 
 \begin{center}
 \begin{minipage}{\linewidth}
+\centering
 \captionof{table}{Primary outcomes on the 120 evaluation cases.}
 \label{tab:outcomes}
 \begin{tabular}{@{}lrr@{}}
@@ -427,62 +470,60 @@ Assisted-only correct paired cases & \multicolumn{2}{c}{1/120}\\
 \end{minipage}
 \end{center}
 
+Both methods scored 10/10 in eleven of the twelve horizon--difficulty
+cells. In the four-semester easy cell, direct planning scored 9/10 and
+assistance 10/10. Thus accuracy did not decline with designed difficulty or
+longer horizons. The sole discordant pair, analysed in
+Section~\ref{sec:false-infeasibility}, gives an observed difference of
+0.83 percentage points.
+
+\subsection{Runtime and reported usage}
+Mean recorded time was 22.41 seconds for direct planning and 31.60 seconds
+for solver assistance: 9.19 seconds, or approximately 41.0\%, longer.
+Mean local assisted solver time, including compilation, was approximately
+0.105 seconds, about 0.33\% of assisted time.
+
 \begin{center}
 \begin{minipage}{\linewidth}
-\captionof{table}{Correct outcomes by horizon and designed difficulty.
-Each cell has seven feasible and three infeasible cases.}
-\label{tab:cells}
-\begin{tabular}{@{}rlrr@{}}
+\centering
+\captionof{table}{Mean recorded time by reference label, including the
+assisted solver stage. All selected attempts are included.}
+\label{tab:runtime}
+\begin{tabular}{@{}lrrr@{}}
 \toprule
-Remaining semesters & Difficulty & Direct & Solver-assisted\\
+Reference label & Cases & Direct (s) & Assisted (s)\\
 \midrule
-7 & Easy & 10/10 & 10/10\\
-7 & Medium & 10/10 & 10/10\\
-7 & Hard & 10/10 & 10/10\\
-6 & Easy & 10/10 & 10/10\\
-6 & Medium & 10/10 & 10/10\\
-6 & Hard & 10/10 & 10/10\\
-5 & Easy & 10/10 & 10/10\\
-5 & Medium & 10/10 & 10/10\\
-5 & Hard & 10/10 & 10/10\\
-4 & Easy & 9/10 & 10/10\\
-4 & Medium & 10/10 & 10/10\\
-4 & Hard & 10/10 & 10/10\\
+Feasible & 84 & 27.28 & 31.68\\
+Infeasible & 36 & 11.04 & 31.42\\
+All & 120 & 22.41 & 31.60\\
 \bottomrule
 \end{tabular}
 \end{minipage}
 \end{center}
 
-The single failure occurs in an easy cell, so these scores do not exhibit an
-accuracy decline with designed difficulty or longer horizons. One discordant
-pair gives a descriptive difference of 0.83 percentage points. It does not
-establish a broad population-level advantage, particularly given correlated
-cases, one attempt per case and different prompt guidance.
-
-\subsection{Runtime and reported usage}
-Mean recorded time was 22.41 seconds for direct planning and 31.60 seconds
-for solver assistance: 9.19 seconds, or approximately 41.0\%, longer.
-Medians calculated from the case records were 24.18 and 31.00 seconds.
-Mean local assisted solver time, including compilation, was approximately
-0.105 seconds. Most recorded assisted latency therefore occurred in the
-model process rather than local solving.
+The overhead depends strongly on the reference label: 4.39 seconds
+(16.1\%) on feasible cases, versus 20.38 seconds (184.6\%) on infeasible
+cases. Direct responses to infeasible cases average 165 output tokens,
+compared with 676 on feasible cases; assisted specifications average
+1,117 and 1,108 respectively. Short direct contradiction responses and
+complete translated specifications are consistent with this timing pattern.
 
 Reported input-token totals were 2,332,737 and 2,359,601; output-token totals
 were 62,736 and 133,277 for direct and assisted execution respectively.
-The larger specification response is consistent with greater serialization
-work, but token counts do not isolate the cause of latency. Execution order,
-network and service conditions were not randomized or controlled.
+These records describe process latency rather than a causal decomposition:
+execution order, network and service conditions were not randomized.
 
 \par
 \section{Error analysis and translation fidelity}
 \subsection{The false infeasibility case}
-In \code{test-h4-easy-01}, the student has already passed CS1101S and asks
-that the plan include it and CS4277. The direct response treats CS1101S
+\label{sec:false-infeasibility}
+The request illustrated in Table~\ref{tab:worked},
+\code{test-h4-easy-01}, produces the only primary failure. The direct response treats CS1101S
 as a compulsory new enrolment and declares a contradiction with the
 no-retake rule. The formal interpretation distinguishes
 $y_{\mathrm{CS1101S}}=1$ from $x_{\mathrm{CS1101S},t}=1$: past completion
 satisfies the requirement, and there is no fixed new placement for this
-course. A feasible reference schedule independently passes all checks.
+course. The saved assisted schedule passes all original constraints.
 This is an interpretation error under the frozen semantics. The prompt
 difference discussed above prevents attributing it solely to a lack of
 symbolic search.
@@ -497,6 +538,7 @@ diagnostic fields \cite{audit}.
 
 \begin{center}
 \begin{minipage}{\linewidth}
+\centering
 \captionof{table}{Semantic review of the five noncanonical translations.
 Case identifiers omit the common \code{test-} prefix.}
 \label{tab:translation}
@@ -513,21 +555,22 @@ Case(s) & Constraint-level equivalence evidence\\
 \end{minipage}
 \end{center}
 
-Outcome agreement alone would not support these judgments: a changed
-specification can coincidentally produce a valid plan or share an infeasible
-status. Here the added restrictions are redundant or the representation is
-logically equivalent. Canonical accuracy of 95.83\% therefore understates
-the reviewed semantic fidelity of these particular outputs.
+The canonical match rate is 95.83\%, although all 120 specifications are
+either canonical matches or reviewed as semantically equivalent. The five
+judgments follow from redundant or equivalent constraints, independently
+of whether solver outcomes match.
 
 \subsection{Numeric explanations of valid direct plans}
 A diagnostic audit checked 453 explicitly matched numerical claims across
 all 83 feasible direct responses. Literal-claim review and independent
 checker evidence confirmed 17 incorrect claims in 15 responses (18.1\%).
-Errors concern focus-course counts, credit totals and a semester load.
+Thirteen overstate AI focus-course counts, including ten AI-upper counts;
+the other four concern credit totals or a semester load.
 The affected plans still satisfy all original constraints.
 
 \begin{center}
 \begin{minipage}{\linewidth}
+\centering
 \captionof{table}{Examples of explanation errors in independently valid plans.}
 \label{tab:explanations}
 \begin{tabularx}{\linewidth}{@{}lYll@{}}
@@ -551,30 +594,24 @@ equally detailed natural-language explanation systems.
 \par
 \section{Discussion and threats to validity}
 \subsection{What the comparison establishes}
-Under a restricted catalogue, explicit domain facts and a fixed output
-contract, direct planning was already highly accurate. The assisted pipeline
-provided a satisfying assignment or a solver infeasibility result for every
-translated instance, and every feasible assisted plan passed the original
-checker. Its measurable disadvantages in this run were additional latency
-and larger reported output-token usage. Its architectural benefit is an
-explicit representation that can be inspected, solved and checked. This
-benefit is conditional on correct interpretation and compilation.
+With the supplied catalogue and structured facts, direct planning was
+already highly accurate. Assistance added one correct outcome and an
+inspectable specification, at greater process latency and output-token
+usage. That latency difference was concentrated in infeasible requests;
+local solving itself was inexpensive. The experiment therefore distinguishes
+the cost of obtaining a formal specification from the cost of solving it.
 
-The clearest additional finding is that correctness of a schedule does not
-guarantee correctness of its explanation. Independent arithmetic checking
-made it possible to detect inaccuracies without discarding valid schedules.
-A practical assistant could derive counts and credit summaries from
-validated schedules, then constrain narrative explanations to those values.
-This is a design implication of the findings; that improved explanation
-pipeline has not been evaluated here.
+The clearest additional finding is inaccurate numerical explanation
+despite valid planning. Most observed errors overcount focus membership,
+so an assistant should compute displayed counts and credits from the
+checked schedule and completed record. This is a design implication;
+an improved explanation pipeline has not been evaluated here.
 
-Semantic translation assessment likewise requires more than literal
-comparison. Our five reviewed differences show concrete equivalent
-representations. They do not prove that field mismatches are generally
-harmless or that agreement with a reference label establishes fidelity.
-Both schedule and translation evaluation remain necessary because an
-infeasible solver result for a mistranslated request could wrongly reject a
-feasible student request.
+The translation audit shows why literal matching is insufficient:
+five different representations express equivalent constraints. Conversely,
+a solver validates the specification it receives, so checking schedules
+against the original request remains necessary. Faithful interpretation,
+valid assignments and accurate explanations are separate engineering obligations.
 
 \subsection{Representation size and designed difficulty}
 With 87 courses and $H$ remaining semesters, the main model contains $87H$
@@ -596,29 +633,19 @@ No search-state enumeration, optimization comparison or component ablation
 was performed.
 
 \subsection{Limits of the evidence}
-First, feasible cases are retained after solver validation and some
-restrictions are selected from reference plans. This provides consistent
-labels but does not sample all possible student requests. The 70 evaluation
-histories and repeated templates create dependence among cases. Disjoint
-completed-course sets avoid one form of overlap with development, while
-shared construction limits broader generalization.
+Cases are conditioned on solver validation and some restrictions derive
+from reference plans. The 70 evaluation histories recur in related templates,
+so the cases are not independent student samples. Disjoint completed-course
+sets separate the splits, but shared construction limits generalization.
+Supplied group memberships and normalized facts also make interpretation
+easier than reading unprocessed university policies.
 
-Second, the domain context enumerates group memberships and supplies
-normalized course facts. The model is not required to retrieve current
-policies or resolve every natural-language institutional exception. Full
-graduation planning, uncertainty about future offerings and unconstrained
-student preferences remain outside the experiment.
-
-Third, only one model setting and one attempt per case were tested.
-Near-ceiling accuracy and one discordant pair offer little evidence about
-repeated-run stability. Prompt asymmetry and fixed execution order further
-limit causal claims about solver use and runtime.
-
-Finally, the solver and checker can share an incorrect source interpretation.
-The semantic and numeric audits were supported by Codex and recorded with
-case-level evidence. They should not be represented as an independent
-human replication. Further student review improves confidence in the report,
-but additional experiments are not assumed in the stated findings.
+Only one model setting and one attempt per case were tested. The single
+discordant pair, prompt asymmetry and fixed execution order limit claims
+about general solver advantages, repeatability and causal latency.
+The solver and checker share source interpretations. The Codex-supported
+semantic and numeric audits preserve case-level evidence without constituting
+an independent human replication.
 
 \par
 \section{Responsible AI considerations}
@@ -650,18 +677,19 @@ Both correctly identified all 36 infeasible cases; every returned feasible
 schedule passed the original checker. Five noncanonical translations were
 equivalent, while 15 valid direct responses contained numeric explanation errors.
 
-Both approaches perform strongly on these structured, simplified instances.
-Primary schedule accuracy
-conceals a separate explanation-reliability problem. The study supports
-evaluation that distinguishes schedule validity, translation fidelity and
-explanation accuracy. It does not establish a broad solver superiority
-claim or the constraint-complexity boundary at which assistance becomes
-substantially more beneficial.
+For these structured instances, direct planning combines strong accuracy
+with faster responses, especially for infeasible requests. Assistance
+provides inspectable constraints and correct outcomes at higher process
+cost, with local solving contributing little to that cost. Numerical
+explanations remain a distinct reliability concern. Evaluating schedule
+validity, translation fidelity and explanation accuracy separately therefore
+gives a more useful account of an assistant than primary accuracy alone.
 
 \section{Team contributions and AI assistance}
 The following table summarizes the team's division of work.
 \begin{center}
 \begin{minipage}{\linewidth}
+\centering
 \begin{tabularx}{\linewidth}{@{}lY@{}}
 \toprule
 Team member & Contribution\\
@@ -675,17 +703,30 @@ Jonathan Graziano Yang & Conducted the evaluation; contributed to report writing
 \end{center}
 Codex supported source acquisition and normalization, CSP and checker
 implementation, benchmark generation, execution tooling, test construction,
-experiment execution, secondary analysis and preparation of this report
-draft. Student participants selected the scope and modelling policies,
-directed revisions and reported completion of the source/assumption review.
-The team remains responsible for understanding and verifying the
-formulation, conclusions and contribution statement before submission.
+experiment execution, secondary analysis and report preparation, including
+revision informed by three separate AI reviewers. Student participants
+selected the scope and modelling policies, directed revisions and confirmed
+completion of the source/assumption review. The team is responsible for
+the technical interpretation and conclusions.
 
 \clearpage
 \typeout{REPORT_BODY_PAGES=\number\numexpr\value{page}-1\relax}
 \pagenumbering{roman}
 \begin{thebibliography}{9}
 \raggedright
+
+\bibitem{llmp}
+B. Liu, Y. Jiang, X. Zhang, Q. Liu, S. Zhang, J. Biswas and P. Stone.
+\emph{LLM+P: Empowering Large Language Models with Optimal Planning Proficiency}.
+arXiv:2304.11477, 2023.
+\url{https://arxiv.org/abs/2304.11477}.
+
+\bibitem{logiclm}
+L. Pan, A. Albalak, X. Wang and W. Y. Wang.
+\emph{Logic-LM: Empowering Large Language Models with Symbolic Solvers
+for Faithful Logical Reasoning}.
+arXiv:2305.12295, 2023.
+\url{https://arxiv.org/abs/2305.12295}.
 
 \bibitem{nuscohort}
 NUS School of Computing.
